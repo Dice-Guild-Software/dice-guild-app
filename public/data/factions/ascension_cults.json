@@ -1,0 +1,891 @@
+{
+  "name": "Ascension Cults",
+  "id": "ascension_cults",
+  "color": "#606060",
+  "author": "guitarninja",
+  "lore": "Centuries ago, in a time when interstellar travel was still in its infancy, a group of intrepid explorers stumbled upon a strange organic object of immense power buried deep within the desolate wastelands of an ancient and forgotten planet. This creature was known as the Hive Seed, a source of swirling cosmic energies that seemed to course with energy.\n\nAs they tampered with the seed, they unwittingly unleashed a torrent of chaotic energies that ripped through the planet. The seed acted as a conduit to an unfathomable dimension known as the Abyssal Realm, home to the malevolent and all-devouring creatures that came to be known as the Abyssal Hive.\n\nThe creatures of the Abyssal Hive were ancient, primordial beings that thrived on chaos and destruction. With a pathway opened, they poured forth into the known universe, a swarm of nightmarish entities hungry for the annihilation of all existence. Planets were devoured, stars were extinguished, and entire civilizations were obliterated in their wake.\n\nAmidst the cosmic chaos, a group of survivors from the initial exploration, traumatized by the horrors they had unleashed, were forever changed by the encounter with the Abyssal Hive. Haunted by visions of the end of the universe and consumed by despair, they became the first Abyssal Cultists. These individuals believed that the unleashing of the Hive was not a tragedy but a divine revelation, signaling the inevitable end of the universe – a necessary purification that would pave the way for a new and perfect existence.\n\nThe Ascension Cults emerged as the followers of the Abyssal Hive, worshiping its destructive power and fervently embracing the idea of the universe's end. They believed that by aligning themselves with the all-devouring creatures, they could become chosen vessels, granted immortality and transcendence as the universe succumbed to oblivion.\n\nEmbracing forbidden knowledge and dark rituals, the Ascension Cults sought to open more seeds to the Abyssal Realm, allowing the Hive's monstrous entities to spread their influence further. They recruited new members from across the galaxies, preying on those who felt lost, disillusioned, or disillusioned with the vastness of the cosmos.\n\nAs the cults grew in number and influence, they began to infiltrate various aspects of galactic society, operating in the shadows and manipulating events from behind the scenes. They founded secret temples, performed dark ceremonies, and hoarded ancient artifacts connected to the Abyssal Hive.\n\nHowever, not all beings were willing to embrace the end of the universe. The Ascension Cults saw it as their sacred duty to assist the Abyssal Hive in fully manifesting in the material universe, seeking to strengthen a pathway and the connection to the Abyssal Realm.\n\nAs a pathway remained open, the fate of the universe hung in the balance, and the ultimate confrontation between these opposing forces drew ever closer, with the all-devouring creatures of the Abyssal Hive waiting at the threshold, poised to bring about the end of the universe as all knew it.",
+  "units": {
+    "militia_commander": {
+      "name": "Militia Commander",
+      "description": "Foot infantry platoon leader of the planetary defense force.",
+      "category": "hero",
+      "models": [
+        {
+          "name": "Militia Commander",
+          "courage": 6,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 6,
+          "movement": 6,
+          "wounds": 2,
+          "rules": [{"id": "leader", "x": "Infantry"}, {"id": "tactician", "x": 1}],
+          "weapons": ["auto_rifle", {"id": "light_handweapon", "count": 2}],
+          "options": [
+            {"replaceWeapon": ["auto_rifle", {"id": "light_handweapon", "count": 2}], "withWeapon": [["pistol", {"id": "light_handweapon", "count": 3}]]},
+            {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "plasma_pistol", "flamethrower_pistol", "web_pistol"]},
+            {
+              "replaceWeapon": {"id": "light_handweapon", "count": 3},
+              "withWeapon": [{"id": "energy_handweapon", "count": 3}, {"id": "energy_powerweapon", "count": 3}, {"id": "energy_handweapon", "count": 3}, {"id": "handweapon", "count": 3}]
+            }
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "cult_overlord": {
+      "name": "Cult Overlord",
+      "description": "A cult leader commanding his fellow revolutionaries from the shadows.",
+      "category": "hero",
+      "models": [
+        {
+          "name": "Cult Overlord",
+          "movement": 6,
+          "courage": 7,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 7,
+          "reflexes": 6,
+          "wounds": 3,
+          "rules": ["leader", {"id": "tactician", "x": 1}],
+          "weapons": ["pistol", {"id": "bone_sword", "count": 4}],
+          "options": [
+            {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol", "web_pistol", "needle_pistol"]},
+            {
+              "replaceWeapon": {"id": "bone_sword", "count": 4},
+              "withWeapon": [{"id": "energy_handweapon", "count": 4}, {"id": "energy_handweapon", "count": 4}, {"id": "energy_powerweapon", "count": 4}]
+            },
+            {"addRule": ["cult_icon"]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "cult_psychic": {
+      "name": "Cult Psychic",
+      "description": "A cultist leader with poweful psychic abilities.",
+      "category": "hero",
+      "models": [
+        {
+          "name": "Cult Psychic",
+          "movement": 6,
+          "courage": 6,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 6,
+          "wounds": 2,
+          "rules": ["leader", {"id": "power", "x": 1}],
+          "weapons": ["pistol", {"id": "light_handweapon", "count": 2}],
+          "options": [
+            {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "plasma_pistol", "flamethrower_pistol", "web_pistol"]},
+            {"replaceWeapon": [{"id": "light_handweapon", "count": 2}], "withWeapon": [{"id": "energy_polearm", "count": 2}, {"id": "bone_sword", "count": 2}]},
+            {"addRule": ["companion"]},
+            {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "outrider_assassin": {
+      "name": "Cult Outrider Assassin",
+      "description": "A highly mobile assassin mounted on a dirt bike.",
+      "category": "elite",
+      "models": [
+        {
+          "name": "Cult Outrider Assassin",
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 7,
+          "reflexes": 5,
+          "movement": 8,
+          "wounds": 2,
+          "rules": ["evasive", "spotting_laser", {"id": "support", "x": "Infantry, Biker"}],
+          "weapons": [{"id": "handweapon", "count": 3}, "heavy_sniper_rifle"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "cult_assasin": {
+      "name": "Cult Assasin",
+      "description": "A cunning killer of the cult, striking from the shadows without a trace.",
+      "category": "elite",
+      "models": [
+        {
+          "name": "Cult Assasin",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 6,
+          "wounds": 2,
+          "rules": ["evasive", "spotting_laser", "support"],
+          "weapons": [{"id": "handweapon", "count": 3}, "heavy_sniper_rifle"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "great_abomination": {
+      "name": "Great Abomination",
+      "description": "An extremely tough alpha-abomination.",
+      "category": "hero",
+      "keywords": ["Heavy Infantry"],
+      "models": [
+        {
+          "name": "Great Abomination",
+          "courage": 6,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 7,
+          "reflexes": 5,
+          "movement": 6,
+          "wounds": 3,
+          "rules": ["chosen_abomination", {"id": "leader", "x": "Infantry, Heavy Infantry"}, {"id": "resistant", "x": 1}],
+          "weapons": [{"id": "energy_powerweapon", "count": 4}],
+          "options": [{"addRule": [{"id": "ward", "x": 1}]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "harvester_lord": {
+      "name": "Harvester Lord",
+      "description": "A ferocious alien with enhanced magic power.",
+      "category": "hero",
+      "models": [
+        {
+          "name": "Harvester Lord",
+          "courage": 7,
+          "shoot": 0,
+          "fight": 7,
+          "defense": 8,
+          "reflexes": 7,
+          "movement": 8,
+          "wounds": 3,
+          "rules": ["agile", "leader", "warrior", {"id": "power", "x": 1}],
+          "weapons": [{"id": "large_razor_talons", "count": 6}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "cult_strategist": {
+      "name": "Cult Strategist",
+      "description": "A cult specialist who rallies the hordes of troops.",
+      "category": "elite",
+      "models": [
+        {
+          "name": "Cult Strategist",
+          "movement": 6,
+          "courage": 6,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 6,
+          "wounds": 2,
+          "rules": ["legend_strategist", "support"],
+          "weapons": ["pistol", {"id": "light_handweapon", "count": 2}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "cult_proclamator": {
+      "name": "Cult Proclamator",
+      "description": "A cult specialist who rallies the hordes of troops.",
+      "category": "elite",
+      "models": [
+        {
+          "name": "Cult Proclamator",
+          "movement": 6,
+          "courage": 6,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 6,
+          "wounds": 2,
+          "rules": ["inspiration", "scrambler", "support"],
+          "weapons": ["pistol", {"id": "light_handweapon", "count": 2}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "cult_gunslinger": {
+      "name": "Cult Gunslinger",
+      "description": "A three-armed gunfighter fighting for the cult",
+      "category": "elite",
+      "models": [
+        {
+          "name": "Cult Gunslinger",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 6,
+          "wounds": 2,
+          "rules": ["assassin", "relentless", "scout", "support"],
+          "weapons": [{"id": "heavy_pistol", "count": 3}, "light_handweapon"],
+          "options": [{"replaceWeapon": ["heavy_pistol"], "withWeapon": ["plasma_pistol", "flamethrower_pistol", "web_pistol"], "limit": 3}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "hive_harvesters": {
+      "name": "Hive Harvesters",
+      "description": "Ferocious aliens that rip apart their foes with unnerving speed.",
+      "category": "elite",
+      "models": [
+        {
+          "name": "Hive Harvesters",
+          "courage": 6,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 7,
+          "reflexes": 6,
+          "movement": 8,
+          "rules": ["agile"],
+          "weapons": [{"id": "razor_talons", "count": 3}],
+          "options": [{"addRule": {"name": "Assault Hooks", "id": "impact", "x": 1}, "limit": 1, "modelLimit": "1/5"}],
+          "min": 5,
+          "max": 20
+        }
+      ]
+    },
+    "cult_militia_squad": {
+      "name": "Cult Militia Squad",
+      "description": "A defense force squad turned to the cult.",
+      "category": "core",
+      "options": [{"replaceWeapon": "auto_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "sniper_rifle", "light_machinegun"], "modelLimit": "1/5"}],
+      "models": [
+        {
+          "name": "Sergeant",
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "movement": 6,
+          "weapons": ["auto_rifle", "light_handweapon"],
+          "options": [
+            {"replaceWeapon": "auto_rifle", "withWeapon": ["combat_rifle"]},
+            {"replaceWeapon": ["auto_rifle", "light_handweapon"], "withWeapon": [["pistol", {"id": "light_handweapon", "count": 2}]]},
+            {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "plasma_pistol", "flamethrower_pistol", "web_pistol"]},
+            {
+              "replaceWeapon": {"id": "light_handweapon", "count": 2},
+              "withWeapon": [{"id": "energy_handweapon", "count": 2}, {"id": "energy_powerweapon", "count": 2}, {"id": "handweapon", "count": 2}]
+            }
+          ],
+          "min": 1,
+          "max": 1
+        },
+        {
+          "name": "Trooper",
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "movement": 6,
+          "weapons": ["auto_rifle", "light_handweapon"],
+          "options": [{"addRule": "field_radio", "modelLimit": 1}, {"replaceModel": "weapon_team", "modelLimit": 1}],
+          "min": 9,
+          "max": 19
+        }
+      ]
+    },
+    "cult_militia_heavy_squad": {
+      "name": "Cult Militia Weapons Squad",
+      "description": "A squad of heavy weapons teams loaded out to deal with a variety of targets.",
+      "category": "elite",
+      "models": [
+        {
+          "name": "Cult Militia Weapon Team",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "wounds": 2,
+          "weapons": [{"id": "heavy_machinegun"}, "light_handweapon"],
+          "options": [{"replaceWeapon": {"id": "heavy_machinegun"}, "withWeapon": [{"id": "missile_launcher"}, {"id": "autocannon"}, {"id": "laser_cannon"}, {"id": "mortar"}]}],
+          "min": 3,
+          "max": 6
+        }
+      ]
+    },
+    "neophytes": {
+      "name": "Neophytes",
+      "description": "A group of miners and other manual laborers who have revolted and turned to the cult.",
+      "category": "core",
+      "models": [
+        {
+          "name": "Neophyte Sergeant",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 5,
+          "reflexes": 5,
+          "weapons": ["auto_rifle", "light_handweapon"],
+          "options": [
+            {"replaceWeapon": ["auto_rifle", "light_handweapon"], "withWeapon": [["pistol", {"id": "light_handweapon", "count": 2}]]},
+            {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "plasma_pistol", "flamethrower_pistol", "web_pistol"]},
+            {
+              "replaceWeapon": {"id": "light_handweapon", "count": 2},
+              "withWeapon": [{"id": "energy_handweapon", "count": 2}, {"id": "handweapon", "count": 2}, {"id": "energy_powerweapon", "count": 2}]
+            }
+          ],
+          "min": 1,
+          "max": 1
+        },
+        {"name": "Neophyte", "movement": 6, "courage": 5, "shoot": 5, "fight": 6, "defense": 5, "reflexes": 5, "weapons": ["auto_rifle", "light_handweapon"], "min": 9, "max": 19}
+      ],
+      "options": [
+        {"replaceWeapon": "auto_rifle", "withWeapon": "shotgun"},
+        {"replaceWeapon": "auto_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "web_gun"], "modelLimit": "2/10"},
+        {"replaceWeapon": "auto_rifle", "withWeapon": ["light_machinegun", "seismic_cannon", "mining_laser"], "modelLimit": "2/10"},
+        {"addRule": "banner", "modelLimit": 1}
+      ]
+    },
+    "acolytes": {
+      "name": "Acolytes",
+      "description": "A disfigured squad of humans turned to the cult.",
+      "category": "core",
+      "models": [
+        {
+          "name": "Acolyte Sergeant",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 5,
+          "weapons": [{"id": "handweapon", "count": 2}, "pistol"],
+          "options": [{"replaceWeapon": [{"id": "handweapon", "count": 2}], "withWeapon": [{"id": "bone_sword", "count": 2}]}],
+          "min": 1,
+          "max": 1
+        },
+        {"name": "Acolyte", "movement": 6, "courage": 5, "shoot": 5, "fight": 6, "defense": 6, "reflexes": 5, "weapons": [{"id": "handweapon", "count": 2}, "pistol"], "min": 4, "max": 9}
+      ],
+      "options": [
+        {"replaceWeapon": "pistol", "withWeapon": ["flamethrower_pistol"]},
+        {"replaceWeapon": ["pistol", {"id": "handweapon", "count": 2}], "withWeapon": ["demolition_charges", {"id": "rock_cutter", "count": 2}], "modelLimit": "2/5"},
+        {"addRule": "banner", "modelLimit": 1}
+      ]
+    },
+    "metamorphs": {
+      "name": "Metamorphs",
+      "description": "Half alien and half human, these hybrids are the last step before becoming fully alien.",
+      "category": "elite",
+      "models": [
+        {"name": "Metamorph", "courage": 6, "shoot": 5, "fight": 6, "defense": 7, "reflexes": 6, "movement": 6, "weapons": ["pistol", {"id": "huge_mutated_claw", "count": 3}], "min": 5, "max": 10}
+      ],
+      "options": [{"replaceWeapon": "pistol", "withWeapon": ["flamethrower_pistol"]}, {"addRule": "banner", "modelLimit": 1}]
+    },
+    "abominations": {
+      "name": "Abominations",
+      "description": "Mutated with super strength, these aliens will tear enemies to shreds.",
+      "category": "elite",
+      "keywords": ["Heavy Infantry"],
+      "models": [
+        {
+          "name": "Abomination",
+          "courage": 6,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 7,
+          "reflexes": 5,
+          "movement": 6,
+          "wounds": 2,
+          "rules": [{"id": "resistant", "x": 1}],
+          "weapons": [{"id": "energy_handweapon", "count": 3}],
+          "options": [{"replaceWeapon": {"id": "energy_handweapon", "count": 3}, "withWeapon": [{"id": "energy_powerweapon", "count": 2}]}],
+          "min": 5,
+          "max": 10
+        }
+      ]
+    },
+    "neophyte_outriders": {
+      "name": "Neophyte Outriders",
+      "description": "Cultists using drit bikes and quads to overwhelm their foes with sheer speed.",
+      "category": "elite",
+      "keywords": ["Mounted"],
+      "models": [
+        {
+          "name": "Neophyte Outrider Sergeant",
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 7,
+          "reflexes": 5,
+          "movement": 8,
+          "weapons": ["auto_rifle", "light_handweapon"],
+          "options": [
+            {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "plasma_pistol", "flamethrower_pistol", "web_pistol"]},
+            {
+              "replaceWeapon": {"id": "light_handweapon", "count": 2},
+              "withWeapon": [{"id": "energy_handweapon", "count": 2}, {"id": "energy_handweapon", "count": 2}, {"id": "handweapon", "count": 2}, {"id": "energy_powerweapon", "count": 2}]
+            }
+          ],
+          "min": 1,
+          "max": 1
+        },
+        {"name": "Neophyte Outrider", "movement": 8, "courage": 5, "shoot": 5, "fight": 5, "defense": 7, "reflexes": 5, "weapons": ["auto_rifle", "light_handweapon"], "min": 2, "max": 8}
+      ],
+      "options": [
+        {"replaceWeapon": "auto_rifle", "withWeapon": ["shotgun"]},
+        {"replaceWeapon": ["auto_rifle", "light_handweapon"], "withWeapon": [["pistol", {"id": "light_handweapon", "count": 2}]]},
+        {"replaceWeapon": "auto_rifle", "withWeapon": ["grenade_launcher"], "modelLimit": "1/3"},
+        {"replaceWeapon": "auto_rifle", "withWeapon": ["light_machinegun", "mining_laser", "flamethrower", "seismic_cannon"], "modelLimit": "1/3"}
+      ]
+    },
+    "battle_tank": {
+      "name": "Battle Tank",
+      "description": "A main line battle tank stolen from the planetary defense force.",
+      "category": "rare",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Battle Tank",
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 12,
+          "movement": 10,
+          "reflexes": 5,
+          "wounds": 5,
+          "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear"],
+          "weapons": ["heavy_plasma_cannon", {"id": "heavy_flamethrower"}],
+          "options": [
+            {
+              "replaceWeapon": "heavy_plasma_cannon",
+              "withWeapon": [
+                "nova_cannon",
+                "siege_cannon",
+                "twin_autocannon",
+                "tank_hunter_cannon",
+                "battle_cannon",
+                "gatling_cannon",
+                "heavy_fusion_cannon",
+                "twin_laser_cannon",
+                "twin_thermal_lance"
+              ]
+            },
+            {
+              "replaceWeapon": {"id": "heavy_flamethrower"},
+              "withWeapon": [{"id": "heavy_machinegun"}, {"id": "laser_cannon"}, {"id": "gatling_gun"}, {"id": "siege_cannon"}, {"id": "plasma_cannon"}, {"id": "fusion_cannon"}]
+            },
+            {
+              "addWeapon": [
+                [{"id": "heavy_machinegun", "count": 2}],
+                [{"id": "fusion_cannon", "count": 2}],
+                [{"id": "heavy_flamethrower", "count": 2}],
+                [{"id": "plasma_cannon", "count": 2}],
+                [{"id": "laser_cannon", "count": 2}]
+              ],
+              "limit": 1
+            },
+            {"addWeapon": ["light_machinegun", "twin_combat_rifle"], "limit": 1},
+            {"addWeapon": ["hunter_missiles"]},
+            {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio"]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "heavy_battle_tank": {
+      "name": "Cult Heavy Battle Tank",
+      "description": "A larger battle tank with more powerful weapon options stolen from the planetary defense force.",
+      "category": "rare",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Cult Heavy Battle Tank",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 13,
+          "reflexes": 5,
+          "wounds": 6,
+          "weapons": ["battle_cannon", {"id": "heavy_flamethrower"}],
+          "options": [
+            {"replaceWeapon": "battle_cannon", "withWeapon": ["heavy_fusion_cannon", "heavy_plasma_cannon", "siege_cannon", "autocannon", "flamestorm_cannon", "tank_hunter_cannon", "gatling_cannon"]},
+            {"addWeapon": ["battle_cannon", "heavy_fusion_cannon", "heavy_plasma_cannon", "siege_cannon", "autocannon", "flamestorm_cannon", "tank_hunter_cannon", "gatling_cannon"], "limit": 1},
+            {
+              "replaceWeapon": {"id": "heavy_flamethrower"},
+              "withWeapon": [{"id": "heavy_machinegun"}, {"id": "laser_cannon"}, {"id": "gatling_gun"}, {"id": "siege_cannon"}, {"id": "plasma_cannon"}, {"id": "fusion_cannon"}]
+            },
+            {
+              "addWeapon": [
+                [{"id": "heavy_machinegun", "count": 2}],
+                [{"id": "fusion_cannon", "count": 2}],
+                [{"id": "heavy_flamethrower", "count": 2}],
+                [{"id": "plasma_cannon", "count": 2}],
+                [{"id": "laser_cannon", "count": 2}]
+              ],
+              "limit": 1
+            },
+            {"addWeapon": [{"id": "fusion_rifle", "count": 2}, {"id": "light_machinegun", "count": 2}, {"id": "plasma_rifle", "count": 2}, {"id": "flamethrower", "count": 2}], "limit": 1},
+            {"addWeapon": ["light_machinegun", "twin_combat_rifle"], "limit": 1},
+            {"addWeapon": ["hunter_missiles"]},
+            {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio"]}
+          ],
+          "rules": [{"id": "impact", "x": 9}, "vulnerable_rear"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "support_vehicle": {
+      "name": "Cult Support Vehicle",
+      "description": "A support vehicle with multiple roles from artillery to anti-air.",
+      "category": "rare",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Cult Support Vehicle",
+          "movement": 10,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 10,
+          "reflexes": 5,
+          "wounds": 5,
+          "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear"],
+          "weapons": [{"id": {"id": "heavy_mortar", "count": 4}, "count": 2}, {"id": "heavy_flamethrower"}],
+          "options": [
+            {"replaceWeapon": {"id": "heavy_mortar", "count": 4}, "withWeapon": [{"id": "twin_aa_autocannon", "count": 2}, "artillery_cannon", "eagle_rockets", "death_missile"]},
+            {"replaceWeapon": [{"id": "heavy_flamethrower"}], "withWeapon": [{"id": "laser_cannon"}, {"id": "heavy_machinegun"}, {"id": "plasma_cannon"}, {"id": "fusion_cannon"}]},
+            {"addWeapon": ["light_machinegun", "twin_combat_rifle"], "limit": 1},
+            {"addRule": [{"id": "dozer", "name": "Dozer Blade"}]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "light_apc": {
+      "name": "Cult APC",
+      "description": "A light transport of the planetary defense force.",
+      "category": "transport",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Cult APC",
+          "movement": 10,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 11,
+          "reflexes": 5,
+          "wounds": 3,
+          "rules": [{"id": "impact", "x": 5}, {"id": "transport", "x": 12}, "vulnerable_side_rear"],
+          "weapons": ["heavy_flamethrower", {"id": "heavy_flamethrower"}],
+          "options": [
+            {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["laser_cannon", "heavy_machinegun", "laser_machinegun"]},
+            {"replaceWeapon": [{"id": "heavy_flamethrower"}], "withWeapon": [{"id": "laser_cannon"}, {"id": "heavy_machinegun"}, {"id": "plasma_cannon"}, {"id": "fusion_cannon"}]},
+            {"addWeapon": [[{"id": "auto_rifle", "count": 3}, {"id": "auto_rifle", "count": 3}]]},
+            {"addWeapon": ["light_machinegun", "twin_combat_rifle"], "limit": 1},
+            {"addWeapon": ["hunter_missiles"]},
+            {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio"]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "light_gunship": {
+      "name": "Cult Light Transport Gunship",
+      "description": "A light gunship with sliding doors for troop transport stolen from the planetary defense force.",
+      "category": "transport",
+      "keywords": ["Aircraft", "Vehicle"],
+      "models": [
+        {
+          "name": "Cult Light Transport Gunship",
+          "movement": 10,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 11,
+          "reflexes": 5,
+          "wounds": 5,
+          "rules": ["aircraft", "hover_mode", {"id": "transport", "x": 12}],
+          "weapons": [{"id": "light_machinegun"}],
+          "options": [
+            {"replaceWeapon": [{"id": "light_machinegun"}], "withWeapon": [{"id": "laser_cannon"}, {"id": "fusion_rifle"}, {"id": "plasma_rifle"}, {"id": "laser_machinegun"}]},
+            {"addWeapon": [{"id": "light_machinegun"}, {"id": "laser_cannon"}, {"id": "fusion_rifle"}, {"id": "plasma_rifle"}, {"id": "laser_machinegun"}], "limit": 1},
+            {
+              "addWeapon": [
+                [{"id": "heavy_machinegun"}, {"id": "heavy_machinegun"}],
+                [{"id": "plasma_rifle"}, {"id": "plasma_rifle"}],
+                [{"id": "fusion_rifle"}, {"id": "fusion_rifle"}],
+                [{"id": "laser_machinegun"}, {"id": "laser_machinegun"}],
+                [{"id": "laser_cannon"}, {"id": "laser_cannon"}]
+              ],
+              "limit": 1
+            },
+            {"addWeapon": [{"id": "strike_missiles"}, {"id": "rocket_pod", "count": 2}]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "heavy_gunship": {
+      "name": "Cult Heavy Gunship",
+      "description": "A heavy gunship with a variety of weapon options stolen from the planetary defense force.",
+      "category": "rare",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Cult Heavy Gunship",
+          "movement": 10,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 11,
+          "reflexes": 5,
+          "wounds": 6,
+          "rules": ["aircraft", "hover_mode"],
+          "weapons": [{"id": "heavy_machinegun"}, {"id": "strike_missiles"}],
+          "options": [
+            {"replaceWeapon": [{"id": "heavy_machinegun"}], "withWeapon": [{"id": "twin_laser_cannon"}, {"id": "fusion_cannon"}, {"id": "plasma_cannon"}, {"id": "laser_machinegun"}]},
+            {
+              "replaceWeapon": {"id": "strike_missiles"},
+              "withWeapon": [
+                {"id": "rocket_pod", "count": 2},
+                {"id": "twin_laser_cannon", "count": 2},
+                {"id": "gatling_gun", "count": 2},
+                {"id": "fusion_cannon", "count": 2},
+                {"id": "plasma_cannon", "count": 2}
+              ]
+            },
+            {
+              "addWeapon": [
+                [{"id": "heavy_machinegun"}, {"id": "heavy_machinegun"}],
+                [{"id": "plasma_rifle"}, {"id": "plasma_rifle"}],
+                [{"id": "fusion_rifle"}, {"id": "fusion_rifle"}],
+                [{"id": "laser_machinegun"}, {"id": "laser_machinegun"}],
+                [{"id": "laser_cannon"}, {"id": "laser_cannon"}]
+              ],
+              "limit": 1
+            }
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "light_combat_walker": {
+      "name": "Cult Light Combat Mechs",
+      "description": "Lightly equipped recon mechs.",
+      "category": "elite",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Cult Light Combat Mech",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 10,
+          "reflexes": 5,
+          "wounds": 3,
+          "rules": ["scout", "vulnerable_rear"],
+          "weapons": ["heavy_flamethrower", {"id": "stomp", "count": 2}],
+          "options": [
+            {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["missile_launcher", "laser_cannon", "autocannon", "plasma_cannon", "fusion_cannon", "heavy_machinegun", "laser_machinegun"]},
+            {"addWeapon": ["walker_chainsaw", "hunter_missiles"]},
+            {"modelLimit": "all", "replaceRule": ["scout"], "withRule": ["light_armor"]}
+          ],
+          "min": 1,
+          "max": 3
+        }
+      ]
+    },
+    "scout_buggy": {
+      "name": "Scout Buggy",
+      "description": "A repurposed civilian or mining vehicle turned into a cult ambush wagon.",
+      "category": "elite",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Scout Buggy",
+          "movement": 12,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 4,
+          "defense": 10,
+          "reflexes": 6,
+          "wounds": 4,
+          "rules": [{"id": "impact", "x": 3}, "marking_flares", "scout", "vulnerable_side_rear"],
+          "weapons": [{"id": "light_machinegun", "count": 2}, {"id": "heavy_mining_laser"}],
+          "options": [{"replaceWeapon": {"id": "heavy_mining_laser"}, "withWeapon": [{"id": "heavy_mortar"}, {"id": "missile_launcher"}]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "light_truck": {
+      "name": "Cult Truck",
+      "description": "A repurposed civilian or mining vehicle turned into an improvised transport vehicle.",
+      "category": "transport",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Cult Truck",
+          "movement": 10,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 10,
+          "reflexes": 5,
+          "wounds": 5,
+          "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, {"id": "open_topped", "x": 12}, "vulnerable_side_rear"],
+          "weapons": ["heavy_mining_laser"],
+          "options": [
+            {"replaceWeapon": "heavy_mining_laser", "withWeapon": ["twin_autocannon", "heavy_seismic_cannon", "twin_heavy_flamethrower"]},
+            {"addWeapon": ["light_machinegun", "demolition_charges"]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "mining_truck": {
+      "name": "Cult Mining Vehicle",
+      "description": "A repurposed heavy mining vehicle turned into a improvised gun platform.",
+      "category": "rare",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Cult Mining Vehicle",
+          "movement": 10,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 11,
+          "reflexes": 5,
+          "wounds": 5,
+          "rules": ["dozer", {"id": "heavy_impact", "x": 3}, {"id": "transport", "x": 6}, "vulnerable_side_rear"],
+          "weapons": ["heavy_mining_laser", "light_machinegun"],
+          "options": [{"replaceWeapon": "heavy_mining_laser", "withWeapon": ["twin_autocannon", "heavy_seismic_cannon", "twin_heavy_flamethrower"]}, {"addWeapon": ["demolition_charges"]}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  },
+  "models": {
+    "weapon_team": {
+      "name": "Cult Militia Weapon Team",
+      "courage": 5,
+      "shoot": 5,
+      "fight": 5,
+      "defense": 5,
+      "reflexes": 5,
+      "movement": 6,
+      "wounds": 2,
+      "weapons": [{"id": "heavy_machinegun"}, "light_handweapon"],
+      "options": [{"replaceWeapon": {"id": "heavy_machinegun"}, "withWeapon": [{"id": "missile_launcher"}, {"id": "autocannon"}, {"id": "laser_cannon"}, {"id": "mortar"}]}],
+      "min": 0,
+      "max": 1
+    }
+  },
+  "weapons": {
+    "large_razor_talons": {"name": "Large Razor Talons", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["rending"]},
+    "needle_pistol": {"name": "Needle Pistol", "attacks": 1, "short": 6, "ap": 1, "rules": ["pistol", "poison"]},
+    "demolition_charges": {"name": "Demolition Charges", "attacks": 1, "short": 6, "ap": 6, "rules": [{"id": "blast", "x": 2}]},
+    "lashing_whip": {"name": "Lashing Whip", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["poison"]},
+    "toxic_claw": {"name": "Toxic Claw", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["poison"]},
+    "rock_cutter": {"name": "Rock Cutter", "attacks": 1, "short": "Melee", "ap": 4, "rules": ["cumbersome", "rending"]},
+    "web_gun": {"name": "Web Carbine", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", {"id": "shocking", "x": 2}]},
+    "web_pistol": {"name": "Web Pistol", "attacks": 1, "short": 6, "ap": 1, "rules": ["pistol", {"id": "shocking", "x": 2}]},
+    "acidic_jaws": {"name": "Acidic Jaws", "attacks": 1, "short": "Melee", "ap": 2},
+    "meat_hooks": {"name": "Meat Hooks", "attacks": 2, "short": 6, "ap": 1, "rules": ["assault"]},
+    "bone_sword": {"name": "Bone Sword", "attacks": 1, "short": "Melee", "ap": 2},
+    "legend_sacrificial_dagger": {"name": "Sacrificial Dagger", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["sacrifice"]}
+  },
+  "rules": {
+    "cult_speaker": {"name": "Cult Speaker", "description": "This model's unit gains +1 Courage.", "points": 10},
+    "chosen_abomination": {"name": "Chosen Abomination", "description": "Once per round, a friendly _Heavy Infantry_ unit within 6\" may gain +1 AP on all Melee weapons.", "points": 10},
+    "cult_icon": {"name": "Cult Icon", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Save when targeted by a Shooting or Fighting attack.", "points": 10},
+    "legend_mind_link": {"name": "Mind Link", "description": "Increase the range of all abilities which target friendly units by 6\".", "points": 10},
+    "legend_supernatural_speed": {"name": "Supernatural Speed", "description": "Increase this model's Movement by 2\".", "points": 10},
+    "sacrifice": {
+      "name": "Sacrifice",
+      "description": "When this model activates, you may choose to remove a model from a friendly unit within 3\". If you do, restore one Wound(x) to this model.",
+      "points": 10
+    },
+    "companion": {"name": "Alien Companion", "description": "Once per turn when a power within 24“ of this model gets dispelled, deal 1 hit with AP(2) to the caster.", "points": 5}
+  },
+  "relics": {
+    "sacrificial_dagger": {
+      "name": "The Sacrificial Dagger",
+      "weapon": "legend_sacrificial_dagger",
+      "description": "Replace one Leader or Support model's CCW(x) with the Sacrificial Dagger(x).",
+      "flavor": "This dagger is known to possess the ability to restore life if offered a sacrifice.",
+      "points": 10
+    },
+    "supernatural_speed": {
+      "name": "Supernatural Speed",
+      "rule": "legend_supernatural_speed",
+      "description": "Upgrade one _Leader_ or _Support_ model with Supernatural Speed.",
+      "flavor": "This model has an inherent supernatural speed.",
+      "points": 10
+    },
+    "mind_link": {
+      "name": "Mind Link",
+      "rule": "legend_mind_link",
+      "description": "Upgrade one _Leader_ or _Support_ model with Mind Link.",
+      "flavor": "This model has an unnatural connection to those it commands.",
+      "points": 20
+    }
+  },
+  "strategies": [
+    {
+      "name": "Ambush",
+      "phase": "pre_game",
+      "description": "Up to half of any force's units, one point for each may be placed in _Ambush Reserves_ instead of deployed on the field.",
+      "flavor": "Alien Cults typically lie in wait for the best moment to strike from surprise.",
+      "cost": "1/per"
+    },
+    {
+      "name": "Swarm Reflexes",
+      "phase": "activation",
+      "description": "Use when taking an Initiative test for a reaction. That unit is treated as having +2 Initiative for that test.",
+      "flavor": "Mutated by the alien swarm, these cultists gain super-human reflexes.",
+      "cost": 1
+    },
+    {
+      "name": "Marked for Death",
+      "phase": "activation",
+      "description": "An enemy unit visible to a friendly _Infantry_ unit it gains 1 spotting marker. When a friendly unit shoots at that target they may spend spotting markers to gain the following for that attack:\n * One Marker: Re-roll Accuracy rolls of 9+ \n * Two Markers: +1 Accuracy \n\n\n These effects are cumulative and may be activated multiple times. At the end of the round, remove all spotting markers.",
+      "flavor": "When the cult emerges from the shadows, they will cover their enemies in a crossfire of bullets.",
+      "cost": 1
+    }
+  ],
+  "powers": {
+    "vitality": {
+      "name": "Unnatural Vitality",
+      "description": "Until the end of the activation phase, whenever target friendly unit within 18\" takes a hit, roll a D10. On a result of 3 or less ignore that hit.",
+      "charge": 7
+    },
+    "horror": {"name": "Horrific Visions", "description": "Target enemy unit within 24\" suffers -1 Accuracy, -1 Strength, and -1 Courage until the end of the activation phase.", "charge": 6},
+    "mind_control": {"name": "Mind Control", "description": "Target enemy unit within 12\" makes a Fight action against itself.", "charge": 5}
+  },
+  "buyLinks": [{"name": "Games Workshop", "link": "https://www.games-workshop.com/en-US/Warhammer-40-000?N=2562756967+4251244224"}]
+}

@@ -1,0 +1,394 @@
+{
+  "name": "Spectral Legions",
+  "id": "spectral_legions",
+  "author": "guitarninja",
+  "color": "#4C838A",
+  "lore": "On the planet of Eldoria, an ancient and mystical civilization once thrived. The land was blessed with abundant magic, and its people lived in harmony with the natural world. However, their prosperity bred arrogance and complacency among the ruling elite. The powerful Council of Elders grew corrupt and sought to dominate not only their own people but neighboring planets as well.\n\nAs their tyranny spread, a group of brave and righteous warriors, known as the planet, rose to challenge the Council's oppressive rule. These valiant defenders were skilled in both martial combat and the arts of magic, and they were beloved by the common folk for their selflessness and compassion.\n\nThe Council of Elders, threatened by the Storm Wardens' growing influence, devised a sinister plan to eliminate them. They employed dark sorcery to summon malevolent spirits from the Veil of Eternity – a planet between life and death. These spirits were those who had died with deep resentments, unresolved hatred, and an unyielding desire for vengeance.\n\nIn the dark rituals conducted by the Council, they bound these malevolent spirits to serve as their spectral army. Thus, the Spectral Legions were born – an army of tormented souls who refused to pass on to the afterlife, their identities long lost, replaced by a shared hunger for vengeance against the Storm Wardens.\n\nThe Spectral Legions emerged from the shadows as a haunting force, their ethereal forms wrapped in tattered shrouds of darkness. With sinister glows in their eyes and ghostly wails echoing through the night, they became feared throughout Eldoria.\n\nTheir primary objective was to eradicate the Storm Wardens and anyone who dared to stand against the Council of Elders. Guided by the malevolent sorcerers, the Spectral Legions unleashed terror and chaos, leaving destruction in their wake. They could phase through walls and fade from sight, making them elusive and formidable foes.\n\nAs the conflict intensified, the Spectral Legions began to take on new attributes from their dark enchantments. They became more malevolent, seeking not only vengeance against the Storm Wardens but also the subjugation of the entire planet. With each victory, their malevolence grew stronger, feeding on the fear and despair of those they terrorized.\n\nThe once-beautiful planet of Eldoria was now consumed by darkness, with the Spectral Legions serving as the harbingers of the Council's malevolent reign. The Storm Wardens were pushed to the brink of defeat, fighting valiantly to protect what remained of their homeland.\n\nIn the darkest hour, a prophecy emerged, foretelling the coming of a hero who would possess the power to break the dark enchantments and release the Spectral Legions from their torment. The Storm Wardens and the resistance fighters sought out this savior, hoping for a chance to end the tyranny and restore peace to Eldoria.\n\nThe fate of Eldoria hung in the balance as the Spectral Legions clashed with the Storm Wardens and the hero destined to challenge their dark purpose. The epic struggle between light and shadow would determine the future of the planet, as the Spectral Legions fought with relentless fury, haunted by the very darkness that bound them to their malevolent existence.",
+  "units": {
+    "shrouded_noble": {
+      "name": "Shrouded Noble",
+      "description": "Once a minor noble of the planet, now nothing more than a spiteful revenant seeking to drain the life from the living.",
+      "category": "hero",
+      "models": [
+        {
+          "name": "Shrouded Noble",
+          "movement": 6,
+          "courage": 7,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 6,
+          "rules": ["leader", {"id": "wounds", "x": 3}],
+          "weapons": [{"id": "great_weapon", "count": 3}],
+          "options": [
+            {
+              "replaceWeapon": [{"id": "great_weapon", "count": 3}],
+              "withWeapon": [{"id": "great_weapon", "count": 4}, {"id": "great_axe", "count": 3}, {"id": "heavy_polearm", "count": 3}, {"id": "heavy_flail", "count": 3}]
+            },
+            {"addRule": ["shield", {"id": "inspiring", "x": "Infantry"}, {"id": "power", "x": 1}]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "shrouded_noble_on_horse": {
+      "name": "Shrouded Noble on Ghost Horse",
+      "description": "Once a minor noble of the planet, now nothing more than a spiteful revenant mounted on a cursed spirit-mare.",
+      "category": "hero",
+      "keywords": ["Mounted"],
+      "models": [
+        {
+          "name": "Shrouded Noble on Ghost Horse",
+          "movement": 8,
+          "courage": 7,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 7,
+          "reflexes": 6,
+          "rules": [{"id": "leader", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 3}],
+          "weapons": [{"id": "great_weapon", "count": 3}],
+          "options": [
+            {
+              "replaceWeapon": [{"id": "great_weapon", "count": 3}],
+              "withWeapon": [{"id": "great_weapon", "count": 4}, {"id": "great_axe", "count": 3}, {"id": "heavy_lance", "count": 3}, {"id": "heavy_flail", "count": 3}]
+            },
+            {"addRule": ["shield", {"id": "inspiring", "x": "Infantry, Cavalry"}, {"id": "power", "x": 1}, {"name": "Wings", "id": "fly"}]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "shrouded_noble_on_chariot": {
+      "name": "Shrouded Noble on Ghostly Chariot",
+      "description": "Once a minor noble of the planet, now nothing more than a spiteful revenant mounted on a ghastly chariot.",
+      "category": "hero",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Shrouded Noble on Ghostly Chariot",
+          "movement": 10,
+          "courage": 7,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 10,
+          "reflexes": 6,
+          "rules": [{"id": "wounds", "x": 3}, {"id": "impact", "x": 3}, {"id": "leader", "x": "Infantry, Cavalry"}],
+          "weapons": [{"id": "great_weapon", "count": 3}],
+          "options": [
+            {
+              "replaceWeapon": [{"id": "great_weapon", "count": 3}],
+              "withWeapon": [{"id": "great_weapon", "count": 4}, {"id": "great_axe", "count": 3}, {"id": "heavy_lance", "count": 3}, {"id": "heavy_flail", "count": 3}]
+            },
+            {"addRule": [{"id": "inspiring", "x": "Infantry, Cavalry"}, {"id": "power", "x": 1}]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "shrouded_king": {
+      "name": "Shrouded King",
+      "description": "Once a hero of the planet, now nothing more than a spiteful revenant seeking to drain the life from the living.",
+      "category": "hero",
+      "models": [
+        {
+          "name": "Shrouded King",
+          "movement": 6,
+          "courage": 7,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 7,
+          "reflexes": 6,
+          "rules": ["leader", {"id": "tactician", "x": 1}, {"id": "wounds", "x": 3}],
+          "weapons": [{"id": "great_weapon", "count": 4}],
+          "options": [
+            {
+              "replaceWeapon": [{"id": "great_weapon", "count": 4}],
+              "withWeapon": [{"id": "great_weapon", "count": 5}, {"id": "great_axe", "count": 4}, {"id": "heavy_polearm", "count": 4}, {"id": "heavy_flail", "count": 4}]
+            },
+            {"addRule": ["shield", {"id": "inspiring", "x": "Infantry"}, {"id": "power", "x": 1}]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "shrouded_king_on_ghost_horse": {
+      "name": "Shrouded King on Ghost Horse",
+      "description": "Once a hero of the planet, now nothing more than a spiteful revenant mounted on a cursed spirit-mare.",
+      "category": "hero",
+      "keywords": ["Mounted"],
+      "models": [
+        {
+          "name": "Shrouded King on Ghost Horse",
+          "movement": 8,
+          "courage": 7,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 8,
+          "reflexes": 6,
+          "rules": [{"id": "warrior", "x": 1}, {"id": "leader", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 3}],
+          "weapons": [{"id": "great_weapon", "count": 4}],
+          "options": [
+            {
+              "replaceWeapon": [{"id": "great_weapon", "count": 4}],
+              "withWeapon": [{"id": "great_weapon", "count": 5}, {"id": "great_axe", "count": 4}, {"id": "heavy_lance", "count": 4}, {"id": "heavy_flail", "count": 4}]
+            },
+            {"addRule": ["shield", {"id": "inspiring", "x": "Infantry, Cavalry"}, {"id": "power", "x": 1}, {"name": "Wings", "id": "fly"}]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "shrouded_king_on_chariot": {
+      "name": "Shrouded King on Ghostly Chariot",
+      "description": "Once a hero of the planet, now nothing more than a spiteful revenant mounted on a ghastly chariot.",
+      "category": "hero",
+      "keywords": ["Mounted"],
+      "models": [
+        {
+          "name": "Shrouded King on Ghostly Chariot",
+          "movement": 10,
+          "courage": 7,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 10,
+          "reflexes": 6,
+          "rules": [{"id": "wounds", "x": 3}, {"id": "warrior", "x": 1}, {"id": "leader", "x": "Infantry, Cavalry"}, {"id": "impact", "x": 3}],
+          "weapons": [{"id": "great_weapon", "count": 4}],
+          "options": [
+            {
+              "replaceWeapon": [{"id": "great_weapon", "count": 4}],
+              "withWeapon": [{"id": "great_weapon", "count": 5}, {"id": "great_axe", "count": 4}, {"id": "heavy_lance", "count": 4}, {"id": "heavy_flail", "count": 4}]
+            },
+            {"addRule": ["shield", {"id": "inspiring", "x": "Infantry, Cavalry"}, {"id": "power", "x": 1}]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "soul_guardian": {
+      "name": "Soul Guardian",
+      "description": "A powerful sorcerer commanding the spirits to do his bidding.",
+      "category": "hero",
+      "models": [
+        {
+          "name": "Soul Guardian",
+          "movement": 6,
+          "courage": 7,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 6,
+          "rules": ["leader", {"id": "power", "x": 1}, "striker", {"id": "wounds", "x": 3}],
+          "weapons": ["heavy_handweapon", "staff"],
+          "options": [
+            {"replaceWeapon": ["heavy_handweapon", "staff"], "withWeapon": [{"id": "great_staff", "count": 2}]},
+            {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "banshee_queen": {
+      "name": "Banshee Queen",
+      "description": "A deadly queen of the underworld. Her very presence makes mortals freeze in fear.",
+      "category": "hero",
+      "models": [
+        {
+          "name": "Banshee Queen",
+          "movement": 6,
+          "courage": 6,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 7,
+          "reflexes": 5,
+          "rules": ["fear", "leader", {"id": "wounds", "x": 3}],
+          "weapons": [{"id": "great_weapon", "count": 3}, "banshee_wail"],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "ghosts": {
+      "name": "Ghostly Warriors",
+      "description": "Foul spirits amassed into terrifying formations, slaying their foes with rusted weapons.",
+      "category": "core",
+      "models": [{"name": "Warrior", "movement": 6, "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": ["handweapon"], "min": 10, "max": 20}],
+      "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+    },
+    "ghost_marksmen": {
+      "name": "Ghostly Marksmen",
+      "description": "Spirits with accursed crossbows, shooting their foe with eerie accuracy.",
+      "category": "core",
+      "models": [
+        {"name": "Marksman", "movement": 6, "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 6, "rules": ["crack_shot"], "weapons": ["handweapon", "crossbow"], "min": 5, "max": 10}
+      ],
+      "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+    },
+    "stalkers": {
+      "name": "Glaive Stalkers",
+      "description": "Stalking spirits with glaives.",
+      "category": "core",
+      "models": [{"name": "Glaive Stalkers", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "polearm", "count": 2}], "min": 5, "max": 10}],
+      "keywords": ["Undead", "Infantry"],
+      "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+    },
+    "reapers": {
+      "name": "Ghastly Reapers",
+      "description": "Spirits with large scythes, hunting the living.",
+      "category": "elite",
+      "models": [{"name": "Reaper", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 7, "reflexes": 5, "weapons": [{"id": "rending_heavy_polearm", "count": 2}], "min": 5, "max": 10}],
+      "keywords": ["Undead", "Infantry"],
+      "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+    },
+    "revenants": {
+      "name": "Cursed Revenants",
+      "description": "These are the spirits of those that met a vicious end, forever cursed to be in endless pain.",
+      "category": "elite",
+      "models": [{"name": "Revenant", "movement": 6, "courage": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 5, "weapons": [{"id": "great_weapon", "count": 2}], "min": 5, "max": 10}],
+      "keywords": ["Undead", "Infantry"]
+    },
+    "spirits": {
+      "name": "Spirit Swarms",
+      "description": "A multitude of spirits merged into single entities, resulting in a swarm of angry ghosts.",
+      "category": "core",
+      "keywords": ["Infantry", "Swarm"],
+      "models": [
+        {
+          "name": "Spirit Swarm",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 5,
+          "reflexes": 5,
+          "rules": [{"id": "wounds", "x": 3}],
+          "weapons": [{"id": "claws", "count": 5}],
+          "min": 2,
+          "max": 4
+        }
+      ]
+    },
+    "ghost_knights": {
+      "name": "Ghostly Knights",
+      "description": "Spirits of ancient knights, reaping the living with their massive scythes.",
+      "category": "elite",
+      "keywords": ["Mounted"],
+      "rules": [{"id": "wounds", "x": 2}],
+      "models": [
+        {
+          "name": "Knight",
+          "movement": 8,
+          "courage": 6,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 8,
+          "reflexes": 5,
+          "weapons": [{"id": "great_scythe", "count": 2}],
+          "options": [{"addRule": [{"name": "Wings", "id": "fly"}], "modelLimit": "all"}],
+          "min": 3,
+          "max": 12
+        }
+      ],
+      "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+    },
+    "banshee": {
+      "name": "Banshees",
+      "description": "Heralds of imminent death, banshees are dangerous foes to face.",
+      "category": "elite",
+      "models": [
+        {
+          "name": "Banshee ",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 5,
+          "rules": ["fear", {"id": "wounds", "x": 2}],
+          "weapons": [{"id": "great_weapon", "count": 2}, "banshee_wail"],
+          "min": 3,
+          "max": 9
+        }
+      ]
+    },
+    "ghost_chariot": {
+      "name": "Ghostly Chariot",
+      "description": "A dreadful chariot pulled by ghastly horses.",
+      "category": "rare",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Ghostly Chariot",
+          "movement": 10,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 11,
+          "reflexes": 6,
+          "rules": [{"id": "wounds", "x": 4}, {"id": "impact", "x": 3}, "fear"],
+          "weapons": [{"id": "great_scythe", "count": 8}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  },
+  "weapons": {"great_scythe": {"name": "Great-scythe", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["cumbersome"]}},
+  "powers": {
+    "gravecall": {"name": "Gravecall", "description": "Target friendly unit within 12\" restores 1D3 wounds. If no wounds can be restored, restore 1d3 models instead.", "charge": 5},
+    "spectral_bindings": {"name": "Spectral Bindings", "description": "Target enemy unit within 12\" halves their Movement until the end of the turn.", "charge": 6},
+    "ethereal_form": {
+      "name": "Ethereal Form",
+      "description": "Target friendly unit within 12\" may move up to 12\" ignoring all models and terrain. This must end outside of 12\" of any enemy units.",
+      "charge": 7
+    }
+  },
+  "relics": {
+    "unnatural_senses": {
+      "name": "Unnatural Senses",
+      "rule": "guidance",
+      "description": "Upgrade one _Leader_ with Guidance.",
+      "flavor": "This leader has the ability to see even the most hidden foes.",
+      "points": 10
+    },
+    "nightmare_shroud": {"name": "Nightmare Shroud", "rule": "fear", "description": "Upgrade one _Hero_ with Fear.", "flavor": "A horrifying dark shroud of nightmares.", "points": 10},
+    "soul_caller": {
+      "name": "Soul Caller",
+      "rule": "regeneration",
+      "description": "Upgrade one _Leader_ with Regeneration.",
+      "flavor": "A powerful relic which can preserve the souls of the recently fallen.",
+      "points": 20
+    }
+  },
+  "strategies": {
+    "accursed_blades": {
+      "name": "Accursed Blades",
+      "phase": "activation",
+      "description": "Use before a unit makes a melee attack. Succesful Strength rolls of 1 or 2 gain +1 AP.",
+      "flavor": "The rusted blades of the haunted ghosts are covered in ancient curses that inflict immense pain on any target they strike.",
+      "cost": 1
+    },
+    "flicker": {
+      "name": "Flicker",
+      "phase": "activation",
+      "description": "Use when one of your units is targeted by an attack. Roll a die for each hit, on a 3 or less that hit is prevented.",
+      "flavor": "The ghastly hordes flicker between the planets, making lethal strikes fade through them with ease.",
+      "cost": 1
+    },
+    "fearless": {
+      "name": "Fearless",
+      "phase": "activation",
+      "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+      "flavor": "With no morale to break, the ghastly hordes march forward even in the face of sure death.",
+      "cost": 1
+    }
+  },
+  "buyLinks": [{"name": "Games Workshop", "link": "https://www.games-workshop.com/en-US/Warhammer-Age-of-Sigmar?N=2070689437+3382336861&Nr"}]
+}

@@ -1,0 +1,66 @@
+{
+  "name": "vortex-gate",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.8.1",
+    "@emotion/styled": "^11.8.1",
+    "@fortawesome/free-solid-svg-icons": "^6.0.0",
+    "@fortawesome/react-fontawesome": "^0.1.17",
+    "@jsdevtools/rehype-toc": "^3.0.2",
+    "@mui/icons-material": "^5.4.2",
+    "@mui/material": "^5.4.2",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.3",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^16.11.25",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "mdi-material-ui": "^7.1.0",
+    "notistack": "^2.0.3",
+    "qrious": "^4.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-markdown": "^8.0.0",
+    "react-router": "^6.2.1",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "5.0.0",
+    "react-swipeable-views": "^0.14.0",
+    "react-to-print": "^2.14.4",
+    "styled-components": "^5.3.3",
+    "typescript": "^4.5.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "setup": "npm install",
+    "start": "cross-env BROWSER=none react-scripts start",
+    "build": "react-scripts build",
+    "build-pages": "react-scripts build && mkdir docs && mv build docs",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

@@ -1,0 +1,1682 @@
+import {
+  Delete,
+  ExpandLess,
+  ExpandMore,
+  Visibility,
+} from "@mui/icons-material";
+import {
+  Alert,
+  Avatar,
+  Button,
+  Checkbox,
+  Chip,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Divider,
+  FormControl,
+  FormControlLabel,
+  FormGroup,
+  IconButton,
+  InputLabel,
+  LinearProgress,
+  ListItem,
+  ListItemAvatar,
+  ListItemButton,
+  ListItemText,
+  ListSubheader,
+  MenuItem,
+  Paper,
+  Select,
+  Stack,
+  TextField,
+  Typography,
+} from "@mui/material";
+import Collapse from "@mui/material/Collapse";
+import useTheme from "@mui/material/styles/useTheme";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { Box } from "@mui/system";
+import { InputNumber } from "components/bootstrap";
+import { Dropdown } from "components/dropdown";
+import { PowerCard } from "components/roster/power-card";
+import { RelicCard } from "components/roster/relic-card";
+import { StrategyCard } from "components/roster/strategy-card";
+import { UnitCard } from "components/roster/unit-card";
+import {
+  find,
+  get,
+  groupBy,
+  isEqual,
+  sortBy,
+  sum,
+  toNumber,
+  uniq,
+  uniqBy,
+} from "lodash";
+import React, { useState } from "react";
+import ReactMarkdown from "react-markdown";
+import styled from "styled-components";
+import { formatLevel, LEVEL_TO_NAME } from "utils/format";
+import { MarkdownRenderer } from "utils/markdown";
+import { getRandomItem } from "utils/math";
+
+const PowerSpecialtySelector = (props) => {
+  const { data: nope, faction, onChange = () => {}, value = "none" } = props;
+  const powerCats = {
+    none: { name: "None" },
+    ...nope.getRawPowerCategories(faction),
+  };
+  const specialtyOptions = Object.keys(powerCats).map((cat, index) => {
+    return (
+      <MenuItem key={index} value={cat}>
+        {powerCats[cat]?.name}
+      </MenuItem>
+    );
+  });
+  return (
+    <FormGroup sx={{ my: 1 }}>
+      <FormControl>
+        <InputLabel id="specialty-label">Power Specialty</InputLabel>
+        <Select
+          size="small"
+          labelId="specialty-label"
+          id="specialty"
+          value={value}
+          label="Power Specialty"
+          onChange={onChange}
+        >
+          {specialtyOptions}
+        </Select>
+      </FormControl>
+    </FormGroup>
+  );
+};
+
+export const ChooseSubFaction = (props) => {
+  const { hideModal, setSubFaction, forceId, faction } = props;
+  const rawSubfactions = Object.values(faction.subfactions || []);
+  const subfactions = [
+    {
+      id: "none",
+      name: "Generalist",
+      description:
+        "A generalist force which can take on many different enemies.",
+    },
+    ...rawSubfactions,
+  ];
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  return (
+    <>
+      <Dialog
+        open
+        onClose={hideModal}
+        fullScreen={fullScreen}
+        maxWidth="lg"
+        fullWidth
+      >
+        <DialogTitle closeButton>Change Focus</DialogTitle>
+        <DialogContent
+          style={{ padding: 0 }}
+          sx={{ backgroundColor: "background.paper" }}
+        >
+          <Paper style={{ height: "100%", borderRadius: 0, overflowY: "auto" }}>
+            {subfactions.map((subfaction) => {
+              return (
+                <ListItem
+                  disablePadding
+                  // secondaryAction={
+                  //   <IconButton
+                  //     sx={{}}
+                  //     onClick={() => {
+                  //       setSubFaction(forceId, subfaction.id);
+                  //       hideModal();
+                  //     }}
+                  //   >
+                  //     <AddIcon />
+                  //   </IconButton>
+                  // }
+                >
+                  <ListItemButton
+                    onClick={() => {
+                      setSubFaction(forceId, subfaction.id);
+                      hideModal();
+                    }}
+                  >
+                    <ListItemText
+                      primary={
+                        <Typography fontWeight="bold">{`${subfaction.name}`}</Typography>
+                      }
+                      secondary={
+                        <Typography variant="body2">
+                          {subfaction.description}
+                        </Typography>
+                      }
+                    />
+                  </ListItemButton>
+                </ListItem>
+              );
+            })}
+          </Paper>
+        </DialogContent>
+        <DialogActions>
+          <Button color="secondary" onClick={hideModal}>
+            Cancel
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </>
+  );
+};
+
+export const AddLegend = (props) => {
+  const { hideModal, data, forceId, faction, addLegend } = props;
+  const legends = data.getRelics(faction);
+  const sortedLegends = sortBy(
+    legends.map((legend) => ({
+      ...legend,
+      points: data.getRelicCost(legend, faction),
+    })),
+    ["points", "name"]
+  );
+  const [previewLegend, setPreviewLegend] = React.useState(null);
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  return (
+    <>
+      {!!previewLegend && (
+        <ViewLegend
+          hideModal={() => setPreviewLegend(null)}
+          data={data}
+          faction={faction}
+          legend={previewLegend}
+        />
+      )}
+      {!previewLegend && (
+        <Dialog
+          open
+          onClose={hideModal}
+          fullScreen={fullScreen}
+          maxWidth="lg"
+          fullWidth
+        >
+          <DialogTitle>Add Legend</DialogTitle>
+          <DialogContent
+            style={{ padding: 0 }}
+            sx={{ backgroundColor: "background.paper" }}
+          >
+            <Paper
+              style={{ height: "100%", borderRadius: 0, overflowY: "auto" }}
+            >
+              {sortedLegends.map((relic) => {
+                return (
+                  <div key={relic.id}>
+                    <ListItem
+                      disablePadding
+                      secondaryAction={
+                        <IconButton
+                          sx={{}}
+                          onClick={() => {
+                            setPreviewLegend(relic);
+                          }}
+                        >
+                          <Visibility />
+                        </IconButton>
+                      }
+                    >
+                      <ListItemButton
+                        onClick={() => {
+                          addLegend(forceId, { id: relic.id });
+                          hideModal();
+                        }}
+                      >
+                        <Stack direction="row" spacing={1}>
+                          <ListItemText
+                            primary={
+                              <Typography fontWeight="bold">{`${relic.name} (${relic.points} pts)`}</Typography>
+                            }
+                            secondary={
+                              <Typography variant="body2">
+                                <ReactMarkdown
+                                  children={relic.description}
+                                  className="rule-text"
+                                />
+                              </Typography>
+                            }
+                          />
+                        </Stack>
+                      </ListItemButton>
+                    </ListItem>
+                  </div>
+                );
+              })}
+            </Paper>
+          </DialogContent>
+          <DialogActions>
+            <Button color="secondary" onClick={hideModal}>
+              Cancel
+            </Button>
+          </DialogActions>
+        </Dialog>
+      )}
+    </>
+  );
+};
+
+export const AddForce = (props) => {
+  const { data, addForce, list, hideModal, userPrefs, factionId } = props;
+  const showBeta = userPrefs.showBeta;
+  const [faction, setFaction] = useState(factionId || "");
+  const [subFaction, setSubFaction] = useState("");
+  const forces = get(list, "forces", []);
+  const factions = data
+    .getFactions()
+    .filter((game) =>
+      showBeta ? true : game.version && Number(game.version) >= 1
+    );
+  const organizations = data.getRawOrganizations();
+  const alliances = data.getRawAlliances();
+  const firstFaction = get(list, "forces[0].factionId", "");
+  const listAlliance = data.getFaction(firstFaction).alliance;
+  const unitCategories = groupBy(factions, "alliance");
+  let filteredAlliances = [...Object.keys(alliances), "mercenaries", undefined];
+  if (!listAlliance && forces.length > 0 && list.type !== "narrative") {
+    filteredAlliances = ["mercenaries", undefined];
+  } else if (listAlliance && forces.length > 0 && list.type !== "narrative") {
+    filteredAlliances = [
+      ...Object.keys(alliances).filter((alliance) => alliance === listAlliance),
+      "mercenaries",
+    ];
+  }
+  const categoryOrder = uniq(
+    filteredAlliances.filter(
+      (cat) => unitCategories[cat] && unitCategories[cat].length
+    )
+  );
+  // Subfactions
+  const rawSubfactions = Object.values(
+    data.getFaction(faction).subfactions || []
+  );
+  const hasSubfactions = !!rawSubfactions.length;
+  const subfactions = [
+    {
+      id: "none",
+      name: "Generalist",
+      description:
+        "A generalist force which can take on many different enemies.",
+    },
+    ...rawSubfactions,
+  ];
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  return (
+    <>
+      <Dialog
+        open
+        fullScreen={fullScreen}
+        fullWidth
+        onClose={hideModal}
+        maxWidth="lg"
+      >
+        {!faction && (
+          <>
+            <DialogTitle closeButton>Factions</DialogTitle>
+            <DialogContent style={{ padding: 0 }}>
+              <Paper
+                style={{ height: "100%", borderRadius: 0, overflowY: "auto" }}
+              >
+                <>
+                  {categoryOrder.map((allianceKey) => {
+                    const theFactions = sortBy(
+                      get(unitCategories, `[${allianceKey}]`, []),
+                      "name"
+                    );
+                    const filteredFactions =
+                      forces.length > 0 &&
+                      !listAlliance &&
+                      list.type !== "narrative"
+                        ? theFactions.filter(
+                            (faction) => faction.id === firstFaction
+                          )
+                        : theFactions;
+                    const allianceData = data.getAlliance(allianceKey);
+                    return (
+                      <>
+                        <ListSubheader sx={{ flex: 1, color: "inherit" }}>
+                          <Typography
+                            sx={{ py: 1 }}
+                            fontWeight="bold"
+                            variant="h5"
+                          >
+                            {allianceData.name || "Unaligned"}
+                          </Typography>
+                        </ListSubheader>
+                        {Object.keys(filteredFactions).map((orgKey) => {
+                          const org = filteredFactions[orgKey];
+                          return (
+                            <ListItem disablePadding>
+                              <ListItemButton
+                                onClick={() => {
+                                  setFaction(org.id);
+                                }}
+                              >
+                                <ListItemAvatar>
+                                  <Avatar
+                                    sx={{ p: 0 }}
+                                    variant="rounded"
+                                    size="large"
+                                    alt="Faction image"
+                                    src={org.image}
+                                  />
+                                </ListItemAvatar>
+                                <Stack direction="row" spacing={1}>
+                                  <ListItemText
+                                    primary={
+                                      <Typography fontWeight="bold">
+                                        {`${org.name}`}
+                                        <small>
+                                          {org.version
+                                            ? ` (${org.version})`
+                                            : ""}
+                                        </small>
+                                      </Typography>
+                                    }
+                                    secondary={
+                                      <Typography variant="body2">{`${
+                                        org.description || ""
+                                      }`}</Typography>
+                                    }
+                                  />
+                                </Stack>
+                              </ListItemButton>
+                            </ListItem>
+                          );
+                        })}
+                      </>
+                    );
+                  })}
+                </>
+              </Paper>
+            </DialogContent>
+            <DialogActions>
+              <Button color="secondary" onClick={hideModal}>
+                Cancel
+              </Button>
+            </DialogActions>
+          </>
+        )}
+        {!subFaction && !!faction && (
+          <>
+            <DialogTitle closeButton>Combat Doctrines</DialogTitle>
+            <DialogContent
+              style={{ padding: 0 }}
+              sx={{ backgroundColor: "background.paper" }}
+            >
+              <Paper
+                style={{ height: "100%", borderRadius: 0, overflowY: "auto" }}
+              >
+                {subfactions.map((subfaction) => {
+                  return (
+                    <ListItem
+                      disablePadding
+                      // secondaryAction={
+                      //   <IconButton
+                      //     sx={{}}
+                      //     onClick={() => {
+                      //       setSubFaction(subfaction.id);
+                      //     }}
+                      //   >
+                      //     <AddIcon />
+                      //   </IconButton>
+                      // }
+                    >
+                      <ListItemButton
+                        onClick={() => {
+                          addForce({
+                            id: "skirmish",
+                            factionId: faction,
+                            subFactionId: subfaction.id || "none",
+                          });
+                          hideModal();
+                        }}
+                      >
+                        <Stack direction="row" spacing={1}>
+                          <ListItemText
+                            primary={
+                              <Typography fontWeight="bold">
+                                {subfaction.name}
+                              </Typography>
+                            }
+                            secondary={
+                              <Typography variant="body2">
+                                {subfaction.description}
+                              </Typography>
+                            }
+                          />
+                        </Stack>
+                      </ListItemButton>
+                    </ListItem>
+                  );
+                })}
+              </Paper>
+            </DialogContent>
+            <DialogActions>
+              <Button
+                color="secondary"
+                onClick={() => {
+                  setFaction("");
+                }}
+              >
+                Back
+              </Button>
+              <Button color="secondary" onClick={hideModal}>
+                Cancel
+              </Button>
+            </DialogActions>
+          </>
+        )}
+      </Dialog>
+    </>
+  );
+};
+
+export const AddUnit = (props) => {
+  const { hideModal, data, units, faction, addUnit, forceId } = props;
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const [previewUnit, setPreviewUnit] = React.useState(null);
+  const sortedUnits = sortBy(
+    units.map((unit) => ({
+      ...unit,
+      points: data.getUnitPoints(unit, faction),
+    })),
+    ["points", "name"]
+  );
+  return (
+    <>
+      {!!previewUnit && (
+        <ViewUnit
+          unit={previewUnit}
+          faction={faction}
+          data={data}
+          showOptions={true}
+          hideModal={() => setPreviewUnit(null)}
+        />
+      )}
+      {!previewUnit && (
+        <Dialog
+          open
+          onClose={hideModal}
+          fullScreen={fullScreen}
+          maxWidth="lg"
+          fullWidth
+        >
+          <DialogTitle closeButton>Add Unit</DialogTitle>
+          <DialogContent style={{ padding: 0 }}>
+            <Paper
+              style={{ height: "100%", borderRadius: 0, overflowY: "auto" }}
+            >
+              {sortedUnits.map((unit, index) => {
+                return (
+                  <ListItem
+                    key={index}
+                    disablePadding
+                    secondaryAction={
+                      <IconButton
+                        onClick={() => {
+                          setPreviewUnit(unit);
+                        }}
+                      >
+                        <Visibility />
+                      </IconButton>
+                    }
+                  >
+                    <ListItemButton
+                      onClick={() => {
+                        addUnit(forceId, { id: unit.id });
+                        hideModal();
+                      }}
+                    >
+                      <Stack direction="row" spacing={1}>
+                        <ListItemText
+                          primary={
+                            <Typography fontWeight="bold">{`${unit.name} (${unit.points} pts)`}</Typography>
+                          }
+                          secondary={
+                            <Typography variant="body2">
+                              {unit.description}
+                            </Typography>
+                          }
+                        />
+                      </Stack>
+                    </ListItemButton>
+                  </ListItem>
+                );
+              })}
+            </Paper>
+          </DialogContent>
+          <DialogActions>
+            <Button color="secondary" onClick={hideModal}>
+              Cancel
+            </Button>
+          </DialogActions>
+        </Dialog>
+      )}
+    </>
+  );
+};
+
+export const ViewStrategies = (props) => {
+  const { hideModal, data, faction } = props;
+  const strategies = data.getStrategies(faction);
+  const phases = { ...data.getRawPhases() };
+  const unitPhases = { ...groupBy(strategies, "phase") };
+  const phaseOrder = [...Object.keys(phases), undefined].filter(
+    (cat) => unitPhases[cat] && unitPhases[cat]
+  );
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  return (
+    <>
+      <Dialog
+        open
+        onClose={hideModal}
+        maxWidth="lg"
+        fullWidth
+        fullScreen={fullScreen}
+      >
+        <DialogTitle closeButton>Tactics</DialogTitle>
+        <DialogContent sx={{ backgroundColor: "background.paper" }}>
+          {phaseOrder.map((phaseId, phaseIndex) => {
+            const phaseStrategies = get(unitPhases, `[${phaseId}]`, []).map(
+              (strat) => ({ ...strat, sourceLength: strat.source.length })
+            );
+            const sortedStrategies = sortBy(phaseStrategies, [
+              "sourceLength",
+              "source",
+              "cost",
+            ]);
+            const phaseData = data.getPhase(phaseId);
+            return (
+              <div key={phaseIndex}>
+                <Stack
+                  justifyContent="center"
+                  alignItems="center"
+                  direction="row"
+                >
+                  <Typography sx={{ my: 2, mr: 2 }} variant="h6">
+                    {phaseData.name || faction?.name}
+                  </Typography>
+                  <hr style={{ height: "1px", flex: 1 }} />
+                </Stack>
+                {sortedStrategies.map((strategy, index) => (
+                  <div key={index} className="no-break">
+                    <Box sx={{ mb: 2 }}>
+                      <StrategyCard strategy={strategy} faction={faction} />
+                    </Box>
+                  </div>
+                ))}
+              </div>
+            );
+          })}
+        </DialogContent>
+        <DialogActions>
+          <Button color="secondary" onClick={hideModal}>
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </>
+  );
+};
+
+export const ViewPowers = (props) => {
+  const { hideModal, data, faction, powerSpecialties } = props;
+  const powerCatSet = new Set(powerSpecialties);
+  const strategies = data.getPowers(faction);
+  const phases = { ...data.getRawPowerCategories(faction) };
+  const unitPhases = { ...groupBy(strategies, "category") };
+  const phaseOrder = [undefined, ...Object.keys(phases)]
+    .filter((cat) => unitPhases[cat] && unitPhases[cat])
+    .filter((cat) => powerCatSet.has(cat) || !cat);
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
+  return (
+    <Dialog
+      open
+      onClose={hideModal}
+      maxWidth="lg"
+      fullWidth
+      fullScreen={fullScreen}
+    >
+      <DialogTitle closeButton>Powers</DialogTitle>
+      <DialogContent sx={{ backgroundColor: "background.paper" }}>
+        <>
+          {!strategies.length && <p>{"No strategies found..."}</p>}
+          {phaseOrder.map((phaseId, phaseIdx) => {
+            const phaseStrategies = get(unitPhases, `[${phaseId}]`, []).map(
+              (strat) => ({ ...strat, sourceLength: strat.source.length })
+            );
+            const sortedStrategies = sortBy(phaseStrategies, [
+              "sourceLength",
+              "source",
+              "charge",
+            ]);
+            const phaseData = data.getPowerCategory(phaseId, faction);
+            return (
+              <>
+                <div key={phaseIdx}>
+                  <Stack
+                    justifyContent="center"
+                    alignItems="center"
+                    direction="row"
+                  >
+                    <Typography sx={{ my: 2, mr: 2 }} variant="h6">
+                      {phaseData.name || faction?.name}
+                    </Typography>
+                    <hr style={{ height: "1px", flex: 1 }} />
+                  </Stack>
+                </div>
+                {sortedStrategies.map((power, index) => (
+                  <div key={index} className="no-break">
+                    <Box sx={{ mb: 2 }}>
+                      <PowerCard faction={faction} power={power} />
+                    </Box>
+                  </div>
+                ))}
+              </>
+            );
+          })}
+        </>
+      </DialogContent>
+      <DialogActions>
+        <Button color="secondary" onClick={hideModal}>
+          Close
+        </Button>
+      </DialogActions>
+    </Dialog>
+  );
+};
+
+export const ViewErrors = (props) => {
+  const { hideModal, errors } = props;
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
+  return (
+    <Dialog
+      open
+      onClose={hideModal}
+      maxWidth="lg"
+      fullWidth
+      fullScreen={fullScreen}
+    >
+      <DialogTitle closeButton>Validation Errors</DialogTitle>
+      <DialogContent sx={{ backgroundColor: "background.paper" }}>
+        <>
+        {errors.map((error, idx) => (
+          <Alert
+            key={idx}
+            severity={error.type || "info"}
+            variant="filled"
+            sx={{ my: 2 }}
+          >
+            {error.text}
+          </Alert>
+        ))}
+        {!errors.length && <Typography paragraph sx={{ my: 2 }}>No validation errors found...</Typography>}
+        </>
+      </DialogContent>
+      <DialogActions>
+        <Button color="secondary" onClick={hideModal}>
+          Close
+        </Button>
+      </DialogActions>
+    </Dialog>
+  );
+};
+
+export const ViewUnit = (props) => {
+  const { hideModal, data, unit, faction, showOptions = false } = props;
+  const models = [
+    ...get(unit, "models", []),
+    ...(unit.selectedModels
+      ? data.getModelList(unit.selectedModels, faction)
+      : []),
+  ];
+  const weapons = unit.selectedWeapons
+    ? data.getWeaponList(unit.selectedWeapons, faction)
+    : undefined;
+  const rules = unit.selectedRules
+    ? data.getRulesList(unit.selectedRules, faction)
+    : undefined;
+  const allWeaponRules = data.getAllWeaponRules(weapons, faction);
+  const weaponsRules = uniqBy(allWeaponRules, (rule) => rule.id || rule);
+  const unitSetbacks = get(unit, "selectedSetbacks", []).map((setback) =>
+    data.getSetback(faction, setback)
+  );
+  const unitPerks = get(unit, "selectedPerks", []).map((perk) =>
+    data.getPerk(faction, perk)
+  );
+  const unitLevel = Math.floor((unit.experience || 0) / 5);
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const unitPowerSpecialty = unit?.powerSpecialty
+    ? data.getPowerCategory(unit?.powerSpecialty, faction)?.name
+    : undefined;
+  return (
+    <>
+      <Dialog
+        open
+        maxWidth="lg"
+        fullScreen={fullScreen}
+        onClose={hideModal}
+        fullWidth
+      >
+        <DialogTitle>View Unit</DialogTitle>
+        <DialogContent sx={{ p: 1, backgroundColor: "background.paper" }}>
+          <Box sx={{ mt: 1 }}>
+            <UnitCard
+              toggler={false}
+              points={unit.points}
+              models={models}
+              weapons={weapons}
+              faction={faction}
+              data={data}
+              unit={unit}
+              rules={rules}
+              setbacks={unitSetbacks}
+              powerSpecialty={unitPowerSpecialty}
+              perks={unitPerks}
+              level={unitLevel}
+              weaponRules={weaponsRules}
+              showOptions={showOptions}
+              embeddedOptions={true}
+              unitOptions={unit.selectedOptionsList}
+            />
+          </Box>
+        </DialogContent>
+        <DialogActions>
+          <Button color="secondary" onClick={hideModal}>
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </>
+  );
+};
+
+const injuryText = `
+# Injuries
+When this model would be killed, roll a D10 adding the amount it failed the save by plus the number of critical damage tokens it has and refer to the following:
+
+* Shaken(3+): Take one additional shock.
+* Panic(6+): Take 2 additional shock and immediately take a Courage test. If failed the unit is destroyed.
+* Destroyed(9+): It is instantly destroyed.
+* Critical(12+): The unit is destroyed and all units within 6" gain 2 Shock.
+
+Mark each time the unit rolls on the chart with a critical damage token. While a unit has one or more damage tokens, it may not remove that amount of Shock.
+`;
+
+export const ViewInjuryTable = (props) => {
+  const { hideModal } = props;
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  return (
+    <>
+      <Dialog open maxWidth="lg" fullScreen={fullScreen} onClose={hideModal}>
+        <DialogTitle closeButton>
+          <DialogTitle>Injury Chart</DialogTitle>
+        </DialogTitle>
+        <DialogContent>
+          <ReactMarkdown className="rule-text" children={injuryText} />
+        </DialogContent>
+        <DialogActions>
+          <Button color="secondary" onClick={hideModal}>
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </>
+  );
+};
+
+const actionReference = `
+# Actions
+The following actions are available to all units.
+
+### Focus
+The unit gains a focus token which can be spent when it attacks for +1 Accuracy or Strength for that attack.
+### Shoot
+The unit attacks with all equipped Ranged weapons. Units may only shoot once per round.
+### Fight
+The unit fights will all equipped melee weapons in close combat. A unit may only fight once per round. If a unit has no Melee weapons, it may not perform Fight actions.
+### Move
+All models in the unit move up to their movement characteristic.
+#### Rushing
+When performing a move action, a unit may attempt to rush. The unit takes an Initiative skill check. If passed, the unit may move an additional number of inches equal to half its movement characteristic rounded down with that Move action. If failed, the unit takes a Shock at the end of the Move and does not gain any benefit. Units may never rush across obstacles or through difficult terrain.
+### Charge
+The unit declares a target and makes a move action into base contact with it and may make a free fight action. A unit may not charge if already in close combat. A unit may only use a Charge action if it is in range of an enemy unit it can reach with its move action.
+### Hold
+The unit prepares itself and may perform a reaction later in the round. It may automatically perform an Overwatch or Counter Attack reaction without having to test. All other reactions will require the unit to test.
+### Evade
+The unit gains an Evade token which can be spent when it is targeted by an attack causing the attacker to suffer -1 Accuracy or -1 Strength for that attack.
+### Rally
+The unit attempts to regroup and prepare to fight on. Roll a Courage check for each Shock on the unit and any successes remove one Shock.
+
+# Reactions
+Reactions allow units to perform actions out of the normal activation sequence. Units may attempt a reaction to a few different possible triggers. A unit may only make a reaction if they have not yet taken any actions this round or if they are on Hold. When a unit reacts, it may perform a single action out of sequence. Once it does so, that unit may no longer perform any further actions this round and counts as activated.
+
+### Reaction Triggers
+Units may react to the following triggers:
+* A unit is targeted by a Shoot action, Fight action or Charge action
+* A unit on Hold has a unit move within range of a charge or shooting attack
+
+### Making A Reaction
+To make a Reaction, a unit declares they are attempting to react to one of the above triggers and takes an Initiative skill check. If failed, the unit takes 1 Shock and may activate later in the round. If passed, the unit may perform one action after which it counts as activating for the round.
+
+### Reaction Timing
+Reactions follow some special timing as they interrupt another unit's activation. 
+
+Timings are described as follows:
+* Move, Focus, Evade and Rally actions are performed immediately when a reaction is successful.
+* Shoot and Fight are performed simultaneously with the attacking unit.
+* Charges are performed before the attacking unit moves, after which both units Fight simultaneously if the unit being reacted to is also charging.
+`;
+const ReferenceRules = styled.div`
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0.25rem;
+  }
+  h1 {
+    font-size: 18pt;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 16pt;
+    margin-top: 0.5em;
+  }
+  h3 {
+    font-size: 14pt;
+  }
+  h4 {
+    font-weight: bold;
+    font-size: 12pt;
+  }
+  h5 {
+    font-weight: bold;
+    font-size: 12pt;
+  }
+  p {
+    margin-top: 0;
+    break-inside: "avoid-column";
+    page-break-inside: avoid; /* For Firefox. */
+    -webkit-column-break-inside: avoid; /* For Chrome & friends. */
+    break-inside: avoid; /* For standard browsers like IE. :-) */
+  }
+`;
+
+export const ViewActionReference = (props) => {
+  const { hideModal, isSkirmish } = props;
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const rules = isSkirmish ? injuryText + actionReference : actionReference;
+  return (
+    <>
+      <Dialog open maxWidth="lg" fullScreen={fullScreen} onClose={hideModal}>
+        <DialogTitle>Rules Reference</DialogTitle>
+        <DialogContent sx={{ p: 0 }}>
+          <Paper
+            sx={{ px: 3 }}
+            style={{ height: "100%", borderRadius: 0, overflowY: "auto" }}
+          >
+            <ReferenceRules>
+              <ReactMarkdown className="reference-text" children={rules} />
+            </ReferenceRules>
+          </Paper>
+        </DialogContent>
+        <DialogActions>
+          <Button color="secondary" onClick={hideModal}>
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </>
+  );
+};
+const StyledRules = styled.div`
+  h1 {
+    font-size: 20pt;
+    font-weight: bold;
+    border-bottom: 4px solid rgb(57, 110, 158);
+    padding-bottom: 0.25rem;
+  }
+  h2 {
+    font-size: 18pt;
+    border-bottom: 2px solid rgb(57, 110, 158);
+    padding-bottom: 0.25rem;
+  }
+  h3 {
+    font-size: 16pt;
+  }
+  h4 {
+    font-weight: bold;
+    font-size: 12pt;
+  }
+  h5 {
+    font-weight: bold;
+    font-size: 12pt;
+  }
+  p {
+    break-inside: "avoid-column";
+    page-break-inside: avoid; /* For Firefox. */
+    -webkit-column-break-inside: avoid; /* For Chrome & friends. */
+    break-inside: avoid; /* For standard browsers like IE. :-) */
+  }
+`;
+
+export const ViewFullRules = (props) => {
+  const { rawData, game, hideModal } = props;
+  const { gameRules, skirmishRules } = rawData;
+  const gameType = get(game, "gameType", "battle");
+  const gameTypeData = get(rawData, `gameData.gameTypes[${gameType}]`, {});
+  const gameTypeName = get(gameTypeData, "name", "Unknown Game");
+  const isSkirmish = isEqual(gameType, "battle");
+  const rules = isSkirmish ? gameRules : skirmishRules;
+  const mdRenderer = React.useMemo(() => MarkdownRenderer(), []);
+  return (
+    <>
+      <Dialog open onClose={hideModal}>
+        <DialogTitle closeButton>
+          <DialogTitle>{`${gameTypeName} Rules`}</DialogTitle>
+        </DialogTitle>
+        <DialogContent>
+          <StyledRules>
+            <ReactMarkdown renderers={mdRenderer} children={rules} />
+          </StyledRules>
+        </DialogContent>
+        <DialogActions>
+          <Button color="secondary" onClick={hideModal}>
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </>
+  );
+};
+
+export const ViewLegend = (props) => {
+  const { hideModal, data, faction, legend: relic } = props;
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  return (
+    <Dialog open maxWidth="lg" onClose={hideModal} fullScreen={fullScreen}>
+      <DialogTitle>View Legend</DialogTitle>
+      <DialogContent sx={{ p: 1, backgroundColor: "background.paper" }}>
+        <Box
+          sx={{ mt: 1 }}
+          height="100%"
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <RelicCard faction={faction} relic={relic} data={data} />
+        </Box>
+      </DialogContent>
+      <DialogActions>
+        <Button color="secondary" onClick={hideModal}>
+          Close
+        </Button>
+      </DialogActions>
+    </Dialog>
+  );
+};
+
+export const EditUnit = (props) => {
+  const {
+    hideModal,
+    data,
+    getUnit,
+    faction,
+    setUnitOptions,
+    setUnitPowerSpecialty,
+    forceId,
+    unitId,
+  } = props;
+  const unit = getUnit(forceId, unitId);
+  const options = get(unit, "optionList", []);
+  const selectedOptions = get(unit, "selectedOptions", []);
+  const unitModels = sum(Object.values(get(unit, "modelCounts", {})));
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const hasPowerRule = find(
+    get(unit, "selectedRules", []),
+    (rule) => rule.id === "power" || rule === "power" || rule === "conclave"
+  );
+  if (!unit) {
+    return <div></div>;
+  }
+  const renderOption = (option, index) => {
+    if (option.list) {
+      return (
+        <>
+          {option.list.length !== 1 && <div>{`${option.option}: `}</div>}
+          {option.list.map((opt, optIndex) => {
+            const limit = opt.limit;
+            const choiceLimit = opt.choiceLimit;
+            // Get total selected choices minus the current context
+            const selectedChoices = sum(
+              selectedOptions[index].filter((option, idx) => idx !== optIndex)
+            );
+            const changeFuncCheck = () => {
+              const val = selectedOptions[index][optIndex];
+              const newVal = val === 0 ? 1 : 0;
+              if (selectedChoices + newVal > choiceLimit) {
+                return;
+              }
+              selectedOptions[index][optIndex] = newVal;
+              setUnitOptions(forceId, unitId, selectedOptions);
+            };
+            const changeFunc = (newValue) => {
+              const value = toNumber(newValue);
+              if (selectedChoices + value > choiceLimit) {
+                return;
+              }
+              selectedOptions[index][optIndex] = value;
+              setUnitOptions(forceId, unitId, selectedOptions);
+            };
+            const value = selectedOptions[index][optIndex];
+            const shouldDisable = selectedChoices >= choiceLimit && value === 0;
+            return (
+              <>
+                {!choiceLimit && limit === 0 && (
+                  <FormGroup controlId={`${index}${optIndex}`}>
+                    <FormControlLabel
+                      control={
+                        <Checkbox
+                          type="checkbox"
+                          color="primary"
+                          checked={value}
+                          disabled={shouldDisable}
+                          onChange={changeFuncCheck}
+                        />
+                      }
+                      label={`${
+                        option.list.length === 1 ? option.option : ""
+                      } ${opt.text}`}
+                    />
+                  </FormGroup>
+                )}
+                {limit > 1 && choiceLimit > 1 && (
+                  <FormGroup controlId={`${index}${optIndex}`} sx={{ mb: 1 }}>
+                    <label style={{ marginBottom: "0.5em" }}>
+                      {option.list.length === 1 && <>{option.option}</>}{" "}
+                      {opt.text}
+                    </label>
+                    <InputNumber
+                      fullWidth
+                      min={0}
+                      max={limit}
+                      type="number"
+                      color="primary"
+                      disabled={shouldDisable}
+                      value={value}
+                      onChange={changeFunc}
+                    />
+                  </FormGroup>
+                )}
+                {(choiceLimit === 1 || limit === 1) && (
+                  <FormGroup controlId={`${index}${optIndex}`}>
+                    <FormControlLabel
+                      control={
+                        <Checkbox
+                          labelPlacement="start"
+                          type="checkbox"
+                          color="primary"
+                          checked={value}
+                          disabled={shouldDisable}
+                          onChange={changeFuncCheck}
+                        />
+                      }
+                      label={`${
+                        option.list.length === 1 ? option.option : ""
+                      } ${opt.text}`}
+                    />
+                  </FormGroup>
+                )}
+              </>
+            );
+          })}
+        </>
+      );
+    }
+    return <></>;
+  };
+  return (
+    <>
+      <Dialog
+        open
+        onClose={hideModal}
+        fullScreen={fullScreen}
+        maxWidth="lg"
+        fullWidth
+      >
+        <DialogTitle>
+          {`${unit.customName || unit.name} `}{" "}
+          <small>
+            {`(${unitModels} ${unitModels > 1 ? "models" : "model"})`}{" "}
+            {`(${unit.points} pts)`}
+          </small>
+        </DialogTitle>
+        <DialogContent sx={{ p: 0 }}>
+          <Paper
+            style={{ height: "100%", borderRadius: 0, overflow: "auto" }}
+            sx={{ p: 2 }}
+          >
+            <FormGroup>
+              <div>
+                {!!hasPowerRule && (
+                  <div>
+                    <div className="d-flex justify-content-center flex-column">
+                      <PowerSpecialtySelector
+                        value={unit?.powerSpecialty}
+                        onChange={(event) =>
+                          setUnitPowerSpecialty(
+                            forceId,
+                            unitId,
+                            event.target.value
+                          )
+                        }
+                        data={data}
+                        faction={faction}
+                      />
+                    </div>
+                    <Box sx={{ py: 1 }} />
+                  </div>
+                )}
+                {options.map((option, index) => {
+                  return (
+                    <div>
+                      <div className="d-flex justify-content-center flex-column">
+                        {renderOption(option, index)}
+                      </div>
+                      <Box sx={{ py: 1 }} />
+                    </div>
+                  );
+                })}
+              </div>
+            </FormGroup>
+          </Paper>
+        </DialogContent>
+        <DialogActions>
+          <Button
+            color="primary"
+            onClick={() => {
+              hideModal();
+            }}
+          >
+            Done
+          </Button>{" "}
+        </DialogActions>
+      </Dialog>
+    </>
+  );
+};
+
+export const RenameUnit = (props) => {
+  const { hideModal, getUnit, setUnitName, forceId, unitId } = props;
+  const unit = getUnit(forceId, unitId);
+  const unitModels = sum(Object.values(get(unit, "modelCounts", {})));
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  if (!unit) {
+    return <div></div>;
+  }
+  return (
+    <>
+      <Dialog
+        open
+        onClose={hideModal}
+        fullScreen={fullScreen}
+        maxWidth="lg"
+        fullWidth
+      >
+        <DialogTitle>
+          {`${unit.customName || unit.name} `}{" "}
+          <small>
+            {`(${unitModels} ${unitModels > 1 ? "models" : "model"})`}{" "}
+            {`(${unit.points} pts)`}
+          </small>
+        </DialogTitle>
+        <DialogContent sx={{ p: 0 }}>
+          <Paper
+            style={{ height: "100%", borderRadius: 0, overflow: "auto" }}
+            sx={{ px: 2 }}
+          >
+            <FormControl fullWidth sx={{ mt: 2 }}>
+              <TextField
+                fullWidth
+                size="small"
+                label="Custom Name"
+                value={unit.customName}
+                onChange={(event) =>
+                  setUnitName(forceId, unitId, event.target.value)
+                }
+              />
+              <Divider />
+            </FormControl>
+          </Paper>
+        </DialogContent>
+        <DialogActions>
+          <Button
+            color="primary"
+            onClick={() => {
+              hideModal();
+            }}
+          >
+            Done
+          </Button>{" "}
+        </DialogActions>
+      </Dialog>
+    </>
+  );
+};
+
+export const EditUnitCampaign = (props) => {
+  const {
+    hideModal,
+    data,
+    getUnit,
+    faction,
+    setUnitPerks,
+    setUnitSetbacks,
+    forceId,
+    unitId,
+    updateUnit,
+  } = props;
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const unit = getUnit(forceId, unitId);
+  const unitPerks = get(unit, "selectedPerks", []);
+  const unitSetbacks = get(unit, "selectedSetbacks", []);
+  const unitPerksData = unitPerks.map((perk) => {
+    return { id: perk, ...data.getPerk(faction, perk) };
+  });
+  const unitSetbacksData = unitSetbacks.map((setback) => {
+    return { id: setback, ...data.getSetback(faction, setback) };
+  });
+  const selectedSetbacks = new Set(unitSetbacks);
+  const selectedPerks = new Set(unitPerks);
+  const setbacks = data.getSetbacks(faction);
+  const filteredSetbacks = setbacks.filter(
+    (setback) => !selectedSetbacks.has(setback.id)
+  );
+  const getRandomSetback = () => {
+    return get(getRandomItem(filteredSetbacks), "id");
+  };
+  const perks = data.getPerks(faction);
+  const perksByLevel = groupBy(perks, "level");
+  const perkOrder = Object.keys(perksByLevel);
+  const unitExperience = unit.experience || 0;
+  const levelProgress = unitExperience % 5;
+  const levelProgressPercent = levelProgress / 5;
+  const unitLevel = Math.floor((unit.experience || 0) / 5);
+  const formattedLevel = formatLevel(unitLevel);
+  const perksLeft =
+    unitLevel - (sum(unitPerksData.map((perk) => perk.level)) || 0);
+  const canGetPerk = (level) => {
+    return perksLeft - level >= 0;
+  };
+  const maxLevel = Object.keys(LEVEL_TO_NAME).length - 1;
+  const isMaxLevel = unitLevel === maxLevel;
+  const isMinLevel = unitLevel === 0;
+  const maxExp = maxLevel * 5;
+  if (!unit) {
+    return <div></div>;
+  }
+  return (
+    <>
+      <Dialog
+        open
+        onClose={hideModal}
+        fullScreen={fullScreen}
+        maxWidth="lg"
+        fullWidth
+      >
+        <DialogTitle>
+          {`${unit.customName || unit.name}`}{" "}
+          <small>{`(${unit.points} pts)`}</small>
+        </DialogTitle>
+        <DialogContent style={{ padding: 0 }}>
+          <Paper
+            sx={{ px: 3 }}
+            style={{ height: "100%", borderRadius: 0, overflowY: "auto" }}
+          >
+            <div>
+              <Typography variant="h5" sx={{ pt: 2, pb: 1 }} gutterBottom>
+                Unit Rank
+              </Typography>
+              {formattedLevel}, {unitLevel} Perk{unitLevel !== 1 ? "s" : ""}
+              <Typography variant="h5" sx={{ pt: 2, pb: 1 }} gutterBottom>
+                Next Level
+              </Typography>
+              <Stack
+                sx={{ mb: 2 }}
+                direction="row"
+                alignItems="center"
+                flexWrap={true}
+              >
+                <LinearProgress
+                  disabled={isMaxLevel}
+                  variant="determinate"
+                  style={{ height: "1em", flex: 1 }}
+                  value={levelProgressPercent * 100}
+                />
+                <Typography sx={{ ml: 2 }}>
+                  {levelProgressPercent * 100} %
+                </Typography>
+              </Stack>
+              <Divider />
+              <Stack direction="row" flexWrap="wrap">
+                <Button
+                  disabled={isMinLevel}
+                  variant="contained"
+                  sx={{ mr: 1, py: 1, my: 1 }}
+                  size="small"
+                  color="primary"
+                  onClick={() =>
+                    updateUnit(forceId, unitId, {
+                      experience: Math.max((unit.experience || 0) - 5, 0),
+                    })
+                  }
+                >
+                  {"-5 xp"}
+                </Button>
+                <Button
+                  disabled={isMinLevel}
+                  variant="contained"
+                  sx={{ mr: 1, py: 1, my: 1 }}
+                  size="small"
+                  color="primary"
+                  onClick={() =>
+                    updateUnit(forceId, unitId, {
+                      experience: Math.max((unit.experience || 0) - 1, 0),
+                    })
+                  }
+                >
+                  {"-1 xp"}
+                </Button>
+                <Button
+                  disabled={isMaxLevel}
+                  variant="contained"
+                  sx={{ mr: 1, py: 1, my: 1 }}
+                  size="small"
+                  color="primary"
+                  onClick={() =>
+                    updateUnit(forceId, unitId, {
+                      experience: Math.min(
+                        Math.max((unit.experience || 0) + 1, 0),
+                        maxExp
+                      ),
+                    })
+                  }
+                >
+                  {"+1 xp"}
+                </Button>
+                <Button
+                  disabled={isMaxLevel}
+                  variant="contained"
+                  sx={{ mr: 1, py: 1, my: 1 }}
+                  size="small"
+                  color="primary"
+                  onClick={() =>
+                    updateUnit(forceId, unitId, {
+                      experience: Math.min(
+                        Math.max((unit.experience || 0) + 5, 0),
+                        maxExp
+                      ),
+                    })
+                  }
+                >
+                  {"+5 xp"}
+                </Button>
+                {!!filteredSetbacks.length && (
+                  <Button
+                    variant="contained"
+                    sx={{ mr: 1, py: 1, my: 1 }}
+                    size="small"
+                    color="primary"
+                    onClick={() => {
+                      selectedSetbacks.add(getRandomSetback());
+                      setUnitSetbacks(
+                        forceId,
+                        unitId,
+                        Array.from(selectedSetbacks)
+                      );
+                    }}
+                  >
+                    Injury
+                  </Button>
+                )}
+                <Divider />
+              </Stack>
+            </div>
+            <Divider />
+            {!!selectedSetbacks.size && (
+              <div>
+                <Dropdown>
+                  {({ handleClose, open, handleOpen, anchorElement }) => (
+                    <>
+                      <ListItemButton
+                        sx={{ px: 0 }}
+                        disabled={unitSetbacksData?.length < 1}
+                        onClick={() => (open ? handleClose() : handleOpen())}
+                      >
+                        <ListItemText
+                          primary={
+                            <Typography variant="h5">
+                              Injuries
+                              <Chip
+                                sx={{ ml: 1 }}
+                                size="small"
+                                variant="outlined"
+                                label={unitSetbacksData?.length}
+                              />
+                            </Typography>
+                          }
+                        />
+                        {unitSetbacksData?.length > 0 && (
+                          <span>{open ? <ExpandLess /> : <ExpandMore />}</span>
+                        )}
+                      </ListItemButton>
+                      <Collapse in={open} timeout="auto" unmountOnExit>
+                        <div>
+                          {unitSetbacksData.map((setback, index) => {
+                            const setbackCost = data.resolvePoints(
+                              setback.points,
+                              { unit }
+                            );
+                            return (
+                              <ListItem
+                                key={index}
+                                sx={{ p: 0 }}
+                                secondaryAction={
+                                  <IconButton
+                                    sx={{ mr: -3 }}
+                                    onClick={() => {
+                                      selectedSetbacks.delete(setback.id);
+                                      updateUnit(forceId, unitId, {
+                                        // experience: Math.max((unit.experience || 0) - 5, 0),
+                                        selectedSetbacks:
+                                          Array.from(selectedSetbacks),
+                                      });
+                                    }}
+                                  >
+                                    <Delete />
+                                  </IconButton>
+                                }
+                              >
+                                <ListItemButton
+                                  sx={{ p: 0 }}
+                                  onClick={() => {
+                                    selectedSetbacks.delete(setback.id);
+                                    updateUnit(forceId, unitId, {
+                                      // experience: Math.max((unit.experience || 0) - 5, 0),
+                                      selectedSetbacks:
+                                        Array.from(selectedSetbacks),
+                                    });
+                                  }}
+                                >
+                                  <ListItemText
+                                    primary={`${setback.name} (${setbackCost} pts)`}
+                                    secondary={setback.description}
+                                  />
+                                </ListItemButton>
+                              </ListItem>
+                            );
+                          })}
+                        </div>
+                      </Collapse>
+                    </>
+                  )}
+                </Dropdown>
+                <Divider />
+              </div>
+            )}
+            <div>
+              {perkOrder.map((level) => {
+                const thePerks = sortBy(
+                  get(perksByLevel, `[${level}]`, []),
+                  "name"
+                );
+                const availablePerks = Math.floor(perksLeft / level);
+                return (
+                  <>
+                    <Dropdown>
+                      {({ handleClose, open, handleOpen, anchorElement }) => (
+                        <>
+                          <ListItemButton
+                            sx={{ px: 0 }}
+                            onClick={() =>
+                              open ? handleClose() : handleOpen()
+                            }
+                          >
+                            <ListItemText
+                              primary={
+                                <Box display="flex">
+                                  <Typography variant="h5">
+                                    {`${formatLevel(level)} Perks`}{" "}
+                                    <Chip
+                                      sx={{ ml: 1 }}
+                                      size="small"
+                                      variant="outlined"
+                                      label={`${availablePerks}`}
+                                    />
+                                  </Typography>
+                                </Box>
+                              }
+                            />
+                            {open ? <ExpandLess /> : <ExpandMore />}
+                          </ListItemButton>
+                          <Collapse in={open} timeout="auto" unmountOnExit>
+                            <div>
+                              {thePerks.map((perk) => {
+                                const perkCost = data.resolvePoints(
+                                  perk.points,
+                                  {
+                                    unit,
+                                  }
+                                );
+                                return (
+                                  <ListItem
+                                    sx={{ p: 0 }}
+                                    secondaryAction={
+                                      <Checkbox
+                                        disabled={
+                                          !canGetPerk(level) &&
+                                          !selectedPerks.has(perk.id)
+                                        }
+                                        sx={{ mr: -3 }}
+                                        checked={selectedPerks.has(perk.id)}
+                                        onChange={() => {
+                                          if (!selectedPerks.has(perk.id)) {
+                                            selectedPerks.add(perk.id);
+                                            setUnitPerks(
+                                              forceId,
+                                              unitId,
+                                              Array.from(selectedPerks)
+                                            );
+                                          } else {
+                                            selectedPerks.delete(perk.id);
+                                            setUnitPerks(
+                                              forceId,
+                                              unitId,
+                                              Array.from(selectedPerks)
+                                            );
+                                          }
+                                        }}
+                                      />
+                                    }
+                                  >
+                                    <ListItemButton
+                                      sx={{ p: 0 }}
+                                      disabled={
+                                        !canGetPerk(level) &&
+                                        !selectedPerks.has(perk.id)
+                                      }
+                                      onClick={() => {
+                                        if (!selectedPerks.has(perk.id)) {
+                                          selectedPerks.add(perk.id);
+                                          setUnitPerks(
+                                            forceId,
+                                            unitId,
+                                            Array.from(selectedPerks)
+                                          );
+                                        } else {
+                                          selectedPerks.delete(perk.id);
+                                          setUnitPerks(
+                                            forceId,
+                                            unitId,
+                                            Array.from(selectedPerks)
+                                          );
+                                        }
+                                      }}
+                                    >
+                                      <ListItemText
+                                        primary={`${perk.name} (${perkCost} pts)`}
+                                        secondary={`${perk.description}`}
+                                      />
+                                    </ListItemButton>
+                                  </ListItem>
+                                );
+                              })}
+                            </div>
+                          </Collapse>
+                        </>
+                      )}
+                    </Dropdown>
+                    <Divider />
+                  </>
+                );
+              })}
+            </div>
+          </Paper>
+        </DialogContent>
+        <DialogActions>
+          <Button
+            color="primary"
+            onClick={() => {
+              hideModal();
+            }}
+          >
+            Done
+          </Button>{" "}
+        </DialogActions>
+      </Dialog>
+    </>
+  );
+};

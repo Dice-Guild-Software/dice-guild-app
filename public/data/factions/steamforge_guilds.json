@@ -1,0 +1,956 @@
+{
+  "id": "steamforge_guilds",
+  "name": "Steamforge Guilds",
+  "author": "guitarninja",
+  "lore": "In a distant corner of the galaxy, where gears and cogs intertwine with the cosmic dance of stars, lies the planet Ardonia, home to a remarkable civilization known as the Steamforge Guilds. Ardonia is a world rich in mineral resources, particularly an abundant rare metal known as Aetherium, which possesses unique properties that allow for the fusion of steampunk machinery and advanced cybernetics.\n\nLong ago, Ardonia was inhabited by separate tribes of skilled inventors and artisans, each with their own unique talents and expertise. The world was divided by vast stretches of untamed wilderness, where powerful storms and towering mountains guarded the secrets of Aetherium-rich deposits.\n\nA turning point in Ardonia's history occurred when the tribes' most brilliant minds discovered the art of harnessing Aetherium's power and blending it with steam-powered inventions. These pioneers formed a gathering called the Steamforge Guilds, a collective of inventors, tinkerers, and visionaries who recognized the immense potential of their newfound fusion of technologies.\n\nThe Steamforge Guilds' pursuit of innovation brought about an era of wondrous technological advancements. They crafted steam-powered limbs to replace lost or damaged body parts, integrating them with Aetherium-infused cybernetics to bestow enhanced strength and agility upon the recipients. Over time, these gifted artisans became the premier creators of steampunk cyborgs.\n\nAs the Steamforge Guilds honed their crafts, they established artisan guilds, each devoted to specific disciplines such as mechanical limbs, cog-driven prosthetics, or wondrous clockwork automatons. These guilds fostered a sense of camaraderie and competition among their members, with a shared goal of pushing the boundaries of steampunk cybernetics even further.\n\nThe planet's cities transformed into bustling hubs of innovation, with towering workshops and laboratories rising high into the skyline. Every artisan guild prided itself on a distinct emblem that signified its mastery, and the streets were alive with the hiss of steam, the clang of gears, and the hum of Aetherium-infused machinery.\n\nIn the heart of the planet, at the majestic Steamcore Citadel, the council of Steamforge Elders convened to guide the destiny of the Artisans. These wise and venerable leaders ensured that their technological pursuits were balanced with a deep reverence for the harmony of nature, and that the advanced inventions would not lead to the planet's destruction.\n\nHowever, not all of Ardonia was united in their embrace of the Steamforge Guilds' vision. There were those who feared the power of the cyborg technologies and regarded them as unnatural abominations. These dissenting factions, known as the Purists, believed in preserving the purity of the organic form and rejected the embrace of cybernetics.\n\nAs a result, tensions flared between the Artisans and the Purists, leading to conflicts that threatened the fragile balance of Ardonian society. It was up to the Steamforge Guilds to navigate these challenges, to demonstrate the benefits of their creations and to prove that their pursuit of knowledge and innovation could lead to a brighter future for all.\n\nIn the cosmic ballet of progress and tradition, the Steamforge Guilds continued to tinker, invent, and imagine, shaping the destiny of Ardonia and leaving a legacy of ingenuity, artistry, and the harmonious blending of steampunk machinery and cybernetics in the tapestry of the cosmos.",
+  "hidden_units": {
+    "machine_grand_master": {
+      "name": "Machine Grand Master",
+      "description": "The smartest and most intelligent machine guild leader.",
+      "category": "hero",
+      "rules": ["engineer", {"id": "leader", "x": "Infantry, Heavy Infantry"}, {"id": "wounds", "x": 3}],
+      "models": [
+        {
+          "name": "Machine Grand Master",
+          "courage": 7,
+          "movement": 6,
+          "shoot": 8,
+          "fight": 8,
+          "defense": 11,
+          "reflexes": 7,
+          "weapons": [{"id": "axe_halberd", "count": 3}],
+          "options": [
+            {"addRule": [{"id": "ward", "x": 1, "name": "Machine Powers"}, {"id": "ward", "x": "2", "name": "Master Machine Powers"}]},
+            {"addWeapon": ["eradication_ray", "combustion_blaster"], "limit": 1},
+            {"addWeapon": ["macro_pistol", "thermal_carbine"], "limit": 1}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  },
+  "units": {
+    "guild_lord": {
+      "name": "Guild Lord",
+      "description": "A master craftsman and leader of a machine guild.",
+      "category": "hero",
+      "models": [
+        {
+          "name": "Guild Lord",
+          "courage": 7,
+          "movement": 6,
+          "shoot": 7,
+          "fight": 6,
+          "defense": 9,
+          "reflexes": 6,
+          "rules": ["engineer", "leader", "tactician", {"id": "wounds", "x": 3}],
+          "weapons": ["radiation_pistol", {"id": "handweapon", "count": 3}],
+          "options": [
+            {"replaceWeapon": ["radiation_pistol"], "withWeapon": ["smg", "thermal_carbine", "thermal_pistol", "emp_pistol", "fusion_pistol", "plasma_pistol", "eradication_blaster"]},
+            {
+              "replaceWeapon": [{"id": "handweapon", "count": 3}],
+              "withWeapon": [
+                {"id": "energy_handweapon", "count": 3},
+                {"id": "energy_powerweapon", "count": 3},
+                {"id": "taser_sword", "count": 3},
+                {"id": "energy_polearm", "count": 3},
+                {"id": "twin_energy_handweapon", "count": 4}
+              ]
+            },
+            {"addWeapon": ["thermal_rifle", "eradication_ray", "plasma_rifle", "emp_rifle", "fusion_rifle", "flamethrower"], "limit": 1},
+            {"addWeapon": ["servo_arm"], "limit": 2},
+            {"addRule": [{"id": "power", "x": 1}, {"id": "power", "x": 2}], "limit": 1},
+            {"addRule": ["jetpack_character", "destroyer_armor"], "limit": 1}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "guild_apprentice": {
+      "name": "Guild Apprentice",
+      "description": "A master craftsman and leader of a machine guild.",
+      "category": "hero",
+      "models": [
+        {
+          "name": "Guild Apprentice",
+          "courage": 6,
+          "movement": 6,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 8,
+          "reflexes": 6,
+          "rules": ["engineer", "leader", "striker", {"id": "wounds", "x": 3}],
+          "weapons": ["radiation_pistol", {"id": "handweapon", "count": 2}],
+          "options": [
+            {"replaceWeapon": ["radiation_pistol"], "withWeapon": ["smg", "thermal_carbine", "thermal_pistol", "emp_pistol", "plasma_pistol", "fusion_pistol", "eradication_blaster"]},
+            {
+              "replaceWeapon": [{"id": "handweapon", "count": 2}],
+              "withWeapon": [
+                {"id": "energy_powerweapon", "count": 2},
+                {"id": "energy_handweapon", "count": 2},
+                {"id": "taser_sword", "count": 2},
+                {"id": "twin_energy_handweapon", "count": 3},
+                {"id": "energy_polearm", "count": 2}
+              ]
+            },
+            {"addWeapon": ["thermal_rifle", "eradication_ray", "plasma_rifle", "emp_rifle", "fusion_rifle", "flamethrower"], "limit": 1},
+            {"addWeapon": ["servo_arm"], "limit": 2},
+            {"addRule": [{"id": "power", "x": 1}]},
+            {"addRule": ["jetpack_character", "destroyer_armor"], "limit": 1}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "data_specialist": {
+      "name": "Data Specialist",
+      "description": "An expert in manipulating machine data.",
+      "category": "hero",
+      "keywords": ["Heavy Infantry"],
+      "models": [
+        {
+          "name": "Data Specialist",
+          "courage": 6,
+          "movement": 6,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 9,
+          "reflexes": 6,
+          "rules": ["support", "protocols", {"id": "wounds", "x": 2}],
+          "weapons": ["radiation_pistol", "handweapon"],
+          "options": [
+            {"replaceWeapon": "radiation_pistol", "withWeapon": ["thermal_pistol", "emp_pistol", "plasma_pistol", "fusion_pistol"]},
+            {"replaceWeapon": {"id": "handweapon"}, "withWeapon": ["energy_powerweapon", "taser_sword", "energy_handweapon"]},
+            {"addRule": ["jetpack_character", "destroyer_armor"], "limit": 1}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "trooper_commander": {
+      "name": "Trooper Commander",
+      "description": "Commander of the foot-mobile machine guild protection forces.",
+      "category": "hero",
+      "models": [
+        {
+          "name": "Trooper Commander",
+          "courage": 6,
+          "movement": 6,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 6,
+          "reflexes": 6,
+          "rules": ["leader", "tactician", {"id": "wounds", "x": 2}],
+          "weapons": ["long_rifle", "light_handweapon"],
+          "options": [
+            {"replaceWeapon": ["long_rifle"], "withWeapon": ["radiation_carbine", "tesla_rifle"]},
+            {"replaceWeapon": ["long_rifle", "light_handweapon"], "withWeapon": [["radiation_pistol", {"id": "handweapon", "count": 2}]]},
+            {"replaceWeapon": "radiation_pistol", "withWeapon": ["thermal_pistol", "emp_pistol", "plasma_pistol", "fusion_pistol"]},
+            {"replaceWeapon": {"id": "handweapon", "count": 2}, "withWeapon": [{"id": "energy_handweapon", "count": 2}, {"id": "taser_sword", "count": 2}, {"id": "energy_powerweapon", "count": 2}]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "guild_troopers": {
+      "name": "Guild Troopers",
+      "description": "Machine guild ground-forces used for recon and guard missions.",
+      "category": "core",
+      "models": [
+        {
+          "name": "Trooper Sergeant",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 6,
+          "reflexes": 6,
+          "weapons": ["long_rifle", "light_handweapon"],
+          "options": [
+            {"replaceWeapon": ["long_rifle", "light_handweapon"], "withWeapon": [["radiation_pistol", {"id": "handweapon", "count": 2}]]},
+            {"replaceWeapon": "radiation_pistol", "withWeapon": ["thermal_pistol", "emp_pistol", "plasma_pistol", "fusion_pistol"]},
+            {"replaceWeapon": {"id": "handweapon", "count": 2}, "withWeapon": [{"id": "energy_handweapon", "count": 2}, {"id": "taser_sword", "count": 2}, {"id": "energy_powerweapon", "count": 2}]}
+          ],
+          "min": 1,
+          "max": 1
+        },
+        {"name": "Trooper", "movement": 6, "courage": 5, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 6, "weapons": ["long_rifle", "light_handweapon"], "min": 4, "max": 9}
+      ],
+      "options": [
+        {"replaceWeapon": ["long_rifle"], "withWeapon": ["radiation_carbine", "tesla_rifle"]},
+        {"replaceWeapon": "long_rifle", "withWeapon": ["flamethrower", "emp_rifle", "plasma_rifle", "rail_rifle", "fusion_rifle", "thermal_rifle"], "modelLimit": "1/5"},
+        {"addRule": ["scout"], "modelLimit": "all"},
+        {"addRule": ["data_link"], "modelLimit": 1},
+        {"addRule": ["heat_scanner"], "modelLimit": 1}
+      ]
+    },
+    "guild_drones": {
+      "name": "Guild Drones",
+      "description": "Simple androids used as cannon fodder by the machine guilds.",
+      "category": "core",
+      "models": [
+        {
+          "name": "Drone",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 4,
+          "fight": 4,
+          "defense": 6,
+          "reflexes": 5,
+          "weapons": ["laser_rifle", "claws"],
+          "options": [{"replaceWeapon": ["laser_rifle", "claws"], "withWeapon": ["twin_handweapon", ["heavy_shotgun", "claws"]], "modelLimit": "all"}],
+          "min": 10,
+          "max": 20
+        }
+      ]
+    },
+    "guild_protectors": {
+      "name": "Guild Protectors",
+      "description": "Machine guild guardians armed with shock spears and shields.",
+      "category": "core",
+      "models": [
+        {
+          "name": "Protector Sergeant",
+          "courage": 5,
+          "movement": 6,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 7,
+          "reflexes": 6,
+          "weapons": [{"id": "shock_spear_melee", "count": 2}, "shock_spear_shoot"],
+          "options": [
+            {"replaceWeapon": [{"id": "shock_spear_melee", "count": 2}, "shock_spear_shoot"], "withWeapon": [["radiation_pistol", {"id": "handweapon", "count": 2}]]},
+            {"replaceWeapon": "radiation_pistol", "withWeapon": ["thermal_pistol", "emp_pistol", "plasma_pistol", "fusion_pistol"]},
+            {"replaceWeapon": {"id": "handweapon", "count": 2}, "withWeapon": [{"id": "energy_handweapon", "count": 2}, {"id": "taser_sword", "count": 2}, {"id": "energy_powerweapon", "count": 2}]}
+          ],
+          "min": 1,
+          "max": 1
+        },
+        {
+          "name": "Protector",
+          "courage": 5,
+          "movement": 6,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 7,
+          "reflexes": 6,
+          "weapons": [{"id": "shock_spear_melee", "count": 2}, "shock_spear_shoot"],
+          "min": 4,
+          "max": 9
+        }
+      ],
+      "options": [{"addRule": ["data_link"], "modelLimit": 1}, {"addRule": ["heat_scanner"], "modelLimit": 1}]
+    },
+    "guild_acolytes": {
+      "name": "Guild Acolytes",
+      "description": "Fervent adepts of the guild, using experimental weapons to overwhelm their enemies.",
+      "category": "core",
+      "models": [
+        {
+          "name": "Acolyte",
+          "courage": 6,
+          "movement": 6,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 5,
+          "reflexes": 6,
+          "rules": [{"id": "resistant", "x": 3}],
+          "weapons": [{"id": "shock_staff", "count": 2}],
+          "options": [{"replaceWeapon": {"id": "shock_staff", "count": 2}, "withWeapon": [["taser_gauntlets_zap", "taser_gauntlets_strike"]]}],
+          "min": 5,
+          "max": 10
+        }
+      ]
+    },
+    "stalkers": {
+      "name": "Cyborg Stalkers",
+      "description": "Masters of subterfuge, using advanced weapons to kill and sabotage their foes.",
+      "category": "elite",
+      "models": [
+        {
+          "name": "Cyborg Stalker",
+          "courage": 5,
+          "movement": 6,
+          "shoot": 5,
+          "fight": 6,
+          "defense": 7,
+          "reflexes": 6,
+          "rules": ["agile", "evasive", "scout"],
+          "weapons": ["smg", {"id": "energy_handweapon", "count": 2}],
+          "options": [
+            {"replaceWeapon": ["smg"], "withWeapon": ["energy_greatweapon"]},
+            {
+              "replaceWeapon": [{"id": "energy_handweapon", "count": 2}],
+              "withWeapon": [{"id": "taser_sword", "count": 2}, {"id": "energy_greatweapon", "count": 2}, {"id": "twin_energy_handweapon", "count": 3}]
+            },
+            {"addRule": {"name": "Infiltration Protocol", "id": "ambush"}, "modelLimit": "all"}
+          ],
+          "min": 5,
+          "max": 10
+        }
+      ]
+    },
+    "raiders": {
+      "name": "Raiders",
+      "description": "Mounted troopers moving across the battlefield on mechanical steeds.",
+      "category": "elite",
+      "keywords": ["Mounted"],
+      "rules": ["agile", {"id": "impact", "x": 1}, "scout"],
+      "models": [
+        {
+          "name": "Raider Sergeant",
+          "courage": 5,
+          "movement": 8,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 7,
+          "reflexes": 6,
+          "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}],
+          "options": [
+            {"replaceWeapon": "heavy_carbine", "withWeapon": ["revolver", "radiation_pistol", "thermal_pistol", "emp_pistol", "plasma_pistol", "fusion_pistol"]},
+            {"replaceWeapon": {"id": "handweapon", "count": 2}, "withWeapon": [{"id": "energy_handweapon", "count": 2}, {"id": "taser_sword", "count": 2}, {"id": "energy_powerweapon", "count": 2}]}
+          ],
+          "min": 1,
+          "max": 1
+        },
+        {"name": "Raider", "courage": 5, "movement": 8, "shoot": 6, "fight": 5, "defense": 7, "reflexes": 6, "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}], "min": 2, "max": 5}
+      ],
+      "options": [
+        {"replaceWeapon": ["heavy_carbine", {"id": "handweapon", "count": 2}], "withWeapon": [[{"id": "thermal_pistol", "count": 2}, "light_handweapon"]]},
+        {"replaceWeapon": "heavy_carbine", "withWeapon": "thermal_carbine", "modelLimit": "1/3"},
+        {"addWeapon": [{"id": "heavy_flamethrower"}], "modelLimit": "all"},
+        {"addRule": ["data_link"], "modelLimit": 1}
+      ]
+    },
+    "sky_stalkers": {
+      "name": "Sky Stalkers",
+      "description": "Metallic stalking cyborgs for hunting and killing targets.",
+      "category": "elite",
+      "rules": ["fly"],
+      "models": [
+        {
+          "name": "Sky Stalker Sergeant",
+          "courage": 5,
+          "movement": 8,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 7,
+          "reflexes": 6,
+          "weapons": ["twin_carbine", "piercing_claws"],
+          "options": [
+            {"replaceWeapon": ["twin_carbine", "handweapon"], "withWeapon": [["radiation_pistol", {"id": "energy_handweapon", "count": 2}]]},
+            {"replaceWeapon": ["radiation_pistol"], "withWeapon": ["thermal_pistol", "emp_pistol", "plasma_pistol", "fusion_pistol", "smg"]},
+            {
+              "replaceWeapon": [{"id": "energy_handweapon", "count": 2}],
+              "withWeapon": [{"id": "energy_powerweapon", "count": 2}, {"id": "taser_sword", "count": 2}, {"id": "energy_powerweapon", "count": 2}]
+            }
+          ],
+          "min": 1,
+          "max": 1
+        },
+        {"name": "Sky Stalker", "courage": 5, "movement": 8, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": ["twin_carbine", "piercing_claws"], "min": 4, "max": 9}
+      ],
+      "options": [{"replaceWeapon": "twin_carbine", "withWeapon": {"id": "flamethrower"}}, {"addRule": [{"name": "Cluster Grenades", "id": "impact", "x": 1}], "modelLimit": "all"}]
+    },
+    "breachers": {
+      "name": "Cyborg Breachers",
+      "description": "Cyborgs specialized in breaching defenses and fighting armored targets.",
+      "category": "elite",
+      "keywords": ["Heavy Infantry"],
+      "models": [
+        {
+          "name": "Cyborg Breacher",
+          "movement": 5,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 9,
+          "reflexes": 6,
+          "rules": ["relentless", {"id": "wounds", "x": 2}],
+          "weapons": ["fusion_cannon", {"id": "claws", "count": 3}],
+          "options": [
+            {"replaceWeapon": "fusion_cannon", "withWeapon": ["heavy_gravity_cannon", "plasma_cannon", "emp_cannon", "laser_cannon", "radiation_emitter", "laser_machinegun", "tesla_cannon"]},
+            {"replaceWeapon": {"id": "claws", "count": 3}, "withWeapon": {"id": "energy_handweapon", "count": 3}},
+            {"addWeapon": ["thermal_rifle", "flamethrower", "light_machinegun", "fusion_rifle", "plasma_rifle", "emp_rifle"], "limit": 1},
+            {"addRule": ["jetpack", "light_armor"], "modelLimit": "all", "limit": 1}
+          ],
+          "min": 3,
+          "max": 6
+        }
+      ]
+    },
+    "shock_troopers": {
+      "name": "Cyborg Shock Troopers",
+      "description": "Cyborgs specialized in fighting in close combat.",
+      "category": "elite",
+      "models": [
+        {
+          "name": "Cyborg Shock Trooper",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 8,
+          "reflexes": 6,
+          "rules": ["furious", {"id": "wounds", "x": 2}],
+          "weapons": ["light_machinegun", {"id": "twin_energy_handweapon", "count": 4}],
+          "options": [
+            {"replaceWeapon": "light_machinegun", "withWeapon": ["thermal_rifle", "fusion_rifle", "plasma_rifle", "tesla_rifle", "emp_rifle"]},
+            {"modelLimit": "all", "replaceWeapon": [{"id": "twin_energy_handweapon", "count": 4}], "withWeapon": [{"id": "energy_powerweapon", "count": 3}]},
+            {"addRule": ["jetpack"], "modelLimit": "all"}
+          ],
+          "min": 3,
+          "max": 6
+        }
+      ]
+    },
+    "guild_gravite_squad": {
+      "name": "Guild Gravite Squad",
+      "description": "Middle-ranking guild craftsmen clad in experimental variants of Gravite armor.",
+      "category": "elite",
+      "models": [
+        {
+          "name": "Guild Gravite Trooper",
+          "movement": 5,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 9,
+          "reflexes": 5,
+          "rules": ["ambush"],
+          "weapons": [{"id": "energy_handweapon", "count": 3}, {"id": "twin_heavy_carbine", "count": 2}],
+          "options": [
+            {
+              "replaceWeapon": {"id": "twin_heavy_carbine", "count": 2},
+              "withWeapon": ["gravity_cannon", "laser_cannon", "fusion_beamer", "thermal_lance", "heavy_radiation_emitter", "plasma_cannon", "fusion_cannon", "heavy_flamethrower"]
+            },
+            {"replaceWeapon": {"id": "twin_heavy_carbine"}, "withWeapon": ["gravity_rifle", "plasma_rifle", "radiation_emitter", "thermal_rifle", "fusion_rifle", "flamethrower"], "limit": 2},
+            {
+              "replaceWeapon": {"id": "energy_handweapon", "count": 3},
+              "withWeapon": [{"id": "energy_powerweapon", "count": 3}, {"id": "twin_energy_handweapon", "count": 4}, {"id": "energy_polearm", "count": 3}]
+            }
+          ],
+          "min": 3,
+          "max": 6
+        }
+      ]
+    },
+    "combat_robot": {
+      "name": "Combat Robots",
+      "description": "A squad of tactical robots built to attack with a variety of deadly weapons.",
+      "category": "elite",
+      "keywords": ["Heavy Infantry"],
+      "models": [
+        {
+          "name": "Combat Robot",
+          "movement": 6,
+          "courage": 7,
+          "shoot": 5,
+          "fight": 5,
+          "defense": 10,
+          "reflexes": 6,
+          "rules": [{"id": "resistant", "x": 1}, "vulnerable_rear", {"id": "wounds", "x": 3}],
+          "weapons": [{"id": "robot_fist", "count": 2}, "heavy_flamethrower"],
+          "options": [
+            {"replaceWeapon": {"id": "robot_fist"}, "withWeapon": ["thermal_lance", "fusion_cannon", "plasma_cannon", "heavy_flamethrower", "heavy_machinegun", "laser_cannon"], "count": 2},
+            {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["thermal_lance", "heavy_machinegun", "plasma_cannon", "fusion_cannon", "laser_cannon"]}
+          ],
+          "min": 1,
+          "max": 3
+        }
+      ]
+    },
+    "guild_juggernaut": {
+      "name": "Guild Juggernaut",
+      "description": "A heavily armed combat robot deployed to break through enemy ranks.",
+      "category": "rare",
+      "keywords": ["Vehicle", "Juggernaut"],
+      "models": [
+        {
+          "name": "Guild Juggernaut",
+          "movement": 8,
+          "courage": 6,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 11,
+          "reflexes": 6,
+          "rules": ["vulnerable_rear", {"id": "wounds", "x": 5}],
+          "weapons": [{"id": "walker_fist", "count": 2}],
+          "options": [
+            {
+              "replaceWeapon": {"id": "walker_fist"},
+              "withWeapon": ["gravity_hammer", "fusion_cannon", "plasma_cannon", "heavy_machinegun", "laser_cannon", "thermal_lance", "gravity_cannon"],
+              "count": 2
+            },
+            {"addWeapon": [{"id": "rocket_launcher"}]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "heavy_siege_robot": {
+      "name": "Heavy Siege Robot",
+      "description": "A huge robot built to devastate fortified positions.",
+      "category": "rare",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Heavy Siege Robot",
+          "movement": 8,
+          "courage": 7,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 12,
+          "reflexes": 6,
+          "rules": ["vulnerable_rear", {"id": "wounds", "x": 6}],
+          "weapons": [{"id": "robot_fist", "count": 4}, "twin_aa_autocannon"],
+          "options": [
+            {
+              "replaceWeapon": ["twin_aa_autocannon"],
+              "withWeapon": ["heavy_plasma_mortar", "twin_laser_cannon", "twin_heavy_plasma_cannon", "twin_heavy_fusion_cannon", "twin_heavy_gravity_cannon", "twin_battle_cannon"]
+            },
+            {
+              "replaceWeapon": [{"id": "robot_fist", "count": 2}],
+              "withWeapon": ["heavy_gravity_hammer", "twin_heavy_machinegun", "twin_laser_cannon", "twin_autocannon", "twin_plasma_cannon", "twin_fusion_cannon"],
+              "limit": 2
+            }
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "guild_apc_gunship": {
+      "name": "APC Gunship",
+      "description": "A troop-carrying gunship.",
+      "category": "transport",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "APC Gunship",
+          "movement": 10,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 4,
+          "defense": 11,
+          "reflexes": 6,
+          "rules": ["aircraft", "hover_mode", {"id": "transport", "x": 12}, {"id": "wounds", "x": 5}],
+          "weapons": [{"id": "twin_light_machinegun"}],
+          "options": [
+            {
+              "replaceWeapon": {"id": "twin_light_machinegun"},
+              "withWeapon": [
+                {"id": "twin_thermal_lance"},
+                {"id": "twin_laser_cannon"},
+                {"id": "twin_plasma_rifle"},
+                {"id": "twin_fusion_rifle"}
+              ]
+            },
+            {"addWeapon": [[{"id": "light_machinegun"}, {"id": "light_machinegun"}]]},
+            {"addRule": ["data_link"]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "guild_scout_mech": {
+      "name": "Guild Scout Mechsuits",
+      "description": "Light mechsuits with various weapons, well suited for scouting missions.",
+      "category": "elite",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Guild Scout Mechsuit",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 9,
+          "reflexes": 6,
+          "rules": ["scout", "vulnerable_rear", "walker", {"id": "wounds", "x": 4}],
+          "weapons": ["long_rifle", {"id": "servo_arm", "count": 2}],
+          "options": [{"replaceWeapon": ["long_rifle"], "withWeapon": ["radiation_sniper", {"id": "taser_lance", "count": 3}]}],
+          "min": 1,
+          "max": 3
+        }
+      ]
+    },
+    "guild_heavy_mech": {
+      "name": "Guild Heavy Mechsuits",
+      "description": "Heavy mechsuits with a variety of heavy weapons, well suited for difficult terrain.",
+      "category": "rare",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Guild Heavy Mechsuit",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 6,
+          "defense": 9,
+          "reflexes": 6,
+          "rules": ["vulnerable_rear", "walker", {"id": "wounds", "x": 4}],
+          "weapons": ["twin_autocannon", {"id": "servo_arm", "count": 2}],
+          "options": [{"replaceWeapon": ["twin_autocannon"], "withWeapon": ["twin_laser_cannon", "twin_heavy_flamethrower", "twin_plasma_cannon", "twin_fusion_cannon", "twin_thermal_lance"]}],
+          "min": 1,
+          "max": 3
+        }
+      ]
+    },
+    "guild_heavy_gunship": {
+      "name": "Heavy Gunship",
+      "description": "A gunship equipped with heavy weapons.",
+      "category": "rare",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Heavy Gunship",
+          "movement": 10,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 4,
+          "defense": 11,
+          "reflexes": 6,
+          "rules": ["aircraft", "hover_mode", {"id": "wounds", "x": 6}],
+          "weapons": [{"id": "twin_light_machinegun"}],
+          "options": [
+            {
+              "replaceWeapon": {"id": "twin_light_machinegun"},
+              "withWeapon": [
+                {"id": "twin_thermal_lance"},
+                {"id": "twin_laser_cannon"},
+                {"id": "twin_plasma_rifle"},
+                {"id": "twin_fusion_rifle"},
+                {"id": "rocket_pod", "count": 2}
+              ]
+            },
+            {
+              "addWeapon": [
+                [{"id": "light_machinegun"}, {"id": "light_machinegun"}],
+                [{"id": "laser_cannon"}, {"id": "laser_cannon"}],
+                [{"id": "plasma_rifle"}, {"id": "plasma_rifle"}],
+                [{"id": "fusion_rifle"}, {"id": "fusion_rifle"}],
+                [{"id": "thermal_lance"}, {"id": "thermal_lance"}],
+                "bomb_rack"
+              ],
+              "limit": 1
+            },
+            {"addWeapon": [[{"id": "light_machinegun"}, {"id": "light_machinegun"}]]},
+            {"addRule": ["data_link"]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "hover_apc": {
+      "name": "Hover APC",
+      "description": "A hovering transport for transporting troops.",
+      "category": "transport",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Hover APC",
+          "movement": 10,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 3,
+          "defense": 11,
+          "reflexes": 6,
+          "rules": [{"id": "wounds", "x": 5}, "hover", {"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear"],
+          "weapons": [{"id": "light_machinegun"}, {"id": "light_machinegun"}],
+          "options": [{"addWeapon": ["twin_aa_light_machinegun"]}, {"addRule": "data_link"}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "hover_tank": {
+      "name": "Hover Tank",
+      "description": "A hovering tank for supporting landing assaults.",
+      "category": "rare",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Hover Tank",
+          "movement": 10,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 12,
+          "reflexes": 6,
+          "rules": [{"id": "wounds", "x": 6}, "hover", {"id": "impact", "x": 6}, "vulnerable_side_rear"],
+          "weapons": [{"id": "light_machinegun"}, {"id": "light_machinegun"}, "light_machinegun", "tank_hunter_cannon"],
+          "options": [
+            {"replaceWeapon": "tank_hunter_cannon", "withWeapon": ["mortar_cannon", "eradication_beam"]},
+            {"replaceWeapon": ["light_machinegun"], "withWeapon": ["laser_cannon", "plasma_rifle", "fusion_rifle", "thermal_rifle", "flamethrower"]},
+            {
+              "replaceWeapon": [{"id": "light_machinegun"}, {"id": "light_machinegun"}],
+              "withWeapon": [
+                [{"id": "laser_cannon"}, {"id": "laser_cannon"}],
+                [{"id": "plasma_rifle"}, {"id": "plasma_rifle"}],
+                [{"id": "fusion_rifle"}, {"id": "fusion_rifle"}],
+                [{"id": "thermal_rifle"}, {"id": "thermal_rifle"}],
+                [{"id": "flamethrower"}, {"id": "flamethrower"}]
+              ]
+            },
+            {"addWeapon": "disruption_missiles"},
+            {"addRule": "data_link"}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "guild_tank_destroyer": {
+      "name": "Guild Tank Destroyer",
+      "description": "A large tracked cannon used to obliterate other tanks.",
+      "category": "rare",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Tank Destroyer",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 11,
+          "reflexes": 6,
+          "rules": [{"id": "wounds", "x": 5}, {"id": "impact", "x": 6}, "vulnerable_side_rear"],
+          "weapons": [{"id": "tesla_hunter_cannon"}],
+          "options": [
+            {"replaceWeapon": {"id": "tesla_hunter_cannon"}, "withWeapon": [{"id": "laser_volley_cannon"}]},
+            {
+              "addWeapon": [
+                [{"id": "laser_cannon"}, {"id": "laser_cannon"}],
+                [{"id": "plasma_rifle"}, {"id": "plasma_rifle"}],
+                [{"id": "fusion_rifle"}, {"id": "fusion_rifle"}],
+                [{"id": "thermal_rifle"}, {"id": "thermal_rifle"}],
+                [{"id": "flamethrower"}, {"id": "flamethrower"}],
+                [{"id": "light_machinegun"}, {"id": "light_machinegun"}]
+              ]
+            },
+            {"addRule": "data_link"}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "guild_heavy_tank": {
+      "name": "Guild Heavy Tank",
+      "description": "A mighty tank designed to break apart formations.",
+      "category": "rare",
+      "keywords": ["Vehicle", "Tank"],
+      "models": [
+        {
+          "name": "Guild Heavy Tank",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 13,
+          "reflexes": 6,
+          "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", {"id": "wounds", "x": 6}],
+          "weapons": [
+            {"id": "radiation_rocket_array"},
+            {"id": "laser_cannon"},
+            {"id": "laser_cannon"},
+            {"id": "taser_prow", "count": 3}
+          ],
+          "options": [
+            {
+              "replaceWeapon": [{"id": "laser_cannon"}, {"id": "laser_cannon"}],
+              "withWeapon": [
+                [{"id": "plasma_cannon"}, {"id": "plasma_cannon"}],
+                [{"id": "fusion_cannon"}, {"id": "fusion_cannon"}],
+                [{"id": "tesla_cannon"}, {"id": "tesla_cannon"}],
+                [{"id": "radiation_emitter"}, {"id": "radiation_emitter"}]
+              ]
+            }
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "guild_heavy_transport": {
+      "name": "Guild Heavy APC",
+      "description": "A mighty apc designed to carry large groups of infantry wherever they are needed.",
+      "category": "rare",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Guild Heavy APC",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 13,
+          "reflexes": 6,
+          "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 20}, "vulnerable_side_rear", {"id": "wounds", "x": 6}],
+          "weapons": [
+            {"id": "twin_heavy_machinegun"},
+            {"id": "flamethrower"},
+            {"id": "flamethrower"},
+            {"id": "taser_prow", "count": 3}
+          ],
+          "options": [
+            {
+              "replaceWeapon": [{"id": "flamethrower"}, {"id": "flamethrower"}],
+              "withWeapon": [
+                [{"id": "plasma_rifle"}, {"id": "plasma_rifle"}],
+                [{"id": "fusion_rifle"}, {"id": "fusion_rifle"}],
+                [{"id": "tesla_rifle"}, {"id": "tesla_rifle"}],
+                [{"id": "thermal_rifle"}, {"id": "thermal_rifle"}]
+              ]
+            }
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "spider_tank": {
+      "name": "Spider Tank",
+      "description": "A tank walking on large robotic legs.",
+      "category": "rare",
+      "keywords": ["Vehicle", "Tank"],
+      "models": [
+        {
+          "name": "Spider Tank",
+          "movement": 10,
+          "courage": 5,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 12,
+          "reflexes": 6,
+          "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "walker", {"id": "wounds", "x": 5}],
+          "weapons": [{"id": "servo_arm", "count": 2}, "thermal_lance", "light_machinegun"],
+          "options": [
+            {"replaceWeapon": "thermal_lance", "withWeapon": ["eradication_beam", "death_laser", "aa_autocannon"]},
+            {"replaceWeapon": "light_machinegun", "withWeapon": ["aa_autocannon", "plasma_cannon", "fusion_cannon", "heavy_flamethrower", "thermal_lance"]},
+            {
+              "addWeapon": [
+                {"id": "light_machinegun"},
+                {"id": "plasma_rifle"},
+                {"id": "fusion_rifle"},
+                {"id": "flamethrower"},
+                {"id": "laser_cannon"}
+              ],
+              "limit": 1
+            },
+            {"addWeapon": ["aa_missiles"]},
+            {"addRule": ["data_link"]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  },
+  "weapons": {
+    "emp_pistol": {"name": "EMP Pistol", "attacks": 1, "short": 6, "ap": 4, "rules": [{"id": "deadly", "x": 1}, "pistol"]},
+    "emp_rifle": {"name": "EMP Rifle", "attacks": 1, "short": 12, "medium": 24, "ap": 4, "rules": [{"id": "deadly", "x": 1}, "rapid_fire"]},
+    "emp_cannon": {"name": "EMP Cannon", "attacks": 2, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "deadly", "x": 1}, "heavy"]},
+    "tesla_hunter_cannon": {"name": "Tesla Tank Cannon", "attacks": 1, "short": 18, "medium": 36, "ap": 5, "rules": [{"id": "blast", "x": 3}, "lethal", "heavy"]},
+    "laser_volley_cannon": {"name": "Laser Volley Cannon", "attacks": 3, "short": 24, "medium": 48, "ap": 7, "rules": ["heavy"]},
+    "taser_gauntlets_zap": {"name": "Taser Gauntlets (Shooting)", "attacks": 1, "ap": 2, "short": 6, "rules": ["lethal", "pistol"]},
+    "taser_gauntlets_strike": {"name": "Taser Gauntlets (Melee)", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["lethal"]},
+    "taser_sword": {"name": "Taser Sword", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["lethal"]},
+    "taser_lance": {"name": "Taser Lance", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["lance", "lethal"]},
+    "taser_arm": {"name": "Taser Arm", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["lethal"]},
+    "taser_prow": {"name": "Taser Prow", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["lethal", "lance"]},
+    "radiation_pistol": {"name": "Radiation Pistol", "attacks": 1, "short": 6, "rules": ["pistol", "poison"]},
+    "radiation_carbine": {"name": "Radiation Carbine", "attacks": 2, "short": 9, "medium": 18, "rules": ["assault", "poison"]},
+    "radiation_sniper": {"name": "Radiation Sniper", "attacks": 1, "short": 15, "medium": 30, "ap": 3, "rules": ["precise", "poison"]},
+    "radiation_emitter": {"name": "Radiation Emitter", "attacks": 3, "short": 6, "medium": 12, "ap": 3, "rules": ["breaching", "poison"]},
+    "heavy_radiation_emitter": {"name": "Heavy Radiation Emitter", "attacks": 3, "short": 6, "medium": 12, "ap": 4, "rules": ["breaching", "poison"]},
+    "radiation_rocket_array": {"name": "Radiation Rocket Array", "attacks": 2, "short": 18, "medium": 36, "ap": 4, "rules": ["poison", "indirect", {"id": "blast", "x": 3}]},
+    "long_rifle": {"name": "Long Rifle", "attacks": 1, "short": 15, "medium": 30, "ap": 1, "rules": ["rapid_fire"]},
+    "sonic_blade": {"name": "Sonic Blade", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["rending"]},
+    "disruption_missiles": {"name": "Disruption Missiles", "attacks": 1, "short": 18, "medium": 36, "ap": 5},
+    "revolver": {"name": "Revolver", "attacks": 1, "ap": 3, "short": 6, "rules": ["pistol"]},
+    "shock_caster": {
+      "name": "Shock Caster",
+      "profiles": [{"name": "Slug", "attacks": 1, "short": 12, "medium": 24, "ap": 2}, {"name": "Submunitions", "attacks": 2, "short": 9, "medium": 18, "ap": 1, "rules": ["indirect"]}]
+    },
+    "shock_spear_shoot": {"name": "Shock Spear (Shooting)", "attacks": 1, "ap": 3, "short": 6, "medium": 12, "rules": ["assault", "lethal"]},
+    "shock_spear_melee": {"name": "Shock Spear (Melee)", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["lethal", {"id": "reach", "x": 1}]},
+    "claws": {"name": "Claws", "attacks": 1, "short": "Melee", "rules": ["rending"]},
+    "iron_claws": {"name": "Iron Claws", "attacks": 1, "short": "Melee", "ap": 2},
+    "robot_fist": {"name": "Robot Fist", "attacks": 1, "short": "Melee", "ap": 8},
+    "eradication_beam": {"name": "Eradication Beam", "attacks": 1, "short": 18, "medium": 36, "ap": 4, "rules": ["heavy", {"id": "blast", "x": 6}]},
+    "eradication_ray": {"name": "Eradication Ray", "attacks": 1, "short": 9, "medium": 18, "ap": 3, "rules": [{"id": "blast", "x": 3}]},
+    "eradication_blaster": {"name": "Eradication Blaster", "attacks": 1, "short": 6, "ap": 3, "rules": [{"id": "blast", "x": 3}, "pistol"]},
+    "death_laser": {"name": "Death Laser", "attacks": 2, "short": 24, "medium": 48, "ap": 10, "rules": ["heavy", {"id": "deadly", "x": 2}]},
+    "bomb_rack": {"name": "Bomb Rack", "attacks": 2, "short": 6, "ap": 3, "rules": [{"id": "blast", "x": 3}, "bomb"]},
+    "aa_missiles": {"name": "AA Missile System", "attacks": 2, "short": 24, "medium": 48, "ap": 5, "rules": ["anti_air"]},
+    "twin_carbine": {"name": "Twin Carbine", "attacks": 2, "short": 9, "medium": 18, "rules": ["assault"]},
+    "gravity_hammer": {"name": "Gravity Hammer", "attacks": 1, "ap": 8, "short": "Melee", "rules": ["gravity", {"id": "deadly", "x": 1}]},
+    "heavy_gravity_hammer": {"name": "Heavy Gravity Hammer", "attacks": 1, "ap": 8, "short": "Melee", "rules": ["gravity", {"id": "deadly", "x": 2}]}
+  },
+  "rules": {
+    "data_link": {"name": "Data Link", "description": "This model's unit gains +1 Courage.", "points": 5},
+    "heat_scanner": {"name": "Heat Scanner", "description": "This model's unit gains +6\" to long range when shooting.", "points": 5},
+    "protocols": {
+      "name": "Protocols",
+      "description": "At the start of the round, choose one of the following abilities to be active for this model's unit until the end of the round:\n* Advance: Gain +2\" Movement.\n* Extermination: Hit rolls of 1 or 2 generate an additional hit.\n* Protection: Reduce the AP of all hits by 1.",
+      "points": 15
+    },
+    "legend_machine_whisperer": {"name": "Machine Whisperer", "description": "This model may reroll failed _Engineer_ rolls.", "points": 5},
+    "legend_masterwork_mechanisms": {"name": "Masterwork Mechanisms", "description": "This model has +1 save.", "points": 5}
+  },
+  "strategies": [
+    {
+      "name": "Mechanically Adept",
+      "phase": "activation",
+      "description": "Use before making a Repair roll with an _Engineer_ unit. The unit gets +2 to Repair rolls.",
+      "flavor": "The Steamforge Guilds are masters of building and maintaining machines, rarely failing to find the root of the problem.",
+      "cost": 1
+    },
+    {
+      "name": "Cybernetic Enhancements",
+      "phase": "activation",
+      "description": "Use before taking Save rolls for a unit. That unit may re-roll failed Save rolls.",
+      "flavor": "Half-man and half-machine, Steamforge Artisan infantry can withstand even the toughest punishment.",
+      "cost": 2
+    },
+    {
+      "name": "Volley Fire",
+      "phase": "activation",
+      "description": "Use before a unit shoots. Hit rolls of 1 or 2 generate an additional hit.",
+      "flavor": "With a devastating barrage of supercharged guns the Steamforge Guilds overwhelm their foes.",
+      "cost": 1
+    }
+  ],
+  "powers": {
+    "volatile_discharge": {"name": "Volatile Discharge", "description": "Target enemy unit within 18\" takes 3 hits with AP(2).", "charge": 7},
+    "overclock": {"name": "Overclock", "description": "Target friendly unit within 12\" gains +1 AP with one Ranged weapon until the end of the turn.", "charge": 6},
+    "reinforce": {"name": "Reinforce", "description": "Target friendly unit within 12\" gains +2 Save until the end of the turn.", "charge": 5}
+  },
+  "relics": {
+    "machine_whisperer": {
+      "name": "Machine Whisperer",
+      "rule": "legend_machine_whisperer",
+      "description": "Choose one _Leader_ or _Support_ model to be upgraded with Machine Whisperer",
+      "flavor": "Some machine masters understand machines better than others.",
+      "cost": 10
+    },
+    "masterwork_mechanisms": {
+      "name": "Masterwork Mechanisms",
+      "rule": "legend_masterwork_mechanisms",
+      "description": "Choose one _Leader_ or _Support_ model to have Masterwork Mechanisms",
+      "flavor": "A particularly lucky guild-leader may find themselves with a superior chassis to his kin.",
+      "cost": 10
+    }
+  },
+  "buyLinks": [{"name": "Games Workshop", "link": "https://www.games-workshop.com/en-US/Warhammer-40-000?N=2562756967+1001313688"}]
+}
