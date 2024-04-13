@@ -2,6 +2,7 @@ import { get } from "lodash";
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { CHAPTERS } from "routes/Rules";
+import { useLocalStorage } from "./use-localstorage";
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
@@ -45,13 +46,13 @@ const breadCrumbDefaults = {
 
 export function usePageTitle(opts = {}) {
   const { path: optPath, optData } = opts;
+  const [lists] = useLocalStorage("lists", {});
   // const [{ data: contextData }] = React.useContext(DataContext);
   const contextData = {};
   const data = optData ?? contextData;
   const loc = useLocation();
   const path = optPath ?? loc.pathname;
   const [locationTitle] = path.split("/").slice(-1);
-  //const ignoredPathes = new Set(['lists']);
   const ignoredPathes = new Set([]);
   const titles = React.useMemo(() => {
     const breadCrumbTitles = {
@@ -65,7 +66,6 @@ export function usePageTitle(opts = {}) {
       );
       breadCrumbTitles[factionId] = faction.name;
     });
-    const lists = get(data, "lists", {});
     Object.keys(lists).forEach((listId) => {
       const list = lists[listId];
       breadCrumbTitles[listId] = list.name;
@@ -74,7 +74,7 @@ export function usePageTitle(opts = {}) {
       breadCrumbTitles[chapterId] = CHAPTERS[chapterId]?.name;
     });
     return breadCrumbTitles;
-  }, [data]);
+  }, [data, lists]);
   let title = titles[locationTitle] || locationTitle;
   title = ignoredPathes.has(title) ? null : title;
   return title;

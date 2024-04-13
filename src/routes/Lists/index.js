@@ -6,8 +6,8 @@ import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import DeleteIcon from "@mui/icons-material/Delete";
 import DownloadIcon from "@mui/icons-material/Download";
 import EditIcon from "@mui/icons-material/Edit";
-import GroupIcon from "@mui/icons-material/Group";
 import ErrorIcon from '@mui/icons-material/Error';
+import GroupIcon from "@mui/icons-material/Group";
 import MilitaryTechIcon from "@mui/icons-material/MilitaryTech";
 import PrintIcon from "@mui/icons-material/Print";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -34,8 +34,7 @@ import {
 } from "@mui/material";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { InputNumber } from "components/bootstrap";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CustomCircularProgress from "components/CustomCircularProgress";
 import { Dropdown } from "components/dropdown";
 import { PrintView } from "components/print";
@@ -53,6 +52,7 @@ import {
 } from "lodash";
 import { useSnackbar } from "notistack";
 import React, { useContext, useEffect, useRef, useState } from "react";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { useLocation, useNavigate, useParams } from "react-router";
 import { Link as RouterLink } from "react-router-dom";
 import { useReactToPrint } from "react-to-print";
@@ -77,8 +77,6 @@ import {
   ViewStrategies,
   ViewUnit,
 } from "./modals";
-import { ReactMarkdown } from "react-markdown/lib/react-markdown";
-import { PrettyHeader } from "components/pretty-header";
 
 const PrintStyles = styled.div``;
 
@@ -117,20 +115,6 @@ export default React.memo((props) => {
   const handlePrint = () => {
     doPrint();
   };
-  const LIST_TYPES = [
-    { label: "Competitive", value: "competitive" },
-    { label: "Narrative", value: "narrative" },
-    { label: "Campaign", value: "campaign" },
-  ];
-  const [victoryPoints, setVictoryPoints] = useLocalStorage("victoryPoints", 0);
-  const [strategyPoints, setStrategyPoints] = useLocalStorage(
-    "strategyPoints",
-    0
-  );
-  const [collapseTrackers, setCollapseTracker] = useLocalStorage(
-    "collapseTracker",
-    false
-  );
   const calculateUnitPoints = React.useCallback(
     (
       unit,
@@ -470,7 +454,7 @@ export default React.memo((props) => {
         { replace: true }
       );
     }
-  }, [shouldStartEditMode, showAddForce]);
+  }, [shouldStartEditMode, showAddForce, factionId, navigate, queryParams]);
   const allFactionsLoaded = every(forces, (force) => {
     const factionName = force.factionId;
     const faction = get(
@@ -865,12 +849,6 @@ export default React.memo((props) => {
     ),
     [forces, list]
   );
-  const showViewActionReference = () => {
-    window.open("/#/rules", "_blank");
-  };
-  const showScenarioBuilder = () => {
-    window.open("/#/scenarios", "_blank");
-  };
   const [showUpdateList, hideUpdateList] = useModal(
     ({ extraProps }) => (
       <UpdateList
@@ -955,9 +933,6 @@ export default React.memo((props) => {
     );
   }
   const listType = list.type || "competitive";
-  const listTypeName =
-    (find(LIST_TYPES, (myType) => myType.value === list.type) || {}).label ||
-    "Competitive";
   const currentForcePoints = sum(
     forces.map((force) => {
       const unitPoints = sum(
@@ -982,21 +957,8 @@ export default React.memo((props) => {
         return unitPoints + legendPoints;
       })
     );
-  const totalForceReservePoints = sum(
-    forces.map((force) => {
-      const unitPoints = sum(
-        get(force, "reserves", []).map((unit) => unit.points)
-      );
-      return unitPoints;
-    })
-  );
   const detachmentLimitMult = isSkirmish ? 100 : 500;
-  const SPMult = isSkirmish ? 50 : 500;
   const LegendMult = isSkirmish ? 100 : 1000;
-  const totalSP =
-    2 +
-    Math.round(totalForcePoints / SPMult) -
-    sum(forces.map((force) => force.cost));
   const legendLimit = Math.max(Math.floor(totalForcePoints / LegendMult), 1);
   const validationErrors = [];
   if (listType !== "narrative") {
@@ -1152,9 +1114,21 @@ export default React.memo((props) => {
             });
           return (
             <>
+              {index === 1 && <Stack
+                justifyContent="center"
+                alignItems="center"
+                direction="row"
+                sx={{ my: 2 }}
+              >
+                <hr style={{ height: "1px", flex: 1 }} />
+                <Typography variant="h6" sx={{ mx: 2 }}>
+                  Allied Forces
+                </Typography>
+                <hr style={{ height: "1px", flex: 1 }} />
+              </Stack>}
               <Dropdown>
                 {({ handleClose, open, handleOpen, anchorElement }) => (
-                  <Card>
+                  <Card sx={{ mt: 2 }}>
                     <CardHeader
                       onClick={handleOpen}
                       sx={{
@@ -1178,12 +1152,9 @@ export default React.memo((props) => {
                                 {forceFaction.name}
                               </Typography>
                             }
-                            secondary={`${showingReserves
-                              ? "Reserves"
-                              : `${force.name} Detachment`
-                              }${!forceSubFactionId || forceSubFactionId === "none"
-                                ? ""
-                                : ` - ${forceSubfaction.name} Focus`
+                            secondary={`${!forceSubFactionId || forceSubFactionId === "none"
+                              ? "No Combat Doctrine"
+                              : `${forceSubfaction.name} Combat Doctrine`
                               }`}
                           />
                         </ListItem>
@@ -1449,10 +1420,6 @@ export default React.memo((props) => {
                     )}
                   {filteredCategories.map((catKey, catIndex) => {
                     const category = data.getCategory(catKey);
-                    const categoryData = data.getOrganizationCategory(
-                      force,
-                      catKey
-                    );
                     const unitCatCount = units.filter(
                       (unit) => unit.category === catKey
                     ).length;
