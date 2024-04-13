@@ -8,31 +8,28 @@ import {
   Typography,
 } from "@mui/material";
 import Container from "@mui/material/Container";
-import { useTheme } from "@mui/material/styles";
-import React from "react";
-import { useNavigate } from "react-router";
-import library from "assets/library.png";
 import { DataContext, useModal } from "hooks";
-import { useContext } from "react";
-import { useSnackbar } from "notistack";
-import { UserPreferences } from "./modals";
-import { v4 as uuidv4 } from "uuid";
 import { useLocalStorage } from "hooks/use-localstorage";
+import { sortBy } from 'lodash';
+import { useSnackbar } from "notistack";
+import React, { useContext } from "react";
+import { useNavigate } from "react-router";
+import { v4 as uuidv4 } from "uuid";
+import { UserPreferences } from "./modals";
+import { RosterList } from "./rosters";
 import { AddList } from "./rosters/modals";
 
 export default function Home(props) {
   const navigate = useNavigate();
-  const theme = useTheme();
   const [{ data: nope, refreshAllData: refreshData, setAppState, userPrefs, setUserPrefs }] =
     useContext(DataContext);
 
   const [lists, setRawLists] = useLocalStorage("lists", {});
-    
+
   const { enqueueSnackbar } = useSnackbar();
   const games = [
     {
       name: "Dice Guild",
-      background: library,
       image: "/data/vortex_gate.png",
     },
   ];
@@ -111,6 +108,7 @@ export default function Home(props) {
     setLists({
       ...lists,
       [listId]: {
+        created: Date.now(),
         name: listName,
         ...data,
       },
@@ -132,6 +130,14 @@ export default function Home(props) {
     ),
     [lists]
   );
+
+  const filteredLists = sortBy(Object.keys(lists)
+  .map((listId) => {
+    return {
+      ...lists[listId],
+      id: listId,
+    };
+  }), 'created').slice(0, 8);
 
   return (
     <>
@@ -173,13 +179,16 @@ export default function Home(props) {
           <Grid item xs={12} md={6} sx={{ mb: 2 }}>
             <Stack justifyContent="center" alignItems="center" direction="row">
               <Typography sx={{ my: 2, mr: 2 }} variant="h5">
-                {"Game Rosters"}
+                {"Recent Rosters"}
               </Typography>
               <hr style={{ height: "1px", flex: 1 }} />
             </Stack>
             <Stack spacing={1}>
-              <Button style={{ minHeight: '60px'}} fullWidth variant="outlined" color="secondary" onClick={() => showAddList()}>Create Roster</Button>
-              <Button style={{ minHeight: '60px'}} fullWidth variant="outlined" color="secondary" onClick={() => navigate(`/lists`)}>Manage Rosters</Button>
+              <Stack direction="row" spacing={1}>
+                <Button style={{ minHeight: '50px' }} fullWidth variant="outlined" color="secondary" onClick={() => showAddList()}>Create Roster</Button>
+                <Button style={{ minHeight: '50px' }} fullWidth variant="outlined" color="secondary" onClick={() => navigate(`/lists`)}>Manage Rosters</Button>
+              </Stack>
+              <RosterList goToList={goToList} lists={filteredLists} />
             </Stack>
           </Grid>
         </Grid>

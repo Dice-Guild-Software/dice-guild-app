@@ -1,13 +1,8 @@
-import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import BugReportIcon from "@mui/icons-material/BugReport";
 import UploadIcon from "@mui/icons-material/Upload";
 import { Container } from "@mui/material";
 import Box from "@mui/material/Box";
-import Popover from "@mui/material/Popover";
-import Typography from "@mui/material/Typography";
 import CustomCircularProgress from "components/CustomCircularProgress";
-import { Dropdown } from "components/dropdown";
 import { DataContext } from "hooks";
 import { get, omitBy } from "lodash";
 import { set } from "lodash/fp";
@@ -17,7 +12,6 @@ import { useParams } from "react-router";
 import { DataAPI, mergeGlobalData } from "utils/data";
 import { readFileContent } from "utils/files";
 import { Factions } from "./factions";
-import { PrettyHeader } from "components/pretty-header";
 
 const FactionsMain = () => {
   const { gameName } = useParams();
@@ -143,21 +137,21 @@ const FactionsMain = () => {
       contextActions: [
         ...(!!userPrefs.developerMode
           ? [
-              {
-                name: "Import",
-                icon: <UploadIcon />,
-                onClick: () => handleClick(),
-              },
-            ]
+            {
+              name: "Import",
+              icon: <UploadIcon />,
+              onClick: () => handleClick(),
+            },
+          ]
           : []),
         ...(!!game.reportUrl
           ? [
-              {
-                name: "Report",
-                icon: <BugReportIcon />,
-                onClick: () => window.open(game.reportUrl, "_blank"),
-              },
-            ]
+            {
+              name: "Report",
+              icon: <BugReportIcon />,
+              onClick: () => window.open(game.reportUrl, "_blank"),
+            },
+          ]
           : []),
       ],
     });
@@ -185,9 +179,6 @@ const FactionsMain = () => {
       </Box>
     );
   }
-  const isModified = Object.values(
-    get(nope, `customData.games[${gameName}]`, {})
-  ).length;
   return (
     <>
       <Container>

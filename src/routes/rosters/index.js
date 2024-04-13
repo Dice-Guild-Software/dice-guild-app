@@ -3,12 +3,10 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import DownloadIcon from "@mui/icons-material/Download";
 import EditIcon from "@mui/icons-material/Edit";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import UploadIcon from "@mui/icons-material/Upload";
 import ShareIcon from "@mui/icons-material/Share";
+import UploadIcon from "@mui/icons-material/Upload";
 import {
   Card,
-  CardContent,
-  CardHeader,
   Container,
   IconButton,
   ListItem,
@@ -17,24 +15,125 @@ import {
   ListItemText,
   Menu,
   MenuItem,
-  Stack,
-  useTheme,
+  Stack
 } from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import CustomCircularProgress from "components/CustomCircularProgress";
 import { Dropdown } from "components/dropdown";
 import { DataContext, useModal } from "hooks";
-import { get, omit, startCase } from "lodash";
+import { useLocalStorage } from "hooks/use-localstorage";
+import { get, omit, sortBy, startCase } from "lodash";
 import { useSnackbar } from "notistack";
 import React from "react";
-import { useNavigate } from "react-router";
-import { useLocation } from "react-router";
-import { AddList, UpdateList, ShareList } from "routes/rosters/modals";
+import { useLocation, useNavigate } from "react-router";
+import { AddList, ShareList, UpdateList } from "routes/rosters/modals";
 import { downloadFile, readFileContent } from "utils/files";
 import { v4 as uuidv4 } from "uuid";
-import { PrettyHeader } from "components/pretty-header";
-import { useLocalStorage } from "hooks/use-localstorage";
+
+export const RosterList = (props) => {
+  const { showEditList, downloadList, lists, shareList, deleteList, goToList, showContext = false } = props;
+  return (
+    <>
+      {lists.map((list, unitIdx) => {
+        const { pointLimit, type } = list;
+        return (
+          <Card sx={{ mb: 1 }}>
+            <ListItem
+              key={unitIdx}
+              secondaryAction={
+                showContext ?
+                  <Dropdown>
+                    {({
+                      handleClose,
+                      open,
+                      handleOpen,
+                      anchorElement,
+                    }) => (
+                      <>
+                        <IconButton sx={{ mr: -1 }} onClick={handleOpen}>
+                          <MoreVertIcon />
+                        </IconButton>
+                        <Menu
+                          anchorOrigin={{
+                            vertical: "bottom",
+                            horizontal: "right",
+                          }}
+                          transformOrigin={{
+                            vertical: "top",
+                            horizontal: "right",
+                          }}
+                          anchorEl={anchorElement}
+                          id="basic-menu"
+                          open={open}
+                          onClose={handleClose}
+                          MenuListProps={{
+                            dense: false,
+                            onClick: handleClose,
+                            "aria-labelledby": "basic-button",
+                          }}
+                        >
+                          <MenuItem
+                            onClick={() =>
+                              showEditList({ listId: list.id })
+                            }
+                          >
+                            <ListItemIcon>
+                              <EditIcon />
+                            </ListItemIcon>
+                            <ListItemText>Edit</ListItemText>
+                          </MenuItem>
+                          <MenuItem onClick={() => downloadList(list.id)}>
+                            <ListItemIcon>
+                              <DownloadIcon />
+                            </ListItemIcon>
+                            <ListItemText>Download</ListItemText>
+                          </MenuItem>
+                          <MenuItem onClick={() => shareList(list.id)}>
+                            <ListItemIcon>
+                              <ShareIcon />
+                            </ListItemIcon>
+                            <ListItemText>Share</ListItemText>
+                          </MenuItem>
+                          <MenuItem onClick={() => deleteList(list.id)}>
+                            <ListItemIcon>
+                              <DeleteIcon />
+                            </ListItemIcon>
+                            <ListItemText>Delete</ListItemText>
+                          </MenuItem>
+                        </Menu>
+                      </>
+                    )}
+                  </Dropdown> : ''
+              }
+              disablePadding
+            >
+              <ListItemButton
+                sx={{ py: 1.5 }}
+                onClick={() => goToList(list.id)}
+              >
+                <ListItemText
+                  primary={list.name}
+                  secondary={[
+                    pointLimit ? `${pointLimit}pts` : undefined,
+                    startCase(type),
+                  ].join(" - ")}
+                />
+              </ListItemButton>
+            </ListItem>
+          </Card>
+        );
+      })}
+      {!lists.length && (
+        <>
+          <Typography>
+            No created rosters available.
+          </Typography>
+        </>
+      )}
+    </>
+  );
+}
 
 export default React.memo((props) => {
   const [{ data: nope, appState, userPrefs, setAppState }] =
@@ -42,7 +141,6 @@ export default React.memo((props) => {
   const nameFilter = appState?.searchText;
   const fileDialog = React.useRef();
   const navigate = useNavigate();
-  const theme = useTheme();
   const location = useLocation();
   const queryParams = React.useMemo(
     () => new URLSearchParams(location.search),
@@ -106,6 +204,7 @@ export default React.memo((props) => {
     setLists({
       ...lists,
       [listId]: {
+        created: Date.now(),
         name: listName,
         ...data,
       },
@@ -259,8 +358,7 @@ export default React.memo((props) => {
       </Box>
     );
   }
-  const factionColor = theme.palette.primary.main;
-  const filteredLists = Object.keys(lists)
+  const filteredLists = sortBy(Object.keys(lists)
     .map((listId) => {
       return {
         ...lists[listId],
@@ -271,7 +369,7 @@ export default React.memo((props) => {
       nameFilter
         ? list?.name?.toLowerCase()?.includes(nameFilter?.toLowerCase())
         : true
-    );
+    ), 'created');
   return (
     <Container>
       <Stack justifyContent="center" alignItems="center" direction="row">
@@ -280,104 +378,7 @@ export default React.memo((props) => {
         </Typography>
         <hr style={{ height: "1px", flex: 1 }} />
       </Stack>
-      <>
-        {filteredLists.map((list, unitIdx) => {
-          const { pointLimit, type } = list;
-          return (
-            <Card sx={{ mb: 1 }}>
-              <ListItem
-                key={unitIdx}
-                secondaryAction={
-                  <Dropdown>
-                    {({
-                      handleClose,
-                      open,
-                      handleOpen,
-                      anchorElement,
-                    }) => (
-                      <>
-                        <IconButton sx={{ mr: -1 }} onClick={handleOpen}>
-                          <MoreVertIcon />
-                        </IconButton>
-                        <Menu
-                          anchorOrigin={{
-                            vertical: "bottom",
-                            horizontal: "right",
-                          }}
-                          transformOrigin={{
-                            vertical: "top",
-                            horizontal: "right",
-                          }}
-                          anchorEl={anchorElement}
-                          id="basic-menu"
-                          open={open}
-                          onClose={handleClose}
-                          MenuListProps={{
-                            dense: false,
-                            onClick: handleClose,
-                            "aria-labelledby": "basic-button",
-                          }}
-                        >
-                          <MenuItem
-                            onClick={() =>
-                              showEditList({ listId: list.id })
-                            }
-                          >
-                            <ListItemIcon>
-                              <EditIcon />
-                            </ListItemIcon>
-                            <ListItemText>Edit</ListItemText>
-                          </MenuItem>
-                          <MenuItem onClick={() => downloadList(list.id)}>
-                            <ListItemIcon>
-                              <DownloadIcon />
-                            </ListItemIcon>
-                            <ListItemText>Download</ListItemText>
-                          </MenuItem>
-                          <MenuItem onClick={() => shareList(list.id)}>
-                            <ListItemIcon>
-                              <ShareIcon />
-                            </ListItemIcon>
-                            <ListItemText>Share</ListItemText>
-                          </MenuItem>
-                          <MenuItem onClick={() => deleteList(list.id)}>
-                            <ListItemIcon>
-                              <DeleteIcon />
-                            </ListItemIcon>
-                            <ListItemText>Delete</ListItemText>
-                          </MenuItem>
-                        </Menu>
-                      </>
-                    )}
-                  </Dropdown>
-                }
-                disablePadding
-              >
-                <ListItemButton
-                  sx={{ py: 1.5 }}
-                  onClick={() => goToList(list.id)}
-                >
-                  <ListItemText
-                    primary={list.name}
-                    secondary={[
-                      pointLimit ? `${pointLimit}pts` : undefined,
-                      startCase(type),
-                    ].join(" - ")}
-                  />
-                </ListItemButton>
-              </ListItem>
-            </Card>
-          );
-        })}
-        {!filteredLists.length && (
-          <>
-            <Typography>
-              No created lists. Click the <AddIcon /> Button in the top
-              right to get started.
-            </Typography>
-          </>
-        )}
-      </>
+      <RosterList showContext lists={filteredLists} showEditList={showEditList} downloadList={downloadList} shareList={shareList} deleteList={deleteList} goToList={goToList} />
       <input
         id="file-Form.Control"
         type="file"

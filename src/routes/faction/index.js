@@ -1,48 +1,32 @@
-import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AddIcon from "@mui/icons-material/Add";
 import BugReportIcon from "@mui/icons-material/BugReport";
 import UploadIcon from "@mui/icons-material/Upload";
-import InfoIcon from "@mui/icons-material/Info";
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Button, Stack } from "@mui/material";
 import Container from "@mui/material/Container";
-import Popover from "@mui/material/Popover";
-import { useTheme } from "@mui/material/styles";
-import Tab from "@mui/material/Tab";
-import Tabs from "@mui/material/Tabs";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import CustomCircularProgress from "components/CustomCircularProgress";
-import { Dropdown } from "components/dropdown";
+import { PrettyHeader } from "components/pretty-header";
 import { DataContext, useModal } from "hooks";
-import useQueryParams from "hooks/use-query-params";
+import { useLocalStorage } from "hooks/use-localstorage";
 import { get, isNil, set } from "lodash";
 import { useSnackbar } from "notistack";
 import React, { useContext, useState } from "react";
 import { useNavigate, useParams } from "react-router";
+import { AddList } from "routes/rosters/modals";
 import { DataAPI, mergeGlobalData } from "utils/data";
 import { readFileContent } from "utils/files";
+import { v4 as uuidv4 } from "uuid";
 import { Overview } from "./overview";
 import { Powers } from "./powers";
 import { Relics } from "./relics";
-import { Rules } from "./rules";
 import { Strategies } from "./strategies";
 import { Units } from "./units";
-import { Weapons } from "./weapons";
-import { ShowInfo } from "routes/modals";
-import { PrettyHeader } from "components/pretty-header";
-import { AddList } from "routes/rosters/modals";
-import { v4 as uuidv4 } from "uuid";
-import { useLocalStorage } from "hooks/use-localstorage";
 
 export default React.memo((props) => {
-  const { factionName, gameName } = useParams();
+  const { factionName } = useParams();
   const [
     { data: someData, coreData, setData, appState, setAppState, userPrefs },
   ] = useContext(DataContext);
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const nameFilter = appState?.searchText;
-  let [activeTab, setActiveTab] = useQueryParams("tab", 0);
   const [filterByFocus] = useState(false);
   const game = get(someData, `gameData`, {});
   const globalData = mergeGlobalData(game, someData);
@@ -139,6 +123,7 @@ export default React.memo((props) => {
     setLists({
       ...lists,
       [listId]: {
+        created: Date.now(),
         name: listName,
         ...data,
       },
@@ -220,9 +205,6 @@ export default React.memo((props) => {
       </Box>
     );
   }
-  const isModified = Object.values(
-    get(someData, `customData.games[${gameName}].factions[${factionName}]`, {})
-  ).length;
   const hiddenTabs = new Set([]);
   if (!powers) {
     hiddenTabs.add("Powers");
