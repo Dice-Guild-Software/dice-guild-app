@@ -1,6 +1,7 @@
 import RefreshIcon from "@mui/icons-material/Refresh";
 import SettingsIcon from "@mui/icons-material/Settings";
 import {
+  Button,
   CardActionArea,
   Grid,
   Stack,
@@ -14,14 +15,19 @@ import library from "assets/library.png";
 import { DataContext, useModal } from "hooks";
 import { useContext } from "react";
 import { useSnackbar } from "notistack";
-import Rosters from "routes/rosters";
 import { UserPreferences } from "./modals";
+import { v4 as uuidv4 } from "uuid";
+import { useLocalStorage } from "hooks/use-localstorage";
+import { AddList } from "./rosters/modals";
 
 export default function Home(props) {
   const navigate = useNavigate();
   const theme = useTheme();
-  const [{ refreshAllData: refreshData, setAppState, userPrefs, setUserPrefs }] =
+  const [{ data: nope, refreshAllData: refreshData, setAppState, userPrefs, setUserPrefs }] =
     useContext(DataContext);
+
+  const [lists, setRawLists] = useLocalStorage("lists", {});
+    
   const { enqueueSnackbar } = useSnackbar();
   const games = [
     {
@@ -89,6 +95,44 @@ export default function Home(props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const setLists = React.useCallback(
+    (listData) => {
+      const newGameData = {
+        ...listData,
+      };
+      setRawLists(newGameData);
+    },
+    [setRawLists]
+  );
+
+  const goToList = (listId) => navigate(`/lists/${listId}`);
+  const addList = (listName, data) => {
+    const listId = uuidv4();
+    setLists({
+      ...lists,
+      [listId]: {
+        name: listName,
+        ...data,
+      },
+    });
+    goToList(listId);
+  };
+
+  const [showAddList, hideAddList] = useModal(
+    ({ extraProps }) => (
+      <AddList
+        {...props}
+        rawData={nope}
+        userPrefs={userPrefs}
+        hideModal={hideAddList}
+        lists={lists}
+        addList={addList}
+        {...extraProps}
+      />
+    ),
+    [lists]
+  );
+
   return (
     <>
       <Container>
@@ -127,7 +171,16 @@ export default function Home(props) {
             </Grid>
           </Grid>
           <Grid item xs={12} md={6} sx={{ mb: 2 }}>
-            <Rosters />
+            <Stack justifyContent="center" alignItems="center" direction="row">
+              <Typography sx={{ my: 2, mr: 2 }} variant="h5">
+                {"Game Rosters"}
+              </Typography>
+              <hr style={{ height: "1px", flex: 1 }} />
+            </Stack>
+            <Stack spacing={1}>
+              <Button style={{ minHeight: '60px'}} fullWidth variant="outlined" color="secondary" onClick={() => showAddList()}>Create Roster</Button>
+              <Button style={{ minHeight: '60px'}} fullWidth variant="outlined" color="secondary" onClick={() => navigate(`/lists`)}>Manage Rosters</Button>
+            </Stack>
           </Grid>
         </Grid>
       </Container>

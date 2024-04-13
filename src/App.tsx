@@ -16,9 +16,8 @@ import Faction from "routes/faction";
 import Factions from "routes/factions";
 import Lists from "routes/Lists";
 import PageNotFound from "routes/PageNotFound";
-import Privacy from "routes/Privacy";
 import Rosters from "routes/rosters";
-import Rules, { CHAPTERS } from "routes/Rules";
+import { CHAPTERS } from "routes/Rules";
 import Splash from "routes/Splash";
 import Updates from "routes/Updates";
 import LoadingSplash from "routes/loading";
@@ -104,7 +103,7 @@ const App = () => {
                   <Route path="/games/vortex_gate/factions/:factionName" element={<Faction />} />
                   <Route
                     path="lists"
-                    element={<Navigate replace to={`/`} />}
+                    element={<Rosters />}
                   />
                   <Route path="/lists/:listId" element={<Lists />} />
                   <Route path="/scenarios" element={<MissionGenerator />} />
