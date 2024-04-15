@@ -15,7 +15,7 @@
           "name": "Battlesuit Commander",
           "movement": 8,
           "courage": 7,
-          "shoot": 7,
+          "shoot": 2,
           "fight": 6,
           "defense": 9,
           "reflexes": 6,
@@ -64,7 +64,7 @@
           "name": "Celestial",
           "movement": 7,
           "courage": 6,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 6,
           "defense": 5,
           "reflexes": 5,
@@ -86,7 +86,7 @@
           "name": "Warrior Commander",
           "movement": 6,
           "courage": 7,
-          "shoot": 7,
+          "shoot": 2,
           "fight": 6,
           "defense": 6,
           "reflexes": 6,
@@ -112,7 +112,7 @@
           "name": "Warrior Sergeant",
           "movement": 6,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 4,
           "defense": 6,
           "reflexes": 6,
@@ -121,7 +121,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Warrior", "movement": 6, "courage": 5, "shoot": 5, "fight": 4, "defense": 6, "reflexes": 6, "weapons": ["pulse_rifle", "light_handweapon"], "min": 4, "max": 9}
+        {"name": "Warrior", "movement": 6, "courage": 5, "shoot": 4, "fight": 4, "defense": 6, "reflexes": 6, "weapons": ["pulse_rifle", "light_handweapon"], "min": 4, "max": 9}
       ]
     },
     "pathfinder_squad": {
@@ -140,7 +140,7 @@
           "name": "Pathfinder Sergeant",
           "movement": 6,
           "courage": 5,
-          "shoot": 6,
+          "shoot": 3,
           "fight": 4,
           "defense": 5,
           "reflexes": 6,
@@ -153,7 +153,7 @@
           "name": "Pathfinder",
           "movement": 6,
           "courage": 5,
-          "shoot": 6,
+          "shoot": 3,
           "fight": 4,
           "defense": 5,
           "reflexes": 6,
@@ -174,7 +174,7 @@
           "name": "Militia Sergeant",
           "movement": 6,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 5,
           "reflexes": 6,
@@ -187,7 +187,7 @@
           "name": "Militia",
           "movement": 6,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 5,
           "reflexes": 6,
@@ -207,7 +207,7 @@
           "name": "Insect Warrior",
           "movement": 8,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 7,
           "reflexes": 5,
@@ -229,7 +229,7 @@
           "name": "Stealth Suit",
           "movement": 8,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 4,
           "defense": 8,
           "reflexes": 6,
@@ -256,7 +256,7 @@
           "name": "Assault Suit",
           "movement": 8,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 6,
           "defense": 8,
           "reflexes": 6,
@@ -283,7 +283,7 @@
           "name": "Battlesuit",
           "movement": 8,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 8,
           "reflexes": 6,
@@ -324,7 +324,7 @@
           "name": "Support Drone",
           "movement": 8,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 0,
           "defense": 6,
           "reflexes": 5,
@@ -334,7 +334,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Escort Drone", "movement": 8, "courage": 5, "shoot": 5, "fight": 0, "defense": 6, "reflexes": 5, "weapons": ["pulse_pistol"], "rules": ["fly"], "min": 3, "max": 8}
+        {"name": "Escort Drone", "movement": 8, "courage": 5, "shoot": 4, "fight": 0, "defense": 6, "reflexes": 5, "weapons": ["pulse_pistol"], "rules": ["fly"], "min": 3, "max": 8}
       ]
     },
     "tactical_drones": {
@@ -347,7 +347,7 @@
           "name": "Tactical Drone",
           "movement": 8,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 0,
           "defense": 6,
           "reflexes": 6,
@@ -372,7 +372,7 @@
           "name": "Heavy Gun Drone",
           "movement": 8,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 0,
           "defense": 6,
           "reflexes": 5,
@@ -390,7 +390,7 @@
       "category": "elite",
       "keywords": ["Drone"],
       "models": [
-        {"name": "Sniper Drone", "movement": 8, "courage": 5, "shoot": 5, "fight": 0, "defense": 6, "reflexes": 5, "weapons": ["pulse_sniper"], "rules": ["evasive", "fly"], "min": 3, "max": 9}
+        {"name": "Sniper Drone", "movement": 8, "courage": 5, "shoot": 4, "fight": 0, "defense": 6, "reflexes": 5, "weapons": ["pulse_sniper"], "rules": ["evasive", "fly"], "min": 3, "max": 9}
       ]
     },
     "hover_apc": {
@@ -403,7 +403,7 @@
           "name": "Hover APC",
           "movement": 10,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 11,
           "reflexes": 6,
@@ -430,7 +430,7 @@
           "name": "Hover Tank",
           "movement": 10,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 12,
           "reflexes": 6,
@@ -457,7 +457,7 @@
           "name": "Observation Craft",
           "movement": 8,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 8,
           "reflexes": 6,
@@ -479,7 +479,7 @@
           "name": "Scout Craft",
           "movement": 10,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 10,
           "reflexes": 6,
@@ -505,7 +505,7 @@
           "name": "Support Battlesuit",
           "movement": 8,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 4,
           "defense": 11,
           "reflexes": 6,
@@ -532,7 +532,7 @@
           "name": "Heavy Battlesuit",
           "movement": 8,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 4,
           "defense": 12,
           "reflexes": 6,
@@ -560,7 +560,7 @@
           "name": "Heavy Stealth Suit",
           "movement": 8,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 4,
           "defense": 11,
           "reflexes": 6,
@@ -586,7 +586,7 @@
           "name": "Light Fighter",
           "movement": 10,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 0,
           "defense": 9,
           "reflexes": 5,
@@ -612,7 +612,7 @@
           "name": "Light Bomber",
           "movement": 10,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 0,
           "defense": 9,
           "reflexes": 5,
@@ -634,7 +634,7 @@
         {
           "name": "Shaper",
           "movement": 6,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 6,
           "defense": 6,
           "reflexes": 7,
@@ -652,7 +652,7 @@
       "category": "core",
       "keywords": ["Infantry"],
       "models": [
-        {"name": "Tribal Warrior", "movement": 6, "shoot": 5, "fight": 6, "defense": 5, "reflexes": 5, "courage": 5, "weapons": ["rifle", {"id": "handweapon", "count": 2}], "min": 5, "max": 10}
+        {"name": "Tribal Warrior", "movement": 6, "shoot": 4, "fight": 6, "defense": 5, "reflexes": 5, "courage": 5, "weapons": ["rifle", {"id": "handweapon", "count": 2}], "min": 5, "max": 10}
       ]
     },
     "wild_dogs": {
@@ -661,7 +661,7 @@
       "category": "elite",
       "keywords": ["Beasts"],
       "rules": ["agile"],
-      "models": [{"name": "Tribal Hound", "movement": 8, "shoot": 4, "fight": 6, "reflexes": 6, "courage": 5, "defense": 5, "weapons": [{"id": "handweapon", "count": 2}], "min": 4, "max": 8}]
+      "models": [{"name": "Tribal Hound", "movement": 8, "shoot": 5, "fight": 6, "reflexes": 6, "courage": 5, "defense": 5, "weapons": [{"id": "handweapon", "count": 2}], "min": 4, "max": 8}]
     },
     "ogre_riders": {
       "name": "Ogre Riders",
@@ -670,17 +670,17 @@
       "keywords": ["Infantry"],
       "rules": [{"id": "wounds", "x": 3}],
       "models": [
-        {"name": "Ogre Rider", "movement": 6, "shoot": 5, "fight": 6, "reflexes": 6, "courage": 5, "defense": 7, "weapons": [{"id": "ogre_fists", "count": 3}, "laser_cannon"], "min": 1, "max": 3}
+        {"name": "Ogre Rider", "movement": 6, "shoot": 4, "fight": 6, "reflexes": 6, "courage": 5, "defense": 7, "weapons": [{"id": "ogre_fists", "count": 3}, "laser_cannon"], "min": 1, "max": 3}
       ]
     }
   },
   "models": {
-    "support_turret": {"name": "Support Turret", "movement": "-", "courage": "-", "shoot": 5, "fight": 0, "defense": "-", "reflexes": "-", "weapons": ["smart_missiles"], "min": 1, "max": 1},
+    "support_turret": {"name": "Support Turret", "movement": "-", "courage": "-", "shoot": 4, "fight": 0, "defense": "-", "reflexes": "-", "weapons": ["smart_missiles"], "min": 1, "max": 1},
     "recon_drone": {
       "name": "Heavy Gunner Drone",
       "movement": "-",
       "courage": "-",
-      "shoot": 5,
+      "shoot": 4,
       "fight": 0,
       "defense": "-",
       "reflexes": "-",
@@ -693,7 +693,7 @@
       "name": "Shield Missile Drone",
       "movement": "-",
       "courage": "-",
-      "shoot": 5,
+      "shoot": 4,
       "fight": 0,
       "defense": "-",
       "reflexes": "-",
@@ -702,11 +702,11 @@
       "min": 1,
       "max": 1
     },
-    "inhibitor_drone": {"name": "Inhibitor Drone", "movement": "-", "courage": "-", "shoot": 5, "fight": 0, "defense": "-", "reflexes": "-", "rules": ["inhibitor"], "min": 0, "max": 1},
+    "inhibitor_drone": {"name": "Inhibitor Drone", "movement": "-", "courage": "-", "shoot": 4, "fight": 0, "defense": "-", "reflexes": "-", "rules": ["inhibitor"], "min": 0, "max": 1},
     "spotter_drone": {"name": "Spotter Drone", "movement": "-", "courage": "-", "shoot": 0, "fight": 0, "defense": "-", "reflexes": "-", "rules": ["spotting_laser"], "min": 1, "max": 1},
-    "missile_drone": {"name": "Missile Drone", "movement": "-", "courage": "-", "shoot": 5, "fight": 0, "defense": "-", "reflexes": "-", "weapons": ["missile_pod"], "min": 1, "max": 1},
+    "missile_drone": {"name": "Missile Drone", "movement": "-", "courage": "-", "shoot": 4, "fight": 0, "defense": "-", "reflexes": "-", "weapons": ["missile_pod"], "min": 1, "max": 1},
     "stealth_drone": {"name": "Stealth Drone", "movement": "-", "courage": "-", "shoot": 0, "fight": 0, "defense": "-", "reflexes": "-", "rules": ["stealth_field"], "min": 1, "max": 1},
-    "gunner_drone": {"name": "Gunner Drone", "movement": "-", "courage": "-", "shoot": 5, "fight": 0, "defense": "-", "reflexes": "-", "weapons": ["pulse_carbine"], "min": 1, "max": 1},
+    "gunner_drone": {"name": "Gunner Drone", "movement": "-", "courage": "-", "shoot": 4, "fight": 0, "defense": "-", "reflexes": "-", "weapons": ["pulse_carbine"], "min": 1, "max": 1},
     "shield_drone": {"name": "Shield Drone", "movement": "-", "courage": "-", "shoot": 0, "fight": 0, "defense": "-", "reflexes": "-", "rules": ["pulse_shield"], "min": 1, "max": 1},
     "guardian_drone": {"name": "Guardian Drone", "movement": "-", "courage": "-", "shoot": 0, "fight": 0, "defense": "-", "reflexes": "-", "rules": ["protection"], "min": 1, "max": 1},
     "accelerator_drone": {"name": "Accelerator Drone", "movement": "-", "courage": "-", "shoot": 0, "fight": 0, "defense": "-", "reflexes": "-", "rules": ["accelerator"], "min": 1, "max": 1}

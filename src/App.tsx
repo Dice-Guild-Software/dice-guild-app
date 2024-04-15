@@ -1,29 +1,26 @@
 // @ts-nocheck
 
 import CloseIcon from "@mui/icons-material/Close";
-import { Box, IconButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import "App.css";
-import { Footer } from "components/footer";
 import { MainNav } from "components/MainNav";
 import { useDataFetcher, usePageTitle } from "hooks";
 import { SnackbarProvider } from "notistack";
 import React from "react";
 import { Navigate, Route, Routes } from "react-router";
-import Faction from "routes/faction";
-import Factions from "routes/factions";
 import Lists from "routes/Lists";
 import PageNotFound from "routes/PageNotFound";
-import Rosters from "routes/rosters";
-import { CHAPTERS } from "routes/Rules";
 import Splash from "routes/Splash";
 import Updates from "routes/Updates";
+import Faction from "routes/faction";
+import Factions from "routes/factions";
 import LoadingSplash from "routes/loading";
+import { MissionGenerator } from "routes/mission_generator";
+import Rosters from "routes/rosters";
 import { BASE_THEME } from "utils/constants";
 import { DataContext, ModalProvider } from "./hooks";
-import { MissionGenerator } from "routes/mission_generator";
 
 const App = () => {
   const dataFetcher = useDataFetcher();
@@ -64,7 +61,6 @@ const App = () => {
       },
     },
   });
-  const fullScreen = useMediaQuery(theme.breakpoints.up("md"));
   const title = usePageTitle({ optData: data });
   React.useEffect(() => {
     document.title = `Dice Guild - ${title}`;
@@ -73,7 +69,6 @@ const App = () => {
   const onClickDismiss = (key) => () => {
     notistackRef.current.closeSnackbar(key);
   };
-  const firstChapter = Object.keys(CHAPTERS)[0] || "introduction";
   return (
     <ThemeProvider theme={theme}>
       <ModalProvider>

@@ -13,7 +13,7 @@
         {
           "name": "Militia Commander",
           "courage": 6,
-          "shoot": 6,
+          "shoot": 3,
           "fight": 6,
           "defense": 6,
           "reflexes": 6,
@@ -43,7 +43,7 @@
           "name": "Cult Overlord",
           "movement": 6,
           "courage": 7,
-          "shoot": 6,
+          "shoot": 3,
           "fight": 6,
           "defense": 7,
           "reflexes": 6,
@@ -72,7 +72,7 @@
           "name": "Cult Psychic",
           "movement": 6,
           "courage": 6,
-          "shoot": 6,
+          "shoot": 3,
           "fight": 6,
           "defense": 6,
           "reflexes": 6,
@@ -98,7 +98,7 @@
         {
           "name": "Cult Outrider Assassin",
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 7,
           "reflexes": 5,
@@ -120,7 +120,7 @@
           "name": "Cult Assasin",
           "movement": 6,
           "courage": 5,
-          "shoot": 6,
+          "shoot": 3,
           "fight": 6,
           "defense": 6,
           "reflexes": 6,
@@ -141,7 +141,7 @@
         {
           "name": "Great Abomination",
           "courage": 6,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 6,
           "defense": 7,
           "reflexes": 5,
@@ -185,7 +185,7 @@
           "name": "Cult Strategist",
           "movement": 6,
           "courage": 6,
-          "shoot": 6,
+          "shoot": 3,
           "fight": 6,
           "defense": 6,
           "reflexes": 6,
@@ -206,7 +206,7 @@
           "name": "Cult Proclamator",
           "movement": 6,
           "courage": 6,
-          "shoot": 6,
+          "shoot": 3,
           "fight": 6,
           "defense": 6,
           "reflexes": 6,
@@ -227,7 +227,7 @@
           "name": "Cult Gunslinger",
           "movement": 6,
           "courage": 5,
-          "shoot": 6,
+          "shoot": 3,
           "fight": 6,
           "defense": 6,
           "reflexes": 6,
@@ -248,7 +248,7 @@
         {
           "name": "Hive Harvesters",
           "courage": 6,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 6,
           "defense": 7,
           "reflexes": 6,
@@ -270,7 +270,7 @@
         {
           "name": "Sergeant",
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 5,
           "reflexes": 5,
@@ -291,7 +291,7 @@
         {
           "name": "Trooper",
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 5,
           "reflexes": 5,
@@ -312,7 +312,7 @@
           "name": "Cult Militia Weapon Team",
           "movement": 6,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 5,
           "reflexes": 5,
@@ -333,7 +333,7 @@
           "name": "Neophyte Sergeant",
           "movement": 6,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 6,
           "defense": 5,
           "reflexes": 5,
@@ -349,7 +349,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Neophyte", "movement": 6, "courage": 5, "shoot": 5, "fight": 6, "defense": 5, "reflexes": 5, "weapons": ["auto_rifle", "light_handweapon"], "min": 9, "max": 19}
+        {"name": "Neophyte", "movement": 6, "courage": 5, "shoot": 4, "fight": 6, "defense": 5, "reflexes": 5, "weapons": ["auto_rifle", "light_handweapon"], "min": 9, "max": 19}
       ],
       "options": [
         {"replaceWeapon": "auto_rifle", "withWeapon": "shotgun"},
@@ -367,7 +367,7 @@
           "name": "Acolyte Sergeant",
           "movement": 6,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 6,
           "defense": 6,
           "reflexes": 5,
@@ -376,7 +376,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Acolyte", "movement": 6, "courage": 5, "shoot": 5, "fight": 6, "defense": 6, "reflexes": 5, "weapons": [{"id": "handweapon", "count": 2}, "pistol"], "min": 4, "max": 9}
+        {"name": "Acolyte", "movement": 6, "courage": 5, "shoot": 4, "fight": 6, "defense": 6, "reflexes": 5, "weapons": [{"id": "handweapon", "count": 2}, "pistol"], "min": 4, "max": 9}
       ],
       "options": [
         {"replaceWeapon": "pistol", "withWeapon": ["flamethrower_pistol"]},
@@ -389,7 +389,7 @@
       "description": "Half alien and half human, these hybrids are the last step before becoming fully alien.",
       "category": "elite",
       "models": [
-        {"name": "Metamorph", "courage": 6, "shoot": 5, "fight": 6, "defense": 7, "reflexes": 6, "movement": 6, "weapons": ["pistol", {"id": "huge_mutated_claw", "count": 3}], "min": 5, "max": 10}
+        {"name": "Metamorph", "courage": 6, "shoot": 4, "fight": 6, "defense": 7, "reflexes": 6, "movement": 6, "weapons": ["pistol", {"id": "huge_mutated_claw", "count": 3}], "min": 5, "max": 10}
       ],
       "options": [{"replaceWeapon": "pistol", "withWeapon": ["flamethrower_pistol"]}, {"addRule": "banner", "modelLimit": 1}]
     },
@@ -402,7 +402,7 @@
         {
           "name": "Abomination",
           "courage": 6,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 6,
           "defense": 7,
           "reflexes": 5,
@@ -425,7 +425,7 @@
         {
           "name": "Neophyte Outrider Sergeant",
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 7,
           "reflexes": 5,
@@ -441,7 +441,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Neophyte Outrider", "movement": 8, "courage": 5, "shoot": 5, "fight": 5, "defense": 7, "reflexes": 5, "weapons": ["auto_rifle", "light_handweapon"], "min": 2, "max": 8}
+        {"name": "Neophyte Outrider", "movement": 8, "courage": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 5, "weapons": ["auto_rifle", "light_handweapon"], "min": 2, "max": 8}
       ],
       "options": [
         {"replaceWeapon": "auto_rifle", "withWeapon": ["shotgun"]},
@@ -459,7 +459,7 @@
         {
           "name": "Battle Tank",
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 12,
           "movement": 10,
@@ -515,7 +515,7 @@
           "name": "Cult Heavy Battle Tank",
           "movement": 8,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 13,
           "reflexes": 5,
@@ -559,7 +559,7 @@
           "name": "Cult Support Vehicle",
           "movement": 10,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 10,
           "reflexes": 5,
@@ -587,7 +587,7 @@
           "name": "Cult APC",
           "movement": 10,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 11,
           "reflexes": 5,
@@ -617,7 +617,7 @@
           "name": "Cult Light Transport Gunship",
           "movement": 10,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 11,
           "reflexes": 5,
@@ -654,7 +654,7 @@
           "name": "Cult Heavy Gunship",
           "movement": 10,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 11,
           "reflexes": 5,
@@ -699,7 +699,7 @@
           "name": "Cult Light Combat Mech",
           "movement": 8,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 10,
           "reflexes": 5,
@@ -726,7 +726,7 @@
           "name": "Scout Buggy",
           "movement": 12,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 4,
           "defense": 10,
           "reflexes": 6,
@@ -749,7 +749,7 @@
           "name": "Cult Truck",
           "movement": 10,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 10,
           "reflexes": 5,
@@ -775,7 +775,7 @@
           "name": "Cult Mining Vehicle",
           "movement": 10,
           "courage": 5,
-          "shoot": 5,
+          "shoot": 4,
           "fight": 5,
           "defense": 11,
           "reflexes": 5,
@@ -793,7 +793,7 @@
     "weapon_team": {
       "name": "Cult Militia Weapon Team",
       "courage": 5,
-      "shoot": 5,
+      "shoot": 4,
       "fight": 5,
       "defense": 5,
       "reflexes": 5,

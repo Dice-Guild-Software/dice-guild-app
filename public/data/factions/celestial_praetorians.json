@@ -13,7 +13,7 @@
           "name": "Witch Hunter Champion",
           "movement": 6,
           "courage": 6,
-          "shoot": 6,
+          "shoot": 3,
           "fight": 6,
           "defense": 7,
           "reflexes": 6,
@@ -41,7 +41,7 @@
         {
           "name": "Praetorian Commander",
           "courage": 8,
-          "shoot": 8,
+          "shoot": 2,
           "fight": 8,
           "movement": 6,
           "defense": 9,
@@ -75,7 +75,7 @@
         {
           "name": "Praetorian Captain",
           "courage": 7,
-          "shoot": 7,
+          "shoot": 2,
           "fight": 7,
           "movement": 6,
           "defense": 9,
@@ -110,7 +110,7 @@
         {
           "name": "Praetorian Captain on Jetbike",
           "courage": 7,
-          "shoot": 8,
+          "shoot": 2,
           "fight": 8,
           "defense": 9,
           "movement": 8,
@@ -133,7 +133,7 @@
         {
           "name": "Praetorian Blademaster",
           "courage": 7,
-          "shoot": 7,
+          "shoot": 2,
           "fight": 7,
           "movement": 6,
           "defense": 9,
@@ -159,7 +159,7 @@
           "name": "Witch Hunter Leader",
           "movement": 6,
           "courage": 6,
-          "shoot": 6,
+          "shoot": 3,
           "fight": 6,
           "defense": 7,
           "reflexes": 6,
@@ -168,7 +168,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Witch Hunter", "movement": 6, "courage": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": ["combat_rifle", "light_handweapon"], "min": 4, "max": 9}
+        {"name": "Witch Hunter", "movement": 6, "courage": 6, "shoot": 3, "fight": 6, "defense": 7, "reflexes": 6, "weapons": ["combat_rifle", "light_handweapon"], "min": 4, "max": 9}
       ]
     },
     "throne_guardians": {
@@ -193,7 +193,7 @@
         {
           "name": "Praetorian",
           "courage": 7,
-          "shoot": 7,
+          "shoot": 2,
           "fight": 7,
           "movement": 6,
           "defense": 9,
@@ -215,7 +215,7 @@
         {
           "name": "Praetorian Jetpack",
           "courage": 7,
-          "shoot": 7,
+          "shoot": 2,
           "fight": 7,
           "movement": 8,
           "defense": 8,
@@ -245,7 +245,7 @@
         {
           "name": "Warden",
           "courage": 7,
-          "shoot": 7,
+          "shoot": 2,
           "fight": 7,
           "defense": 9,
           "movement": 6,
@@ -267,7 +267,7 @@
         {
           "name": "Jetbike",
           "courage": 7,
-          "shoot": 7,
+          "shoot": 2,
           "fight": 7,
           "defense": 9,
           "movement": 8,
@@ -289,7 +289,7 @@
           "name": "Praetorian Gravite Warrior",
           "movement": 5,
           "courage": 7,
-          "shoot": 7,
+          "shoot": 2,
           "fight": 7,
           "defense": 10,
           "reflexes": 7,
@@ -313,7 +313,7 @@
         {
           "name": "Praetorian Gravite Warrior",
           "courage": 7,
-          "shoot": 7,
+          "shoot": 2,
           "fight": 7,
           "defense": 10,
           "movement": 5,
@@ -340,7 +340,7 @@
           "name": "Relic Heavy APC",
           "movement": 10,
           "courage": 7,
-          "shoot": 7,
+          "shoot": 2,
           "fight": 7,
           "defense": 13,
           "reflexes": 7,
@@ -359,7 +359,7 @@
       "keywords": ["Vehicle"],
       "category": "elite",
       "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "hover"],
-      "models": [{"name": "Light Hover Tank", "movement": 10, "courage": 7, "shoot": 7, "fight": 7, "defense": 11, "wounds": 4, "reflexes": 7, "weapons": ["twin_light_laser_cannon"], "min": 1, "max": 1}]
+      "models": [{"name": "Light Hover Tank", "movement": 10, "courage": 7, "shoot": 2, "fight": 7, "defense": 11, "wounds": 4, "reflexes": 7, "weapons": ["twin_light_laser_cannon"], "min": 1, "max": 1}]
     },
     "hover_tank": {
       "name": "Hover Tank",
@@ -372,7 +372,7 @@
           "name": "Hover Tank",
           "movement": 10,
           "courage": 7,
-          "shoot": 7,
+          "shoot": 2,
           "fight": 7,
           "defense": 12,
           "reflexes": 7,
@@ -395,7 +395,7 @@
           "name": "Hover Tank",
           "movement": 10,
           "courage": 7,
-          "shoot": 7,
+          "shoot": 2,
           "fight": 7,
           "defense": 12,
           "reflexes": 7,
@@ -417,7 +417,7 @@
           "name": "Praetorian Combat Juggernaut",
           "movement": 8,
           "courage": 7,
-          "shoot": 7,
+          "shoot": 2,
           "fight": 7,
           "defense": 12,
           "reflexes": 7,
@@ -446,7 +446,7 @@
           "name": "Relic Juggernaut",
           "movement": 8,
           "courage": 7,
-          "shoot": 7,
+          "shoot": 2,
           "fight": 7,
           "defense": 12,
           "reflexes": 7,
@@ -469,7 +469,7 @@
           "name": "Heavy Assault Juggernaut",
           "movement": 6,
           "courage": 7,
-          "shoot": 7,
+          "shoot": 2,
           "fight": 7,
           "defense": 13,
           "reflexes": 7,
