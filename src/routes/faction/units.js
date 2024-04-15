@@ -1,22 +1,18 @@
 import {
-  Box,
   Card,
   CardActionArea,
   Chip,
   Grid,
   ListItem,
   ListItemText,
-  Pagination,
   Stack,
-  Typography,
+  Typography
 } from "@mui/material";
-import { UnitCard } from "components/roster/unit-card";
-import { findIndex, get, groupBy, intersection, omit, sortBy } from "lodash";
-import React, { useEffect, useState } from "react";
-import "./roster.css";
 import { useModal } from "hooks";
+import { findIndex, get, groupBy, intersection, sortBy, uniq } from "lodash";
+import React from "react";
 import { ViewUnit } from "routes/Lists/modals";
-import { uniq } from 'lodash';
+import "./roster.css";
 
 export const Units = React.memo((props) => {
   const {
@@ -24,15 +20,8 @@ export const Units = React.memo((props) => {
     faction,
     nameFilter,
     unitFilter,
-    filterByFocus = true,
-    subfactionId = "none",
-    userPrefs,
   } = props;
-  const [pinnedUnits, setPinnedUnits] = useState({});
-  const [currentPage, setCurrentPage] = useState(0);
-  const PAGE_SIZE = 15;
   const categories = {
-    pinned_units: { name: "Pinned Units" },
     ...data.getRawCategories(),
   };
   const unitsUn = data.getUnits(faction);
@@ -53,7 +42,6 @@ export const Units = React.memo((props) => {
         ? unitFilter.categories.has(unit.category)
         : true;
     });
-  const numPages = Math.ceil(unitsFiltered.length / PAGE_SIZE);
   const sortOrder = ["pinned_units", ...Object.keys(categories)];
   const unitsSorted = sortBy(unitsFiltered, (unit) =>
     data.getUnitPoints(unit, faction)
@@ -65,13 +53,11 @@ export const Units = React.memo((props) => {
   });
   const unitCategories = { pinned_units: [], ...groupBy(units, "category") };
   const categoryOrder = [
-    "pinned_units",
     ...Object.keys(categories),
     undefined,
   ].filter(
     (cat) =>
-      unitCategories[cat] &&
-      unitCategories[cat].filter((unit) => !pinnedUnits[unit.id]).length
+      unitCategories[cat]
   );
   const [showViewUnit, hideViewUnit] = useModal(
     ({ extraProps }) => (
@@ -88,9 +74,7 @@ export const Units = React.memo((props) => {
     <div>
       {!units.length && <p>{"No units found..."}</p>}
       {categoryOrder.map((category, catIndex) => {
-        const categoryUnits = get(unitCategories, `[${category}]`, []).filter(
-          (unit) => !pinnedUnits[unit.id]
-        );
+        const categoryUnits = get(unitCategories, `[${category}]`, []);
         const categoryData = data.getCategory(category);
         return (
           <div key={catIndex}>

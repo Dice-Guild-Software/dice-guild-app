@@ -1013,7 +1013,7 @@ export default React.memo((props) => {
     });
     (Object.values(limitedUnitMap) || []).forEach((unit) => {
       // Max of each unit allowed
-      const unitLimit = 3;
+      const unitLimit = unit?.category === "core" ? 6 : 3;
       if (unitLimit && unit?.limitedCount > unitLimit) {
         const limitDiff = unit?.limitedCount - unitLimit;
         validationErrors.push({

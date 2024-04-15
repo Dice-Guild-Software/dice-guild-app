@@ -268,14 +268,13 @@ export const AddForce = (props) => {
   const { data, addForce, list, hideModal, userPrefs, factionId } = props;
   const showBeta = userPrefs.showBeta;
   const [faction, setFaction] = useState(factionId || "");
-  const [subFaction, setSubFaction] = useState("");
+  const [subFaction] = useState("");
   const forces = get(list, "forces", []);
   const factions = data
     .getFactions()
     .filter((game) =>
       showBeta ? true : game.version && Number(game.version) >= 1
     );
-  const organizations = data.getRawOrganizations();
   const alliances = data.getRawAlliances();
   const firstFaction = get(list, "forces[0].factionId", "");
   const listAlliance = data.getFaction(firstFaction).alliance;
@@ -298,7 +297,6 @@ export const AddForce = (props) => {
   const rawSubfactions = Object.values(
     data.getFaction(faction).subfactions || []
   );
-  const hasSubfactions = !!rawSubfactions.length;
   const subfactions = [
     {
       id: "none",
