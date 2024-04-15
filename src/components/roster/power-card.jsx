@@ -1,5 +1,4 @@
 import { Typography } from "@mui/material";
-import { EasyTooltip } from "components/easytootlip";
 import ReactMarkdown from "react-markdown";
 
 export const PowerCard = (props) => {

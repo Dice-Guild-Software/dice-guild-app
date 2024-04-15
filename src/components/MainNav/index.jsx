@@ -3,17 +3,15 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import ConstructionIcon from "@mui/icons-material/Construction";
 import FeaturedPlayListIcon from "@mui/icons-material/FeaturedPlayList";
-import MenuIcon from "@mui/icons-material/Menu";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import SearchIcon from "@mui/icons-material/Search";
 import SettingsIcon from "@mui/icons-material/Settings";
 import {
   Collapse,
-  Drawer,
   ListItemButton,
   Menu,
-  MenuItem,
+  MenuItem
 } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -25,26 +23,25 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import { alpha, styled, useTheme } from "@mui/material/styles";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import { alpha, styled, useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import IGR from "assets/Dice_Guild_left.png";
 import { Dropdown } from "components/dropdown";
 import { DataContext, useModal } from "hooks";
-import { get } from "lodash";
+import { get, groupBy, sortBy, uniq } from "lodash";
+import CoffeeIcon from "mdi-material-ui/CoffeeOutline";
 import Discord from "mdi-material-ui/Discord";
 import Github from "mdi-material-ui/Github";
-import CoffeeIcon from "mdi-material-ui/CoffeeOutline";
 import React from "react";
 import { useNavigate } from "react-router";
-import { UserPreferences } from "routes/modals";
 import { CHAPTERS } from "routes/Rules";
-import { sortBy, uniq, groupBy } from "lodash";
+import { UserPreferences } from "routes/modals";
 import { DataAPI } from "utils/data";
 
-const drawerWidth = 250;
+// const drawerWidth = 250;
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -217,13 +214,13 @@ export const MainNav = (props) => {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
+  // const handleDrawerOpen = () => {
+  //   setOpen(true);
+  // };
 
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
+  // const handleDrawerClose = () => {
+  //   setOpen(false);
+  // };
 
   const fullScreen = useMediaQuery(theme.breakpoints.up("md"));
   const numActionsToShow = fullScreen

@@ -1,17 +1,10 @@
 import {
-  Card,
-  CardContent,
-  CardHeader,
-  Divider,
-  Typography,
-  useTheme,
+  Typography
 } from "@mui/material";
-import { EasyTooltip } from "components/easytootlip";
 import ReactMarkdown from "react-markdown";
 
 export const StrategyCard = (props) => {
   const { strategy } = props;
-  const theme = useTheme();
   return (
     <Typography>
       <ReactMarkdown

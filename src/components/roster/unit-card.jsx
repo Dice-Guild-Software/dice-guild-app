@@ -3,9 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import {
   Box,
-  Card,
-  CardContent,
-  CardHeader,
   Chip,
   Divider,
   IconButton,
@@ -13,8 +10,7 @@ import {
   ListItemText,
   Menu,
   MenuItem,
-  Typography,
-  useTheme,
+  Typography
 } from "@mui/material";
 import { Dropdown } from "components/dropdown";
 import { EasyTooltip } from "components/easytootlip";
@@ -54,7 +50,6 @@ export const UnitCard = (props) => {
     printMode,
   } = props;
   const toggler = !printMode && toggle;
-  const theme = useTheme();
   const unitPoints = useMemo(() => {
     return points ? points : data.getUnitPoints(unit, faction);
   }, [points, data, unit, faction]);

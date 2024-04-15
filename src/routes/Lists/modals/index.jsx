@@ -57,12 +57,12 @@ import {
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
-import { formatLevel, LEVEL_TO_NAME } from "utils/format";
+import { LEVEL_TO_NAME, formatLevel } from "utils/format";
 import { MarkdownRenderer } from "utils/markdown";
 import { getRandomItem } from "utils/math";
 
 const PowerSpecialtySelector = (props) => {
-  const { data: nope, faction, onChange = () => {}, value = "none" } = props;
+  const { data: nope, faction, onChange = () => { }, value = "none" } = props;
   const powerCats = {
     none: { name: "None" },
     ...nope.getRawPowerCategories(faction),
@@ -126,17 +126,17 @@ export const ChooseSubFaction = (props) => {
               return (
                 <ListItem
                   disablePadding
-                  // secondaryAction={
-                  //   <IconButton
-                  //     sx={{}}
-                  //     onClick={() => {
-                  //       setSubFaction(forceId, subfaction.id);
-                  //       hideModal();
-                  //     }}
-                  //   >
-                  //     <AddIcon />
-                  //   </IconButton>
-                  // }
+                // secondaryAction={
+                //   <IconButton
+                //     sx={{}}
+                //     onClick={() => {
+                //       setSubFaction(forceId, subfaction.id);
+                //       hideModal();
+                //     }}
+                //   >
+                //     <AddIcon />
+                //   </IconButton>
+                // }
                 >
                   <ListItemButton
                     onClick={() => {
@@ -334,11 +334,11 @@ export const AddForce = (props) => {
                     );
                     const filteredFactions =
                       forces.length > 0 &&
-                      !listAlliance &&
-                      list.type !== "narrative"
+                        !listAlliance &&
+                        list.type !== "narrative"
                         ? theFactions.filter(
-                            (faction) => faction.id === firstFaction
-                          )
+                          (faction) => faction.id === firstFaction
+                        )
                         : theFactions;
                     const allianceData = data.getAlliance(allianceKey);
                     return (
@@ -383,9 +383,8 @@ export const AddForce = (props) => {
                                       </Typography>
                                     }
                                     secondary={
-                                      <Typography variant="body2">{`${
-                                        org.description || ""
-                                      }`}</Typography>
+                                      <Typography variant="body2">{`${org.description || ""
+                                        }`}</Typography>
                                     }
                                   />
                                 </Stack>
@@ -420,16 +419,6 @@ export const AddForce = (props) => {
                   return (
                     <ListItem
                       disablePadding
-                      // secondaryAction={
-                      //   <IconButton
-                      //     sx={{}}
-                      //     onClick={() => {
-                      //       setSubFaction(subfaction.id);
-                      //     }}
-                      //   >
-                      //     <AddIcon />
-                      //   </IconButton>
-                      // }
                     >
                       <ListItemButton
                         onClick={() => {
@@ -714,17 +703,17 @@ export const ViewErrors = (props) => {
       <DialogTitle closeButton>Validation Errors</DialogTitle>
       <DialogContent sx={{ backgroundColor: "background.paper" }}>
         <>
-        {errors.map((error, idx) => (
-          <Alert
-            key={idx}
-            severity={error.type || "info"}
-            variant="filled"
-            sx={{ my: 2 }}
-          >
-            {error.text}
-          </Alert>
-        ))}
-        {!errors.length && <Typography paragraph sx={{ my: 2 }}>No validation errors found...</Typography>}
+          {errors.map((error, idx) => (
+            <Alert
+              key={idx}
+              severity={error.type || "info"}
+              variant="filled"
+              sx={{ my: 2 }}
+            >
+              {error.text}
+            </Alert>
+          ))}
+          {!errors.length && <Typography paragraph sx={{ my: 2 }}>No validation errors found...</Typography>}
         </>
       </DialogContent>
       <DialogActions>
@@ -1105,9 +1094,8 @@ export const EditUnit = (props) => {
                           onChange={changeFuncCheck}
                         />
                       }
-                      label={`${
-                        option.list.length === 1 ? option.option : ""
-                      } ${opt.text}`}
+                      label={`${option.list.length === 1 ? option.option : ""
+                        } ${opt.text}`}
                     />
                   </FormGroup>
                 )}
@@ -1142,9 +1130,8 @@ export const EditUnit = (props) => {
                           onChange={changeFuncCheck}
                         />
                       }
-                      label={`${
-                        option.list.length === 1 ? option.option : ""
-                      } ${opt.text}`}
+                      label={`${option.list.length === 1 ? option.option : ""
+                        } ${opt.text}`}
                     />
                   </FormGroup>
                 )}

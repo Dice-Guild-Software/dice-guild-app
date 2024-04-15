@@ -13,7 +13,7 @@
         {
           "name": "Celestial Lord",
           "movement": 6,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 7,
           "courage": 7,
@@ -43,7 +43,7 @@
         {
           "name": "Celestial Lord on Dragon-Lizard",
           "movement": 8,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 7,
           "courage": 7,
@@ -72,7 +72,7 @@
         {
           "name": "Celestial Lord on Starborn Drake",
           "movement": 10,
-          "fight": 7,
+          "fight": 2,
           "shoot": 2,
           "defense": 13,
           "courage": 7,
@@ -101,7 +101,7 @@
         {
           "name": "Celestial Lord on Stormforged Chariot",
           "movement": 12,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 10,
           "courage": 7,
@@ -131,7 +131,7 @@
           "name": "Celestial Lord on Gryphon",
           "movement": 10,
           "courage": 7,
-          "fight": 7,
+          "fight": 2,
           "shoot": 2,
           "defense": 8,
           "reflexes": 6,
@@ -158,7 +158,7 @@
         {
           "name": "Reliquary Lord",
           "movement": 6,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 7,
           "courage": 7,
@@ -182,7 +182,7 @@
         {
           "name": "Stormcaller Mage",
           "movement": 6,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 7,
           "courage": 7,
@@ -204,7 +204,7 @@
         {
           "name": "Stormcaller Mage on Greater Celestial Beast",
           "movement": 8,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 7,
           "courage": 7,
@@ -227,7 +227,7 @@
           "name": "Stormcaller Mage on Gryphon",
           "movement": 10,
           "courage": 7,
-          "fight": 7,
+          "fight": 2,
           "shoot": 2,
           "defense": 8,
           "reflexes": 6,
@@ -248,7 +248,7 @@
         {
           "name": "Stormcaller Mage on Stormforged Chariot",
           "movement": 12,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 10,
           "courage": 7,
@@ -270,7 +270,7 @@
         {
           "name": "Ascended Starborn Drake",
           "movement": 10,
-          "fight": 7,
+          "fight": 2,
           "shoot": 2,
           "defense": 13,
           "courage": 7,
@@ -287,7 +287,7 @@
       "category": "core",
       "description": "Loyal companions from the Star realm, swift and wielding deadly claws.",
       "keywords": ["Beast", "Infantry"],
-      "models": [{"name": "Celestial Beast", "movement": 7, "fight": 6, "shoot": 3, "defense": 5, "courage": 4, "reflexes": 5, "weapons": [{"id": "claws", "count": 2}], "min": 5, "max": 20}],
+      "models": [{"name": "Celestial Beast", "movement": 7, "fight": 3, "shoot": 3, "defense": 5, "courage": 4, "reflexes": 5, "weapons": [{"id": "claws", "count": 2}], "min": 5, "max": 20}],
       "options": [{"addRule": ["champion"], "modelLimit": 1}]
     },
     "stormforged_warriors": {
@@ -298,7 +298,7 @@
         {
           "name": "Stormforged Warrior",
           "movement": 6,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 7,
           "courage": 6,
@@ -328,7 +328,7 @@
         {
           "name": "Stormforged Archer",
           "movement": 6,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 7,
           "courage": 6,
@@ -354,7 +354,7 @@
         {
           "name": "Stormforged Arbalestier",
           "movement": 6,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 7,
           "courage": 6,
@@ -380,7 +380,7 @@
         {
           "name": "Invoker",
           "movement": 6,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 7,
           "courage": 6,
@@ -406,7 +406,7 @@
         {
           "name": "Invoker on Dragon-Lizard",
           "movement": 8,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 7,
           "courage": 6,
@@ -432,7 +432,7 @@
         {
           "name": "Invoker on Greater Celestial Beast",
           "movement": 8,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 7,
           "courage": 6,
@@ -457,7 +457,7 @@
         {
           "name": "Protector",
           "movement": 6,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 7,
           "courage": 6,
@@ -484,7 +484,7 @@
         {
           "name": "Protector on Dragon-Lizard",
           "movement": 8,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 7,
           "courage": 6,
@@ -510,7 +510,7 @@
         {
           "name": "Stormwing",
           "movement": 8,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 7,
           "courage": 6,
@@ -541,7 +541,7 @@
         {
           "name": "Skirmisher on Greater Celestial Beast",
           "movement": 8,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 7,
           "courage": 6,
@@ -564,7 +564,7 @@
         {
           "name": "Protector on Greater Celestial Beast",
           "movement": 8,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 7,
           "courage": 6,
@@ -587,7 +587,7 @@
         {
           "name": "Stormforged Chariot",
           "movement": 12,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 10,
           "courage": 7,
@@ -609,7 +609,7 @@
         {
           "name": "Dragon Guard",
           "movement": 10,
-          "fight": 6,
+          "fight": 3,
           "shoot": 3,
           "defense": 13,
           "courage": 7,
@@ -635,7 +635,7 @@
         {
           "name": "Starborn Drake",
           "movement": 10,
-          "fight": 7,
+          "fight": 2,
           "shoot": 2,
           "defense": 13,
           "courage": 7,
@@ -655,7 +655,7 @@
         {
           "name": "Stormforged Ballista",
           "movement": 5,
-          "fight": 6,
+          "fight": 3,
           "shoot": 2,
           "defense": 8,
           "courage": 6,
