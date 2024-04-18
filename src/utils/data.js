@@ -68,7 +68,7 @@ export const DataAPI = (data, root = {}) => {
       movement: 6,
       shoot: 4,
       fight: 4,
-      courage: 5,
+      courage: 6,
       reflexes: 6,
       wounds: 1,
       defense: 4,
