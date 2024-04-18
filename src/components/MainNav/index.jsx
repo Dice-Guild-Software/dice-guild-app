@@ -85,6 +85,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export const MainNav = (props) => {
+  const { enableNav = false } = props;
   const [searchMode, setSearchMode] = React.useState(false);
   const [{ data: nope, userPrefs, setUserPrefs, appState, setAppState }] =
     React.useContext(DataContext);
@@ -408,7 +409,7 @@ export const MainNav = (props) => {
           </Toolbar>
         )}
       </AppBar>
-      <SwipeableDrawer
+      {!!enableNav && <SwipeableDrawer
         open={open}
         onClose={() => setOpen(false)}
         onOpen={() => setOpen(true)}
@@ -417,7 +418,7 @@ export const MainNav = (props) => {
         <Box sx={{ width: 300 }}>
           <List>{navItems.map(renderMenuItem)}</List>
         </Box>
-      </SwipeableDrawer>
+      </SwipeableDrawer>}
     </>
   );
 };
