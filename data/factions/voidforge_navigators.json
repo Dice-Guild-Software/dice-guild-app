@@ -899,7 +899,7 @@
     {
       "name": "Runic Might",
       "phase": "activation",
-      "description": "Use when a unit attacks. Hit rolls of 1 or 2 gain +1 AP.",
+      "description": "Use when a unit attacks. Hit rolls of 6 gain +1 AP.",
       "flavor": "Forge masters can call upon the strength of their ancestors, dealing devastating blows.",
       "cost": 1
     },

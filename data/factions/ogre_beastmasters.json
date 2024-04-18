@@ -563,19 +563,19 @@
     "great_leader": {
       "name": "Leader's Bellowing",
       "inputs": ["x"],
-      "description": "When this unit is activated, choose up to X friendly _Cavalry_ units within 6\".  These units re-roll failed Strength tests of 9+",
+      "description": "When this unit is activated, choose up to X friendly _Cavalry_ units within 6\".  These units re-roll failed Strength tests of 1",
       "points": ["rule.x", {"multiply": 10}]
     },
     "merc_tactics": {
       "name": "Mercenary Tactics",
       "inputs": ["x"],
-      "description": "When this unit is activated, choose up to X friendly _Heavy Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 9+ \n * +3\" Movement",
+      "description": "When this unit is activated, choose up to X friendly _Heavy Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 1 \n * +3\" Movement",
       "points": ["rule.x", {"multiply": 15}]
     },
     "hunter_tactics": {
       "name": "Hunter Tactics",
       "inputs": ["x"],
-      "description": "When this unit is activated, choose up to X friendly _Beast_ units within 12\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 9+ \n * Re-roll failed Initiative tests of 9+",
+      "description": "When this unit is activated, choose up to X friendly _Beast_ units within 12\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 1 \n * Re-roll failed Initiative tests of 1",
       "points": ["rule.x", {"multiply": 15}]
     },
     "trappers": {"name": "Trappers", "description": "When this unit successfully falls back from an enemy unit, the enemy unit suffers 1 hit with no AP for each model in this unit.", "points": [1]}
@@ -598,7 +598,7 @@
     "brutality": {
       "phase": "activation",
       "name": "Brutality",
-      "description": "Use before fighting with a _Cavalry_ unit. Hit rolls of 1 or 2 gain +1 AP.",
+      "description": "Use before fighting with a _Cavalry_ unit. Hit rolls of 6 gain +1 AP.",
       "flavor": "With their superior strength and savagery these beasts can easily crush any opposition.",
       "cost": 1
     }

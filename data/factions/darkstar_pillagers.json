@@ -832,7 +832,7 @@
     "distortion_cannon": {"name": "Distortion Cannon", "attacks": 2, "short": 24, "medium": 48, "ap": 8, "rules": [{"id": "blast", "x": 3}, {"id": "deadly", "x": 1}]}
   },
   "rules": {
-    "weapon_racks": {"name": "Weapon Racks", "description": "Models shooting while embarked on this unit may re-roll failed Accuracy tests of 9+.", "points": 10},
+    "weapon_racks": {"name": "Weapon Racks", "description": "Models shooting while embarked on this unit may re-roll failed Accuracy tests of 1.", "points": 10},
     "trophy_racks": {"name": "Trophy Racks", "description": "Enemy units within 6\" of this model suffer -1 Courage.", "points": 5},
     "reinforced_ram": {"name": "Reinforced Ram", "hidden": true, "description_short": "Impact(+3)", "description": "This model gains Impact(+3).", "points": 6},
     "reinforced_ram_heavy": {"name": "Reinforced Ram", "hidden": true, "description_short": "Heavy Impact(+3)", "description": "This model gains Impact(+3).", "points": 12},
@@ -843,7 +843,7 @@
     },
     "legend_pop": {"name": "Purveyor of Poison", "description": "Weapons in this model's unit with _Poison_ cause successful re-rolls of 2 or less instead of 1.", "points": 10},
     "gravity_thrusters": {"name": "Gravity Thrusters", "description": "If this model performs two _Move_ actions on its turn, enemy units suffer -1 Accuracy when targeting this model.", "points": 10},
-    "legend_master_of_war": {"name": "Master of War", "description": "When this unit makes an attack targeting an enemy _Leader_ or _Support_ model, it may reroll hit rolls of 9+.", "points": 5},
+    "legend_master_of_war": {"name": "Master of War", "description": "When this unit makes an attack targeting an enemy _Leader_ or _Support_ model, it may reroll hit rolls of 1.", "points": 5},
     "portal": {
       "name": "Portal",
       "description": "_Infantry_ and _Biker_ units may spend a _Move_ action to embark this model. To embark, the unit must all get within 1\" of this model. Immediately disembark from another model with the Portal special rule, making a _Move_ action originating from that model's edge.",

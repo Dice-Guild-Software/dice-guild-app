@@ -555,7 +555,7 @@
     "companion": {"name": "Arcane Companion", "description": "Once per turn when a power within 24“ of this model gets dispelled, deal 1 hit with AP(2) to the caster.", "points": 5},
     "mutations": {
       "name": "Mutations",
-      "description": "At the beginning of the game choose one of the following effects to be applied to this unit:\n* Strength rolls of 1 or 2 gain +1 AP\n* Strength rolls of 1 or 2 cause an additional hit.\n* +1 Save",
+      "description": "At the beginning of the game choose one of the following effects to be applied to this unit:\n* Strength rolls of 6 gain +1 AP\n* Strength rolls of 6 cause an additional hit.\n* +1 Save",
       "points": 2
     },
     "legend_war_veteran": {"name": "War Veteran", "description": "This unit can be affected an additional time by the Eye of the Gods strategy.", "points": 5}
@@ -578,7 +578,7 @@
     {
       "name": "Blazing Runes",
       "phase": "activation",
-      "description": "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
+      "description": "Use before an Infantry unit fights. Hit rolls of 6 gain +1 AP.",
       "flavor": "Fallen Warriors wield enchanted weapons, covered in unholy runes and burning with dark magic.",
       "cost": 1
     }

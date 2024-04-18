@@ -856,7 +856,7 @@
       "points": 5
     },
     "gravity_thrusters": {"name": "Gravity Thrusters", "description": "If this model performs two _Move_ actions on its turn, enemy units suffer -1 Accuracy when targeting this model.", "points": 10},
-    "legend_master_of_war": {"name": "Master of War", "description": "When this unit makes an attack targeting an enemy _Leader_ or _Support_ model, it may reroll hit rolls of 9+.", "points": 5},
+    "legend_master_of_war": {"name": "Master of War", "description": "When this unit makes an attack targeting an enemy _Leader_ or _Support_ model, it may reroll hit rolls of 1.", "points": 5},
     "legend_psychic_mastery": {
       "name": "Psychic Mastery",
       "description": "This model may treat the casting value of a power they cast as 2 higher _(for example, a power with a casting value of 6 would require an 8 or lower to cast)_.",

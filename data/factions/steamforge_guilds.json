@@ -902,7 +902,7 @@
     "heat_scanner": {"name": "Heat Scanner", "description": "This model's unit gains +6\" to long range when shooting.", "points": 5},
     "protocols": {
       "name": "Protocols",
-      "description": "At the start of the round, choose one of the following abilities to be active for this model's unit until the end of the round:\n* Advance: Gain +2\" Movement.\n* Extermination: Hit rolls of 1 or 2 generate an additional hit.\n* Protection: Reduce the AP of all hits by 1.",
+      "description": "At the start of the round, choose one of the following abilities to be active for this model's unit until the end of the round:\n* Advance: Gain +2\" Movement.\n* Extermination: Hit rolls of 6 generate an additional hit.\n* Protection: Reduce the AP of all hits by 1.",
       "points": 15
     },
     "legend_machine_whisperer": {"name": "Machine Whisperer", "description": "This model may reroll failed _Engineer_ rolls.", "points": 5},
@@ -926,7 +926,7 @@
     {
       "name": "Volley Fire",
       "phase": "activation",
-      "description": "Use before a unit shoots. Hit rolls of 1 or 2 generate an additional hit.",
+      "description": "Use before a unit shoots. Hit rolls of 6 generate an additional hit.",
       "flavor": "With a devastating barrage of supercharged guns the Steamforge Guilds overwhelm their foes.",
       "cost": 1
     }

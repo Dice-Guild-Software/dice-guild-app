@@ -1359,7 +1359,7 @@
       "name": "Combined Arms",
       "subfactions": ["mounted_focus"],
       "phase": "activation",
-      "description": "Use when _Shooting_ or _Fighting_ with a unit within 6\" of a friendly _Transport_ unit. That unit may re-roll failed Accuracy and Strength tests of 9+ for that action.",
+      "description": "Use when _Shooting_ or _Fighting_ with a unit within 6\" of a friendly _Transport_ unit. That unit may re-roll failed Accuracy and Strength tests of 1 for that action.",
       "flavor": "Mechanized forces usually operate in close proximity of their transport vehicles.",
       "cost": 1
     },
@@ -1399,7 +1399,7 @@
       "subfactions": ["toughness_focus"],
       "name": "Machine Might",
       "phase": "activation",
-      "description": "Use when a unit attacks in melee. Hit rolls of 1 or 2 gain +1 AP.",
+      "description": "Use when a unit attacks in melee. Hit rolls of 6 gain +1 AP.",
       "flavor": "With a wave of fire, enemy units cannot hope to stand a chance.",
       "cost": 1
     },
@@ -1423,7 +1423,7 @@
       "subfactions": ["siege_focus"],
       "name": "Rapid Fire",
       "phase": "activation",
-      "description": "Use before a unit performs a _Shoot_ action. Hit rolls of 1 or 2 cause an additional hit.",
+      "description": "Use before a unit performs a _Shoot_ action. Hit rolls of 6 cause an additional hit.",
       "flavor": "With a wave of fire, enemy units cannot hope to stand a chance.",
       "cost": 1
     },
@@ -1488,7 +1488,7 @@
       "name": "Fury",
       "phase": "activation",
       "flavor": "These soldiers are furious in resolve and can rip through their enemies.",
-      "description": "Use when a unit makes a _Fight_ action. Hit rolls of 1 or 2 gain +1 AP.",
+      "description": "Use when a unit makes a _Fight_ action. Hit rolls of 6 gain +1 AP.",
       "cost": 1
     },
     "assault": {
@@ -1544,7 +1544,7 @@
       "subfactions": ["vigilance_focus"],
       "name": "Overcharge",
       "flavor": "By overcharging their weapons, some hits can pierce even heavily armored targets.",
-      "description": "Use when a unit makes a _Shoot_ action. Hit rolls of 1 or 2 gain +1 AP.",
+      "description": "Use when a unit makes a _Shoot_ action. Hit rolls of 6 gain +1 AP.",
       "cost": 1
     },
     "quick_aim": {
@@ -1607,7 +1607,7 @@
       "subfactions": ["firepower_focus"],
       "name": "Overwhelming Firepower",
       "phase": "activation",
-      "description": "Use before a unit performs a _Shoot_ action. Hit rolls of 1 or 2 cause an additional hit.",
+      "description": "Use before a unit performs a _Shoot_ action. Hit rolls of 6 cause an additional hit.",
       "flavor": "Burst fire can be relatively effective in taking down most targets.",
       "cost": 1
     },
@@ -1783,31 +1783,31 @@
     "warrior_tactics": {
       "name": "Warrior Tactics",
       "inputs": ["x"],
-      "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+      "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 1 until the end of the round.",
       "points": ["rule.x", {"multiply": 10}]
     },
     "blackpowder_tactics": {
       "name": "Blackpowder Tactics",
       "inputs": ["x"],
-      "description": "When this unit is activated, choose up to X friendly _Warmachine_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
+      "description": "When this unit is activated, choose up to X friendly _Warmachine_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 1 until the end of the round.",
       "points": ["rule.x", {"multiply": 10}]
     },
     "knight_tactics": {
       "name": "Knight Tactics",
       "inputs": ["x"],
-      "description": "When this unit is activated, choose up to X friendly _Cavalry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+      "description": "When this unit is activated, choose up to X friendly _Cavalry_ units within 6\". This unit and those units may re-roll failed Strength tests of 1 until the end of the round.",
       "points": ["rule.x", {"multiply": 10}]
     },
     "marauder_tactics": {
       "name": "Marauder Tactics",
       "inputs": ["x"],
-      "description": "When this unit is activated, choose up to X friendly _Cavalry_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
+      "description": "When this unit is activated, choose up to X friendly _Cavalry_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 1 until the end of the round.",
       "points": ["rule.x", {"multiply": 10}]
     },
     "beast_tactics": {
       "name": "Beast Tactics",
       "inputs": ["x"],
-      "description": "When this unit is activated, choose up to X friendly _Beast_ or _Monster_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+      "description": "When this unit is activated, choose up to X friendly _Beast_ or _Monster_ units within 6\". This unit and those units may re-roll failed Strength tests of 1 until the end of the round.",
       "points": ["rule.x", {"multiply": 10}]
     },
     "hover_mode": {
@@ -1898,7 +1898,7 @@
     },
     "lethal": {
       "name": "Lethal",
-      "description": "Hit rolls of 1 or 2 from this weapon cause 2 hits instead of 1. Additional hits must be assigned to the same model.",
+      "description": "Hit rolls of 6 from this weapon cause 2 hits instead of 1. Additional hits must be assigned to the same model.",
       "points": ["weapon.attacks", {"multiply": 1}]
     },
     "armored_front": {"name": "Heavy Armor(Front)", "description": "This model gets +1 Save when hit by a ranged attack in its front arc.", "points": 5},
@@ -1908,9 +1908,9 @@
       "points": -10
     },
     "vulnerable_rear": {"name": "Vulnerable(Rear)", "description": "This model gets -1 Save when hit by a ranged attack in its Rear arc.", "points": -5},
-    "furious": {"name": "Furious", "description": "When this model Fights, Strength rolls of 1 or 2 cause 2 hits instead of 1.", "points": 2},
-    "relentless": {"name": "Relentless", "description": "When this model shoots, Accuracy rolls of 1 or 2 cause 2 hits instead of 1.", "points": 2},
-    "crack_shot": {"name": "Crack Shot", "description": "Hits rolls of 1 or 2 from shooting attacks made by this model ignore the benefit of cover.", "points": [1]},
+    "furious": {"name": "Furious", "description": "When this model Fights, Strength rolls of 6 cause 2 hits instead of 1.", "points": 2},
+    "relentless": {"name": "Relentless", "description": "When this model shoots, Accuracy rolls of 6 cause 2 hits instead of 1.", "points": 2},
+    "crack_shot": {"name": "Crack Shot", "description": "Hits rolls of 6 from shooting attacks made by this model ignore the benefit of cover.", "points": [1]},
     "stubborn": {"name": "Stubborn", "description": "This model adds 1 to Courage tests when removing Shock.", "points": [1]},
     "reluctant": {"name": "Reluctant", "description": "This model subtracts 1 from Courage tests when removing Shock.", "points": [-1]},
     "power": {"name": "Magic", "inputs": ["x"], "description": "At the start or end of any action, this unit may cast up to _x_ Powers.", "points": [20, {"multiply": "rule.x"}]},
@@ -2002,11 +2002,11 @@
       "description": "This weapon always hits at -1 Accuracy. When scattering results from this weapon, it hits the closest unit within 3\" instead of just 1\".",
       "points": ["weapon.attacks"]
     },
-    "overcharge": {"name": "Overheat", "description": "Hit rolls of 9+ cause the firing unit to take 2 Shock.", "points": 0},
-    "overheat": {"name": "Overheat", "description": "Hit rolls of 9+ cause the firing unit to take 2 Shock.", "points": 0},
+    "overcharge": {"name": "Overheat", "description": "Hit rolls of 1 cause the firing unit to take 2 Shock.", "points": 0},
+    "overheat": {"name": "Overheat", "description": "Hit rolls of 1 cause the firing unit to take 2 Shock.", "points": 0},
     "pistol": {"name": "Pistol", "description": "This weapon may be used instead of a model's other weapons even while engaged in close combat.", "points": ["weapon.attacks", {"multiply": 1}]},
     "strider": {"name": "Strider", "description": "This model can cross difficult and dangerous terrain without penalty.", "points": 1},
-    "rending": {"name": "Rending", "description": "Hit rolls of 1 or 2 gain +1 AP.", "points": ["weapon.attacks", {"multiply": 0.2}]},
+    "rending": {"name": "Rending", "description": "Hit rolls of 6 gain +1 AP.", "points": ["weapon.attacks", {"multiply": 0.2}]},
     "indirect": {"name": "Indirect", "description": "This weapon may target units out of line of sight at -1 Accuracy.", "points": ["weapon.attacks"]},
     "anti_air": {"name": "Anti-air", "description": "This weapon gets +1 to hit units with the Aircraft special rule.", "points": ["weapon.attacks", {"multiply": 1}]},
     "poison": {"name": "Poison", "description": "Enemy units hit by this weapon must re-roll successful Save rolls of 1.", "points": ["weapon.attacks", {"multiply": 0.5}]},
@@ -2052,7 +2052,7 @@
     "banner": {"name": "Banner", "description": "Once per round, this model's unit may re-roll a single failed Courage test when removing Shock.", "points": 5},
     "champion": {"name": "Champion", "description": "Once per round, this model's unit may re-roll a single failed Accuracy or Strength test when attacking.", "points": 5},
     "brutal": {"name": "Brutal", "description": "This weapon gains +1 AP at Short range.", "points": ["weapon.attacks", {"multiply": 1}]},
-    "sorcerer": {"name": "Sorcerer", "description": "This model's unit may re-roll failed Power tests of 9+ until the end of the round.", "points": 10},
+    "sorcerer": {"name": "Sorcerer", "description": "This model's unit may re-roll failed Power tests of 1 until the end of the round.", "points": 10},
     "crazed": {
       "name": "Crazed",
       "description": "When you activate this unit make an initiative test. If successful, until the end of the turn whenever you make a move action with this unit you may rush without needing to make an initiative test.",
@@ -2060,7 +2060,7 @@
     },
     "curse": {
       "name": "Curse",
-      "description": "When this unit is activated, choose a Curse for an enemy _Infantry_ unit within 6\" to receive until the end of the turn:\n* Weakness: This unit has -1 Strength and Accuracy when fighting or making a shooting attack.\n* Brittle Bones: When this unit is targeted by an attack, hit rolls of 1 or 2 generate an additional attack.\n* Soul Siphon: One model in the unit immediately takes 2 hits with AP2.",
+      "description": "When this unit is activated, choose a Curse for an enemy _Infantry_ unit within 6\" to receive until the end of the turn:\n* Weakness: This unit has -1 Strength and Accuracy when fighting or making a shooting attack.\n* Brittle Bones: When this unit is targeted by an attack, Hit rolls of 6 generate an additional attack.\n* Soul Siphon: One model in the unit immediately takes 2 hits with AP2.",
       "points": [15]
     },
     "ethereal": {"name": "Ethereal", "description": "This model may ignore other models and any terrain when moving.", "points": 2},
@@ -2076,15 +2076,15 @@
     "inspiring_aura": {"name": "Inspiring(Aura)", "description": "Friendly units within 6\" may re-roll failed Courage tests.", "points": 10},
     "amplification_aura": {"name": "Amplification(Aura)", "description": "Friendly units within 6\" may re-roll failed Power tests.", "points": 10},
     "epic_tactician": {"name": "Epic Tactician", "description": "This model's unit may re-roll all failed Accuracy and Strength tests.", "points": 20},
-    "tactician": {"name": "Tactician", "description": "This model's unit may re-roll failed Accuracy and Strength tests of 9+.", "points": 10},
-    "tactician_aura": {"name": "Tactician(Aura)", "description": "Friendly units within 6\" may re-roll failed Accuracy and Strength tests of 9+.", "points": 10},
+    "tactician": {"name": "Tactician", "description": "This model's unit may re-roll failed Accuracy and Strength tests of 1.", "points": 10},
+    "tactician_aura": {"name": "Tactician(Aura)", "description": "Friendly units within 6\" may re-roll failed Accuracy and Strength tests of 1.", "points": 10},
     "defender": {"name": "Defender", "description": "This model's unit gains +1 Save.", "points": 10},
     "charger": {"name": "Charger", "description": "This model's unit gains +3\" of movement when _Charging_.", "points": 10},
-    "warrior": {"name": "Warrior", "description": "This model's unit may re-roll failed Strength tests of 9+.", "points": 10},
-    "zealot": {"name": "Zealot", "description": "Strength rolls of 1 or 2 for this model's unit cause 2 hits instead of 1.", "points": 10},
-    "spotter": {"name": "Spotter", "description": "Accuracy rolls of 1 or 2 for this model's unit cause 2 hits instead of 1.", "points": 10},
-    "marksman": {"name": "Marksman", "description": "This model's unit may re-roll failed Accuracy tests of 9+.", "points": 10},
-    "marksman_aura": {"name": "Marksman (Aura)", "description": "Friendly units within 6\" may re-roll failed Accuracy tests of 9+.", "points": 10},
+    "warrior": {"name": "Warrior", "description": "This model's unit may re-roll failed Strength tests of 1.", "points": 10},
+    "zealot": {"name": "Zealot", "description": "Strength rolls of 6 for this model's unit cause 2 hits instead of 1.", "points": 10},
+    "spotter": {"name": "Spotter", "description": "Accuracy rolls of 6 for this model's unit cause 2 hits instead of 1.", "points": 10},
+    "marksman": {"name": "Marksman", "description": "This model's unit may re-roll failed Accuracy tests of 1.", "points": 10},
+    "marksman_aura": {"name": "Marksman (Aura)", "description": "Friendly units within 6\" may re-roll failed Accuracy tests of 1.", "points": 10},
     "striker": {"name": "Striker", "description": "This model's unit gains +1 AP on all weapons.", "points": 10},
     "guidance": {"name": "Guidance", "description": "This model's unit may ignore cover when making ranged attacks.", "points": 10},
     "vigilant_aura": {"name": "Vigilant(Aura)", "description": "Friendly units within 6\" gain +1 Initiative.", "points": 10},
@@ -2105,7 +2105,7 @@
     "destroyer_armor": {"name": "Gravite Armor", "hidden": true, "description_short": "Ambush, Save +1, Movement -1\"", "points": 10},
     "mutations": {
       "name": "Mutations",
-      "description": "At the beginning of the game choose one of the following effects to be applied to this unit: \n * Strength rolls of 1 or 2 gain +1 AP \n * Strength rolls of 1 or 2 cause 2 hits instead of 1. \n * +1 Save ",
+      "description": "At the beginning of the game choose one of the following effects to be applied to this unit: \n * Strength rolls of 6 gain +1 AP \n * Strength rolls of 6 cause 2 hits instead of 1. \n * +1 Save ",
       "points": 2
     },
     "field_radio": {"name": "Field Radio", "description": "This model's unit gains +1 Initiative.", "points": 5},
@@ -2126,11 +2126,11 @@
       "description": "Whenever a friendly _Infantry_ or _Biker_ unit within 6\" loses a model or Wound(x), roll a D10. On a 3 or less, that loss is prevented.",
       "points": 15
     },
-    "legend_power_surge": {"name": "Power Surge", "description": "Once per turn this model may re-roll a Power roll of 9+.", "points": 10},
+    "legend_power_surge": {"name": "Power Surge", "description": "Once per turn this model may re-roll a Power roll of 1.", "points": 10},
     "legend_tome": {"name": "Tome of Power", "description": "This model knows an additional Power Specialty to cast Powers from.", "points": 10},
     "legend_battle_frenzy": {
       "name": "Battle Frenzy",
-      "description": "Once per turn a friendly unit within 6\" of this model may re-roll all failed Strength tests of 9+ when attacking.",
+      "description": "Once per turn a friendly unit within 6\" of this model may re-roll all failed Strength tests of 1 when attacking.",
       "points": 10
     },
     "legend_final_stand": {
@@ -2150,8 +2150,8 @@
     "legend_cqc": {"name": "Close Combat Fighters", "description": "This unit adds +3\" to short range when shooting.", "points": 10},
     "legend_presence": {"name": "Commanding Presence", "description": "This model adds +3\" to the range of their _Leader_ and _Tactician_ special rules.", "points": 10},
     "legend_bulwark": {"name": "Bulwark", "description": "Friendly units within 6\" may re-roll a single failed Save test once per turn.", "points": 10},
-    "legend_defensive_mastery": {"name": "Defensive Mastery", "description": "This model may re-roll failed Save tests of 9+.", "points": 10},
-    "legend_watchmaster": {"name": "Watchmaster", "description": "Friendly units within 6\" may re-roll Initiative tests of 9+.", "points": 10},
+    "legend_defensive_mastery": {"name": "Defensive Mastery", "description": "This model may re-roll failed Save tests of 1.", "points": 10},
+    "legend_watchmaster": {"name": "Watchmaster", "description": "Friendly units within 6\" may re-roll Initiative tests of 1.", "points": 10},
     "legend_eagle_eyed": {"name": "Eagle-Eyed", "description": "This unit may re-roll failed Accuracy tests when attacking whilst controlling an Objective.", "points": 10},
     "legend_siege_master": {"name": "Siege Master", "description": "This unit may re-roll failed Strength and Accuracy tests when attacking a unit with the _Wounds_ special rule.", "points": 10},
     "legend_expert_gunner": {"name": "Expert Gunner", "description": "This model may make one additional attack with any Ranged weapon.", "points": 10},
@@ -2165,7 +2165,7 @@
     "legend_master_hunter": {"name": "Master Hunter", "description": "This model gains +2\" of Movement when taking a Charge action.", "points": 10},
     "spotting_laser": {
       "name": "Spotting Laser",
-      "description": "Any time during this model's activation, pick an enemy unit within 36\" to gain 1 spotting marker. When a friendly unit shoots at that target they may spend spotting markers to gain the following for that attack: \n * One Marker: Re-roll Accuracy rolls of 9+ \n * Two Markers: +1 Accuracy \n\n\n These effects are cumulative and may be activated multiple times. At the end of the round, remove all spotting markers.",
+      "description": "Any time during this model's activation, pick an enemy unit within 36\" to gain 1 spotting marker. When a friendly unit shoots at that target they may spend spotting markers to gain the following for that attack: \n * One Marker: Re-roll Accuracy rolls of 1 \n * Two Markers: +1 Accuracy \n\n\n These effects are cumulative and may be activated multiple times. At the end of the round, remove all spotting markers.",
       "points": 5
     },
     "drag": {

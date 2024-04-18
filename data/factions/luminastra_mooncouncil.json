@@ -647,7 +647,7 @@
     {
       "name": "Moonfire Arrows",
       "phase": "activation",
-      "description": "Use when a unit shoots. Hits rolls of 1 or 2 gain +2 AP.",
+      "description": "Use when a unit shoots. Hits rolls of 6 gain +2 AP.",
       "flavor": "Weaved out of the flames of lunar dragons and enchanted by ancient secrets, these arrows are a potent weapon to slay even the greatest beasts.",
       "cost": 2
     }

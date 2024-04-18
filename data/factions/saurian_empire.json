@@ -584,7 +584,7 @@
     "cold_blooded": {
       "name": "Cold-blooded",
       "phase": "activation",
-      "description": "Use when a unit fights. Hits rolls of 1 or 2 gain +2 AP.",
+      "description": "Use when a unit fights. Hits rolls of 6 gain +2 AP.",
       "flavor": "While they wield weapons and armor made of gold, the lizardfolk are ferocious predators at heart.",
       "cost": 2
     }

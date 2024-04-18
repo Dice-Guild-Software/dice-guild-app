@@ -2335,7 +2335,7 @@
     "archmage_tactics": {
       "name": "Arch-Psyker's Tactics",
       "inputs": ["x"],
-      "description": "When this unit is activated, choose up to X friendly units with the Power special rule within 6\".  Those units may reroll dice rolls of 9+ while using the Power ability until the end of the round.",
+      "description": "When this unit is activated, choose up to X friendly units with the Power special rule within 6\".  Those units may reroll dice rolls of 1 while using the Power ability until the end of the round.",
       "points": 5
     },
     "archmage": {"name": "Blessings of the Psyker God", "description": "When this unit casts the Arcane Barrage Power, double the number of hits it deals.", "points": 10},
@@ -2348,7 +2348,7 @@
       "name": "Hate",
       "phase": "activation",
       "flavor": "Full with fury, Voidwarped Renegade can launch devastating close combat assaults.",
-      "description": "Use before a unit fights. Hit rolls of 1 or 2 gain +1 AP.",
+      "description": "Use before a unit fights. Hit rolls of 6 gain +1 AP.",
       "cost": 1
     },
     "daemonforge": {

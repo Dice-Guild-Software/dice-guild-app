@@ -258,7 +258,7 @@
     "veterancy": {
       "phase": "activation",
       "name": "Veterancy",
-      "description": "Use when a unit takes a _Shoot_ or _Fight_ action. That unit may re-roll failed _Accuracy_ and _Strength_ tests of 9+.",
+      "description": "Use when a unit takes a _Shoot_ or _Fight_ action. That unit may re-roll failed _Accuracy_ and _Strength_ tests of 1.",
       "flavor": "Each Freeblade Mercenary is a hero with countless titles they earned in battle.",
       "cost": 1
     },
