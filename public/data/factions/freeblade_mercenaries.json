@@ -19,7 +19,8 @@
           "fight": 2,
           "defense": 10,
           "reflexes": 6,
-          "rules": ["vulnerable_rear", {"id": "wounds", "x": 5}],
+          "wounds": 5,
+          "rules": ["vulnerable_rear"],
           "weapons": [{"id": "heavy_autocannon", "count": 2}, {"id": "stomp", "count": 2}, {"id": "light_machinegun"}],
           "options": [
             {
@@ -70,7 +71,8 @@
           "fight": 3,
           "defense": 10,
           "reflexes": 6,
-          "rules": ["vulnerable_rear", {"id": "wounds", "x": 5}],
+          "wounds": 5,
+          "rules": ["vulnerable_rear"],
           "weapons": [{"id": "heavy_autocannon", "count": 2}, {"id": "stomp", "count": 2}, {"id": "light_machinegun"}],
           "options": [
             {
@@ -121,7 +123,8 @@
           "fight": 3,
           "defense": 11,
           "reflexes": 6,
-          "rules": ["vulnerable_rear", {"id": "wounds", "x": 6}],
+          "wounds": 6,
+          "rules": ["vulnerable_rear"],
           "weapons": [{"id": "light_battle_cannon", "count": 2}, {"id": "heavy_stomp", "count": 3}, {"id": "light_machinegun"}],
           "options": [
             {
@@ -171,7 +174,8 @@
           "fight": 3,
           "defense": 11,
           "reflexes": 6,
-          "rules": ["vulnerable_rear", {"id": "wounds", "x": 6}],
+          "wounds": 6,
+          "rules": ["vulnerable_rear"],
           "weapons": [
             {"id": "battle_cannon", "count": 2},
             {"id": "twin_light_machinegun", "count": 2},
