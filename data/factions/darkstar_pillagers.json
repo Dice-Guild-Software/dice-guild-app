@@ -13,13 +13,13 @@
         {
           "name": "Beastmaster",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
           "wounds": 3,
           "rules": [{"id": "warrior", "x": 1}, "hover", {"id": "leader", "x": "Beast, Monster"}],
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["barb_launcher", {"id": "glaive", "count": 3}],
           "options": [
             {"replaceWeapon": [{"id": "glaive", "count": 3}], "withWeapon": [["barb_pistol", {"id": "barb_knife", "count": 4}]]},
@@ -40,11 +40,11 @@
         {
           "name": "Raid Master on Jetbike",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 5,
-          "reflexes": 7,
+          "reflexes": 8,
           "wounds": 3,
           "rules": [{"id": "heavy_impact", "x": 3}, "hover", {"id": "leader", "x": "Infantry, Biker"}, {"id": "tactician", "x": 1}],
           "weapons": ["barb_pistol", {"id": "barb_sword", "count": 5}, {"id": "twin_barb_rifle"}],
@@ -77,11 +77,11 @@
         {
           "name": "Abomination Master",
           "movement": 7,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 3,
           "rules": [{"id": "defender", "x": 1}, "hover", {"id": "leader", "x": "Infantry, Heavy Infantry"}],
           "weapons": ["barb_pistol", {"id": "barb_sword", "count": 5}],
@@ -104,11 +104,11 @@
         {
           "name": "Raid Master",
           "movement": 7,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 5,
-          "reflexes": 7,
+          "reflexes": 8,
           "wounds": 3,
           "rules": ["leader", {"id": "tactician", "x": 1}],
           "weapons": ["barb_pistol", {"id": "barb_sword", "count": 5}],
@@ -139,12 +139,12 @@
       "models": [
         {
           "name": "Blade Master",
-          "courage": 7,
+          "courage": 8,
           "movement": 7,
           "shoot": 2,
           "fight": 2,
           "defense": 6,
-          "reflexes": 7,
+          "reflexes": 8,
           "wounds": 3,
           "rules": ["fear", "furious", "leader", {"id": "tactician", "x": 1}],
           "weapons": [{"id": "energy_greatweapon", "count": 3}],
@@ -161,11 +161,11 @@
         {
           "name": "Ravager Sergeant",
           "movement": 7,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 4,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["barb_rifle", "barb_knife"],
           "options": [
             {"replaceWeapon": ["barb_rifle", "barb_knife"], "withWeapon": [["barb_pistol", {"id": "barb_knife", "count": 2}]]},
@@ -176,7 +176,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Ravager", "movement": 7, "courage": 5, "shoot": 3, "fight": 4, "defense": 4, "reflexes": 6, "weapons": ["barb_rifle", "barb_knife"], "min": 4, "max": 9}
+        {"name": "Ravager", "movement": 7, "courage": 6, "shoot": 3, "fight": 4, "defense": 4, "reflexes": 7, "weapons": ["barb_rifle", "barb_knife"], "min": 4, "max": 9}
       ],
       "options": [
         {"replaceWeapon": "barb_rifle", "withWeapon": ["fusion_rifle", "shred_rifle", "emp_rifle", "flamethrower", "grenade_launcher"], "modelLimit": "2/10"},
@@ -192,11 +192,11 @@
         {
           "name": "Witch Sergeant",
           "movement": 7,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 3,
           "defense": 3,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["barb_pistol", {"id": "barb_knife", "count": 2}],
           "options": [
             {"replaceWeapon": "barb_pistol", "withWeapon": ["fusion_pistol", "flamethrower_pistol"]},
@@ -206,7 +206,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Witch", "movement": 7, "courage": 5, "shoot": 4, "fight": 3, "defense": 3, "reflexes": 6, "weapons": ["barb_pistol", {"id": "barb_knife", "count": 2}], "min": 4, "max": 9}
+        {"name": "Witch", "movement": 7, "courage": 6, "shoot": 4, "fight": 3, "defense": 3, "reflexes": 7, "weapons": ["barb_pistol", {"id": "barb_knife", "count": 2}], "min": 4, "max": 9}
       ],
       "options": [
         {
@@ -224,11 +224,11 @@
         {
           "name": "Abomination Warrior Leader",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 3,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": [{"id": "barb_sword", "count": 2}],
           "options": [
             {"replaceWeapon": [{"id": "barb_sword", "count": 2}], "withWeapon": [{"id": "poison_whip", "count": 3}]},
@@ -237,7 +237,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Abomination Warrior", "movement": 6, "courage": 5, "shoot": 4, "fight": 3, "defense": 5, "reflexes": 5, "weapons": [{"id": "barb_sword", "count": 2}], "min": 4, "max": 9}
+        {"name": "Abomination Warrior", "movement": 6, "courage": 6, "shoot": 4, "fight": 3, "defense": 5, "reflexes": 6, "weapons": [{"id": "barb_sword", "count": 2}], "min": 4, "max": 9}
       ],
       "options": [{"addWeapon": ["poison_sprayer", "poison_dart_rifle"], "modelLimit": "1/5"}]
     },
@@ -248,12 +248,12 @@
       "models": [
         {
           "name": "Blade Adept",
-          "courage": 6,
+          "courage": 7,
           "movement": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["fear", "furious"],
           "weapons": [{"id": "energy_greatweapon", "count": 3}],
           "min": 5,
@@ -269,12 +269,12 @@
       "models": [
         {
           "name": "Mutated Abominations",
-          "courage": 6,
+          "courage": 7,
           "movement": 6,
           "shoot": 5,
           "fight": 3,
           "defense": 6,
-          "reflexes": 5,
+          "reflexes": 6,
           "wounds": 2,
           "weapons": ["poison_sprayer", {"id": "mutated_fists", "count": 4}],
           "options": [{"replaceWeapon": ["poison_sprayer"], "withWeapon": ["energy_handweapon"]}],
@@ -290,12 +290,12 @@
       "models": [
         {
           "name": "Courtesan",
-          "courage": 6,
+          "courage": 7,
           "movement": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 3,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 2,
           "rules": ["legend_pop", "support"],
           "weapons": [{"id": "toxic_blade", "count": 2}],
@@ -313,11 +313,11 @@
         {
           "name": "Ghoul",
           "movement": 7,
-          "courage": 4,
+          "courage": 5,
           "shoot": 3,
           "fight": 3,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "wounds": 2,
           "rules": [{"id": "resistant", "x": 2}, "furious", "support"],
           "weapons": [{"id": "piercing_claws", "count": 3}],
@@ -334,11 +334,11 @@
         {
           "name": "Psychic Servant",
           "movement": 7,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 3,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 2,
           "rules": [{"id": "power", "x": 1}, "support"],
           "weapons": ["dreadful_gaze"],
@@ -355,11 +355,11 @@
         {
           "name": "Naga Bodyguard",
           "movement": 7,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "wounds": 2,
           "rules": [{"id": "resistant", "x": 3}],
           "weapons": [{"id": "heavy_energy_sword", "count": 3}, "barb_carbine"],
@@ -377,11 +377,11 @@
         {
           "name": "Grand Abomination",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 3,
           "defense": 8,
-          "reflexes": 5,
+          "reflexes": 6,
           "wounds": 3,
           "rules": ["hover"],
           "weapons": [{"id": "claw_blade", "count": 4}, {"id": "barb_stinger", "count": 2}],
@@ -428,8 +428,8 @@
           "shoot": 0,
           "fight": 4,
           "defense": 3,
-          "reflexes": 6,
-          "courage": 4,
+          "reflexes": 7,
+          "courage": 5,
           "wounds": 2,
           "rules": ["evasive"],
           "weapons": [{"id": "fangs_and_claws", "count": 2}],
@@ -447,11 +447,11 @@
         {
           "name": "Bird Swarm",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 0,
           "fight": 4,
           "defense": 3,
-          "reflexes": 4,
+          "reflexes": 5,
           "wounds": 3,
           "rules": ["fly"],
           "weapons": [{"id": "sharp_claws", "count": 3}],
@@ -469,11 +469,11 @@
         {
           "name": "Harpy Sergeant",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 4,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["barb_carbine", "light_handweapon"],
           "options": [
             {"replaceWeapon": ["barb_carbine", "light_handweapon"], "withWeapon": [["barb_pistol", {"id": "light_handweapon", "count": 2}]]},
@@ -483,7 +483,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Harpy", "movement": 8, "courage": 5, "shoot": 3, "fight": 4, "defense": 4, "reflexes": 6, "weapons": ["barb_carbine", "light_handweapon"], "min": 4, "max": 9}
+        {"name": "Harpy", "movement": 8, "courage": 6, "shoot": 3, "fight": 4, "defense": 4, "reflexes": 7, "weapons": ["barb_carbine", "light_handweapon"], "min": 4, "max": 9}
       ],
       "options": [
         {"replaceWeapon": "barb_carbine", "withWeapon": ["fusion_rifle", "shred_rifle", "emp_rifle", "flamethrower", "grenade_launcher"], "modelLimit": "1/5"},
@@ -500,11 +500,11 @@
         {
           "name": "Jetbike Witch Sergeant",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["barb_rifle", "light_handweapon", {"id": "twin_barb_rifle"}],
           "options": [
             {"replaceWeapon": "barb_pistol", "withWeapon": ["fusion_pistol", "flamethrower_pistol"]},
@@ -516,11 +516,11 @@
         {
           "name": "Jetbike Witch",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["barb_rifle", "light_handweapon", {"id": "twin_barb_rifle"}],
           "min": 2,
           "max": 11
@@ -541,11 +541,11 @@
         {
           "name": "Hoverboard Leader",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["barb_launcher", {"id": "glaive", "count": 2}],
           "options": [
             {"replaceWeapon": [{"id": "glaive", "count": 2}], "withWeapon": [["barb_pistol", {"id": "barb_knife", "count": 3}]]},
@@ -556,7 +556,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Hoverboarder", "movement": 8, "courage": 5, "shoot": 4, "fight": 3, "defense": 4, "reflexes": 6, "weapons": ["barb_launcher", {"id": "glaive", "count": 2}], "min": 4, "max": 19}
+        {"name": "Hoverboarder", "movement": 8, "courage": 6, "shoot": 4, "fight": 3, "defense": 4, "reflexes": 7, "weapons": ["barb_launcher", {"id": "glaive", "count": 2}], "min": 4, "max": 19}
       ]
     },
     "void_bomber": {
@@ -568,11 +568,11 @@
         {
           "name": "Void Bomber",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 4,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 5,
           "rules": ["aircraft"],
           "weapons": [{"id": "twin_fusion_cannon"}, "void_bombs"],
@@ -595,11 +595,11 @@
         {
           "name": "Strike Fighter",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 4,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 5,
           "rules": ["aircraft"],
           "weapons": ["strike_missiles", {"id": "twin_fusion_cannon"}, {"id": "twin_barb_rifle"}],
@@ -635,11 +635,11 @@
         {
           "name": "Serpent Scout Craft",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 4,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 4,
           "rules": ["hover", {"id": "impact", "x": 3}, "vulnerable_side_rear"],
           "weapons": [{"id": "barb_cannon"}, {"id": "twin_barb_rifle"}],
@@ -671,11 +671,11 @@
         {
           "name": "Boarding Barge",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 4,
           "defense": 8,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 5,
           "rules": ["hover", {"id": "impact", "x": 3}, {"id": "open_topped", "x": 12}, {"id": "transport", "x": 12}, "vulnerable_side_rear"],
           "weapons": [{"id": "barb_cannon"}],
@@ -706,12 +706,12 @@
       "models": [
         {
           "name": "Devastator Barge",
-          "courage": 5,
+          "courage": 6,
           "movement": 10,
           "shoot": 3,
           "fight": 4,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 5,
           "rules": ["hover", {"id": "heavy_impact", "x": 3}, "vulnerable_side_rear"],
           "weapons": [{"id": "barb_cannon"}, {"id": "barb_cannon"}, {"id": "barb_cannon"}],
@@ -763,11 +763,11 @@
         {
           "name": "Hover Tank",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 4,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 5,
           "rules": [{"id": "heavy_impact", "x": 6}, "hover", "vulnerable_side_rear"],
           "weapons": [{"id": "twin_fusion_cannon"}, {"id": "twin_barb_rifle"}],

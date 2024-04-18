@@ -18,8 +18,8 @@
           "fight": 2,
           "shoot": 3,
           "defense": 10,
-          "reflexes": 6,
-          "courage": 7,
+          "reflexes": 7,
+          "courage": 8,
           "wounds": 5,
           "rules": [{"id": "power", "x": 1}],
           "weapons": [{"id": "large_razor_talons", "count": 6}, "grabbing_tail"],
@@ -45,8 +45,8 @@
       "models": [
         {
           "name": "Hive Queen",
-          "courage": 7,
-          "reflexes": 6,
+          "courage": 8,
+          "reflexes": 7,
           "shoot": 4,
           "fight": 4,
           "defense": 10,
@@ -67,11 +67,11 @@
       "models": [
         {
           "name": "Harvester Lord",
-          "courage": 7,
+          "courage": 8,
           "shoot": 0,
           "fight": 2,
           "defense": 6,
-          "reflexes": 7,
+          "reflexes": 8,
           "movement": 8,
           "wounds": 3,
           "rules": ["agile", "leader", "warrior", {"id": "power", "x": 1}],
@@ -89,8 +89,8 @@
       "models": [
         {
           "name": "Ravager Lord",
-          "courage": 7,
-          "reflexes": 6,
+          "courage": 8,
+          "reflexes": 7,
           "fight": 4,
           "shoot": 4,
           "defense": 9,
@@ -111,8 +111,8 @@
       "models": [
         {
           "name": "Shadowhunter",
-          "courage": 7,
-          "reflexes": 7,
+          "courage": 8,
+          "reflexes": 8,
           "fight": 2,
           "shoot": 4,
           "defense": 4,
@@ -133,11 +133,11 @@
       "models": [
         {
           "name": "Hive Warrior Prime",
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 2,
           "defense": 7,
-          "reflexes": 7,
+          "reflexes": 8,
           "movement": 6,
           "wounds": 3,
           "rules": ["leader", "tactician"],
@@ -163,11 +163,11 @@
       "models": [
         {
           "name": "Hive Warrior",
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 6,
           "wounds": 2,
           "weapons": ["razor_blaster", {"id": "razor_talons", "count": 3}],
@@ -191,11 +191,11 @@
       "models": [
         {
           "name": "Hive Harvesters",
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 8,
           "rules": ["agile"],
           "weapons": [{"id": "razor_talons", "count": 3}],
@@ -213,8 +213,8 @@
       "models": [
         {
           "name": "Hive Nestlings",
-          "courage": 4,
-          "reflexes": 5,
+          "courage": 5,
+          "reflexes": 6,
           "fight": 4,
           "shoot": 5,
           "defense": 3,
@@ -234,11 +234,11 @@
       "models": [
         {
           "name": "Hive Skirmisher",
-          "courage": 4,
+          "courage": 5,
           "shoot": 4,
           "fight": 4,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 7,
           "weapons": ["razor_blaster", "light_razor_talons"],
           "options": [
@@ -258,11 +258,11 @@
       "models": [
         {
           "name": "Hive Swarmers",
-          "courage": 4,
+          "courage": 5,
           "shoot": 0,
           "fight": 3,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 7,
           "rules": ["agile"],
           "weapons": [{"id": "light_razor_talons", "count": 2}],
@@ -279,11 +279,11 @@
       "models": [
         {
           "name": "Hive Gunner",
-          "courage": 4,
+          "courage": 5,
           "shoot": 4,
           "fight": 4,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 7,
           "weapons": ["impaler_rifle", "light_razor_talons"],
           "options": [{"replaceWeapon": "impaler_rifle", "withWeapon": ["light_acid_cannon", "web_cannon"], "modelLimit": "all"}],
@@ -299,11 +299,11 @@
       "models": [
         {
           "name": "Hive Fiend",
-          "courage": 4,
+          "courage": 5,
           "shoot": 4,
           "fight": 4,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 8,
           "rules": ["fly"],
           "weapons": ["razor_blaster", "light_razor_talons", "venom_spit"],
@@ -321,8 +321,8 @@
       "models": [
         {
           "name": "Hive Guardian",
-          "courage": 6,
-          "reflexes": 5,
+          "courage": 7,
+          "reflexes": 6,
           "fight": 4,
           "shoot": 3,
           "defense": 6,
@@ -343,8 +343,8 @@
       "models": [
         {
           "name": "Hive Lord Guardian",
-          "courage": 6,
-          "reflexes": 5,
+          "courage": 7,
+          "reflexes": 6,
           "fight": 3,
           "shoot": 4,
           "defense": 7,
@@ -365,8 +365,8 @@
       "models": [
         {
           "name": "Marauder",
-          "courage": 6,
-          "reflexes": 5,
+          "courage": 7,
+          "reflexes": 6,
           "fight": 4,
           "shoot": 4,
           "defense": 5,
@@ -391,10 +391,10 @@
       "models": [
         {
           "name": "Monstrous Marauder",
-          "courage": 7,
+          "courage": 8,
           "shoot": 4,
           "fight": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "defense": 9,
           "movement": 8,
           "wounds": 7,
@@ -413,8 +413,8 @@
       "models": [
         {
           "name": "Ravager",
-          "courage": 7,
-          "reflexes": 6,
+          "courage": 8,
+          "reflexes": 7,
           "fight": 4,
           "shoot": 4,
           "defense": 4,
@@ -435,8 +435,8 @@
       "models": [
         {
           "name": "Hive Stalker",
-          "courage": 6,
-          "reflexes": 6,
+          "courage": 7,
+          "reflexes": 7,
           "fight": 4,
           "shoot": 4,
           "defense": 5,
@@ -457,8 +457,8 @@
       "models": [
         {
           "name": "Devourer",
-          "courage": 6,
-          "reflexes": 5,
+          "courage": 7,
+          "reflexes": 6,
           "fight": 4,
           "shoot": 4,
           "defense": 10,
@@ -479,8 +479,8 @@
       "models": [
         {
           "name": "Sporeback Beast",
-          "courage": 6,
-          "reflexes": 5,
+          "courage": 7,
+          "reflexes": 6,
           "fight": 4,
           "shoot": 4,
           "defense": 10,
@@ -501,8 +501,8 @@
       "models": [
         {
           "name": "Sorcerous Beast",
-          "courage": 7,
-          "reflexes": 6,
+          "courage": 8,
+          "reflexes": 7,
           "fight": 3,
           "shoot": 4,
           "defense": 9,
@@ -523,8 +523,8 @@
       "models": [
         {
           "name": "Artillery Beast",
-          "courage": 6,
-          "reflexes": 5,
+          "courage": 7,
+          "reflexes": 6,
           "fight": 4,
           "shoot": 2,
           "defense": 5,
@@ -545,8 +545,8 @@
       "models": [
         {
           "name": "Despoiler",
-          "courage": 6,
-          "reflexes": 5,
+          "courage": 7,
+          "reflexes": 6,
           "fight": 4,
           "shoot": 4,
           "defense": 10,
@@ -574,8 +574,8 @@
       "models": [
         {
           "name": "Bio-Gunner Beast",
-          "courage": 6,
-          "reflexes": 5,
+          "courage": 7,
+          "reflexes": 6,
           "fight": 4,
           "shoot": 4,
           "defense": 11,
@@ -595,8 +595,8 @@
       "models": [
         {
           "name": "Transport Spore",
-          "courage": 6,
-          "reflexes": 5,
+          "courage": 7,
+          "reflexes": 6,
           "fight": 5,
           "shoot": 5,
           "defense": 7,
@@ -618,8 +618,8 @@
       "models": [
         {
           "name": "Gargantuan Monstrosity",
-          "courage": 6,
-          "reflexes": 6,
+          "courage": 7,
+          "reflexes": 7,
           "fight": 3,
           "defense": 12,
           "movement": 10,
@@ -639,8 +639,8 @@
       "models": [
         {
           "name": "Flying Gargantuan Monstrosity",
-          "courage": 6,
-          "reflexes": 6,
+          "courage": 7,
+          "reflexes": 7,
           "fight": 3,
           "shoot": 3,
           "defense": 11,

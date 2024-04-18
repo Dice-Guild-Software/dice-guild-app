@@ -13,11 +13,11 @@
         {
           "name": "Forgeborn Chieftain",
           "movement": 5,
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["leader", {"id": "wounds", "x": 3}, {"id": "tactician", "x": 1}],
           "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}],
           "options": [
@@ -43,11 +43,11 @@
         {
           "name": "Forgeborn Chieftain on Combat Bike",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "leader", "x": "Infantry, Biker"}, {"id": "wounds", "x": 3}, {"id": "tactician", "x": 1}],
           "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}, {"id": "twin_combat_rifle"}],
           "options": [
@@ -79,11 +79,11 @@
         {
           "name": "Forgeborn Chieftain in Gravite Armor",
           "movement": 4,
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 8,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["ambush", "leader", {"id": "wounds", "x": 3}, {"id": "tactician", "x": 1}],
           "weapons": ["twin_heavy_carbine", {"id": "handweapon", "count": 3}],
           "options": [
@@ -114,11 +114,11 @@
         {
           "name": "Forgeborn Runesmith",
           "movement": 5,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
           "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}],
           "options": [
@@ -151,11 +151,11 @@
         {
           "name": "Forgeborn Runesmith on Combat Bike",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "leader", "x": "Infantry, Biker"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
           "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}, {"id": "twin_combat_rifle"}],
           "options": [
@@ -193,11 +193,11 @@
         {
           "name": "Forgeborn Runesmith in Gravite Armor",
           "movement": 4,
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["ambush", "leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
           "weapons": ["twin_heavy_carbine", {"id": "handweapon", "count": 3}],
           "options": [
@@ -228,11 +228,11 @@
         {
           "name": "Forgeborn Artificer",
           "movement": 5,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["engineer", "leader", {"id": "wounds", "x": 3}],
           "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}],
           "options": [
@@ -258,11 +258,11 @@
         {
           "name": "Forgeborn Artificer on Combat Bike",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["engineer", {"id": "leader", "x": "Infantry, Biker"}, {"id": "wounds", "x": 3}],
           "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}, {"id": "twin_combat_rifle"}],
           "options": [
@@ -294,11 +294,11 @@
         {
           "name": "Forgeborn Artificer in Gravite Armor",
           "movement": 4,
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["ambush", "engineer", "leader", {"id": "wounds", "x": 3}],
           "weapons": ["twin_heavy_carbine", {"id": "handweapon", "count": 3}],
           "options": [
@@ -326,11 +326,11 @@
         {
           "name": "Militia Sergeant",
           "movement": 5,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["auto_carbine", "handweapon"],
           "options": [
             {"replaceWeapon": ["auto_carbine"], "withWeapon": ["combi_rifle", "storm_rifle"]},
@@ -344,7 +344,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Militia", "movement": 5, "courage": 5, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 5, "weapons": ["auto_carbine", "handweapon"], "min": 4, "max": 19}
+        {"name": "Militia", "movement": 5, "courage": 6, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 6, "weapons": ["auto_carbine", "handweapon"], "min": 4, "max": 19}
       ]
     },
     "forge_warriors": {
@@ -377,11 +377,11 @@
         {
           "name": "Warrior Sergeant",
           "movement": 5,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["heavy_carbine", "handweapon"],
           "options": [
             {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["combi_rifle", "storm_rifle"]},
@@ -394,7 +394,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Warrior", "movement": 5, "courage": 5, "shoot": 3, "fight": 4, "defense": 6, "reflexes": 5, "weapons": ["heavy_carbine", "handweapon"], "min": 4, "max": 19}
+        {"name": "Warrior", "movement": 5, "courage": 6, "shoot": 3, "fight": 4, "defense": 6, "reflexes": 6, "weapons": ["heavy_carbine", "handweapon"], "min": 4, "max": 19}
       ]
     },
     "forge_berzerkers": {
@@ -418,17 +418,17 @@
         {
           "name": "Berzerker Sergeant",
           "movement": 5,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["heavy_pistol", {"id": "handweapon", "count": 3}],
           "options": [{"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]}],
           "min": 1,
           "max": 1
         },
-        {"name": "Berzerker", "movement": 5, "courage": 5, "shoot": 3, "fight": 3, "defense": 6, "reflexes": 5, "weapons": ["heavy_pistol", {"id": "handweapon", "count": 3}], "min": 4, "max": 9}
+        {"name": "Berzerker", "movement": 5, "courage": 6, "shoot": 3, "fight": 3, "defense": 6, "reflexes": 6, "weapons": ["heavy_pistol", {"id": "handweapon", "count": 3}], "min": 4, "max": 9}
       ]
     },
     "forge_destroyers": {
@@ -439,11 +439,11 @@
         {
           "name": "Forgeborn Destroyer",
           "movement": 4,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["ambush"],
           "weapons": ["twin_heavy_carbine", {"id": "handweapon", "count": 3}],
           "options": [
@@ -480,11 +480,11 @@
         {
           "name": "Forgeborn Gunner",
           "movement": 5,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["strider"],
           "weapons": ["heavy_machinegun", {"id": "handweapon", "count": 2}],
           "options": [
@@ -506,11 +506,11 @@
         {
           "name": "Biker",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 5,
+          "reflexes": 6,
           "options": [
             {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["laser_rifle"]},
             {"replaceWeapon": ["heavy_carbine", "handweapon"], "withWeapon": [["heavy_pistol", {"id": "handweapon", "count": 2}]]},
@@ -566,11 +566,11 @@
         {
           "name": "Engineer Sergeant",
           "movement": 5,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["heavy_carbine", "handweapon"],
           "rules": ["engineer"],
           "options": [
@@ -580,7 +580,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Engineer", "movement": 5, "courage": 5, "shoot": 3, "fight": 3, "defense": 4, "reflexes": 5, "weapons": ["heavy_carbine", "handweapon"], "min": 4, "max": 9}
+        {"name": "Engineer", "movement": 5, "courage": 6, "shoot": 3, "fight": 3, "defense": 4, "reflexes": 6, "weapons": ["heavy_carbine", "handweapon"], "min": 4, "max": 9}
       ]
     },
     "mining_drone": {
@@ -591,11 +591,11 @@
         {
           "name": "Mining Drone",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 4,
           "defense": 7,
-          "reflexes": 5,
+          "reflexes": 6,
           "options": [{"replaceWeapon": ["mining_laser"], "withWeapon": ["heavy_mining_laser", "fusion_cannon", "thermal_lance"]}, {"addWeapon": [{"id": "assault_drill", "count": 2}]}],
           "weapons": ["mining_laser"],
           "min": 1,
@@ -614,11 +614,11 @@
         {
           "name": "Forgeborn Battle Tank",
           "movement": 10,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["twin_fusion_cannon"],
           "options": [
             {
@@ -642,11 +642,11 @@
         {
           "name": "Forgeborn Assault Tank",
           "movement": 10,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 11,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": [
             "plasma_gatling",
             {"id": "autocannon"},
@@ -688,11 +688,11 @@
         {
           "name": "Forgeborn APC",
           "movement": 10,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": [{"id": "twin_combat_rifle"}],
           "options": [{"addRule": [{"id": "dozer", "name": "Dozer Blade"}, {"id": "transport", "x": 10}]}],
           "min": 1,
@@ -710,11 +710,11 @@
         {
           "name": "Forgeborn Halftrack",
           "movement": 10,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 8,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["thermal_lance"],
           "options": [{"replaceWeapon": "thermal_lance", "withWeapon": ["plasma_cannon", "heavy_flamethrower", "heavy_machinegun", "autocannon", "fusion_cannon", "missile_launcher", "tesla_cannon"]}],
           "min": 1,
@@ -732,11 +732,11 @@
         {
           "name": "Forgeborn Buggy",
           "movement": 12,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["laser_cannon", {"id": "twin_heavy_machinegun"}],
           "options": [{"replaceWeapon": "laser_cannon", "withWeapon": ["autocannon", "missile_launcher", "plasma_cannon"]}],
           "min": 1,
@@ -753,11 +753,11 @@
         {
           "name": "Forgeborn Juggernaut",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 5}, "vulnerable_rear"],
           "weapons": [{"id": "heavy_fusion_cannon", "count": 2}],
           "options": [
@@ -806,11 +806,11 @@
         {
           "name": "Forgeborn Field Medic",
           "movement": 5,
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["medic", "support", {"id": "wounds", "x": 3}],
           "weapons": ["heavy_pistol", {"id": "handweapon", "count": 2}],
           "min": 1,
@@ -827,11 +827,11 @@
         {
           "name": "Forgeborn Heavy Juggernaut",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 11,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 6}, "vulnerable_rear"],
           "weapons": [{"id": "heavy_autocannon", "count": 2}],
           "options": [

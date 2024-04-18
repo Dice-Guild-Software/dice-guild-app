@@ -12,11 +12,11 @@
         {
           "name": "High Saint",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 6,
-          "reflexes": 7,
+          "reflexes": 8,
           "rules": ["epic_tactician", "fly", "leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 6}],
           "weapons": ["saints_blade_shoot", {"id": "saints_blade_melee", "count": 6}],
           "min": 1,
@@ -25,11 +25,11 @@
         {
           "name": "Angel",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["fly"],
           "weapons": ["heavy_pistol", {"id": "energy_handweapon", "count": 3}],
           "min": 0,
@@ -45,11 +45,11 @@
         {
           "name": "Battle Pulpit",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["hover", "leader", "tactician", {"id": "wounds", "x": 4}],
           "weapons": [{"id": "heavy_flamethrower", "count": 2}, {"id": "energy_powerweapon", "count": 4}],
           "min": 1,
@@ -65,11 +65,11 @@
         {
           "name": "High Warden",
           "movement": 6,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["leader", "tactician", {"id": "wounds", "x": 3}],
           "weapons": ["combat_rifle", {"id": "light_handweapon", "count": 3}],
           "options": [
@@ -96,11 +96,11 @@
         {
           "name": "Warden",
           "movement": 6,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["leader", "tactician", {"id": "wounds", "x": 2}],
           "weapons": ["combat_rifle", {"id": "light_handweapon", "count": 3}],
           "options": [
@@ -127,11 +127,11 @@
         {
           "name": "Herald",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["leader", "striker", {"id": "wounds", "x": 2}],
           "weapons": ["combat_rifle", {"id": "light_handweapon", "count": 2}],
           "options": [
@@ -158,11 +158,11 @@
         {
           "name": "Combat Medic",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": ["medic", "support", {"id": "wounds", "x": 2}],
           "weapons": ["heavy_pistol", {"id": "handweapon", "count": 3}],
           "options": [
@@ -186,11 +186,11 @@
         {
           "name": "Combat Preacher",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": ["support", {"id": "wounds", "x": 2}, "zealot"],
           "weapons": ["heavy_pistol", {"id": "handweapon", "x": 3}],
           "options": [
@@ -214,11 +214,11 @@
         {
           "name": "Vanguard Sergeant",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["combat_rifle", "light_handweapon"],
           "options": [
             {"replaceWeapon": "pistol", "withWeapon": ["plasma_pistol", "flamethrower_pistol", "fusion_pistol"]},
@@ -230,7 +230,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Vangaurd", "movement": 6, "courage": 5, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 5, "weapons": ["auto_rifle", "light_handweapon"], "min": 4, "max": 9}
+        {"name": "Vangaurd", "movement": 6, "courage": 6, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 6, "weapons": ["auto_rifle", "light_handweapon"], "min": 4, "max": 9}
       ],
       "options": [
         {"replaceWeapon": "auto_rifle", "withWeapon": ["flamethrower", "fusion_rifle", "light_machinegun", "plasma_rifle"], "modelLimit": "1/5"},
@@ -257,11 +257,11 @@
         {
           "name": "Vindicator Sergeant",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 4,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["combat_rifle", "light_handweapon"],
           "options": [
             {"replaceWeapon": "combat_rifle", "withWeapon": ["combi_rifle", "twin_combat_rifle"]},
@@ -274,7 +274,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Vindicator", "movement": 6, "courage": 6, "shoot": 3, "fight": 4, "defense": 5, "reflexes": 5, "weapons": ["combat_rifle", "light_handweapon"], "min": 4, "max": 9}
+        {"name": "Vindicator", "movement": 6, "courage": 7, "shoot": 3, "fight": 4, "defense": 5, "reflexes": 6, "weapons": ["combat_rifle", "light_handweapon"], "min": 4, "max": 9}
       ],
       "options": [
         {"replaceWeapon": "combat_rifle", "withWeapon": ["flamethrower", "fusion_rifle", "light_machinegun", "plasma_rifle"], "modelLimit": "1/5"},
@@ -292,11 +292,11 @@
         {
           "name": "Protector Sergeant",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 3,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["heavy_pistol", {"id": "energy_handweapon", "count": 2}, "shield"],
           "options": [{"replaceWeapon": "heavy_pistol", "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol"]}],
           "min": 1,
@@ -305,11 +305,11 @@
         {
           "name": "Protector",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 3,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["heavy_pistol", {"id": "energy_handweapon", "count": 2}, "shield"],
           "min": 4,
           "max": 9
@@ -330,11 +330,11 @@
         {
           "name": "Gravite Vindicator",
           "movement": 5,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["relentless"],
           "weapons": ["heavy_flamethrower", {"id": "energy_handweapon", "count": 3}, {"id": "twin_combat_rifle"}],
           "options": [
@@ -360,11 +360,11 @@
         {
           "name": "Veteran Vindicator Sergeant",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 4,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["combat_rifle", {"id": "light_handweapon", "count": 2}],
           "options": [
             {"replaceWeapon": "combat_rifle", "withWeapon": ["combi_rifle", "twin_combat_rifle"]},
@@ -381,11 +381,11 @@
         {
           "name": "Veteran Vindicator",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 4,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["combat_rifle", {"id": "light_handweapon", "count": 2}],
           "min": 4,
           "max": 9
@@ -406,11 +406,11 @@
         {
           "name": "Redemptor Sergeant",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": [{"id": "shock_whip", "count": 4}],
           "options": [{"addWeapon": "heavy_pistol"}],
           "min": 1,
@@ -419,11 +419,11 @@
         {
           "name": "Redemptor",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": [{"id": "shock_whip", "count": 2}],
           "options": [{"replaceWeapon": [{"id": "shock_whip", "count": 2}], "withWeapon": [{"id": "energy_greatweapon", "count": 2}, {"id": "energy_powerweapon", "count": 2}]}],
           "min": 4,
@@ -440,11 +440,11 @@
         {
           "name": "Winged Vindicator Sergeant",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["heavy_pistol", {"id": "light_handweapon", "count": 2}],
           "options": [
             {
@@ -463,11 +463,11 @@
         {
           "name": "Winged Vindicator",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["heavy_pistol", {"id": "light_handweapon", "count": 2}],
           "min": 4,
           "max": 9
@@ -494,11 +494,11 @@
         {
           "name": "Annihilator Sergeant",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["combat_rifle", "light_handweapon"],
           "options": [
             {"replaceWeapon": "combat_rifle", "withWeapon": ["combi_rifle", "twin_combat_rifle", "heavy_flamethrower"]},
@@ -512,7 +512,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Annihilator", "movement": 6, "courage": 6, "shoot": 3, "fight": 3, "defense": 5, "reflexes": 5, "weapons": ["heavy_flamethrower", "light_handweapon"], "min": 4, "max": 9}
+        {"name": "Annihilator", "movement": 6, "courage": 7, "shoot": 3, "fight": 3, "defense": 5, "reflexes": 6, "weapons": ["heavy_flamethrower", "light_handweapon"], "min": 4, "max": 9}
       ],
       "options": [
         {"replaceWeapon": "heavy_flamethrower", "withWeapon": ["heavy_machinegun", "fusion_cannon", "plasma_cannon"]},
@@ -529,11 +529,11 @@
         {
           "name": "Sacred Juggernaut",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 4,
           "defense": 8,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": ["vulnerable_rear", "walker", {"id": "wounds", "x": 5}],
           "weapons": [{"id": "heavy_flamethrower", "count": 2}, {"id": "walker_flail", "count": 4}],
           "options": [
@@ -555,11 +555,11 @@
         {
           "name": "APC",
           "movement": 10,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 0,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear", {"id": "wounds", "x": 4}],
           "weapons": ["twin_combat_rifle"],
           "options": [
@@ -581,11 +581,11 @@
         {
           "name": "Heavy APC",
           "movement": 10,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 0,
           "defense": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear", {"id": "wounds", "x": 5}],
           "weapons": [{"id": "twin_combat_rifle"}, {"id": "twin_combat_rifle"}, {"id": "twin_combat_rifle"}],
           "options": [
@@ -625,11 +625,11 @@
         {
           "name": "Battle Tank",
           "movement": 10,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 0,
           "defense": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", {"id": "wounds", "x": 5}],
           "weapons": [{"id": "twin_combat_rifle"}, {"id": "twin_combat_rifle"}, "heavy_autocannon"],
           "options": [
@@ -661,11 +661,11 @@
         {
           "name": "Artillery Tank",
           "movement": 10,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 0,
           "defense": 8,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", {"id": "wounds", "x": 5}],
           "weapons": [{"id": "twin_combat_rifle"}, "twin_missile_launcher"],
           "options": [

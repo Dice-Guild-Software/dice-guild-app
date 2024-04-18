@@ -12,11 +12,11 @@
         {
           "name": "Vortex Champion",
           "movement": 6,
-          "courage": 7,
+          "courage": 8,
           "shoot": 4,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["leader", {"id": "tactician", "x": 1}, {"id": "wounds", "x": 3}],
           "weapons": [{"id": "handweapon", "count": 3}],
           "options": [
@@ -39,11 +39,11 @@
         {
           "name": "Vortex Champion on Warbeast",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 4,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "impact", "x": 1}, {"id": "leader", "x": "Infantry, Cavalry"}, {"id": "tactician", "x": 2}, {"id": "wounds", "x": 3}],
           "weapons": [{"id": "handweapon", "count": 3}, {"id": "warbeast_horn", "count": 2}],
           "options": [
@@ -64,11 +64,11 @@
         {
           "name": "Vortex Champion on Infernal Steed",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 4,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "impact", "x": 1}, {"id": "leader", "x": "Infantry, Cavalry"}, {"id": "tactician", "x": 1}, {"id": "wounds", "x": 3}],
           "weapons": [{"id": "handweapon", "count": 3}],
           "options": [
@@ -89,11 +89,11 @@
         {
           "name": "Vortex Champion on Chariot",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 3,
           "defense": 7,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": [{"id": "wounds", "x": 5}, {"id": "heavy_impact", "x": 3}, {"id": "leader", "x": "Vehicle"}, {"id": "tactician", "x": 1}],
           "weapons": [{"id": "handweapon", "count": 3}, {"id": "fangs_and_teeth", "count": 2}],
           "options": [
@@ -113,11 +113,11 @@
         {
           "name": "Vortex Sorcerer",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 4,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
           "weapons": [{"id": "energy_polearm", "count": 2}, "handweapon"],
           "options": [
@@ -139,11 +139,11 @@
         {
           "name": "Vortex Sorcerer on Infernal Steed",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 4,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "impact", "x": 1}, {"id": "leader", "x": "Infantry, Cavalry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
           "weapons": [{"id": "energy_polearm", "count": 2}, "handweapon"],
           "options": [{"addRule": [{"name": "Wings", "id": "fly"}]}, {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}}],
@@ -161,11 +161,11 @@
         {
           "name": "Vortex Sorcerer on Chariot",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 7,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": [{"id": "wounds", "x": 5}, {"id": "heavy_impact", "x": 3}, {"id": "leader", "x": "Vehicle"}, {"id": "power", "x": 2}],
           "weapons": [{"id": "energy_polearm", "count": 2}, "handweapon", {"id": "fangs_and_teeth", "count": 2}],
           "options": [{"replaceRule": {"id": "power", "x": 2}, "withRule": {"id": "power", "x": 3}}],
@@ -183,11 +183,11 @@
         {
           "name": "Vortexspawn Lord",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 8,
-          "reflexes": 7,
+          "reflexes": 8,
           "rules": [{"id": "wounds", "x": 4}, "leader", {"id": "tactician", "x": 2}, {"id": "power", "x": 1}],
           "weapons": [{"id": "daemon_sword", "count": 3}, {"id": "daemon_claws", "count": 2}],
           "options": [
@@ -208,11 +208,11 @@
         {
           "name": "Greater Vortexspawn",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 11,
-          "reflexes": 7,
+          "reflexes": 8,
           "rules": [{"id": "wounds", "x": 5}, "leader", {"id": "tactician", "x": 2}, {"id": "power", "x": 2}],
           "weapons": [{"id": "daemon_sword", "count": 6}, {"id": "daemon_claws", "count": 4}],
           "options": [
@@ -236,11 +236,11 @@
         {
           "name": "Lesser Vortexspawn",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 4,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["handweapon"],
           "options": [{"replaceWeapon": ["handweapon"], "withWeapon": ["heavy_energy_sword", {"id": "handweapon", "count": 2}], "modelLimit": "all"}],
           "min": 10,
@@ -259,11 +259,11 @@
         {
           "name": "Lesser Vortex on Warbeast",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
           "weapons": ["handweapon", {"id": "warbeast_horn", "count": 2}],
           "options": [{"replaceWeapon": ["handweapon"], "withWeapon": ["heavy_energy_sword", {"id": "handweapon", "count": 2}], "modelLimit": "all"}],
@@ -278,7 +278,7 @@
       "description": "Vicious flying predators of the Abyss.",
       "category": "elite",
       "models": [
-        {"name": "Flying Vortex", "movement": 8, "courage": 5, "shoot": 4, "fight": 4, "defense": 4, "reflexes": 6, "weapons": ["fangs_and_teeth"], "rules": ["fear", "fly"], "min": 5, "max": 15}
+        {"name": "Flying Vortex", "movement": 8, "courage": 6, "shoot": 4, "fight": 4, "defense": 4, "reflexes": 7, "weapons": ["fangs_and_teeth"], "rules": ["fear", "fly"], "min": 5, "max": 15}
       ]
     },
     "abyssal_guard": {
@@ -289,11 +289,11 @@
         {
           "name": "Vortex Guard",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 3,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": [{"id": "handweapon", "count": 2}],
           "options": [{"replaceWeapon": [{"id": "handweapon", "count": "2"}], "withWeapon": [{"id": "heavy_energy_sword", "count": 2}], "modelLimit": "all"}],
           "min": 5,
@@ -307,7 +307,7 @@
       "description": "Demonic hounds that hunt in large packs.",
       "category": "elite",
       "keywords": ["Beast"],
-      "models": [{"name": "Vortex Hound", "movement": 7, "courage": 5, "shoot": 4, "fight": 3, "defense": 3, "reflexes": 6, "weapons": [{"id": "fangs_and_teeth", "count": 2}], "min": 5, "max": 10}]
+      "models": [{"name": "Vortex Hound", "movement": 7, "courage": 6, "shoot": 4, "fight": 3, "defense": 3, "reflexes": 7, "weapons": [{"id": "fangs_and_teeth", "count": 2}], "min": 5, "max": 10}]
     },
     "abyssal_cavalry": {
       "name": "Vortex Cavalry",
@@ -318,11 +318,11 @@
         {
           "name": "Vortex Cavalry",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "impact", "x": 1}],
           "weapons": ["handweapon"],
           "options": [
@@ -343,11 +343,11 @@
         {
           "name": "Exalted Vortex",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 3,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": ["conclave", {"id": "wounds", "x": 2}],
           "weapons": [{"id": "heavy_energy_sword", "count": 3}],
           "options": [{"addRule": [{"name": "Wings", "id": "fly"}], "modelLimit": "all"}, {"addRule": ["disk_of_change"], "subfactions": ["power_focus"], "modelLimit": "all"}],
@@ -366,11 +366,11 @@
         {
           "name": "Exalted Vortex Cavalry",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
           "weapons": [{"id": "heavy_energy_sword", "count": 3}],
           "options": [{"addRule": [{"name": "Wings", "id": "fly"}], "modelLimit": "all"}],
@@ -389,11 +389,11 @@
         {
           "name": "Vortex Chariot",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 7,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": [{"id": "wounds", "x": 5}, {"id": "heavy_impact", "x": 3}],
           "weapons": [{"id": "handweapon", "count": 4}, {"id": "fangs_and_teeth", "count": 2}],
           "options": [{"addRule": "banner"}],
@@ -410,11 +410,11 @@
         {
           "name": "Flamebearer",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 4,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["light_handweapon", "firebolts"],
           "options": [{"replaceWeapon": ["firebolts"], "withWeapon": ["flamethrower"], "modelLimit": "all"}],
           "min": 10,
@@ -428,7 +428,7 @@
       "description": "Shapeshifting demons, masters of fooling their enemies. ",
       "category": "elite",
       "models": [
-        {"name": "Succubus", "movement": 6, "courage": 5, "shoot": 4, "fight": 3, "defense": 4, "reflexes": 6, "rules": ["evasive", "fear"], "weapons": ["barbed_whip"], "min": 10, "max": 20}
+        {"name": "Succubus", "movement": 6, "courage": 6, "shoot": 4, "fight": 3, "defense": 4, "reflexes": 7, "rules": ["evasive", "fear"], "weapons": ["barbed_whip"], "min": 10, "max": 20}
       ],
       "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
     },
@@ -441,11 +441,11 @@
         {
           "name": "Warp Beast",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 0,
           "fight": 4,
           "defense": 9,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": [{"id": "wounds", "x": 5}, {"id": "power", "x": 1}, "vulnerable_rear"],
           "weapons": ["crushing_maw", {"id": "enormous_claws", "count": 2}],
           "min": 1,

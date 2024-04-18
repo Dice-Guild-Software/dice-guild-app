@@ -12,11 +12,11 @@
       "models": [
         {
           "name": "Company Commander",
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 6,
           "weapons": ["auto_rifle", {"id": "light_handweapon", "count": 2}],
           "options": [
@@ -41,11 +41,11 @@
       "models": [
         {
           "name": "Mounted Commander",
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 8,
           "weapons": ["pistol", {"id": "light_handweapon", "count": 3}],
           "options": [
@@ -69,11 +69,11 @@
       "models": [
         {
           "name": "Stormtrooper Commander",
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 6,
           "weapons": ["combat_rifle", {"id": "handweapon", "count": 2}],
           "options": [
@@ -95,11 +95,11 @@
       "models": [
         {
           "name": "Commissar",
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 6,
           "weapons": ["pistol", {"id": "light_handweapon", "count": 3}],
           "options": [
@@ -122,11 +122,11 @@
       "models": [
         {
           "name": "Psychic",
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 6,
           "weapons": ["pistol", {"id": "light_handweapon", "count": 2}],
           "options": [
@@ -149,11 +149,11 @@
       "models": [
         {
           "name": "Conscripted Sergeant",
-          "courage": 4,
+          "courage": 5,
           "shoot": 5,
           "fight": 5,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 6,
           "weapons": ["auto_rifle", "light_handweapon"],
           "options": [{"replaceWeapon": ["auto_rifle", "light_handweapon"], "withWeapon": [["pistol", {"id": "light_handweapon", "count": 2}]]}],
@@ -162,12 +162,12 @@
         },
         {
           "name": "Conscripted Trooper",
-          "courage": 4,
+          "courage": 5,
           "shoot": 5,
           "fight": 5,
           "defense": 3,
           "movement": 6,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["auto_rifle", "light_handweapon"],
           "options": [{"addRule": "field_radio", "modelLimit": 1}, {"replaceModel": "conscript_weapon_team", "modelLimit": 1}],
           "min": 9,
@@ -183,11 +183,11 @@
       "models": [
         {
           "name": "Sergeant",
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 6,
           "weapons": ["auto_rifle", "light_handweapon"],
           "options": [
@@ -204,11 +204,11 @@
         },
         {
           "name": "Trooper",
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 6,
           "weapons": ["auto_rifle", "light_handweapon"],
           "options": [{"addRule": "field_radio", "modelLimit": 1}, {"replaceModel": "weapon_team", "modelLimit": 1}],
@@ -224,11 +224,11 @@
       "models": [
         {
           "name": "Void Sergeant",
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 4,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 6,
           "weapons": ["adv_defense_rifle", "light_handweapon"],
           "options": [
@@ -244,11 +244,11 @@
         },
         {
           "name": "Void Trooper",
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 4,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 6,
           "weapons": ["adv_defense_rifle", "light_handweapon"],
           "options": [
@@ -273,11 +273,11 @@
       "models": [
         {
           "name": "Veteran Sergeant",
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 4,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 6,
           "weapons": ["auto_rifle", "light_handweapon"],
           "options": [
@@ -294,11 +294,11 @@
         },
         {
           "name": "Veteran Trooper",
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 4,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 6,
           "weapons": ["auto_rifle", "light_handweapon"],
           "options": [{"addRule": "field_radio", "modelLimit": 1}, {"replaceModel": "veteran_weapon_team", "modelLimit": 1}],
@@ -314,12 +314,12 @@
       "models": [
         {
           "name": "Veteran Support Trooper",
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 4,
           "defense": 3,
           "movement": 6,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["auto_rifle", "light_handweapon"],
           "options": [
             {"addRule": ["field_radio"], "modelLimit": 1},
@@ -343,12 +343,12 @@
       "models": [
         {
           "name": "Weapon Team",
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 3,
           "movement": 6,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": [{"id": "laser_cannon"}, {"id": "light_handweapon", "count": 2}],
           "options": [{"replaceWeapon": {"id": "laser_cannon"}, "withWeapon": [{"id": "missile_launcher"}, {"id": "autocannon"}, {"id": "heavy_machinegun"}, {"id": "mortar"}]}],
           "min": 3,
@@ -364,12 +364,12 @@
       "models": [
         {
           "name": "Artillery Team",
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 5,
           "movement": 6,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": [{"id": "rocket_battery"}, {"id": "light_handweapon", "count": 3}],
           "options": [{"replaceWeapon": {"id": "rocket_battery"}, "withWeapon": [{"id": "light_artillery_cannon"}, {"id": "tank_hunter_cannon"}]}],
           "min": 2,
@@ -384,11 +384,11 @@
       "models": [
         {
           "name": "Specialist Trooper",
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 5,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 6,
           "weapons": ["auto_rifle", "light_handweapon"],
           "options": [
@@ -407,11 +407,11 @@
       "models": [
         {
           "name": "Combat Engineer Sergeant",
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 4,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 6,
           "rules": ["engineer"],
           "weapons": ["shotgun", {"id": "light_handweapon", "count": 2}],
@@ -429,11 +429,11 @@
         },
         {
           "name": "Combat Engineer",
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 4,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 6,
           "weapons": ["shotgun", {"id": "light_handweapon", "count": 2}],
           "options": [{"replaceWeapon": "auto_rifle", "withWeapon": ["flamethrower", "grenade_launcher", "fusion_rifle", "plasma_rifle", "heavy_flamethrower"], "modelLimit": 1}],
@@ -448,7 +448,7 @@
       "category": "elite",
       "rules": ["evasive", "scout"],
       "options": [{"replaceWeapon": "sniper_rifle", "withWeapon": ["heavy_sniper_rifle"], "modelLimit": 1}],
-      "models": [{"name": "Sniper", "courage": 5, "shoot": 4, "fight": 5, "defense": 3, "movement": 6, "reflexes": 5, "weapons": ["sniper_rifle", "light_handweapon"], "min": 3, "max": 6}]
+      "models": [{"name": "Sniper", "courage": 6, "shoot": 4, "fight": 5, "defense": 3, "movement": 6, "reflexes": 6, "weapons": ["sniper_rifle", "light_handweapon"], "min": 3, "max": 6}]
     },
     "stormtroopers": {
       "name": "Stormtroopers",
@@ -462,11 +462,11 @@
       "models": [
         {
           "name": "Stormtrooper Sergeant",
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 4,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 6,
           "weapons": ["combat_rifle", "light_handweapon"],
           "options": [
@@ -482,11 +482,11 @@
         },
         {
           "name": "Stormtrooper",
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 4,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 6,
           "weapons": ["combat_rifle", "light_handweapon"],
           "options": [{"addRule": {"id": "field_radio"}, "modelLimit": 1}],
@@ -508,12 +508,12 @@
       "models": [
         {
           "name": "Rider Sergeant",
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 4,
           "movement": 8,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["pistol", {"id": "light_handweapon", "count": 2}],
           "options": [
             {"replaceWeapon": "pistol", "withWeapon": ["heavy_pistol", "plasma_pistol"]},
@@ -524,12 +524,12 @@
         },
         {
           "name": "Rider",
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "movement": 8,
           "defense": 4,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["pistol", {"id": "light_handweapon", "count": 2}],
           "options": [{"addRule": "field_radio", "modelLimit": 1}],
           "min": 4,
@@ -544,12 +544,12 @@
       "models": [
         {
           "name": "Ogre",
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 3,
           "movement": 6,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["heavy_shotgun", {"id": "handweapon", "count": 2}],
           "options": [
             {"addRule": ["shield"]},
@@ -571,11 +571,11 @@
         {
           "name": "Light Combat Mech",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 8,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": [{"id": "wounds", "x": 3}, "scout", "vulnerable_rear"],
           "weapons": ["heavy_flamethrower", {"id": "stomp", "count": 2}],
           "options": [
@@ -597,11 +597,11 @@
         {
           "name": "Light Transport Gunship",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 9,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": ["aircraft", {"id": "wounds", "x": 5}, "hover_mode", {"id": "transport", "x": 12}],
           "weapons": [{"id": "light_machinegun"}],
           "options": [
@@ -633,11 +633,11 @@
         {
           "name": "Heavy Gunship",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 9,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": ["aircraft", {"id": "wounds", "x": 5}, "hover_mode"],
           "weapons": [{"id": "heavy_machinegun"}, {"id": "strike_missiles"}],
           "options": [
@@ -677,11 +677,11 @@
         {
           "name": "APC",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 9,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": [{"id": "wounds", "x": 3}, {"id": "impact", "x": 5}, {"id": "transport", "x": 12}, "vulnerable_side_rear"],
           "weapons": ["heavy_flamethrower", {"id": "heavy_flamethrower"}],
           "options": [
@@ -706,11 +706,11 @@
         {
           "name": "Void APC",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 10,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": [{"id": "wounds", "x": 5}, {"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear"],
           "weapons": [{"id": "twin_laser_cannon"}],
           "options": [
@@ -735,12 +735,12 @@
       "models": [
         {
           "name": "Battle Tank Commander",
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 10,
           "movement": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["battle_cannon"],
           "options": [
             {
@@ -786,12 +786,12 @@
       "models": [
         {
           "name": "Battle Tank",
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 10,
           "movement": 10,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": [{"id": "wounds", "x": 5}, {"id": "impact", "x": 6}, "vulnerable_side_rear"],
           "weapons": ["heavy_plasma_cannon", {"id": "heavy_flamethrower"}],
           "options": [
@@ -841,11 +841,11 @@
         {
           "name": "Heavy Battle Tank",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 11,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["battle_cannon", {"id": "heavy_flamethrower"}],
           "options": [
             {"replaceWeapon": "battle_cannon", "withWeapon": ["heavy_fusion_cannon", "heavy_plasma_cannon", "siege_cannon", "autocannon", "flamestorm_cannon", "tank_hunter_cannon", "gatling_cannon"]},
@@ -884,11 +884,11 @@
         {
           "name": "Support Vehicle",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 8,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": [{"id": "wounds", "x": 5}, {"id": "impact", "x": 3}, "vulnerable_side_rear"],
           "weapons": [{"id": "twin_aa_autocannon", "count": 2}, {"id": "heavy_flamethrower"}],
           "options": [
@@ -914,11 +914,11 @@
         {
           "name": "Light Assault Tank",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 9,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": [{"id": "wounds", "x": 5}, {"id": "impact", "x": 3}, "vulnerable_side_rear"],
           "weapons": ["plasma_cannon", {"id": "heavy_flamethrower"}],
           "options": [
@@ -941,11 +941,11 @@
         {
           "name": "Super Heavy Battle Tank",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 11,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": [{"id": "wounds", "x": 6}, {"id": "heavy_impact", "x": 6}, "vulnerable_rear"],
           "weapons": [{"id": "twin_heavy_flamethrower", "count": 2}, "titan_hell_cannon", "autocannon"],
           "options": [
@@ -990,11 +990,11 @@
         {
           "name": "Super Heavy Transport Tank",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 11,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": [{"id": "wounds", "x": 6}, {"id": "heavy_impact", "x": 6}, {"id": "open_topped", "x": 10}, {"id": "transport", "x": 25}, "vulnerable_rear"],
           "weapons": ["heavy_gatling_cannon", {"id": "twin_heavy_machinegun"}],
           "options": [
@@ -1029,11 +1029,11 @@
         {
           "name": "Armored Truck",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 8,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": [{"id": "wounds", "x": 5}, {"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear"],
           "options": [
             {"addWeapon": [{"id": "twin_autocannon"}, {"id": "twin_laser_cannon"}, {"id": "twin_plasma_rifle"}, {"id": "twin_fusion_rifle"}, {"id": "twin_flamethrower"}], "limit": 1},
@@ -1054,11 +1054,11 @@
         {
           "name": "Armored Stormtrooper Truck",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 3,
           "defense": 8,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": [{"id": "wounds", "x": 5}, {"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear"],
           "weapons": ["light_battle_cannon"],
           "options": [
@@ -1086,12 +1086,12 @@
   "models": {
     "conscript_weapon_team": {
       "name": "Conscripted Weapon Team",
-      "courage": 4,
+      "courage": 5,
       "shoot": 5,
       "fight": 5,
       "defense": 3,
       "movement": 6,
-      "reflexes": 5,
+      "reflexes": 6,
       "weapons": [{"id": "laser_cannon"}, {"id": "light_handweapon", "count": 2}],
       "rules": [{"id": "wounds", "x": 2}],
       "options": [{"replaceWeapon": {"id": "laser_cannon"}, "withWeapon": [{"id": "missile_launcher"}, {"id": "autocannon"}, {"id": "heavy_machinegun", "count": 1}, {"id": "mortar"}]}],
@@ -1100,11 +1100,11 @@
     },
     "veteran_weapon_team": {
       "name": "Veteran Weapon Team",
-      "courage": 6,
+      "courage": 7,
       "shoot": 3,
       "fight": 4,
       "defense": 3,
-      "reflexes": 5,
+      "reflexes": 6,
       "movement": 6,
       "weapons": [{"id": "laser_cannon"}, {"id": "light_handweapon", "count": 2}],
       "rules": [{"id": "wounds", "x": 2}],
@@ -1114,11 +1114,11 @@
     },
     "weapon_team": {
       "name": "Weapon Team",
-      "courage": 5,
+      "courage": 6,
       "shoot": 4,
       "fight": 4,
       "defense": 3,
-      "reflexes": 5,
+      "reflexes": 6,
       "movement": 6,
       "weapons": [{"id": "laser_cannon"}, {"id": "light_handweapon", "count": 2}],
       "rules": [{"id": "wounds", "x": 2}],

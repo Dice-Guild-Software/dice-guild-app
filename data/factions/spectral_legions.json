@@ -13,11 +13,11 @@
         {
           "name": "Shrouded Noble",
           "movement": 6,
-          "courage": 7,
+          "courage": 8,
           "shoot": 4,
           "fight": 4,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["leader", {"id": "wounds", "x": 3}],
           "weapons": [{"id": "great_weapon", "count": 3}],
           "options": [
@@ -41,11 +41,11 @@
         {
           "name": "Shrouded Noble on Ghost Horse",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 4,
           "fight": 4,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "leader", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 3}],
           "weapons": [{"id": "great_weapon", "count": 3}],
           "options": [
@@ -69,11 +69,11 @@
         {
           "name": "Shrouded Noble on Ghostly Chariot",
           "movement": 10,
-          "courage": 7,
+          "courage": 8,
           "shoot": 4,
           "fight": 4,
           "defense": 8,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 3}, {"id": "impact", "x": 3}, {"id": "leader", "x": "Infantry, Cavalry"}],
           "weapons": [{"id": "great_weapon", "count": 3}],
           "options": [
@@ -96,11 +96,11 @@
         {
           "name": "Shrouded King",
           "movement": 6,
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["leader", {"id": "tactician", "x": 1}, {"id": "wounds", "x": 3}],
           "weapons": [{"id": "great_weapon", "count": 4}],
           "options": [
@@ -124,11 +124,11 @@
         {
           "name": "Shrouded King on Ghost Horse",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "warrior", "x": 1}, {"id": "leader", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 3}],
           "weapons": [{"id": "great_weapon", "count": 4}],
           "options": [
@@ -152,11 +152,11 @@
         {
           "name": "Shrouded King on Ghostly Chariot",
           "movement": 10,
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 8,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 3}, {"id": "warrior", "x": 1}, {"id": "leader", "x": "Infantry, Cavalry"}, {"id": "impact", "x": 3}],
           "weapons": [{"id": "great_weapon", "count": 4}],
           "options": [
@@ -179,11 +179,11 @@
         {
           "name": "Soul Guardian",
           "movement": 6,
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["leader", {"id": "power", "x": 1}, "striker", {"id": "wounds", "x": 3}],
           "weapons": ["heavy_handweapon", "staff"],
           "options": [
@@ -203,11 +203,11 @@
         {
           "name": "Banshee Queen",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": ["fear", "leader", {"id": "wounds", "x": 3}],
           "weapons": [{"id": "great_weapon", "count": 3}, "banshee_wail"],
           "min": 1,
@@ -219,7 +219,7 @@
       "name": "Ghostly Warriors",
       "description": "Foul spirits amassed into terrifying formations, slaying their foes with rusted weapons.",
       "category": "core",
-      "models": [{"name": "Warrior", "movement": 6, "courage": 5, "shoot": 4, "fight": 4, "defense": 3, "reflexes": 5, "weapons": ["handweapon"], "min": 10, "max": 20}],
+      "models": [{"name": "Warrior", "movement": 6, "courage": 6, "shoot": 4, "fight": 4, "defense": 3, "reflexes": 6, "weapons": ["handweapon"], "min": 10, "max": 20}],
       "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
     },
     "ghost_marksmen": {
@@ -227,7 +227,7 @@
       "description": "Spirits with accursed crossbows, shooting their foe with eerie accuracy.",
       "category": "core",
       "models": [
-        {"name": "Marksman", "movement": 6, "courage": 5, "shoot": 4, "fight": 4, "defense": 3, "reflexes": 6, "rules": ["crack_shot"], "weapons": ["handweapon", "crossbow"], "min": 5, "max": 10}
+        {"name": "Marksman", "movement": 6, "courage": 6, "shoot": 4, "fight": 4, "defense": 3, "reflexes": 7, "rules": ["crack_shot"], "weapons": ["handweapon", "crossbow"], "min": 5, "max": 10}
       ],
       "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
     },
@@ -235,7 +235,7 @@
       "name": "Glaive Stalkers",
       "description": "Stalking spirits with glaives.",
       "category": "core",
-      "models": [{"name": "Glaive Stalkers", "movement": 8, "courage": 6, "shoot": 4, "fight": 4, "defense": 4, "reflexes": 5, "weapons": [{"id": "polearm", "count": 2}], "min": 5, "max": 10}],
+      "models": [{"name": "Glaive Stalkers", "movement": 8, "courage": 7, "shoot": 4, "fight": 4, "defense": 4, "reflexes": 6, "weapons": [{"id": "polearm", "count": 2}], "min": 5, "max": 10}],
       "keywords": ["Undead", "Infantry"],
       "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
     },
@@ -243,7 +243,7 @@
       "name": "Ghastly Reapers",
       "description": "Spirits with large scythes, hunting the living.",
       "category": "elite",
-      "models": [{"name": "Reaper", "movement": 8, "courage": 6, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 5, "weapons": [{"id": "rending_heavy_polearm", "count": 2}], "min": 5, "max": 10}],
+      "models": [{"name": "Reaper", "movement": 8, "courage": 7, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 6, "weapons": [{"id": "rending_heavy_polearm", "count": 2}], "min": 5, "max": 10}],
       "keywords": ["Undead", "Infantry"],
       "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
     },
@@ -251,7 +251,7 @@
       "name": "Cursed Revenants",
       "description": "These are the spirits of those that met a vicious end, forever cursed to be in endless pain.",
       "category": "elite",
-      "models": [{"name": "Revenant", "movement": 6, "courage": 6, "shoot": 3, "fight": 3, "defense": 5, "reflexes": 5, "weapons": [{"id": "great_weapon", "count": 2}], "min": 5, "max": 10}],
+      "models": [{"name": "Revenant", "movement": 6, "courage": 7, "shoot": 3, "fight": 3, "defense": 5, "reflexes": 6, "weapons": [{"id": "great_weapon", "count": 2}], "min": 5, "max": 10}],
       "keywords": ["Undead", "Infantry"]
     },
     "spirits": {
@@ -263,11 +263,11 @@
         {
           "name": "Spirit Swarm",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": [{"id": "wounds", "x": 3}],
           "weapons": [{"id": "claws", "count": 5}],
           "min": 2,
@@ -285,11 +285,11 @@
         {
           "name": "Knight",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 4,
           "defense": 6,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": [{"id": "great_scythe", "count": 2}],
           "options": [{"addRule": [{"name": "Wings", "id": "fly"}], "modelLimit": "all"}],
           "min": 3,
@@ -306,11 +306,11 @@
         {
           "name": "Banshee ",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 4,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": ["fear", {"id": "wounds", "x": 2}],
           "weapons": [{"id": "great_weapon", "count": 2}, "banshee_wail"],
           "min": 3,
@@ -327,11 +327,11 @@
         {
           "name": "Ghostly Chariot",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 4}, {"id": "impact", "x": 3}, "fear"],
           "weapons": [{"id": "great_scythe", "count": 8}],
           "min": 1,

@@ -12,11 +12,11 @@
       "models": [
         {
           "name": "Militia Commander",
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 6,
           "wounds": 2,
           "rules": [{"id": "leader", "x": "Infantry"}, {"id": "tactician", "x": 1}],
@@ -42,11 +42,11 @@
         {
           "name": "Cult Overlord",
           "movement": 6,
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 3,
           "rules": ["leader", {"id": "tactician", "x": 1}],
           "weapons": ["pistol", {"id": "bone_sword", "count": 4}],
@@ -71,11 +71,11 @@
         {
           "name": "Cult Psychic",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 2,
           "rules": ["leader", {"id": "power", "x": 1}],
           "weapons": ["pistol", {"id": "light_handweapon", "count": 2}],
@@ -97,11 +97,11 @@
       "models": [
         {
           "name": "Cult Outrider Assassin",
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 8,
           "wounds": 2,
           "rules": ["evasive", "spotting_laser", {"id": "support", "x": "Infantry, Biker"}],
@@ -119,11 +119,11 @@
         {
           "name": "Cult Assasin",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 2,
           "rules": ["evasive", "spotting_laser", "support"],
           "weapons": [{"id": "handweapon", "count": 3}, "heavy_sniper_rifle"],
@@ -140,11 +140,11 @@
       "models": [
         {
           "name": "Great Abomination",
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 3,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 6,
           "wounds": 3,
           "rules": ["chosen_abomination", {"id": "leader", "x": "Infantry, Heavy Infantry"}, {"id": "resistant", "x": 1}],
@@ -162,11 +162,11 @@
       "models": [
         {
           "name": "Harvester Lord",
-          "courage": 7,
+          "courage": 8,
           "shoot": 0,
           "fight": 2,
           "defense": 6,
-          "reflexes": 7,
+          "reflexes": 8,
           "movement": 8,
           "wounds": 3,
           "rules": ["agile", "leader", "warrior", {"id": "power", "x": 1}],
@@ -184,11 +184,11 @@
         {
           "name": "Cult Strategist",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 2,
           "rules": ["legend_strategist", "support"],
           "weapons": ["pistol", {"id": "light_handweapon", "count": 2}],
@@ -205,11 +205,11 @@
         {
           "name": "Cult Proclamator",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 2,
           "rules": ["inspiration", "scrambler", "support"],
           "weapons": ["pistol", {"id": "light_handweapon", "count": 2}],
@@ -226,11 +226,11 @@
         {
           "name": "Cult Gunslinger",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 2,
           "rules": ["assassin", "relentless", "scout", "support"],
           "weapons": [{"id": "heavy_pistol", "count": 3}, "light_handweapon"],
@@ -247,11 +247,11 @@
       "models": [
         {
           "name": "Hive Harvesters",
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 8,
           "rules": ["agile"],
           "weapons": [{"id": "razor_talons", "count": 3}],
@@ -269,11 +269,11 @@
       "models": [
         {
           "name": "Sergeant",
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 6,
           "weapons": ["auto_rifle", "light_handweapon"],
           "options": [
@@ -290,11 +290,11 @@
         },
         {
           "name": "Trooper",
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 6,
           "weapons": ["auto_rifle", "light_handweapon"],
           "options": [{"addRule": "field_radio", "modelLimit": 1}, {"replaceModel": "weapon_team", "modelLimit": 1}],
@@ -311,11 +311,11 @@
         {
           "name": "Cult Militia Weapon Team",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "wounds": 2,
           "weapons": [{"id": "heavy_machinegun"}, "light_handweapon"],
           "options": [{"replaceWeapon": {"id": "heavy_machinegun"}, "withWeapon": [{"id": "missile_launcher"}, {"id": "autocannon"}, {"id": "laser_cannon"}, {"id": "mortar"}]}],
@@ -332,11 +332,11 @@
         {
           "name": "Neophyte Sergeant",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 3,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["auto_rifle", "light_handweapon"],
           "options": [
             {"replaceWeapon": ["auto_rifle", "light_handweapon"], "withWeapon": [["pistol", {"id": "light_handweapon", "count": 2}]]},
@@ -349,7 +349,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Neophyte", "movement": 6, "courage": 5, "shoot": 4, "fight": 3, "defense": 3, "reflexes": 5, "weapons": ["auto_rifle", "light_handweapon"], "min": 9, "max": 19}
+        {"name": "Neophyte", "movement": 6, "courage": 6, "shoot": 4, "fight": 3, "defense": 3, "reflexes": 6, "weapons": ["auto_rifle", "light_handweapon"], "min": 9, "max": 19}
       ],
       "options": [
         {"replaceWeapon": "auto_rifle", "withWeapon": "shotgun"},
@@ -366,17 +366,17 @@
         {
           "name": "Acolyte Sergeant",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 3,
           "defense": 4,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": [{"id": "handweapon", "count": 2}, "pistol"],
           "options": [{"replaceWeapon": [{"id": "handweapon", "count": 2}], "withWeapon": [{"id": "bone_sword", "count": 2}]}],
           "min": 1,
           "max": 1
         },
-        {"name": "Acolyte", "movement": 6, "courage": 5, "shoot": 4, "fight": 3, "defense": 4, "reflexes": 5, "weapons": [{"id": "handweapon", "count": 2}, "pistol"], "min": 4, "max": 9}
+        {"name": "Acolyte", "movement": 6, "courage": 6, "shoot": 4, "fight": 3, "defense": 4, "reflexes": 6, "weapons": [{"id": "handweapon", "count": 2}, "pistol"], "min": 4, "max": 9}
       ],
       "options": [
         {"replaceWeapon": "pistol", "withWeapon": ["flamethrower_pistol"]},
@@ -389,7 +389,7 @@
       "description": "Half alien and half human, these hybrids are the last step before becoming fully alien.",
       "category": "elite",
       "models": [
-        {"name": "Metamorph", "courage": 6, "shoot": 4, "fight": 3, "defense": 5, "reflexes": 6, "movement": 6, "weapons": ["pistol", {"id": "huge_mutated_claw", "count": 3}], "min": 5, "max": 10}
+        {"name": "Metamorph", "courage": 7, "shoot": 4, "fight": 3, "defense": 5, "reflexes": 7, "movement": 6, "weapons": ["pistol", {"id": "huge_mutated_claw", "count": 3}], "min": 5, "max": 10}
       ],
       "options": [{"replaceWeapon": "pistol", "withWeapon": ["flamethrower_pistol"]}, {"addRule": "banner", "modelLimit": 1}]
     },
@@ -401,11 +401,11 @@
       "models": [
         {
           "name": "Abomination",
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 3,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 6,
           "wounds": 2,
           "rules": [{"id": "resistant", "x": 1}],
@@ -424,11 +424,11 @@
       "models": [
         {
           "name": "Neophyte Outrider Sergeant",
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "movement": 8,
           "weapons": ["auto_rifle", "light_handweapon"],
           "options": [
@@ -441,7 +441,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Neophyte Outrider", "movement": 8, "courage": 5, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 5, "weapons": ["auto_rifle", "light_handweapon"], "min": 2, "max": 8}
+        {"name": "Neophyte Outrider", "movement": 8, "courage": 6, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 6, "weapons": ["auto_rifle", "light_handweapon"], "min": 2, "max": 8}
       ],
       "options": [
         {"replaceWeapon": "auto_rifle", "withWeapon": ["shotgun"]},
@@ -458,12 +458,12 @@
       "models": [
         {
           "name": "Battle Tank",
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 10,
           "movement": 10,
-          "reflexes": 5,
+          "reflexes": 6,
           "wounds": 5,
           "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear"],
           "weapons": ["heavy_plasma_cannon", {"id": "heavy_flamethrower"}],
@@ -514,11 +514,11 @@
         {
           "name": "Cult Heavy Battle Tank",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 11,
-          "reflexes": 5,
+          "reflexes": 6,
           "wounds": 6,
           "weapons": ["battle_cannon", {"id": "heavy_flamethrower"}],
           "options": [
@@ -558,11 +558,11 @@
         {
           "name": "Cult Support Vehicle",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 8,
-          "reflexes": 5,
+          "reflexes": 6,
           "wounds": 5,
           "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear"],
           "weapons": [{"id": {"id": "heavy_mortar", "count": 4}, "count": 2}, {"id": "heavy_flamethrower"}],
@@ -586,11 +586,11 @@
         {
           "name": "Cult APC",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 9,
-          "reflexes": 5,
+          "reflexes": 6,
           "wounds": 3,
           "rules": [{"id": "impact", "x": 5}, {"id": "transport", "x": 12}, "vulnerable_side_rear"],
           "weapons": ["heavy_flamethrower", {"id": "heavy_flamethrower"}],
@@ -616,11 +616,11 @@
         {
           "name": "Cult Light Transport Gunship",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 9,
-          "reflexes": 5,
+          "reflexes": 6,
           "wounds": 5,
           "rules": ["aircraft", "hover_mode", {"id": "transport", "x": 12}],
           "weapons": [{"id": "light_machinegun"}],
@@ -653,11 +653,11 @@
         {
           "name": "Cult Heavy Gunship",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 9,
-          "reflexes": 5,
+          "reflexes": 6,
           "wounds": 6,
           "rules": ["aircraft", "hover_mode"],
           "weapons": [{"id": "heavy_machinegun"}, {"id": "strike_missiles"}],
@@ -698,11 +698,11 @@
         {
           "name": "Cult Light Combat Mech",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 8,
-          "reflexes": 5,
+          "reflexes": 6,
           "wounds": 3,
           "rules": ["scout", "vulnerable_rear"],
           "weapons": ["heavy_flamethrower", {"id": "stomp", "count": 2}],
@@ -725,11 +725,11 @@
         {
           "name": "Scout Buggy",
           "movement": 12,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 5,
           "defense": 8,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 4,
           "rules": [{"id": "impact", "x": 3}, "marking_flares", "scout", "vulnerable_side_rear"],
           "weapons": [{"id": "light_machinegun", "count": 2}, {"id": "heavy_mining_laser"}],
@@ -748,11 +748,11 @@
         {
           "name": "Cult Truck",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 8,
-          "reflexes": 5,
+          "reflexes": 6,
           "wounds": 5,
           "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, {"id": "open_topped", "x": 12}, "vulnerable_side_rear"],
           "weapons": ["heavy_mining_laser"],
@@ -774,11 +774,11 @@
         {
           "name": "Cult Mining Vehicle",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 9,
-          "reflexes": 5,
+          "reflexes": 6,
           "wounds": 5,
           "rules": ["dozer", {"id": "heavy_impact", "x": 3}, {"id": "transport", "x": 6}, "vulnerable_side_rear"],
           "weapons": ["heavy_mining_laser", "light_machinegun"],
@@ -792,11 +792,11 @@
   "models": {
     "weapon_team": {
       "name": "Cult Militia Weapon Team",
-      "courage": 5,
+      "courage": 6,
       "shoot": 4,
       "fight": 4,
       "defense": 3,
-      "reflexes": 5,
+      "reflexes": 6,
       "movement": 6,
       "wounds": 2,
       "weapons": [{"id": "heavy_machinegun"}, "light_handweapon"],

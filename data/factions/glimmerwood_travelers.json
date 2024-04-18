@@ -12,11 +12,11 @@
         {
           "name": "Druid",
           "movement": 7,
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 3,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": ["leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
           "weapons": ["staff", "handweapon"],
           "options": [
@@ -37,11 +37,11 @@
         {
           "name": "Wildborn",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 3,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "min": 10,
           "max": 20,
           "weapons": ["spear"],
@@ -56,7 +56,7 @@
       "description": "Forest spirits with a lust for blood.",
       "category": "core",
       "models": [
-        {"name": "Dryad", "movement": 6, "courage": 5, "shoot": 4, "fight": 4, "defense": 3, "reflexes": 6, "rules": ["furious"], "weapons": [{"id": "claws", "count": 2}], "min": 10, "max": 20}
+        {"name": "Dryad", "movement": 6, "courage": 6, "shoot": 4, "fight": 4, "defense": 3, "reflexes": 7, "rules": ["furious"], "weapons": [{"id": "claws", "count": 2}], "min": 10, "max": 20}
       ],
       "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
     },
@@ -68,11 +68,11 @@
         {
           "name": "Deathwalkers",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "min": 5,
           "max": 15,
           "weapons": [{"id": "handweapon", "count": 3}],
@@ -91,11 +91,11 @@
         {
           "name": "Earth Elemental",
           "movement": 5,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 3,
           "defense": 4,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": [{"id": "crushing_fists", "count": 2}],
           "min": 1,
           "max": 3,
@@ -113,11 +113,11 @@
         {
           "name": "Greater Earth Elemental",
           "movement": 5,
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 2,
           "defense": 7,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": [{"id": "crushing_fists", "count": 4}],
           "min": 1,
           "max": 1,
@@ -132,7 +132,7 @@
       "description": "Overtaken by the beastial spirits within, these human-wolf hybrids are a flurry of fangs and steel.",
       "category": "elite",
       "models": [
-        {"name": "Warpwolf", "movement": 7, "courage": 6, "shoot": 4, "fight": 3, "defense": 4, "reflexes": 6, "min": 5, "max": 15, "weapons": [{"id": "fangs_and_teeth", "count": 2}, "great_axe"]}
+        {"name": "Warpwolf", "movement": 7, "courage": 7, "shoot": 4, "fight": 3, "defense": 4, "reflexes": 7, "min": 5, "max": 15, "weapons": [{"id": "fangs_and_teeth", "count": 2}, "great_axe"]}
       ],
       "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
       "subfactions": ["none"],
@@ -146,11 +146,11 @@
         {
           "name": "Warpwolf Alpha",
           "movement": 7,
-          "courage": 7,
+          "courage": 8,
           "shoot": 4,
           "fight": 2,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "min": 1,
           "max": 1,
           "weapons": [{"id": "fangs_and_teeth", "count": 3}, {"id": "great_axe", "count": 2}],
@@ -164,7 +164,7 @@
       "name": "Great Wolves",
       "description": "A pack of Wolves, roused by ancient magic and the natural connection between the realmshapers and the creatures of the land.",
       "category": "core",
-      "models": [{"name": "Great Wolf", "movement": 7, "courage": 5, "shoot": 4, "fight": 4, "defense": 3, "reflexes": 6, "min": 5, "max": 20, "weapons": [{"id": "fangs_and_teeth", "count": 2}]}],
+      "models": [{"name": "Great Wolf", "movement": 7, "courage": 6, "shoot": 4, "fight": 4, "defense": 3, "reflexes": 7, "min": 5, "max": 20, "weapons": [{"id": "fangs_and_teeth", "count": 2}]}],
       "options": [{"addRule": ["champion"], "modelLimit": 1}],
       "subfactions": ["none"],
       "keywords": ["Beast"]
@@ -178,11 +178,11 @@
         {
           "name": "Druid on Great Beast",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 3,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": [{"id": "leader", "x": "Infantry, Cavalry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
           "weapons": ["staff", "handweapon"],
           "options": [
@@ -204,11 +204,11 @@
         {
           "name": "Druid on Great Eagle",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 3}, "fly", {"id": "impact", "x": 2}, {"id": "leader", "x": "Mounted"}, {"id": "power", "x": 1}],
           "weapons": ["staff", "handweapon", {"id": "beak", "count": 2}, {"id": "claws", "count": 2}],
           "options": [
@@ -230,11 +230,11 @@
         {
           "name": "Druid on Forest Dragon",
           "movement": 10,
-          "courage": 6,
+          "courage": 7,
           "shoot": 2,
           "fight": 3,
           "defense": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 3}, "fly", {"id": "leader", "x": "Monster"}, {"id": "power", "x": 2}],
           "weapons": [{"id": "staff", "count": 2}, {"id": "handweapon", "count": 2}, {"id": "flame_breath", "count": 4}, {"id": "fangs_and_claws", "count": 3}, "bashing_tail"],
           "options": [
@@ -255,11 +255,11 @@
         {
           "name": "Wild Noble",
           "movement": 7,
-          "courage": 6,
+          "courage": 7,
           "shoot": 2,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["leader", {"id": "warrior", "x": 1}, {"id": "wounds", "x": 3}],
           "weapons": [{"id": "handweapon", "count": 3}, "long_bow"],
           "options": [
@@ -284,11 +284,11 @@
         {
           "name": "Wild Noble on Great Beast",
           "movement": 9,
-          "courage": 6,
+          "courage": 7,
           "shoot": 2,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "leader", "x": "Infantry, Cavalry"}, {"id": "marksman", "x": 1}, {"id": "wounds", "x": 3}],
           "weapons": [{"id": "handweapon", "count": 3}, "long_bow"],
           "options": [
@@ -313,11 +313,11 @@
         {
           "name": "Wild Noble on Great Eagle",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 3}, "fly", {"id": "impact", "x": 2}, {"id": "leader", "x": "Mounted"}, {"id": "marksman", "x": 1}],
           "weapons": [{"id": "handweapon", "count": 3}, "long_bow", {"id": "beak", "count": 2}, {"id": "claws", "count": 2}],
           "options": [
@@ -342,11 +342,11 @@
         {
           "name": "Wild Noble on Forest Dragon",
           "movement": 10,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 3}, "fly", {"id": "leader", "x": "Monster"}, {"id": "warrior", "x": 2}],
           "weapons": [{"id": "handweapon", "count": 3}, "long_bow", {"id": "flame_breath", "count": 4}, {"id": "fangs_and_claws", "count": 3}, "bashing_tail"],
           "options": [
@@ -371,11 +371,11 @@
         {
           "name": "Firstborn Ancient",
           "movement": 6,
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 2,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["ambush", {"id": "wounds", "x": 3}, "leader", {"id": "power", "x": 2}],
           "weapons": ["impaling_claws", {"id": "roots", "count": 5}],
           "options": [
@@ -391,7 +391,7 @@
       "name": "Glimmerwood Scouts",
       "description": "Swift archers of the wood elves, protecting the edges of the sacred forests.",
       "category": "core",
-      "models": [{"name": "Scout", "movement": 7, "courage": 5, "shoot": 3, "fight": 4, "defense": 3, "reflexes": 6, "rules": ["scout"], "weapons": ["bow", "light_handweapon"], "min": 10, "max": 20}],
+      "models": [{"name": "Scout", "movement": 7, "courage": 6, "shoot": 3, "fight": 4, "defense": 3, "reflexes": 7, "rules": ["scout"], "weapons": ["bow", "light_handweapon"], "min": 10, "max": 20}],
       "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
     },
     "elf_guardians": {
@@ -402,11 +402,11 @@
         {
           "name": "Royal Guardian",
           "movement": 7,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 4,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["spear"],
           "options": [
             {"replaceWeapon": ["spear"], "withWeapon": [{"id": "handweapon", "count": 2}, "great_weapon", "polearm"], "modelLimit": "all"},
@@ -426,11 +426,11 @@
         {
           "name": "Revenant",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 4,
           "defense": 3,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["great_weapon", "rending_claws"],
           "options": [
             {"replaceWeapon": ["great_weapon"], "withWeapon": ["heavy_polearm", "long_bow", {"id": "rending_claws", "count": 2}], "modelLimit": "all"},
@@ -451,11 +451,11 @@
         {
           "name": "Wood Wraith",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 3}],
           "weapons": [{"id": "claws", "count": 3}],
           "options": [{"replaceWeapon": [{"id": "claws", "count": 1}], "withWeapon": ["great_weapon", "great_polearm", "great_bow"]}],
@@ -474,11 +474,11 @@
         {
           "name": "Wild Knight",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["handweapon", "long_bow"],
           "options": [{"replaceWeapon": ["handweapon", "long_bow"], "withWeapon": [["lance", "shield"], ["lance", "javelin"]], "modelLimit": "all"}],
           "min": 5,
@@ -493,7 +493,7 @@
       "category": "elite",
       "keywords": ["Mounted"],
       "models": [
-        {"name": "Moon Knight", "movement": 8, "courage": 5, "shoot": 3, "fight": 3, "defense": 4, "reflexes": 6, "rules": ["conclave"], "weapons": [{"id": "lance", "count": 2}], "min": 3, "max": 12}
+        {"name": "Moon Knight", "movement": 8, "courage": 6, "shoot": 3, "fight": 3, "defense": 4, "reflexes": 7, "rules": ["conclave"], "weapons": [{"id": "lance", "count": 2}], "min": 3, "max": 12}
       ],
       "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
     },
@@ -502,7 +502,7 @@
       "description": "Travelling along the hidden Spirit Paths, ambushing armies that have travelled too far into the sacred forests.",
       "category": "elite",
       "models": [
-        {"name": "Ranger", "movement": 7, "courage": 5, "shoot": 3, "fight": 3, "defense": 4, "reflexes": 6, "rules": ["ambush", "evasive"], "weapons": ["long_bow", "handweapon"], "min": 5, "max": 20}
+        {"name": "Ranger", "movement": 7, "courage": 6, "shoot": 3, "fight": 3, "defense": 4, "reflexes": 7, "rules": ["ambush", "evasive"], "weapons": ["long_bow", "handweapon"], "min": 5, "max": 20}
       ],
       "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
     },
@@ -515,11 +515,11 @@
         {
           "name": "Firstborn",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 8,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": [{"id": "wounds", "x": 3}],
           "weapons": ["impaling_claws", {"id": "roots", "count": 5}],
           "min": 1,
@@ -536,11 +536,11 @@
         {
           "name": "Living Totem",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["warrior", {"id": "wounds", "x": 3}, "support"],
           "weapons": [{"id": "crushing_fists", "count": 3}],
           "min": 1,
@@ -560,8 +560,8 @@
           "shoot": 3,
           "fight": "-",
           "defense": 6,
-          "courage": 5,
-          "reflexes": 5,
+          "courage": 6,
+          "reflexes": 6,
           "rules": [{"id": "wounds", "x": 3}],
           "weapons": ["glaive_thrower"],
           "min": 1,
@@ -578,11 +578,11 @@
         {
           "name": "Great Eagle",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 3}, "fly", {"id": "impact", "x": 2}],
           "weapons": [{"id": "beak", "count": 2}, {"id": "claws", "count": 2}],
           "min": 1,
@@ -599,11 +599,11 @@
         {
           "name": "Hawk Knight",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["fly", {"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
           "weapons": ["handweapon", "long_bow", "beak", "claws"],
           "options": [{"replaceWeapon": ["handweapon", "long_bow"], "withWeapon": [["lance", "shield"]], "modelLimit": "all"}],
@@ -625,11 +625,11 @@
     "animated_construct": {
       "name": "Animated Construct",
       "movement": 5,
-      "courage": 5,
+      "courage": 6,
       "shoot": 4,
       "fight": 4,
       "defense": 3,
-      "reflexes": 5,
+      "reflexes": 6,
       "weapons": [{"id": "handweapon", "count": 2}],
       "min": 1,
       "max": 1,
