@@ -1,0 +1,518 @@
+{
+  "id": "vortexspawn_horrors",
+  "name": "Vortexspawn Horrors",
+  "author": "guitarninja",
+  "lore": "In the vast and mysterious expanse of the Celestia Expanse, where celestial wonders and cosmic energies dance in an eternal ballet, a cataclysmic event occurred that would forever change the balance of the cosmos. From the depths of the void, a malevolent rift known as the Vortex Gate tore open, unleashing a race of unspeakable horrors known as the Vortexspawn.\n\nBefore the Vortex Gate's emergence, the Celestia Expanse was a realm of celestial harmony, where benevolent beings and divine entities coexisted in a delicate equilibrium. However, the Vortex Gate served as a conduit to a realm of primordial chaos, a plane beyond comprehension, and its opening marked the beginning of a celestial nightmare.\n\nThe Vortexspawn Horrors emerged from the chaotic depths of the Vortex Gate, twisted and malevolent entities born from the very fabric of entropy and discord. Their forms were monstrous and nightmarish, each an amalgamation of limbs, claws, and tendrils that defied the laws of reality. Their eyes glowed with an eerie and malefic light, and their voices were a cacophony of screams and wails that sent shivers down the spines of all who heard them.\n\nLed by a dread entity known as the Abyssal Sovereign, the Vortexspawn Horrors surged into the Celestia Expanse with a singular purpose - to terrorize, corrupt, and consume all that stood in their path. They were creatures of darkness and destruction, seeking to obliterate the divine order and plunge the cosmos into an eternal abyss of chaos.\n\nThe celestial beings of the Celestia Expanse were caught off guard by the sudden onslaught of the Vortexspawn Horrors. Despite their divine powers, they found themselves ill-prepared to face such malevolence and ferocity. The heavens themselves quivered at the awakening of these cosmic terrors.\n\nAs the Vortexspawn Horrors wreaked havoc upon the Celestia Expanse, they left a trail of devastation in their wake. Celestial realms fell into darkness, divine sanctuaries were desecrated, and entire star systems were extinguished by their maleficent touch. Many celestial beings who dared to oppose them were ensnared in the Abyssal Sovereign's dark powers, corrupted and transformed into minions of the Vortexspawn.\n\nThe cosmic balance teetered on the brink of oblivion, and it seemed that all hope was lost. However, in the darkest hour, a coalition of powerful and valiant beings from across the celestial realms united to face the Vortexspawn Horrors. This coalition became known as the Astral Vanguard, warriors of light and order determined to push back the encroaching darkness.\n\nA cosmic war of epic proportions ensued as the Astral Vanguard clashed with the Vortexspawn Horrors. The Celestia Expanse became a battlefield of celestial forces and chaotic energies, the very fabric of existence unraveling under the weight of the conflict.\n\nThe battle was fierce and perilous, and many on both sides fell in the cataclysmic struggle. Yet, the determination and unity of the Astral Vanguard began to tip the scales in their favor. With each victory, they closed the Vortex Gate little by little, weakening the Abyssal Sovereign's hold on the Celestia Expanse.\n\nIn a climactic showdown, the Astral Vanguard confronted the Abyssal Sovereign himself. The battle raged across the planes of existence, and in a final desperate act, the Astral Vanguard managed to seal the Vortex Gate once more, banishing the Abyssal Sovereign and the remaining Vortexspawn Horrors back to the chaotic depths from whence they came.\n\nThough the Celestia Expanse was scarred and forever changed by the cataclysmic event, the Astral Vanguard's sacrifice and bravery brought hope and order back to the celestial realms. The memory of the Vortexspawn Horrors became a cautionary tale, a reminder of the ever-present threat of chaos lurking beyond the boundaries of the cosmos.\n\nThe legend of the Vortexspawn Horrors endures, a reminder that darkness and malevolence can emerge from even the most unexpected places, and that the battle between light and darkness is an eternal struggle that spans the celestial expanse and beyond.",
+  "units": {
+    "abyssal_champion": {
+      "name": "Vortex Champion",
+      "description": "A demonic lord, commanding their warband.",
+      "category": "hero",
+      "models": [
+        {
+          "name": "Vortex Champion",
+          "movement": 6,
+          "courage": 7,
+          "shoot": 4,
+          "fight": 3,
+          "defense": 7,
+          "reflexes": 6,
+          "rules": ["leader", {"id": "tactician", "x": 1}, {"id": "wounds", "x": 3}],
+          "weapons": [{"id": "handweapon", "count": 3}],
+          "options": [
+            {"replaceWeapon": [{"id": "handweapon", "count": 3}], "withWeapon": [{"id": "handweapon", "count": 4}, {"id": "heavy_energy_sword", "count": 3}, {"id": "energy_polearm", "count": 3}]},
+            {"addRule": [{"name": "Wings", "id": "fly"}, {"id": "power", "x": 1}, {"id": "inspiring", "x": "Infantry"}]},
+            {"addRule": ["disk_of_change"], "subfactions": ["power_focus"]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "abyssal_champion_on_warbeast": {
+      "name": "Vortex Champion on Warbeast",
+      "description": "A demonic lord, commanding their warband atop an unstoppable beast.",
+      "category": "hero",
+      "subfactions": ["assault_focus"],
+      "keywords": ["Mounted"],
+      "models": [
+        {
+          "name": "Vortex Champion on Warbeast",
+          "movement": 8,
+          "courage": 7,
+          "shoot": 4,
+          "fight": 3,
+          "defense": 9,
+          "reflexes": 6,
+          "rules": [{"id": "impact", "x": 1}, {"id": "leader", "x": "Infantry, Cavalry"}, {"id": "tactician", "x": 2}, {"id": "wounds", "x": 3}],
+          "weapons": [{"id": "handweapon", "count": 3}, {"id": "warbeast_horn", "count": 2}],
+          "options": [
+            {"replaceWeapon": [{"id": "handweapon", "count": 3}], "withWeapon": [{"id": "handweapon", "count": 4}, {"id": "heavy_energy_sword", "count": 3}, {"id": "energy_polearm", "count": 3}]},
+            {"addRule": [{"id": "power", "x": 1}, {"id": "inspiring", "x": "Infantry, Cavalry"}]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "abyssal_champion_mount": {
+      "name": "Vortex Champion on Infernal Steed",
+      "description": "A demonic lord, commanding their warband atop a loyal mount.",
+      "category": "hero",
+      "keywords": ["Mounted"],
+      "models": [
+        {
+          "name": "Vortex Champion on Infernal Steed",
+          "movement": 8,
+          "courage": 7,
+          "shoot": 4,
+          "fight": 3,
+          "defense": 7,
+          "reflexes": 6,
+          "rules": [{"id": "impact", "x": 1}, {"id": "leader", "x": "Infantry, Cavalry"}, {"id": "tactician", "x": 1}, {"id": "wounds", "x": 3}],
+          "weapons": [{"id": "handweapon", "count": 3}],
+          "options": [
+            {"replaceWeapon": [{"id": "handweapon", "count": 3}], "withWeapon": [{"id": "handweapon", "count": 4}, {"id": "energy_staff", "count": 3}, {"id": "energy_polearm", "count": 3}]},
+            {"addRule": [{"id": "power", "x": 1}, {"id": "inspiring", "x": "Infantry, Cavalry"}, {"name": "Wings", "id": "fly"}]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "abyssal_champion_chariot": {
+      "name": "Vortex Champion on Chariot",
+      "description": "A demonic leader, commanding their warband atop a demonic chariot.",
+      "category": "hero",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Vortex Champion on Chariot",
+          "movement": 10,
+          "courage": 5,
+          "shoot": 4,
+          "fight": 3,
+          "defense": 9,
+          "reflexes": 5,
+          "rules": [{"id": "wounds", "x": 5}, {"id": "heavy_impact", "x": 3}, {"id": "leader", "x": "Vehicle"}, {"id": "tactician", "x": 1}],
+          "weapons": [{"id": "handweapon", "count": 3}, {"id": "fangs_and_teeth", "count": 2}],
+          "options": [
+            {"replaceWeapon": [{"id": "handweapon", "count": 3}], "withWeapon": [{"id": "handweapon", "count": 4}, {"id": "heavy_energy_sword", "count": 3}, {"id": "energy_polearm", "count": 3}]},
+            {"addRule": [{"id": "power", "x": 1}]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "abyssal_sorcerer": {
+      "name": "Vortex Sorcerer",
+      "description": "A demonic mage using infernal magic.",
+      "category": "hero",
+      "models": [
+        {
+          "name": "Vortex Sorcerer",
+          "movement": 6,
+          "courage": 6,
+          "shoot": 4,
+          "fight": 4,
+          "defense": 6,
+          "reflexes": 6,
+          "rules": ["leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
+          "weapons": [{"id": "energy_polearm", "count": 2}, "handweapon"],
+          "options": [
+            {"addRule": [{"name": "Wings", "id": "fly"}]},
+            {"addRule": ["disk_of_change"], "subfactions": ["power_focus"]},
+            {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "abyssal_sorcerer_mount": {
+      "name": "Vortex Sorcerer on Infernal Steed",
+      "description": "A demonic mage using infernal magic atop a loyal mount.",
+      "category": "hero",
+      "keywords": ["Mounted"],
+      "models": [
+        {
+          "name": "Vortex Sorcerer on Infernal Steed",
+          "movement": 8,
+          "courage": 6,
+          "shoot": 4,
+          "fight": 4,
+          "defense": 6,
+          "reflexes": 6,
+          "rules": [{"id": "impact", "x": 1}, {"id": "leader", "x": "Infantry, Cavalry"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
+          "weapons": [{"id": "energy_polearm", "count": 2}, "handweapon"],
+          "options": [{"addRule": [{"name": "Wings", "id": "fly"}]}, {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "abyssal_sorcerer_chariot": {
+      "name": "Vortex Sorcerer on Chariot",
+      "description": "A demonic mage using infernal magic atop a demonic chariot.",
+      "category": "hero",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Vortex Sorcerer on Chariot",
+          "movement": 10,
+          "courage": 5,
+          "shoot": 4,
+          "fight": 4,
+          "defense": 9,
+          "reflexes": 5,
+          "rules": [{"id": "wounds", "x": 5}, {"id": "heavy_impact", "x": 3}, {"id": "leader", "x": "Vehicle"}, {"id": "power", "x": 2}],
+          "weapons": [{"id": "energy_polearm", "count": 2}, "handweapon", {"id": "fangs_and_teeth", "count": 2}],
+          "options": [{"replaceRule": {"id": "power", "x": 2}, "withRule": {"id": "power", "x": 3}}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "demonic_champion": {
+      "name": "Vortexspawn Lord",
+      "description": "A massive demon gifted by the dark gods.",
+      "category": "hero",
+      "keywords": ["Monster"],
+      "models": [
+        {
+          "name": "Vortexspawn Lord",
+          "movement": 8,
+          "courage": 7,
+          "shoot": 2,
+          "fight": 2,
+          "defense": 10,
+          "reflexes": 7,
+          "rules": [{"id": "wounds", "x": 4}, "leader", {"id": "tactician", "x": 2}, {"id": "power", "x": 1}],
+          "weapons": [{"id": "daemon_sword", "count": 3}, {"id": "daemon_claws", "count": 2}],
+          "options": [
+            {"replaceWeapon": {"id": "daemon_sword", "count": 3}, "withWeapon": [{"id": "daemon_axe", "count": 3}, {"id": "daemon_claws", "count": 4}]},
+            {"addRule": [{"name": "Wings", "id": "fly"}]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "greater_abyssal": {
+      "name": "Greater Vortexspawn",
+      "description": "Gigantic commanders of the abyssal forces.",
+      "category": "hero",
+      "keywords": ["Monster"],
+      "models": [
+        {
+          "name": "Greater Vortexspawn",
+          "movement": 8,
+          "courage": 7,
+          "shoot": 2,
+          "fight": 2,
+          "defense": 13,
+          "reflexes": 7,
+          "rules": [{"id": "wounds", "x": 5}, "leader", {"id": "tactician", "x": 2}, {"id": "power", "x": 2}],
+          "weapons": [{"id": "daemon_sword", "count": 6}, {"id": "daemon_claws", "count": 4}],
+          "options": [
+            {
+              "replaceWeapon": {"id": "daemon_sword", "count": 6},
+              "withWeapon": [{"id": "daemon_axe", "count": 6}, {"id": "daemon_claws", "count": 10}, [{"id": "daemon_sword", "count": 3}, {"id": "barbed_whip", "count": 4}]]
+            },
+            {"addRule": [{"name": "Wings", "id": "fly"}]},
+            {"replaceRule": {"id": "power", "x": 2}, "withRule": [{"id": "power", "x": 3}]}
+          ],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "lesser_abyssals": {
+      "name": "Lesser Vortexspawn",
+      "description": "The most common of the demonic warriors, swarming the battlefield in great numbers.",
+      "category": "core",
+      "models": [
+        {
+          "name": "Lesser Vortexspawn",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 4,
+          "fight": 4,
+          "defense": 6,
+          "reflexes": 5,
+          "weapons": ["handweapon"],
+          "options": [{"replaceWeapon": ["handweapon"], "withWeapon": ["heavy_energy_sword", {"id": "handweapon", "count": 2}], "modelLimit": "all"}],
+          "min": 10,
+          "max": 20
+        }
+      ],
+      "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+    },
+    "lesser_abyssals_warbeast": {
+      "name": "Lesser Vortexspawn on Warbeasts",
+      "description": "A swarm of lesser demons riding atop unstoppable beasts.",
+      "category": "elite",
+      "subfactions": ["assault_focus"],
+      "keywords": ["Mounted"],
+      "models": [
+        {
+          "name": "Lesser Vortex on Warbeast",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 4,
+          "fight": 4,
+          "defense": 9,
+          "reflexes": 6,
+          "rules": [{"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
+          "weapons": ["handweapon", {"id": "warbeast_horn", "count": 2}],
+          "options": [{"replaceWeapon": ["handweapon"], "withWeapon": ["heavy_energy_sword", {"id": "handweapon", "count": 2}], "modelLimit": "all"}],
+          "min": 3,
+          "max": 15
+        }
+      ],
+      "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+    },
+    "flying_abyssals": {
+      "name": "Flying Daemons",
+      "description": "Vicious flying predators of the Abyss.",
+      "category": "elite",
+      "models": [
+        {"name": "Flying Vortex", "movement": 8, "courage": 5, "shoot": 4, "fight": 4, "defense": 6, "reflexes": 6, "weapons": ["fangs_and_teeth"], "rules": ["fear", "fly"], "min": 5, "max": 15}
+      ]
+    },
+    "abyssal_guard": {
+      "name": "Vortex Guard",
+      "description": "Powerful and well-equipped elite warriors.",
+      "category": "core",
+      "models": [
+        {
+          "name": "Vortex Guard",
+          "movement": 6,
+          "courage": 6,
+          "shoot": 4,
+          "fight": 3,
+          "defense": 7,
+          "reflexes": 5,
+          "weapons": [{"id": "handweapon", "count": 2}],
+          "options": [{"replaceWeapon": [{"id": "handweapon", "count": "2"}], "withWeapon": [{"id": "heavy_energy_sword", "count": 2}], "modelLimit": "all"}],
+          "min": 5,
+          "max": 20
+        }
+      ],
+      "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+    },
+    "abyssal_hounds": {
+      "name": "Vortex Hounds",
+      "description": "Demonic hounds that hunt in large packs.",
+      "category": "elite",
+      "keywords": ["Beast"],
+      "models": [{"name": "Vortex Hound", "movement": 7, "courage": 5, "shoot": 4, "fight": 3, "defense": 5, "reflexes": 6, "weapons": [{"id": "fangs_and_teeth", "count": 2}], "min": 5, "max": 10}]
+    },
+    "abyssal_cavalry": {
+      "name": "Vortex Cavalry",
+      "description": "A horde of demonic riders.",
+      "category": "elite",
+      "keywords": ["Mounted"],
+      "models": [
+        {
+          "name": "Vortex Cavalry",
+          "movement": 8,
+          "courage": 5,
+          "shoot": 4,
+          "fight": 4,
+          "defense": 6,
+          "reflexes": 6,
+          "rules": [{"id": "impact", "x": 1}],
+          "weapons": ["handweapon"],
+          "options": [
+            {"replaceWeapon": ["handweapon"], "withWeapon": ["heavy_energy_sword", {"id": "handweapon", "count": 2}], "modelLimit": "all"},
+            {"addRule": [{"name": "Wings", "id": "fly"}], "modelLimit": "all"}
+          ],
+          "min": 5,
+          "max": 15
+        }
+      ],
+      "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+    },
+    "exalted_abyssals": {
+      "name": "Exalted Vortexspawn",
+      "description": "Massive warriors of the abyss, these demons rend apart their enemies with ease.",
+      "category": "elite",
+      "models": [
+        {
+          "name": "Exalted Vortex",
+          "movement": 6,
+          "courage": 6,
+          "shoot": 4,
+          "fight": 3,
+          "defense": 7,
+          "reflexes": 5,
+          "rules": ["conclave", {"id": "wounds", "x": 2}],
+          "weapons": [{"id": "heavy_energy_sword", "count": 3}],
+          "options": [{"addRule": [{"name": "Wings", "id": "fly"}], "modelLimit": "all"}, {"addRule": ["disk_of_change"], "subfactions": ["power_focus"], "modelLimit": "all"}],
+          "min": 3,
+          "max": 12
+        }
+      ],
+      "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+    },
+    "exalted_cavalry": {
+      "name": "Exalted Vortex Cavalry",
+      "description": "A horde of elite demonic riders.",
+      "category": "elite",
+      "keywords": ["Mounted"],
+      "models": [
+        {
+          "name": "Exalted Vortex Cavalry",
+          "movement": 8,
+          "courage": 6,
+          "shoot": 4,
+          "fight": 3,
+          "defense": 7,
+          "reflexes": 6,
+          "rules": [{"id": "impact", "x": 1}, {"id": "wounds", "x": 2}],
+          "weapons": [{"id": "heavy_energy_sword", "count": 3}],
+          "options": [{"addRule": [{"name": "Wings", "id": "fly"}], "modelLimit": "all"}],
+          "min": 3,
+          "max": 12
+        }
+      ],
+      "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+    },
+    "abyssal_chariot": {
+      "name": "Vortex Chariot",
+      "description": "A demonic chariot.",
+      "category": "elite",
+      "keywords": ["Vehicle"],
+      "models": [
+        {
+          "name": "Vortex Chariot",
+          "movement": 10,
+          "courage": 5,
+          "shoot": 4,
+          "fight": 4,
+          "defense": 9,
+          "reflexes": 5,
+          "rules": [{"id": "wounds", "x": 5}, {"id": "heavy_impact", "x": 3}],
+          "weapons": [{"id": "handweapon", "count": 4}, {"id": "fangs_and_teeth", "count": 2}],
+          "options": [{"addRule": "banner"}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    "flamebearers": {
+      "name": "Flamebearers",
+      "description": "These demons blast their foes with eldritch fire.",
+      "category": "elite",
+      "models": [
+        {
+          "name": "Flamebearer",
+          "movement": 6,
+          "courage": 5,
+          "shoot": 4,
+          "fight": 4,
+          "defense": 6,
+          "reflexes": 5,
+          "weapons": ["light_handweapon", "firebolts"],
+          "options": [{"replaceWeapon": ["firebolts"], "withWeapon": ["flamethrower"], "modelLimit": "all"}],
+          "min": 10,
+          "max": 20
+        }
+      ],
+      "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+    },
+    "succubi": {
+      "name": "Succubi",
+      "description": "Shapeshifting demons, masters of fooling their enemies. ",
+      "category": "elite",
+      "models": [
+        {"name": "Succubus", "movement": 6, "courage": 5, "shoot": 4, "fight": 3, "defense": 6, "reflexes": 6, "rules": ["evasive", "fear"], "weapons": ["barbed_whip"], "min": 10, "max": 20}
+      ],
+      "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+    },
+    "warp_beast": {
+      "name": "Warp Beast",
+      "description": "An amalgamation of corupted flesh whose power is harnessed by a massive portal on its back.",
+      "category": "rare",
+      "subfactions": ["power_focus"],
+      "models": [
+        {
+          "name": "Warp Beast",
+          "movement": 8,
+          "courage": 6,
+          "shoot": 0,
+          "fight": 4,
+          "defense": 11,
+          "reflexes": 5,
+          "rules": [{"id": "wounds", "x": 5}, {"id": "power", "x": 1}, "vulnerable_rear"],
+          "weapons": ["crushing_maw", {"id": "enormous_claws", "count": 2}],
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  },
+  "weapons": {
+    "enormous_claws": {"name": "Enormous Claws", "attacks": 1, "short": "Melee", "ap": 6},
+    "crushing_maw": {"name": "Crushing Maw", "attacks": 1, "short": "Melee", "ap": 8, "rules": ["rending"]},
+    "firebolts": {"name": "Firebolt", "attacks": 1, "short": 9, "medium": 18, "ap": 1, "rules": ["assault", "breaching"]},
+    "legend_kingslayer": {"name": "Kingslayer", "attacks": 1, "short": "Melee", "ap": 3, "rules": [{"id": "deadly", "x": 3}]},
+    "warbeast_horn": {"name": "Warbeast's Horns and Hooves", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["lance"]},
+    "fangs_and_teeth": {"name": "Fangs and Teeth", "attacks": 1, "short": "Melee", "ap": 2}
+  },
+  "rules": {"legend_pitlord": {"name": "Pitlord", "description": "Increase the range of this model's Leader special rule by 3\".", "points": 10}},
+  "strategies": {
+    "summoning": {
+      "name": "Summoning Rift",
+      "phase": "pre_game",
+      "description": "Up to half of any force's units, one point for each may be placed in _Ambush Reserves_ instead of deployed on the field.",
+      "flavor": "Ripping holes into the essence of reality allows the abyssal forces to appear from everywhere.",
+      "cost": "1/per"
+    },
+    "terror": {
+      "name": "Terror",
+      "phase": "activation",
+      "description": "Use when a unit within 6\" takes a Courage test. That unit suffers -1 Courage until the end of its activation.",
+      "flavor": "The nightmarish forms of the abyss dwellers can break even the strongest of wills.",
+      "cost": 1
+    },
+    "hate": {
+      "name": "Hate",
+      "phase": "activation",
+      "flavor": "Full with fury, abyssal demons can launch devastating close combat assaults.",
+      "description": "Use before a unit fights. Hit rolls of 1 or 2 gain +1 AP.",
+      "cost": 1
+    }
+  },
+  "powers": {
+    "weakness": {"name": "Weakness", "description": "Target enemy unit within 12\" must re-roll one die of your choice on its next Save test.", "charge": 5},
+    "inferno": {"name": "Inferno", "description": "Target enemy unit within 12\" takes 4 hits with AP(2).", "charge": 6},
+    "helfire": {"name": "Helfire", "description": "Target enemy unit within 24\" takes 3 hits with AP(1). This power may be cast unlimited times per turn.", "charge": 7}
+  },
+  "relics": {
+    "legend_pendant": {
+      "name": "Demonic Regeneration",
+      "rule": "regeneration",
+      "description": "Upgrade one Leader model with Regeneration.",
+      "flavor": "Demonic entities are known for being hard to destroy.",
+      "points": 10
+    },
+    "legend_pitlord": {
+      "name": "Pitlord",
+      "rule": "legend_pitlord",
+      "description": "Upgrade one Leader model with Pitlord.",
+      "flavor": "The bellowing commands issued by this leader are more effective.",
+      "points": 10
+    },
+    "legend_kingslayer": {
+      "name": "Kingslayer",
+      "weapon": "legend_kingslayer",
+      "description": "Upgrade one _Leader_ model with the Kingslayer.",
+      "flavor": "A demonic blade that seeks out its own targets to slay.",
+      "points": 10
+    }
+  },
+  "buyLinks": [{"name": "Games Workshop", "link": "https://www.games-workshop.com/en-US/Warhammer-40-000?N=2562756967+1026809784"}]
+}

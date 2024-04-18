@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d4e35473.css",
+    "main.js": "/static/js/main.18ed6645.js",
+    "static/media/background.jpg": "/static/media/background.5b140bf9a931322ebdce.jpg",
+    "static/media/Dice_Guild_left.png": "/static/media/Dice_Guild_left.40c8d4f5db5e4c704dd3.png",
+    "static/media/vortex_gate_small.png": "/static/media/vortex_gate_small.e07fb5e9923f41d2c2ea.png",
+    "static/media/2_datasheets.md": "/static/media/2_datasheets.db9db5083c3b35065842.md",
+    "static/media/6_shooting.md": "/static/media/6_shooting.e20f7015e104c1cc32cd.md",
+    "static/media/4_actions.md": "/static/media/4_actions.8083d1b6f7be9e756400.md",
+    "static/media/10_terrain.md": "/static/media/10_terrain.b97aa0fda4c95b227919.md",
+    "static/media/13_force_building.md": "/static/media/13_force_building.0d8b8861faf8f44f0738.md",
+    "static/media/14_scenarios.md": "/static/media/14_scenarios.332e0d9a92caf78ef4ab.md",
+    "static/media/5_movement.md": "/static/media/5_movement.9fb3e6458bee3d4e4278.md",
+    "static/media/12_tactic_points.md": "/static/media/12_tactic_points.1a6b381fe1a912f842f1.md",
+    "static/media/7_fighting.md": "/static/media/7_fighting.ea8ca97e7e1b2d1bc843.md",
+    "static/media/1_introduction.md": "/static/media/1_introduction.85074330cf6c58243555.md",
+    "static/media/9_reactions.md": "/static/media/9_reactions.84d15ccf05d5cdaceac1.md",
+    "static/media/8_morale.md": "/static/media/8_morale.d5267092d76e1ac16bc8.md",
+    "static/media/11_powers.md": "/static/media/11_powers.e5972d98e4965b8b5071.md",
+    "static/media/15_multiplayer.md": "/static/media/15_multiplayer.edb3f5fc34bc4dc63d2f.md",
+    "static/media/3_game_rounds.md": "/static/media/3_game_rounds.82e3541847a723921de0.md",
+    "index.html": "/index.html",
+    "main.d4e35473.css.map": "/static/css/main.d4e35473.css.map",
+    "main.18ed6645.js.map": "/static/js/main.18ed6645.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4e35473.css",
+    "static/js/main.18ed6645.js"
+  ]
+}
