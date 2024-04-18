@@ -607,7 +607,7 @@
       "name": "Unnatural Vitality",
       "rule": {"id": "wounds", "x": 1},
       "flavor": "Blessed with superhuman vitality, this fighter can endure countless injuries.",
-      "description": "Upgrade one _Leader_ model with Wounds(+1).",
+      "description": "Upgrade one _Leader_ model with +1 HP.",
       "points": 20
     },
     "relentless": {

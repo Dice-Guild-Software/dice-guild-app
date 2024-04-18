@@ -17,6 +17,7 @@
           "fight": 3,
           "defense": 6,
           "reflexes": 7,
+          "wounds": 3,
           "weapons": ["combat_rifle", {"id": "handweapon", "count": 3}],
           "options": [
             {
@@ -27,7 +28,7 @@
             {"addWeapon": ["rocket_pod", "railgun", "fusion_cannon", "plasma_cannon", "light_machinegun", "missile_launcher", "thermal_lance"], "limit": 1},
             {"addRule": [{"name": "Jetpack", "id": "fly"}, "shield"]}
           ],
-          "rules": ["ambush", {"id": "field_orders", "x": 1}, "leader", {"id": "wounds", "x": 3}],
+          "rules": ["ambush", {"id": "field_orders", "x": 1}, "leader"],
           "min": 1,
           "max": 1
         }
@@ -46,8 +47,9 @@
           "fight": 3,
           "defense": 4,
           "reflexes": 7,
+          "wounds": 3,
           "weapons": ["combat_rifle", {"id": "handweapon", "count": 2}],
-          "rules": [{"id": "field_orders", "x": 1}, "leader", {"id": "wounds", "x": 3}],
+          "rules": [{"id": "field_orders", "x": 1}, "leader"],
           "options": [
             {"replaceWeapon": ["combat_rifle", {"id": "handweapon", "count": 2}], "withWeapon": [["pistol", {"id": "handweapon", "count": 3}]]},
             {"replaceWeapon": ["pistol"], "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]},
@@ -73,8 +75,9 @@
           "fight": 3,
           "defense": 4,
           "reflexes": 7,
+          "wounds": 3,
           "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}],
-          "rules": [{"id": "field_orders", "x": 1, "ArrayItem": "leader"}, {"id": "wounds", "x": 3}, "scout"],
+          "rules": [{"id": "field_orders", "x": 1, "ArrayItem": "leader"}, "scout"],
           "options": [
             {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["combat_shotgun", "sniper_rifle"]},
             {"replaceWeapon": ["heavy_carbine", {"id": "handweapon", "count": 2}], "withWeapon": [["pistol", {"id": "handweapon", "count": 3}]]},
@@ -102,8 +105,9 @@
           "fight": 3,
           "defense": 4,
           "reflexes": 7,
+          "wounds": 2,
           "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}],
-          "rules": [{"id": "wounds", "x": 2}, {"id": "power", "x": 1}],
+          "rules": [{"id": "power", "x": 1}],
           "options": [
             {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["combat_shotgun"]},
             {"replaceWeapon": ["heavy_carbine", {"id": "handweapon", "count": 2}], "withWeapon": [["pistol", {"id": "handweapon", "count": 3}]]},
@@ -242,6 +246,7 @@
           "fight": 4,
           "defense": 6,
           "reflexes": 6,
+          "wounds": 3,
           "weapons": ["laser_cannon", "energy_powerweapon"],
           "options": [
             {"replaceWeapon": "laser_cannon", "withWeapon": ["missile_launcher", "heavy_machinegun", "heavy_flamethrower", "autocannon", "plasma_cannon", "thermal_lance", "fusion_cannon"]},
@@ -252,7 +257,7 @@
         }
       ],
       "keywords": ["Vehicle"],
-      "rules": [{"id": "wounds", "x": 3}, "fearless", "scout", "vulnerable_rear"]
+      "rules": ["fearless", "scout", "vulnerable_rear"]
     },
     "heavy_walker": {
       "name": "Heavy Combat Walker",
@@ -267,6 +272,7 @@
           "fight": 4,
           "defense": 8,
           "reflexes": 6,
+          "wounds": 5,
           "weapons": ["laser_cannon", {"id": "energy_powerweapon", "count": 2}],
           "options": [
             {"replaceWeapon": "laser_cannon", "withWeapon": ["missile_launcher", "heavy_machinegun", "heavy_flamethrower", "autocannon", "plasma_cannon", "thermal_lance", "fusion_cannon"]},
@@ -281,7 +287,7 @@
         }
       ],
       "keywords": ["Vehicle"],
-      "rules": [{"id": "wounds", "x": 5}, "fearless", "vulnerable_rear"]
+      "rules": ["fearless", "vulnerable_rear"]
     },
     "security_drones": {
       "name": "Security Drones",
@@ -296,9 +302,10 @@
           "fight": 4,
           "defense": 4,
           "reflexes": 7,
+          "wounds": 2,
           "weapons": ["light_machinegun", "light_handweapon", "railgun"],
           "options": [{"replaceWeapon": ["light_machinegun"], "withWeapon": ["laser_cannon", "heavy_flamethrower"]}, {"addRule": ["field_radio"], "modelLimit": 1}],
-          "rules": ["fearless", {"id": "wounds", "x": 2}],
+          "rules": ["fearless"],
           "min": 1,
           "max": 3
         }
@@ -317,6 +324,7 @@
           "fight": 4,
           "defense": 5,
           "reflexes": 7,
+          "wounds": 2,
           "weapons": ["light_machinegun", "stomp"],
           "options": [
             {
@@ -345,7 +353,7 @@
         }
       ],
       "keywords": ["Vehicle"],
-      "rules": ["fearless", "vulnerable_rear", {"id": "wounds", "x": 2}]
+      "rules": ["fearless", "vulnerable_rear"]
     },
     "heavy_support_drone": {
       "name": "Heavy Support Drone",
@@ -360,6 +368,7 @@
           "fight": 3,
           "defense": 5,
           "reflexes": 7,
+          "wounds": 3,
           "weapons": ["fusion_cannon", {"id": "stomp", "count": 2}],
           "options": [
             {
@@ -373,7 +382,7 @@
         }
       ],
       "keywords": ["Vehicle"],
-      "rules": [{"id": "wounds", "x": 3}, "fearless", "vulnerable_rear"]
+      "rules": ["fearless", "vulnerable_rear"]
     },
     "medic_specialist": {
       "name": "Medic Specialist",
@@ -388,8 +397,9 @@
           "fight": 3,
           "defense": 4,
           "reflexes": 7,
+          "wounds": 2,
           "weapons": ["auto_rifle", "smoke_grenade", "handweapon"],
-          "rules": ["medic", "support", {"id": "wounds", "x": 2}],
+          "rules": ["medic", "support"],
           "options": [
             {"replaceWeapon": ["auto_rifle", "handweapon"], "withWeapon": [["pistol", {"id": "handweapon", "count": 2}]]},
             {"replaceWeapon": ["pistol"], "withWeapon": ["plasma_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]}
@@ -412,8 +422,9 @@
           "fight": 3,
           "defense": 4,
           "reflexes": 7,
+          "wounds": 2,
           "weapons": ["auto_rifle", "handweapon"],
-          "rules": ["engineer", "support", {"id": "wounds", "x": 2}],
+          "rules": ["engineer", "support"],
           "options": [
             {"replaceWeapon": ["auto_rifle"], "withWeapon": ["thermal_rifle", "fusion_rifle", "plasma_rifle", "grenade_launcher"]},
             {"replaceWeapon": ["auto_rifle", "handweapon"], "withWeapon": [["pistol", {"id": "handweapon", "count": 2}]]},
@@ -430,7 +441,7 @@
       "name": "Armored Truck",
       "description": "An armored transport of the galactic corporate allegiance.",
       "category": "transport",
-      "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, {"id": "wounds", "x": 5}, "vulnerable_side_rear"],
+      "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "vulnerable_side_rear"],
       "keywords": ["Vehicle"],
       "models": [
         {
@@ -441,6 +452,7 @@
           "fight": 3,
           "defense": 8,
           "reflexes": 7,
+          "wounds": 5,
           "weapons": ["light_battle_cannon"],
           "options": [
             {"addRule": [{"id": "dozer", "name": "Dozer Blade"}, "field_radio"]},
@@ -468,7 +480,7 @@
       "name": "Psychic-Hunter Assassin",
       "description": "An assassin trained in hunting down rogue psychics.",
       "category": "elite",
-      "rules": [{"id": "wounds", "x": 3}, "fear", {"id": "ward", "x": 3}, "assassin"],
+      "rules": ["fear", {"id": "ward", "x": 3}, "assassin"],
       "models": [
         {
           "name": "Psychic-Hunter Assassin",
@@ -478,6 +490,7 @@
           "defense": 4,
           "reflexes": 8,
           "courage": 8,
+          "wounds": 3,
           "min": 1,
           "max": 1,
           "weapons": ["spectral_eye", {"id": "assassin_unarmed", "count": 4}]
@@ -488,7 +501,7 @@
       "name": "Sniper Assassin",
       "description": "An assassin trained in hunting down and removing dangerous leaders.",
       "category": "elite",
-      "rules": [{"id": "wounds", "x": 3}, "assassin"],
+      "rules": ["assassin"],
       "models": [
         {
           "name": "Sniper Assassin",
@@ -498,6 +511,7 @@
           "defense": 4,
           "reflexes": 8,
           "courage": 8,
+          "wounds": 3,
           "min": 1,
           "max": 1,
           "weapons": ["assassin_sniper", {"id": "light_handweapon", "count": 2}]
@@ -508,16 +522,16 @@
       "name": "Berzerker Assassin",
       "description": "An assassin trained in brutal close combat.",
       "category": "elite",
-      "rules": [{"id": "wounds", "x": 3}, "assassin", "berzerk_overload"],
+      "rules": ["assassin", "berzerk_overload"],
       "models": [
-        {"name": "Berzerker Assassin", "movement": 7, "shoot": 2, "fight": 2, "defense": 4, "reflexes": 8, "courage": 8, "min": 1, "max": 1, "weapons": [{"id": "energy_handweapon", "count": 8}]}
+        {"name": "Berzerker Assassin", "movement": 7, "shoot": 2, "fight": 2, "defense": 4, "reflexes": 8, "courage": 8,"wounds": 3, "min": 1, "max": 1, "weapons": [{"id": "energy_handweapon", "count": 8}]}
       ]
     },
     "stealth_assassin": {
       "name": "Stealth Assassin",
       "description": "An assassin sent to strike from the shadows.",
       "category": "elite",
-      "rules": [{"id": "wounds", "x": 3}, "assassin", "stealth", "ambush"],
+      "rules": ["assassin", "stealth", "ambush"],
       "models": [
         {
           "name": "Stealth Assassin",
@@ -527,6 +541,7 @@
           "defense": 4,
           "reflexes": 8,
           "courage": 8,
+          "wounds": 3,
           "min": 1,
           "max": 1,
           "weapons": ["mind_shredder", {"id": "phase_sword", "count": 4}]

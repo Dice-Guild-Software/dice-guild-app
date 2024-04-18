@@ -719,7 +719,8 @@
           "fight": 3,
           "defense": 10,
           "reflexes": 6,
-          "rules": ["hover", {"id": "power", "x": 3}, {"id": "psychic_prowess", "x": 2}, "vulnerable_rear", {"id": "wounds", "x": 5}],
+          "wounds": 5,
+          "rules": ["hover", {"id": "power", "x": 3}, {"id": "psychic_prowess", "x": 2}, "vulnerable_rear"],
           "weapons": ["tesla_field", "gravity_pulse"],
           "options": [{"addRule": [{"name": "Orbital Drop", "id": "ambush_large"}]}],
           "min": 1,
@@ -741,7 +742,8 @@
           "fight": 4,
           "defense": 8,
           "reflexes": 6,
-          "rules": ["targeting_relay", "walker", {"id": "wounds", "x": 5}],
+          "wounds": 5,
+          "rules": ["targeting_relay", "walker"],
           "weapons": [{"id": "heat_ray"}, {"id": "combat_rifle", "count": 2}, {"id": "heavy_stomp", "count": 3}],
           "options": [
             {
@@ -768,7 +770,8 @@
           "fight": 4,
           "defense": 8,
           "reflexes": 6,
-          "rules": ["regeneration_aura", "walker", {"id": "wounds", "x": 4}],
+          "wounds": 4,
+          "rules": ["regeneration_aura", "walker"],
           "weapons": [{"id": "combat_rifle", "count": 2}, {"id": "heavy_stomp", "count": 3}],
           "min": 1,
           "max": 1
@@ -779,7 +782,7 @@
       "name": "Repair Construct",
       "description": "A spider-like automation tasked with maintaining other machines.",
       "category": "elite",
-      "rules": ["hover", {"id": "wounds", "x": 3}],
+      "rules": ["hover"],
       "keywords": ["Vehicle"],
       "models": [
         {
@@ -790,6 +793,7 @@
           "fight": 4,
           "defense": 8,
           "reflexes": 6,
+          "wounds": 3,
           "weapons": [{"id": "metal_fangs", "count": 3}],
           "options": [{"addWeapon": ["antimatter_rifle"]}, {"addRule": ["dark_prism", {"id": "engineer", "name": "Repair Arm"}]}],
           "min": 1,
