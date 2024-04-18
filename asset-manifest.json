@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d4e35473.css",
-    "main.js": "/static/js/main.18ed6645.js",
+    "main.js": "/static/js/main.7757040c.js",
     "static/media/background.jpg": "/static/media/background.5b140bf9a931322ebdce.jpg",
     "static/media/Dice_Guild_left.png": "/static/media/Dice_Guild_left.40c8d4f5db5e4c704dd3.png",
     "static/media/vortex_gate_small.png": "/static/media/vortex_gate_small.e07fb5e9923f41d2c2ea.png",
@@ -22,10 +22,10 @@
     "static/media/3_game_rounds.md": "/static/media/3_game_rounds.82e3541847a723921de0.md",
     "index.html": "/index.html",
     "main.d4e35473.css.map": "/static/css/main.d4e35473.css.map",
-    "main.18ed6645.js.map": "/static/js/main.18ed6645.js.map"
+    "main.7757040c.js.map": "/static/js/main.7757040c.js.map"
   },
   "entrypoints": [
     "static/css/main.d4e35473.css",
-    "static/js/main.18ed6645.js"
+    "static/js/main.7757040c.js"
   ]
 }
