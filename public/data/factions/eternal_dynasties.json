@@ -898,7 +898,7 @@
     "time_orb": {"name": "Time Orb", "description": "Enemy models within 6\" of this model have -2\" Movement speed.", "points": 10},
     "targeting_relay": {
       "name": "Targeting Relay",
-      "description": "If this unit hits an enemy unit with a ranged attack, mark that unit. The next friendly unit to target that enemy unit may re-roll failed Accuracy rolls of 9+.",
+      "description": "If this unit hits an enemy unit with a ranged attack, mark that unit. The next friendly unit to target that enemy unit may re-roll failed Accuracy rolls of 1.",
       "points": 10
     },
     "extra_space": {"name": "Extra Space", "description_short": "Transport +10", "hidden": true, "description": "This model gains +10 Transport space.", "points": 10},

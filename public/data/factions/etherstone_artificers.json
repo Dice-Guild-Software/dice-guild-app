@@ -1000,7 +1000,7 @@
     },
     "legend_drillmaster": {"name": "Drillmaster", "description": "This model and friendly units within 12\" gain +3\" to their long range when shooting.", "points": 10},
     "suit": {"name": "Skybound Suit", "description": "This model gains +3\" Movement, Wounds(+1) and may ignore terrain and other models without the Fly special rule when moving.", "points": 15},
-    "clockwork_companion": {"name": "Clockwork Companion", "description": "This model and its unit re-rolls failed hit rolls of 9+ when shooting.", "points": 5},
+    "clockwork_companion": {"name": "Clockwork Companion", "description": "This model and its unit re-rolls failed hit rolls of 1 when shooting.", "points": 5},
     "opportunist": {
       "name": "Opportunist",
       "description": "When an enemy model takes any unsaved hits by this models melee attacks, you can push that model 1“ directly away from this model.",
@@ -1008,7 +1008,7 @@
     },
     "brew": {
       "name": "Dwarven Brew",
-      "description": "When this unit is activated, choose a Beer for this unit or a friendly _Infantry_ unit within 6\" to drink:\n* Clockwork Malt: Roll a die when a model in this unit loses a wound. On a value of 1 or 2 that wound is not lost.\n* Berserker Brew: When this unit fights, hit rolls of 1 or 2 generate an additional attack.\n* Ol’ Classic: One model in the unit immediately heals D3 wounds.",
+      "description": "When this unit is activated, choose a Beer for this unit or a friendly _Infantry_ unit within 6\" to drink:\n* Clockwork Malt: Roll a die when a model in this unit loses a wound. On a value of 1 or 2 that wound is not lost.\n* Berserker Brew: When this unit fights, Hit rolls of 6 generate an additional attack.\n* Ol’ Classic: One model in the unit immediately heals D3 wounds.",
       "points": [15]
     }
   },

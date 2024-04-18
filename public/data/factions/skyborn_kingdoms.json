@@ -784,7 +784,7 @@
       "phase": "activation",
       "name": "Blessed Armory",
       "flavor": "Blessed by priests before the fight, these weapons are empowered with divine strength.",
-      "description": "Use before a unit fights. Hit rolls of 1 or 2 gain +1 AP.",
+      "description": "Use before a unit fights. Hit rolls of 6 gain +1 AP.",
       "cost": 1
     },
     {

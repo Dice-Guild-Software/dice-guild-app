@@ -437,7 +437,7 @@
     {
       "name": "Sinister Strikes",
       "phase": "activation",
-      "description": "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
+      "description": "Use before an Infantry unit fights. Hit rolls of 6 gain +1 AP.",
       "flavor": "The Beastmen's crude weapons are outfitted with hooks and barbs, made to drown the ground in blood. ",
       "cost": 1
     },

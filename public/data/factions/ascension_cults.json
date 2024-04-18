@@ -873,7 +873,7 @@
     {
       "name": "Marked for Death",
       "phase": "activation",
-      "description": "An enemy unit visible to a friendly _Infantry_ unit it gains 1 spotting marker. When a friendly unit shoots at that target they may spend spotting markers to gain the following for that attack:\n * One Marker: Re-roll Accuracy rolls of 9+ \n * Two Markers: +1 Accuracy \n\n\n These effects are cumulative and may be activated multiple times. At the end of the round, remove all spotting markers.",
+      "description": "An enemy unit visible to a friendly _Infantry_ unit it gains 1 spotting marker. When a friendly unit shoots at that target they may spend spotting markers to gain the following for that attack:\n * One Marker: Re-roll Accuracy rolls of 1 \n * Two Markers: +1 Accuracy \n\n\n These effects are cumulative and may be activated multiple times. At the end of the round, remove all spotting markers.",
       "flavor": "When the cult emerges from the shadows, they will cover their enemies in a crossfire of bullets.",
       "cost": 1
     }

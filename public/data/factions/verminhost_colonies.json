@@ -602,7 +602,7 @@
     "vermin_tactics": {
       "name": "Vermin Tactics",
       "inputs": ["x"],
-      "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
+      "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 1 \n * Re-roll failed Strength tests of 1",
       "points": ["rule.x", {"multiply": 10}]
     },
     "fanatical_sermon": {
@@ -645,7 +645,7 @@
       "name": "Gnawing Advance",
       "phase": "activation",
       "flavor": "The enemy is crushed in an avalanche of bites and slashes.",
-      "description": "Use when a unit performs a Fight action. Hit rolls of 1 or 2 cause an additional hit.",
+      "description": "Use when a unit performs a Fight action. Hit rolls of 6 cause an additional hit.",
       "cost": 1
     },
     {
