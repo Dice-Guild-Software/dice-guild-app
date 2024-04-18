@@ -14,11 +14,11 @@
         {
           "name": "Arch-Marine",
           "movement": 6,
-          "courage": 8,
+          "courage": 9,
           "shoot": 2,
           "fight": 2,
           "defense": 9,
-          "reflexes": 7,
+          "reflexes": 8,
           "rules": [
             {"id": "inspiring", "x": "Infantry, Heavy Infantry"},
             {"id": "leader", "x": "Infantry, Heavy Infantry"},
@@ -48,11 +48,11 @@
         {
           "name": "Lieutenant",
           "movement": 6,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["leader", "striker", {"id": "wounds", "x": 2}],
           "weapons": ["combat_rifle", {"id": "handweapon", "count": 2}],
           "options": [
@@ -86,11 +86,11 @@
         {
           "name": "Lieutenant on Bike",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "impact", "x": 1}, "leader", "striker", {"id": "wounds", "x": 2}],
           "weapons": ["combat_rifle", {"id": "handweapon", "count": 2}, {"id": "twin_combat_rifle"}],
           "options": [
@@ -123,11 +123,11 @@
         {
           "name": "Captain",
           "movement": 6,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["leader", "tactician", {"id": "wounds", "x": 3}],
           "weapons": ["combat_rifle", {"id": "handweapon", "count": 3}],
           "options": [
@@ -161,11 +161,11 @@
         {
           "name": "Captain on Bike",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "impact", "x": 1}, "leader", "tactician", {"id": "wounds", "x": 3}],
           "weapons": ["combat_rifle", {"id": "handweapon", "count": 3}, {"id": "twin_combat_rifle"}],
           "options": [
@@ -199,11 +199,11 @@
         {
           "name": "Juggernaut Captain",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["tactician_aura", "vulnerable_rear", {"id": "wounds", "x": 5}],
           "weapons": [{"id": "walker_fist", "count": 4}],
           "options": [
@@ -252,11 +252,11 @@
       "models": [
         {
           "name": "Psychic",
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 6,
           "rules": ["leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
           "weapons": ["combat_rifle", {"id": "handweapon", "count": 2}],
@@ -291,11 +291,11 @@
       "models": [
         {
           "name": "Psychic on Bike",
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 8,
           "rules": [{"id": "impact", "x": 1}, "leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
           "weapons": ["combat_rifle", {"id": "handweapon", "count": 2}, {"id": "twin_combat_rifle"}],
@@ -329,12 +329,12 @@
       "models": [
         {
           "name": "Engineer",
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 6,
           "movement": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["engineer", "support", {"id": "wounds", "x": 3}],
           "weapons": ["combat_rifle", {"id": "handweapon", "count": 2}],
           "options": [
@@ -363,7 +363,7 @@
       "models": [
         {
           "name": "Engineer on Bike",
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 6,
@@ -397,11 +397,11 @@
         {
           "name": "Zealot",
           "movement": 6,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["support", {"id": "wounds", "x": 3}, "zealot"],
           "weapons": ["combat_rifle", {"id": "handweapon", "count": 3}],
           "options": [
@@ -435,11 +435,11 @@
         {
           "name": "Marine Zealot on Bike",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "impact", "x": 1}, "support", {"id": "wounds", "x": 3}, "zealot"],
           "weapons": ["combat_rifle", {"id": "handweapon", "count": 3}, {"id": "twin_combat_rifle"}],
           "options": [
@@ -472,11 +472,11 @@
         {
           "name": "Surgeon",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["medic", "support", {"id": "wounds", "x": 2}],
           "weapons": ["heavy_pistol", {"id": "handweapon", "count": 3}],
           "options": [
@@ -507,11 +507,11 @@
         {
           "name": "Surgeon on Bike",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "impact", "x": 1}, "medic", "support", {"id": "wounds", "x": 2}],
           "weapons": ["heavy_pistol", {"id": "handweapon", "count": 3}, {"id": "twin_combat_rifle"}],
           "options": [
@@ -542,11 +542,11 @@
         {
           "name": "Vanguard Sergeant",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["combat_rifle", "handweapon"],
           "options": [
             {"replaceWeapon": ["combat_rifle"], "withWeapon": ["combi_rifle", "twin_combat_rifle"]},
@@ -566,7 +566,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Vanguard Marine", "movement": 6, "courage": 6, "shoot": 3, "fight": 3, "defense": 6, "reflexes": 6, "weapons": ["combat_rifle", "handweapon"], "min": 4, "max": 9}
+        {"name": "Vanguard Marine", "movement": 6, "courage": 7, "shoot": 3, "fight": 3, "defense": 6, "reflexes": 7, "weapons": ["combat_rifle", "handweapon"], "min": 4, "max": 9}
       ],
       "options": [
         {"replaceWeapon": "combat_rifle", "withWeapon": ["marksman_rifle", "heavy_smg"]},
@@ -589,11 +589,11 @@
         {
           "name": "Gravite Vanguard Sergeant",
           "movement": 5,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["heavy_combat_rifle", "handweapon"],
           "options": [
             {"replaceWeapon": ["heavy_combat_rifle"], "withWeapon": ["combi_rifle", "twin_combat_rifle"]},
@@ -607,7 +607,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Gravite Vanguard Marine", "movement": 5, "courage": 6, "shoot": 3, "fight": 3, "defense": 7, "reflexes": 6, "weapons": ["heavy_combat_rifle", "handweapon"], "min": 4, "max": 9}
+        {"name": "Gravite Vanguard Marine", "movement": 5, "courage": 7, "shoot": 3, "fight": 3, "defense": 7, "reflexes": 7, "weapons": ["heavy_combat_rifle", "handweapon"], "min": 4, "max": 9}
       ],
       "options": [
         {
@@ -627,11 +627,11 @@
         {
           "name": "Scout Sergeant",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["combat_rifle", "handweapon"],
           "options": [
             {"replaceWeapon": ["combat_rifle"], "withWeapon": ["combi_rifle", "twin_combat_rifle"]},
@@ -651,7 +651,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Scout Marine", "movement": 6, "courage": 6, "shoot": 3, "fight": 3, "defense": 5, "reflexes": 6, "weapons": ["combat_rifle", "handweapon"], "min": 4, "max": 9}
+        {"name": "Scout Marine", "movement": 6, "courage": 7, "shoot": 3, "fight": 3, "defense": 5, "reflexes": 7, "weapons": ["combat_rifle", "handweapon"], "min": 4, "max": 9}
       ],
       "options": [
         {"replaceWeapon": "combat_rifle", "withWeapon": ["heavy_combat_shotgun", "marksman_rifle", "heavy_smg", "heavy_carbine"]},
@@ -693,11 +693,11 @@
         {
           "name": "Assault Sergeant",
           "movement": 6,
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["heavy_pistol", {"id": "handweapon", "count": 2}],
           "options": [
             {"replaceWeapon": ["heavy_pistol", {"id": "handweapon", "count": 2}], "withWeapon": [["combat_rifle", "handweapon"]]},
@@ -706,7 +706,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Assault Marine", "movement": 6, "courage": 7, "shoot": 3, "fight": 3, "defense": 6, "reflexes": 6, "weapons": ["heavy_pistol", {"id": "handweapon", "count": 2}], "min": 4, "max": 9}
+        {"name": "Assault Marine", "movement": 6, "courage": 8, "shoot": 3, "fight": 3, "defense": 6, "reflexes": 7, "weapons": ["heavy_pistol", {"id": "handweapon", "count": 2}], "min": 4, "max": 9}
       ],
       "options": [
         {
@@ -739,11 +739,11 @@
         {
           "name": "Veteran Assault Sergeant",
           "movement": 6,
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["heavy_pistol", {"id": "handweapon", "count": 3}],
           "options": [
             {"replaceWeapon": ["heavy_pistol", {"id": "handweapon", "count": 3}], "withWeapon": [["combat_rifle", {"id": "handweapon", "count": 2}]]},
@@ -755,11 +755,11 @@
         {
           "name": "Veteran Assault Marine",
           "movement": 6,
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["heavy_pistol", {"id": "handweapon", "count": 3}],
           "min": 4,
           "max": 9
@@ -795,11 +795,11 @@
         {
           "name": "Veteran Marine",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["relentless"],
           "weapons": ["combat_rifle", {"id": "handweapon", "count": 2}],
           "options": [
@@ -837,11 +837,11 @@
         {
           "name": "Hazard Marine",
           "movement": 6,
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": [{"id": "heavy_pistol", "count": 2}, "handweapon"],
           "options": [
             {"replaceWeapon": ["heavy_pistol"], "withWeapon": ["plasma_pistol", "flamethrower_pistol", "thermal_pistol", "gravity_pistol", "fusion_pistol"], "limit": 2},
@@ -865,11 +865,11 @@
         {
           "name": "Vanguard Biker Sergeant",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": [{"id": "twin_combat_rifle"}, "combat_rifle", "handweapon"],
           "options": [
             {"replaceWeapon": ["combat_rifle"], "withWeapon": ["combi_rifle", "twin_combat_rifle"]},
@@ -891,11 +891,11 @@
         {
           "name": "Vanguard Biker",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": [{"id": "twin_combat_rifle"}, "combat_rifle", "handweapon"],
           "min": 2,
           "max": 8
@@ -930,11 +930,11 @@
         {
           "name": "Scout Biker Sergeant",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": [{"id": "twin_combat_rifle"}, "combat_rifle", "handweapon"],
           "options": [
             {"replaceWeapon": ["combat_rifle"], "withWeapon": ["combi_rifle", "twin_combat_rifle"]},
@@ -956,11 +956,11 @@
         {
           "name": "Scout Biker",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": [{"id": "twin_combat_rifle"}, "combat_rifle", "handweapon"],
           "min": 2,
           "max": 8
@@ -983,11 +983,11 @@
         {
           "name": "Gravite Assault Marine",
           "movement": 5,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["ambush"],
           "weapons": ["storm_rifle", {"id": "energy_handweapon", "count": 2}],
           "options": [
@@ -1028,11 +1028,11 @@
       "models": [
         {
           "name": "Honor Guard",
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 7,
           "rules": ["fly"],
           "weapons": ["storm_rifle", {"id": "energy_handweapon", "count": 3}],
@@ -1056,11 +1056,11 @@
       "models": [
         {
           "name": "Werewolf",
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 8,
           "weapons": [{"id": "twin_energy_handweapon", "count": 3}],
           "options": [{"replaceWeapon": {"id": "twin_energy_handweapon", "count": 3}, "withWeapon": [[{"id": "energy_powerweapon", "count": 2}, "shield"]]}, {"addWeapon": "grenade_launcher"}],
@@ -1078,11 +1078,11 @@
         {
           "name": "Combat Speeder",
           "movement": 10,
-          "courage": 6,
+          "courage": 7,
           "fight": 3,
           "shoot": 3,
           "defense": 8,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["fly", {"id": "wounds", "x": 3}],
           "weapons": ["heavy_machinegun"],
           "options": [
@@ -1103,11 +1103,11 @@
         {
           "name": "Devastation Sergeant",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["combat_rifle", "handweapon"],
           "options": [
             {"replaceWeapon": ["combat_rifle"], "withWeapon": ["combi_rifle", "twin_combat_rifle", "heavy_flamethrower", "heavy_smg", "marksman_rifle"]},
@@ -1127,7 +1127,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Devastation Marine", "movement": 6, "courage": 6, "shoot": 3, "fight": 3, "defense": 6, "reflexes": 6, "weapons": ["heavy_flamethrower", "handweapon"], "min": 4, "max": 9}
+        {"name": "Devastation Marine", "movement": 6, "courage": 7, "shoot": 3, "fight": 3, "defense": 6, "reflexes": 7, "weapons": ["heavy_flamethrower", "handweapon"], "min": 4, "max": 9}
       ],
       "options": [
         {
@@ -1146,12 +1146,12 @@
       "models": [
         {
           "name": "Gravite Blade Marine",
-          "courage": 6,
+          "courage": 7,
           "movement": 5,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 2}],
           "weapons": ["heavy_pistol", {"id": "energy_handweapon", "count": 3}],
           "min": 3,
@@ -1166,11 +1166,11 @@
       "models": [
         {
           "name": "Elimination Marine",
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 6,
           "rules": ["ambush", "evasive"],
           "weapons": ["heavy_sniper_rifle", {"id": "handweapon", "count": 2}],
@@ -1187,12 +1187,12 @@
       "models": [
         {
           "name": "Gravite Devastation Marine",
-          "courage": 6,
+          "courage": 7,
           "movement": 5,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 2}],
           "weapons": ["twin_assault_carbine", {"id": "energy_powerweapon", "count": 2}],
           "options": [
@@ -1224,11 +1224,11 @@
         {
           "name": "APC",
           "movement": 10,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 0,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear", {"id": "wounds", "x": 4}],
           "weapons": ["twin_combat_rifle"],
           "options": [
@@ -1250,11 +1250,11 @@
         {
           "name": "Heavy APC",
           "movement": 10,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 0,
           "defense": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear", {"id": "wounds", "x": 5}],
           "weapons": [{"id": "twin_combat_rifle"}, {"id": "twin_combat_rifle", "count": 2}],
           "options": [
@@ -1301,11 +1301,11 @@
         {
           "name": "Drop Pod",
           "movement": 0,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 0,
           "defense": 8,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["ambush", {"id": "wounds", "x": 3}, {"id": "transport", "x": 12}],
           "weapons": ["twin_combat_rifle"],
           "options": [{"replaceWeapon": "twin_combat_rifle", "withWeapon": "missile_launcher"}],
@@ -1323,11 +1323,11 @@
         {
           "name": "Heavy Gunship",
           "movement": 10,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["aircraft", {"id": "wounds", "x": 5}, "hover_mode", {"id": "transport", "x": 12}, {"id": "walker_transport", "x": 1}],
           "weapons": [{"id": "twin_fusion_cannon"}, {"id": "storm_missiles"}, {"id": "twin_laser_cannon"}],
           "options": [
@@ -1349,11 +1349,11 @@
         {
           "name": "Artillery Vehicle",
           "movement": 10,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 0,
           "defense": 8,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 5}, {"id": "impact", "x": 3}, "vulnerable_side_rear"],
           "weapons": [{"id": "twin_combat_rifle"}, "twin_missile_launcher"],
           "options": [
@@ -1388,11 +1388,11 @@
         {
           "name": "Battle Tank",
           "movement": 10,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 0,
           "defense": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 5}, {"id": "impact", "x": 6}, "vulnerable_side_rear"],
           "weapons": ["heavy_autocannon"],
           "options": [
@@ -1428,11 +1428,11 @@
         {
           "name": "Strike Tank",
           "movement": 12,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 0,
           "defense": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 5}, {"id": "impact", "x": 6}, "vulnerable_side_rear"],
           "weapons": [{"id": "heavy_thermal_lance"}],
           "options": [
@@ -1466,11 +1466,11 @@
         {
           "name": "Heavy Battle Tank",
           "movement": 10,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 0,
           "defense": 11,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["twin_laser_cannon"],
           "options": [
             {"replaceWeapon": ["twin_laser_cannon"], "withWeapon": ["battle_cannon", "heavy_autocannon", "twin_gatling_gun", "heavy_plasma_cannon", "heavy_fusion_cannon", "twin_flamethrower_cannon"]},
@@ -1506,11 +1506,11 @@
         {
           "name": "Marine Scout Juggernaut",
           "movement": 10,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 8,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 5}, "scout", "vulnerable_rear"],
           "weapons": ["twin_light_machinegun", {"id": "walker_fist", "count": 2}],
           "options": [
@@ -1532,11 +1532,11 @@
         {
           "name": "Marine Juggernaut",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["vulnerable_rear", {"id": "wounds", "x": 5}],
           "weapons": [{"id": "walker_fist", "count": 4}],
           "options": [
@@ -1588,11 +1588,11 @@
         {
           "name": "Marine Assault Juggernaut",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["furious", "vulnerable_rear", {"id": "wounds", "x": 5}],
           "weapons": [{"id": "walker_fist", "count": 4}],
           "options": [
@@ -1615,11 +1615,11 @@
         {
           "name": "Veteran Assault Juggernaut",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["vulnerable_rear", {"id": "wounds", "x": 5}],
           "weapons": [{"id": "walker_fist", "count": 4}],
           "options": [
@@ -1671,11 +1671,11 @@
         {
           "name": "Marine Interceptor",
           "movement": 12,
-          "courage": 6,
+          "courage": 7,
           "fight": 3,
           "shoot": 3,
           "defense": 8,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["aircraft", {"id": "wounds", "x": 4}, "hover_mode"],
           "weapons": ["twin_gatling_gun", {"id": "twin_laser_cannon"}],
           "options": [{"replaceWeapon": {"id": "twin_laser_cannon"}, "withWeapon": [{"id": "skybreaker_missiles"}, {"id": "twin_heavy_machinegun"}, {"id": "twin_missile_launcher"}]}],
@@ -1693,12 +1693,12 @@
       "models": [
         {
           "name": "Psychic Grand Master",
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "movement": 5,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "leader", "x": "Infantry, Heavy Infantry"}, {"id": "power", "x": 1}, {"id": "tactician", "x": "Infantry, Heavy Infantry"}, {"id": "wounds", "x": 3}],
           "weapons": ["storm_rifle", {"id": "energy_handweapon", "count": 5}],
           "options": [
@@ -1722,12 +1722,12 @@
       "models": [
         {
           "name": "Psychic Captain",
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "movement": 6,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["leader", {"id": "power", "x": 1}, "tactician", {"id": "wounds", "x": 3}],
           "weapons": ["storm_rifle", {"id": "energy_handweapon", "count": 4}],
           "options": [
@@ -1753,11 +1753,11 @@
         {
           "name": "Psychic Juggernaut",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 5}, {"id": "power", "x": 1}, "vulnerable_rear"],
           "weapons": [{"id": "heavy_walker_fist", "count": 5}],
           "options": [
@@ -1779,11 +1779,11 @@
         {
           "name": "Grand Master Juggernaut",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 5}, {"id": "power", "x": 1}, "tactician_aura", "vulnerable_rear"],
           "weapons": [{"id": "walker_fist", "count": 5}],
           "options": [
@@ -1805,11 +1805,11 @@
         {
           "name": "Psychic Sergeant",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["storm_rifle", {"id": "energy_handweapon", "count": 2}],
           "options": [{"replaceWeapon": ["storm_rifle"], "withWeapon": ["plasma_pistol", "flamethrower_pistol", "fusion_pistol", "gravity_pistol", "thermal_pistol"]}],
           "min": 1,
@@ -1818,11 +1818,11 @@
         {
           "name": "Psychic Marine",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["storm_rifle", {"id": "energy_handweapon", "count": 2}],
           "min": 4,
           "max": 9
@@ -1852,11 +1852,11 @@
         {
           "name": "Psychic Purge Sergeant",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["storm_rifle", "handweapon"],
           "options": [
             {"replaceWeapon": ["storm_rifle"], "withWeapon": ["heavy_flamethrower", "plasma_pistol", "flamethrower_pistol", "fusion_pistol", "gravity_pistol", "thermal_pistol", "heavy_smg"]}
@@ -1864,7 +1864,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Psychic Purge Marine", "movement": 6, "courage": 6, "shoot": 3, "fight": 3, "defense": 6, "reflexes": 6, "weapons": ["heavy_flamethrower", "handweapon"], "min": 4, "max": 9}
+        {"name": "Psychic Purge Marine", "movement": 6, "courage": 7, "shoot": 3, "fight": 3, "defense": 6, "reflexes": 7, "weapons": ["heavy_flamethrower", "handweapon"], "min": 4, "max": 9}
       ],
       "options": [{"replaceWeapon": ["heavy_flamethrower"], "withWeapon": ["energy_cannon", "energy_gatling"]}, {"addRule": ["ambush"], "modelLimit": "all"}]
     },
@@ -1878,11 +1878,11 @@
         {
           "name": "Psychic Teleport Sergeant",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["storm_rifle", {"id": "energy_handweapon", "count": 2}],
           "options": [{"replaceWeapon": ["storm_rifle"], "withWeapon": ["plasma_pistol", "flamethrower_pistol", "fusion_pistol", "gravity_pistol", "thermal_pistol"]}],
           "min": 1,
@@ -1891,11 +1891,11 @@
         {
           "name": "Psychic Teleport Marine",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["storm_rifle", {"id": "energy_handweapon", "count": 2}],
           "min": 4,
           "max": 9
@@ -1924,12 +1924,12 @@
       "models": [
         {
           "name": "Psychic Gravite Marines",
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
           "movement": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["ambush", "conclave"],
           "weapons": ["storm_rifle", {"id": "energy_handweapon", "count": 2}],
           "options": [
@@ -1953,12 +1953,12 @@
       "models": [
         {
           "name": "Psychic Gravite Paladin",
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
           "movement": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["ambush", "conclave", {"id": "wounds", "x": 2}],
           "weapons": ["storm_rifle", {"id": "energy_handweapon", "count": 3}],
           "options": [

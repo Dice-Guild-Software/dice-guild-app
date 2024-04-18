@@ -12,11 +12,11 @@
         {
           "name": "Witch Hunter Champion",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 3,
           "weapons": ["combat_rifle", {"id": "light_handweapon", "count": 3}],
           "rules": [{"id": "ward", "x": 1}, {"id": "tactician", "x": 1}, {"id": "leader", "x": "Infantry"}],
@@ -40,12 +40,12 @@
       "models": [
         {
           "name": "Praetorian Commander",
-          "courage": 8,
+          "courage": 9,
           "shoot": 2,
           "fight": 2,
           "movement": 6,
           "defense": 7,
-          "reflexes": 7,
+          "reflexes": 8,
           "wounds": 4,
           "weapons": [{"id": "praetorian_sword_blade", "count": 5}, "praetorian_sword_pistol"],
           "options": [
@@ -74,12 +74,12 @@
       "models": [
         {
           "name": "Praetorian Captain",
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "movement": 6,
           "defense": 7,
-          "reflexes": 7,
+          "reflexes": 8,
           "wounds": 3,
           "weapons": [{"id": "praetorian_sword_blade", "count": 4}, "praetorian_sword_pistol"],
           "options": [
@@ -109,12 +109,12 @@
       "models": [
         {
           "name": "Praetorian Captain on Jetbike",
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 7,
           "movement": 8,
-          "reflexes": 7,
+          "reflexes": 8,
           "wounds": 3,
           "weapons": ["praetorian_rifle_array", {"id": "praetorian_lance", "count": 5}],
           "options": [{"replaceWeapon": ["praetorian_rifle_array"], "withWeapon": ["praetorian_missiles"]}, {"addWeapon": {"id": "praetorian_dagger"}}],
@@ -132,12 +132,12 @@
       "models": [
         {
           "name": "Praetorian Blademaster",
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "movement": 6,
           "defense": 7,
-          "reflexes": 7,
+          "reflexes": 8,
           "wounds": 3,
           "weapons": [{"id": "praetorian_sword_blade", "count": 4}, "praetorian_sword_pistol"],
           "options": [{"addWeapon": {"id": "praetorian_dagger"}}, {"addWeapon": "shield"}],
@@ -158,17 +158,17 @@
         {
           "name": "Witch Hunter Leader",
           "movement": 6,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["combat_rifle", "light_handweapon"],
           "rules": [{"id": "ward", "x": 1}],
           "min": 1,
           "max": 1
         },
-        {"name": "Witch Hunter", "movement": 6, "courage": 6, "shoot": 3, "fight": 3, "defense": 5, "reflexes": 6, "weapons": ["combat_rifle", "light_handweapon"], "min": 4, "max": 9}
+        {"name": "Witch Hunter", "movement": 6, "courage": 7, "shoot": 3, "fight": 3, "defense": 5, "reflexes": 7, "weapons": ["combat_rifle", "light_handweapon"], "min": 4, "max": 9}
       ]
     },
     "throne_guardians": {
@@ -192,12 +192,12 @@
       "models": [
         {
           "name": "Praetorian",
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "movement": 6,
           "defense": 7,
-          "reflexes": 7,
+          "reflexes": 8,
           "wounds": 2,
           "weapons": [{"id": "praetorian_sword_blade", "count": 2}, "praetorian_sword_pistol"],
           "min": 3,
@@ -214,12 +214,12 @@
       "models": [
         {
           "name": "Praetorian Jetpack",
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "movement": 8,
           "defense": 6,
-          "reflexes": 7,
+          "reflexes": 8,
           "wounds": 2,
           "weapons": ["shield", "praetorian_pistol"],
           "options": [{"replaceWeapon": ["shield", "praetorian_pistol"], "withWeapon": [["praetorian_lance_rifle", {"id": "praetorian_lance_blade", "count": 2}]]}],
@@ -244,12 +244,12 @@
       "models": [
         {
           "name": "Warden",
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 7,
           "movement": 6,
-          "reflexes": 7,
+          "reflexes": 8,
           "wounds": 2,
           "weapons": [{"id": "praetorian_spear_blade", "count": 3}, "praetorian_spear_rifle"],
           "min": 3,
@@ -266,12 +266,12 @@
       "models": [
         {
           "name": "Jetbike",
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 7,
           "movement": 8,
-          "reflexes": 7,
+          "reflexes": 8,
           "wounds": 2,
           "weapons": ["praetorian_rifle_array", {"id": "praetorian_lance", "count": 3}],
           "min": 3,
@@ -288,11 +288,11 @@
         {
           "name": "Praetorian Gravite Warrior",
           "movement": 5,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 8,
-          "reflexes": 7,
+          "reflexes": 8,
           "wounds": 2,
           "weapons": ["twin_guardian_rifle", {"id": "twin_energy_handweapon", "count": 3}],
           "options": [
@@ -312,12 +312,12 @@
       "models": [
         {
           "name": "Praetorian Gravite Warrior",
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 8,
           "movement": 5,
-          "reflexes": 7,
+          "reflexes": 8,
           "wounds": 2,
           "weapons": [{"id": "praetorian_spear_blade", "count": 3}, "praetorian_spear_rifle", "praetorian_grenade_launcher"],
           "options": [
@@ -339,11 +339,11 @@
         {
           "name": "Relic Heavy APC",
           "movement": 10,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 11,
-          "reflexes": 7,
+          "reflexes": 8,
           "wounds": 6,
           "weapons": [{"id": "twin_heavy_machinegun"}, {"id": "twin_laser_cannon"}, {"id": "twin_laser_cannon"}],
           "options": [{"addWeapon": ["twin_combat_rifle", "heavy_fusion_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
@@ -359,7 +359,7 @@
       "keywords": ["Vehicle"],
       "category": "elite",
       "rules": [{"id": "impact", "x": 3}, "vulnerable_side_rear", "hover"],
-      "models": [{"name": "Light Hover Tank", "movement": 10, "courage": 7, "shoot": 2, "fight": 2, "defense": 9, "wounds": 4, "reflexes": 7, "weapons": ["twin_light_laser_cannon"], "min": 1, "max": 1}]
+      "models": [{"name": "Light Hover Tank", "movement": 10, "courage": 8, "shoot": 2, "fight": 2, "defense": 9, "wounds": 4, "reflexes": 8, "weapons": ["twin_light_laser_cannon"], "min": 1, "max": 1}]
     },
     "hover_tank": {
       "name": "Hover Tank",
@@ -371,11 +371,11 @@
         {
           "name": "Hover Tank",
           "movement": 10,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 10,
-          "reflexes": 7,
+          "reflexes": 8,
           "wounds": 6,
           "weapons": ["twin_light_laser_cannon", {"id": "twin_heavy_machinegun"}],
           "min": 1,
@@ -394,11 +394,11 @@
         {
           "name": "Hover Tank",
           "movement": 10,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 10,
-          "reflexes": 7,
+          "reflexes": 8,
           "wounds": 5,
           "weapons": ["twin_light_laser_cannon", {"id": "twin_heavy_machinegun"}],
           "min": 1,
@@ -416,11 +416,11 @@
         {
           "name": "Praetorian Combat Juggernaut",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 10,
-          "reflexes": 7,
+          "reflexes": 8,
           "wounds": 5,
           "weapons": ["walker_sword_shoot", {"id": "walker_sword_blade", "count": 5}, {"id": "titan_shield"}],
           "options": [
@@ -445,11 +445,11 @@
         {
           "name": "Relic Juggernaut",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 10,
-          "reflexes": 7,
+          "reflexes": 8,
           "wounds": 5,
           "weapons": ["heavy_gatling_gun", {"id": "walker_fist", "count": 4}, {"id": "twin_combat_rifle"}],
           "options": [{"replaceWeapon": "heavy_gatling_gun", "withWeapon": ["twin_heavy_fusion_rifle"]}],
@@ -468,11 +468,11 @@
         {
           "name": "Heavy Assault Juggernaut",
           "movement": 6,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 11,
-          "reflexes": 7,
+          "reflexes": 8,
           "wounds": 6,
           "weapons": [{"id": "heavy_walker_fist", "count": 6}, "praetorian_missile_array"],
           "options": [

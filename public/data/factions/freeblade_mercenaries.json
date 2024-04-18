@@ -14,11 +14,11 @@
         {
           "name": "Command Battleframe",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 2,
           "fight": 2,
           "defense": 10,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": ["vulnerable_rear", {"id": "wounds", "x": 5}],
           "weapons": [{"id": "heavy_autocannon", "count": 2}, {"id": "stomp", "count": 2}, {"id": "light_machinegun"}],
           "options": [
@@ -65,11 +65,11 @@
         {
           "name": "Light Battleframe",
           "movement": 10,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 10,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": ["vulnerable_rear", {"id": "wounds", "x": 5}],
           "weapons": [{"id": "heavy_autocannon", "count": 2}, {"id": "stomp", "count": 2}, {"id": "light_machinegun"}],
           "options": [
@@ -116,11 +116,11 @@
         {
           "name": "Medium Battleframe",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 11,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": ["vulnerable_rear", {"id": "wounds", "x": 6}],
           "weapons": [{"id": "light_battle_cannon", "count": 2}, {"id": "heavy_stomp", "count": 3}, {"id": "light_machinegun"}],
           "options": [
@@ -166,11 +166,11 @@
         {
           "name": "Heavy Battleframe",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 11,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": ["vulnerable_rear", {"id": "wounds", "x": 6}],
           "weapons": [
             {"id": "battle_cannon", "count": 2},

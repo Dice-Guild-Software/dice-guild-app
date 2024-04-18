@@ -14,11 +14,11 @@
         {
           "name": "Battlesuit Commander",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["fly", {"id": "leader", "x": "Infantry, Heavy Infantry"}, {"id": "wounds", "x": 3}, {"id": "marksman", "x": 2}],
           "weapons": [{"id": "suit_fists", "count": 4}],
           "options": [
@@ -63,11 +63,11 @@
         {
           "name": "Celestial",
           "movement": 7,
-          "courage": 6,
+          "courage": 7,
           "shoot": 4,
           "fight": 3,
           "defense": 3,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": ["leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 2}],
           "weapons": [{"id": "energy_handweapon", "count": 3}],
           "options": [{"addRule": "hover_drone"}],
@@ -85,11 +85,11 @@
         {
           "name": "Warrior Commander",
           "movement": 6,
-          "courage": 7,
+          "courage": 8,
           "shoot": 2,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["pulse_rifle", {"id": "light_handweapon", "count": 2}],
           "rules": ["leader", {"id": "marksman", "x": 1}, {"id": "wounds", "x": 3}],
           "options": [{"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
@@ -111,17 +111,17 @@
         {
           "name": "Warrior Sergeant",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 5,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["pulse_rifle", "light_handweapon"],
           "options": [{"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
           "min": 1,
           "max": 1
         },
-        {"name": "Warrior", "movement": 6, "courage": 5, "shoot": 4, "fight": 5, "defense": 4, "reflexes": 6, "weapons": ["pulse_rifle", "light_handweapon"], "min": 4, "max": 9}
+        {"name": "Warrior", "movement": 6, "courage": 6, "shoot": 4, "fight": 5, "defense": 4, "reflexes": 7, "weapons": ["pulse_rifle", "light_handweapon"], "min": 4, "max": 9}
       ]
     },
     "pathfinder_squad": {
@@ -139,11 +139,11 @@
         {
           "name": "Pathfinder Sergeant",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 5,
           "defense": 3,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["pulse_carbine", "light_handweapon"],
           "options": [{"addWeapon": "pulse_pistol"}, {"addRule": "spotting_laser"}],
           "min": 1,
@@ -152,11 +152,11 @@
         {
           "name": "Pathfinder",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 5,
           "defense": 3,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["pulse_carbine", "light_handweapon"],
           "options": [{"addWeapon": "stun_grenade_launcher_attachment", "modelLimit": 1}, {"addRule": "spotting_laser"}],
           "min": 4,
@@ -173,11 +173,11 @@
         {
           "name": "Militia Sergeant",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 3,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["auto_rifle", "light_handweapon"],
           "options": [{"replaceWeapon": ["auto_rifle", "light_handweapon"], "withWeapon": [["pulse_pistol", {"id": "light_handweapon", "count": 2}]]}],
           "min": 1,
@@ -186,11 +186,11 @@
         {
           "name": "Militia",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 3,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["auto_rifle", "light_handweapon"],
           "options": [{"replaceWeapon": ["auto_rifle"], "withWeapon": ["flamethrower", "plasma_rifle", "fusion_blaster", "stun_grenade_launcher"], "modelLimit": 1}],
           "min": 4,
@@ -206,11 +206,11 @@
         {
           "name": "Insect Warrior",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 5,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": ["fly"],
           "weapons": ["neutron_carbine", "light_handweapon"],
           "min": 5,
@@ -228,11 +228,11 @@
         {
           "name": "Stealth Suit",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 5,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["evasive", "fly"],
           "weapons": ["pulse_gatling", "suit_fists"],
           "options": [
@@ -255,11 +255,11 @@
         {
           "name": "Assault Suit",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["pulse_carbine", {"id": "energy_handweapon", "count": 2}],
           "options": [
             {"replaceWeapon": {"id": "energy_handweapon", "count": 2}, "withWeapon": [{"id": "energy_powerweapon", "count": 2}], "modelLimit": "all"},
@@ -282,11 +282,11 @@
         {
           "name": "Battlesuit",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["fly", {"id": "wounds", "x": 2}],
           "weapons": [{"id": "suit_fists", "count": 4}],
           "options": [
@@ -323,18 +323,18 @@
         {
           "name": "Support Drone",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 0,
           "defense": 4,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["pulse_pistol"],
           "rules": ["fly", "engineer"],
           "options": [{"replaceRule": "engineer", "withRule": "medic"}],
           "min": 1,
           "max": 1
         },
-        {"name": "Escort Drone", "movement": 8, "courage": 5, "shoot": 4, "fight": 0, "defense": 4, "reflexes": 5, "weapons": ["pulse_pistol"], "rules": ["fly"], "min": 3, "max": 8}
+        {"name": "Escort Drone", "movement": 8, "courage": 6, "shoot": 4, "fight": 0, "defense": 4, "reflexes": 6, "weapons": ["pulse_pistol"], "rules": ["fly"], "min": 3, "max": 8}
       ]
     },
     "tactical_drones": {
@@ -346,11 +346,11 @@
         {
           "name": "Tactical Drone",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 0,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["pulse_carbine"],
           "options": [
             {"replaceWeapon": ["pulse_carbine"], "withWeapon": ["missile_pod", "fusion_blaster", "plasma_rifle", "railgun", "flamethrower"]},
@@ -371,11 +371,11 @@
         {
           "name": "Heavy Gun Drone",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 0,
           "defense": 4,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["pulse_gatling"],
           "rules": ["fly"],
           "options": [{"addWeapon": "pulse_gatling"}, {"addRule": "spotting_laser"}],
@@ -390,7 +390,7 @@
       "category": "elite",
       "keywords": ["Drone"],
       "models": [
-        {"name": "Sniper Drone", "movement": 8, "courage": 5, "shoot": 4, "fight": 0, "defense": 4, "reflexes": 5, "weapons": ["pulse_sniper"], "rules": ["evasive", "fly"], "min": 3, "max": 9}
+        {"name": "Sniper Drone", "movement": 8, "courage": 6, "shoot": 4, "fight": 0, "defense": 4, "reflexes": 6, "weapons": ["pulse_sniper"], "rules": ["evasive", "fly"], "min": 3, "max": 9}
       ]
     },
     "hover_apc": {
@@ -402,11 +402,11 @@
         {
           "name": "Hover APC",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": [{"id": "pulse_gatling"}],
           "rules": [{"id": "wounds", "x": 5}, "hover", {"id": "impact", "x": 3}, {"id": "transport", "x": 11}, "vulnerable_side_rear"],
           "options": [
@@ -429,11 +429,11 @@
         {
           "name": "Hover Tank",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["heavy_rail_cannon"],
           "rules": [{"id": "wounds", "x": 5}, "hover", {"id": "impact", "x": 6}, "vulnerable_side_rear"],
           "options": [
@@ -456,11 +456,11 @@
         {
           "name": "Observation Craft",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": [{"id": "pulse_rifle"}],
           "rules": [{"id": "wounds", "x": 2}, "hover", "spotting_laser"],
           "min": 2,
@@ -478,11 +478,11 @@
         {
           "name": "Scout Craft",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 8,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": [{"id": "pulse_gatling"}],
           "rules": [{"id": "wounds", "x": 3}, "hover", {"id": "impact", "x": 3}, "vulnerable_side_rear"],
           "options": [
@@ -504,11 +504,11 @@
         {
           "name": "Support Battlesuit",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 5,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 3}],
           "weapons": [{"id": "suit_fists", "count": 2}],
           "options": [
@@ -531,11 +531,11 @@
         {
           "name": "Heavy Battlesuit",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 5,
           "defense": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 6}, {"id": "resistant", "x": 3}, "fly"],
           "weapons": [{"id": "suit_fists", "count": 4}, "ion_cannon", {"id": "plasma_rifle", "count": 2}],
           "options": [
@@ -559,11 +559,11 @@
         {
           "name": "Heavy Stealth Suit",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 5,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 5}, "evasive", "fly"],
           "weapons": ["ion_gatling", "suit_fists"],
           "options": [
@@ -585,11 +585,11 @@
         {
           "name": "Light Fighter",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 0,
           "defense": 7,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": ["aircraft", {"id": "wounds", "x": 5}],
           "weapons": [{"id": "pulse_gatling"}, "quad_ion_rifle", {"id": "homing_missile", "count": 2}],
           "options": [
@@ -611,11 +611,11 @@
         {
           "name": "Light Bomber",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 0,
           "defense": 7,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": ["aircraft", {"id": "wounds", "x": 5}, "spotting_laser"],
           "weapons": ["missile_pod", {"id": "homing_missile", "count": 2}, "ion_bombs"],
           "options": [{"addWeapon": {"id": "ion_sniper_rifle", "count": 2}, "limit": 2}],
@@ -637,8 +637,8 @@
           "shoot": 4,
           "fight": 3,
           "defense": 4,
-          "reflexes": 7,
-          "courage": 5,
+          "reflexes": 8,
+          "courage": 6,
           "weapons": ["rifle", {"id": "handweapon", "count": 3}],
           "options": [{"replaceWeapon": "rifle", "withWeapon": "carbine"}, {"replaceRule": {"id": "warrior", "x": 1}, "withRule": {"id": "warrior", "x": 2}}],
           "min": 1,
@@ -652,7 +652,7 @@
       "category": "core",
       "keywords": ["Infantry"],
       "models": [
-        {"name": "Tribal Warrior", "movement": 6, "shoot": 4, "fight": 3, "defense": 3, "reflexes": 5, "courage": 5, "weapons": ["rifle", {"id": "handweapon", "count": 2}], "min": 5, "max": 10}
+        {"name": "Tribal Warrior", "movement": 6, "shoot": 4, "fight": 3, "defense": 3, "reflexes": 6, "courage": 6, "weapons": ["rifle", {"id": "handweapon", "count": 2}], "min": 5, "max": 10}
       ]
     },
     "wild_dogs": {
@@ -661,7 +661,7 @@
       "category": "elite",
       "keywords": ["Beasts"],
       "rules": ["agile"],
-      "models": [{"name": "Tribal Hound", "movement": 8, "shoot": 5, "fight": 3, "reflexes": 6, "courage": 5, "defense": 3, "weapons": [{"id": "handweapon", "count": 2}], "min": 4, "max": 8}]
+      "models": [{"name": "Tribal Hound", "movement": 8, "shoot": 5, "fight": 3, "reflexes": 7, "courage": 6, "defense": 3, "weapons": [{"id": "handweapon", "count": 2}], "min": 4, "max": 8}]
     },
     "ogre_riders": {
       "name": "Ogre Riders",
@@ -670,7 +670,7 @@
       "keywords": ["Infantry"],
       "rules": [{"id": "wounds", "x": 3}],
       "models": [
-        {"name": "Ogre Rider", "movement": 6, "shoot": 4, "fight": 3, "reflexes": 6, "courage": 5, "defense": 5, "weapons": [{"id": "ogre_fists", "count": 3}, "laser_cannon"], "min": 1, "max": 3}
+        {"name": "Ogre Rider", "movement": 6, "shoot": 4, "fight": 3, "reflexes": 7, "courage": 6, "defense": 5, "weapons": [{"id": "ogre_fists", "count": 3}, "laser_cannon"], "min": 1, "max": 3}
       ]
     }
   },

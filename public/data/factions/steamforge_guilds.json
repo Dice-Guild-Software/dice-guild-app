@@ -12,12 +12,12 @@
       "models": [
         {
           "name": "Machine Grand Master",
-          "courage": 7,
+          "courage": 8,
           "movement": 6,
           "shoot": 2,
           "fight": 2,
           "defense": 9,
-          "reflexes": 7,
+          "reflexes": 8,
           "weapons": [{"id": "axe_halberd", "count": 3}],
           "options": [
             {"addRule": [{"id": "ward", "x": 1, "name": "Machine Powers"}, {"id": "ward", "x": "2", "name": "Master Machine Powers"}]},
@@ -38,12 +38,12 @@
       "models": [
         {
           "name": "Guild Lord",
-          "courage": 7,
+          "courage": 8,
           "movement": 6,
           "shoot": 2,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["engineer", "leader", "tactician", {"id": "wounds", "x": 3}],
           "weapons": ["radiation_pistol", {"id": "handweapon", "count": 3}],
           "options": [
@@ -75,12 +75,12 @@
       "models": [
         {
           "name": "Guild Apprentice",
-          "courage": 6,
+          "courage": 7,
           "movement": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["engineer", "leader", "striker", {"id": "wounds", "x": 3}],
           "weapons": ["radiation_pistol", {"id": "handweapon", "count": 2}],
           "options": [
@@ -113,12 +113,12 @@
       "models": [
         {
           "name": "Data Specialist",
-          "courage": 6,
+          "courage": 7,
           "movement": 6,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["support", "protocols", {"id": "wounds", "x": 2}],
           "weapons": ["radiation_pistol", "handweapon"],
           "options": [
@@ -138,12 +138,12 @@
       "models": [
         {
           "name": "Trooper Commander",
-          "courage": 6,
+          "courage": 7,
           "movement": 6,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["leader", "tactician", {"id": "wounds", "x": 2}],
           "weapons": ["long_rifle", "light_handweapon"],
           "options": [
@@ -165,11 +165,11 @@
         {
           "name": "Trooper Sergeant",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 4,
           "fight": 4,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["long_rifle", "light_handweapon"],
           "options": [
             {"replaceWeapon": ["long_rifle", "light_handweapon"], "withWeapon": [["radiation_pistol", {"id": "handweapon", "count": 2}]]},
@@ -179,7 +179,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Trooper", "movement": 6, "courage": 5, "shoot": 4, "fight": 4, "defense": 4, "reflexes": 6, "weapons": ["long_rifle", "light_handweapon"], "min": 4, "max": 9}
+        {"name": "Trooper", "movement": 6, "courage": 6, "shoot": 4, "fight": 4, "defense": 4, "reflexes": 7, "weapons": ["long_rifle", "light_handweapon"], "min": 4, "max": 9}
       ],
       "options": [
         {"replaceWeapon": ["long_rifle"], "withWeapon": ["radiation_carbine", "tesla_rifle"]},
@@ -197,11 +197,11 @@
         {
           "name": "Drone",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 5,
           "fight": 5,
           "defense": 4,
-          "reflexes": 5,
+          "reflexes": 6,
           "weapons": ["laser_rifle", "claws"],
           "options": [{"replaceWeapon": ["laser_rifle", "claws"], "withWeapon": ["twin_handweapon", ["heavy_shotgun", "claws"]], "modelLimit": "all"}],
           "min": 10,
@@ -216,12 +216,12 @@
       "models": [
         {
           "name": "Protector Sergeant",
-          "courage": 5,
+          "courage": 6,
           "movement": 6,
           "shoot": 4,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": [{"id": "shock_spear_melee", "count": 2}, "shock_spear_shoot"],
           "options": [
             {"replaceWeapon": [{"id": "shock_spear_melee", "count": 2}, "shock_spear_shoot"], "withWeapon": [["radiation_pistol", {"id": "handweapon", "count": 2}]]},
@@ -233,12 +233,12 @@
         },
         {
           "name": "Protector",
-          "courage": 5,
+          "courage": 6,
           "movement": 6,
           "shoot": 4,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": [{"id": "shock_spear_melee", "count": 2}, "shock_spear_shoot"],
           "min": 4,
           "max": 9
@@ -253,12 +253,12 @@
       "models": [
         {
           "name": "Acolyte",
-          "courage": 6,
+          "courage": 7,
           "movement": 6,
           "shoot": 4,
           "fight": 3,
           "defense": 3,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "resistant", "x": 3}],
           "weapons": [{"id": "shock_staff", "count": 2}],
           "options": [{"replaceWeapon": {"id": "shock_staff", "count": 2}, "withWeapon": [["taser_gauntlets_zap", "taser_gauntlets_strike"]]}],
@@ -274,12 +274,12 @@
       "models": [
         {
           "name": "Cyborg Stalker",
-          "courage": 5,
+          "courage": 6,
           "movement": 6,
           "shoot": 4,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["agile", "evasive", "scout"],
           "weapons": ["smg", {"id": "energy_handweapon", "count": 2}],
           "options": [
@@ -304,12 +304,12 @@
       "models": [
         {
           "name": "Raider Sergeant",
-          "courage": 5,
+          "courage": 6,
           "movement": 8,
           "shoot": 3,
           "fight": 4,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}],
           "options": [
             {"replaceWeapon": "heavy_carbine", "withWeapon": ["revolver", "radiation_pistol", "thermal_pistol", "emp_pistol", "plasma_pistol", "fusion_pistol"]},
@@ -318,7 +318,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Raider", "courage": 5, "movement": 8, "shoot": 3, "fight": 4, "defense": 5, "reflexes": 6, "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}], "min": 2, "max": 5}
+        {"name": "Raider", "courage": 6, "movement": 8, "shoot": 3, "fight": 4, "defense": 5, "reflexes": 7, "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}], "min": 2, "max": 5}
       ],
       "options": [
         {"replaceWeapon": ["heavy_carbine", {"id": "handweapon", "count": 2}], "withWeapon": [[{"id": "thermal_pistol", "count": 2}, "light_handweapon"]]},
@@ -335,12 +335,12 @@
       "models": [
         {
           "name": "Sky Stalker Sergeant",
-          "courage": 5,
+          "courage": 6,
           "movement": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "weapons": ["twin_carbine", "piercing_claws"],
           "options": [
             {"replaceWeapon": ["twin_carbine", "handweapon"], "withWeapon": [["radiation_pistol", {"id": "energy_handweapon", "count": 2}]]},
@@ -353,7 +353,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Sky Stalker", "courage": 5, "movement": 8, "shoot": 3, "fight": 3, "defense": 5, "reflexes": 6, "weapons": ["twin_carbine", "piercing_claws"], "min": 4, "max": 9}
+        {"name": "Sky Stalker", "courage": 6, "movement": 8, "shoot": 3, "fight": 3, "defense": 5, "reflexes": 7, "weapons": ["twin_carbine", "piercing_claws"], "min": 4, "max": 9}
       ],
       "options": [{"replaceWeapon": "twin_carbine", "withWeapon": {"id": "flamethrower"}}, {"addRule": [{"name": "Cluster Grenades", "id": "impact", "x": 1}], "modelLimit": "all"}]
     },
@@ -366,11 +366,11 @@
         {
           "name": "Cyborg Breacher",
           "movement": 5,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["relentless", {"id": "wounds", "x": 2}],
           "weapons": ["fusion_cannon", {"id": "claws", "count": 3}],
           "options": [
@@ -392,11 +392,11 @@
         {
           "name": "Cyborg Shock Trooper",
           "movement": 6,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["furious", {"id": "wounds", "x": 2}],
           "weapons": ["light_machinegun", {"id": "twin_energy_handweapon", "count": 4}],
           "options": [
@@ -417,11 +417,11 @@
         {
           "name": "Guild Gravite Trooper",
           "movement": 5,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
-          "reflexes": 5,
+          "reflexes": 6,
           "rules": ["ambush"],
           "weapons": [{"id": "energy_handweapon", "count": 3}, {"id": "twin_heavy_carbine", "count": 2}],
           "options": [
@@ -449,11 +449,11 @@
         {
           "name": "Combat Robot",
           "movement": 6,
-          "courage": 7,
+          "courage": 8,
           "shoot": 4,
           "fight": 4,
           "defense": 8,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "resistant", "x": 1}, "vulnerable_rear", {"id": "wounds", "x": 3}],
           "weapons": [{"id": "robot_fist", "count": 2}, "heavy_flamethrower"],
           "options": [
@@ -474,11 +474,11 @@
         {
           "name": "Guild Juggernaut",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["vulnerable_rear", {"id": "wounds", "x": 5}],
           "weapons": [{"id": "walker_fist", "count": 2}],
           "options": [
@@ -503,11 +503,11 @@
         {
           "name": "Heavy Siege Robot",
           "movement": 8,
-          "courage": 7,
+          "courage": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["vulnerable_rear", {"id": "wounds", "x": 6}],
           "weapons": [{"id": "robot_fist", "count": 4}, "twin_aa_autocannon"],
           "options": [
@@ -535,11 +535,11 @@
         {
           "name": "APC Gunship",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 5,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["aircraft", "hover_mode", {"id": "transport", "x": 12}, {"id": "wounds", "x": 5}],
           "weapons": [{"id": "twin_light_machinegun"}],
           "options": [
@@ -569,11 +569,11 @@
         {
           "name": "Guild Scout Mechsuit",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["scout", "vulnerable_rear", "walker", {"id": "wounds", "x": 4}],
           "weapons": ["long_rifle", {"id": "servo_arm", "count": 2}],
           "options": [{"replaceWeapon": ["long_rifle"], "withWeapon": ["radiation_sniper", {"id": "taser_lance", "count": 3}]}],
@@ -591,11 +591,11 @@
         {
           "name": "Guild Heavy Mechsuit",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["vulnerable_rear", "walker", {"id": "wounds", "x": 4}],
           "weapons": ["twin_autocannon", {"id": "servo_arm", "count": 2}],
           "options": [{"replaceWeapon": ["twin_autocannon"], "withWeapon": ["twin_laser_cannon", "twin_heavy_flamethrower", "twin_plasma_cannon", "twin_fusion_cannon", "twin_thermal_lance"]}],
@@ -613,11 +613,11 @@
         {
           "name": "Heavy Gunship",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 5,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": ["aircraft", "hover_mode", {"id": "wounds", "x": 6}],
           "weapons": [{"id": "twin_light_machinegun"}],
           "options": [
@@ -659,11 +659,11 @@
         {
           "name": "Hover APC",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 5,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 5}, "hover", {"id": "impact", "x": 3}, {"id": "transport", "x": 12}, "vulnerable_side_rear"],
           "weapons": [{"id": "light_machinegun"}, {"id": "light_machinegun"}],
           "options": [{"addWeapon": ["twin_aa_light_machinegun"]}, {"addRule": "data_link"}],
@@ -681,11 +681,11 @@
         {
           "name": "Hover Tank",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 4,
           "defense": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 6}, "hover", {"id": "impact", "x": 6}, "vulnerable_side_rear"],
           "weapons": [{"id": "light_machinegun"}, {"id": "light_machinegun"}, "light_machinegun", "tank_hunter_cannon"],
           "options": [
@@ -718,11 +718,11 @@
         {
           "name": "Tank Destroyer",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 4,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "wounds", "x": 5}, {"id": "impact", "x": 6}, "vulnerable_side_rear"],
           "weapons": [{"id": "tesla_hunter_cannon"}],
           "options": [
@@ -753,11 +753,11 @@
         {
           "name": "Guild Heavy Tank",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 4,
           "defense": 11,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", {"id": "wounds", "x": 6}],
           "weapons": [
             {"id": "radiation_rocket_array"},
@@ -790,11 +790,11 @@
         {
           "name": "Guild Heavy APC",
           "movement": 8,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 4,
           "defense": 11,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "impact", "x": 6}, {"id": "transport", "x": 20}, "vulnerable_side_rear", {"id": "wounds", "x": 6}],
           "weapons": [
             {"id": "twin_heavy_machinegun"},
@@ -827,11 +827,11 @@
         {
           "name": "Spider Tank",
           "movement": 10,
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 4,
           "defense": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "rules": [{"id": "impact", "x": 6}, "vulnerable_side_rear", "walker", {"id": "wounds", "x": 5}],
           "weapons": [{"id": "servo_arm", "count": 2}, "thermal_lance", "light_machinegun"],
           "options": [

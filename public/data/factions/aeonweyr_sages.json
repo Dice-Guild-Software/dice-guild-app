@@ -12,12 +12,12 @@
       "models": [
         {
           "name": "Aeonweyr War Dancer",
-          "courage": 7,
+          "courage": 8,
           "movement": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 3,
           "rules": ["support", "zealot"],
           "weapons": ["deadly_arts"],
@@ -34,12 +34,12 @@
       "models": [
         {
           "name": "Aeonweyr Champion",
-          "courage": 6,
+          "courage": 7,
           "movement": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 3,
           "rules": ["leader", "striker"],
           "weapons": ["shard_rifle", {"id": "light_energy_handweapon", "count": 2}],
@@ -65,12 +65,12 @@
       "models": [
         {
           "name": "Aeonweyr Champion on Bike",
-          "courage": 6,
+          "courage": 7,
           "movement": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 3,
           "rules": ["hover", "leader", "striker"],
           "weapons": ["twin_shard_rifle", "shard_rifle", {"id": "light_energy_handweapon", "count": 2}],
@@ -106,12 +106,12 @@
       "models": [
         {
           "name": "Aeonweyr Paragon",
-          "courage": 7,
+          "courage": 8,
           "movement": 7,
           "shoot": 2,
           "fight": 2,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 3,
           "rules": ["leader", "tactician"],
           "weapons": ["shard_rifle", {"id": "light_energy_handweapon", "count": 3}],
@@ -137,12 +137,12 @@
       "models": [
         {
           "name": "Aeonweyr Champion on Bike",
-          "courage": 7,
+          "courage": 8,
           "movement": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 3,
           "rules": ["hover", "leader", "tactician"],
           "weapons": ["twin_shard_rifle", "shard_rifle", {"id": "light_energy_handweapon", "count": 3}],
@@ -178,12 +178,12 @@
       "models": [
         {
           "name": "Psychic",
-          "courage": 7,
+          "courage": 8,
           "movement": 7,
           "shoot": 2,
           "fight": 2,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 3,
           "rules": ["leader", {"id": "power", "x": 1}],
           "weapons": ["shard_rifle", {"id": "light_energy_handweapon", "count": 2}],
@@ -207,12 +207,12 @@
       "models": [
         {
           "name": "Psychic on Bike",
-          "courage": 7,
+          "courage": 8,
           "movement": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 3,
           "rules": ["hover", "leader", {"id": "power", "x": 1}],
           "weapons": ["twin_shard_rifle", "shard_rifle", {"id": "light_energy_handweapon", "count": 2}],
@@ -237,12 +237,12 @@
       "models": [
         {
           "name": "Spirit Engineer",
-          "courage": 6,
+          "courage": 7,
           "movement": 7,
           "shoot": 2,
           "fight": 2,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 3,
           "rules": ["engineer", "leader"],
           "weapons": ["shard_pistol", {"id": "light_energy_handweapon", "count": 3}],
@@ -258,12 +258,12 @@
       "models": [
         {
           "name": "Spirit Engineer on Bike",
-          "courage": 6,
+          "courage": 7,
           "movement": 8,
           "shoot": 2,
           "fight": 2,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 3,
           "rules": ["engineer", "hover", "leader"],
           "weapons": ["twin_shard_rifle", "shard_pistol", {"id": "light_energy_handweapon", "count": 3}],
@@ -280,12 +280,12 @@
       "models": [
         {
           "name": "Runecaster",
-          "courage": 6,
+          "courage": 7,
           "movement": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 2,
           "rules": ["conclave"],
           "weapons": ["shard_pistol", {"id": "energy_handweapon", "count": 2}],
@@ -302,12 +302,12 @@
       "models": [
         {
           "name": "Runecaster on Bike",
-          "courage": 6,
+          "courage": 7,
           "movement": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 2,
           "rules": ["conclave", "hover"],
           "weapons": ["twin_shard_rifle", "shard_pistol", {"id": "energy_handweapon", "count": 2}],
@@ -327,12 +327,12 @@
       "models": [
         {
           "name": "War God Avatar",
-          "courage": 8,
+          "courage": 9,
           "movement": 7,
           "shoot": 2,
           "fight": 2,
           "defense": 8,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 4,
           "weapons": [{"id": "shreiking_spear_melee", "count": 5}, "shreiking_spear_shoot"],
           "min": 1,
@@ -347,26 +347,26 @@
       "models": [
         {
           "name": "Warrior Leader",
-          "courage": 5,
+          "courage": 6,
           "movement": 7,
           "shoot": 3,
           "fight": 4,
           "defense": 3,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 1,
           "weapons": ["shard_carbine", "light_handweapon"],
           "options": [{"replaceWeapon": ["shard_pistol"], "withWeapon": ["fusion_pistol", "neuron_pistol"]}],
           "min": 1,
           "max": 1
         },
-        {"name": "Warrior", "courage": 5, "movement": 7, "shoot": 3, "fight": 4, "defense": 3, "reflexes": 6, "wounds": 1, "weapons": ["shard_carbine", "light_handweapon"], "min": 4, "max": 19},
+        {"name": "Warrior", "courage": 6, "movement": 7, "shoot": 3, "fight": 4, "defense": 3, "reflexes": 7, "wounds": 1, "weapons": ["shard_carbine", "light_handweapon"], "min": 4, "max": 19},
         {
           "name": "Weapon Platform",
-          "courage": 5,
+          "courage": 6,
           "shoot": 3,
           "fight": 0,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 7,
           "wounds": 1,
           "weapons": ["fusion_cannon"],
@@ -392,12 +392,12 @@
       "models": [
         {
           "name": "Guardian Leader",
-          "courage": 6,
+          "courage": 7,
           "movement": 7,
           "shoot": 3,
           "fight": 4,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 1,
           "weapons": ["shard_rifle", "light_handweapon"],
           "options": [
@@ -407,7 +407,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Guardian", "courage": 6, "movement": 7, "shoot": 3, "fight": 4, "defense": 4, "reflexes": 6, "wounds": 1, "weapons": ["shard_rifle", "light_handweapon"], "min": 4, "max": 9}
+        {"name": "Guardian", "courage": 7, "movement": 7, "shoot": 3, "fight": 4, "defense": 4, "reflexes": 7, "wounds": 1, "weapons": ["shard_rifle", "light_handweapon"], "min": 4, "max": 9}
       ],
       "options": [{"addRule": ["shield"], "modelLimit": "all"}]
     },
@@ -419,19 +419,19 @@
       "models": [
         {
           "name": "Ranger Leader",
-          "courage": 5,
+          "courage": 6,
           "movement": 7,
           "shoot": 3,
           "fight": 4,
           "defense": 3,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 1,
           "weapons": ["shard_sniper", "light_handweapon"],
           "options": [{"replaceWeapon": "shard_sniper", "withWeapon": ["spectre_rifle"]}],
           "min": 1,
           "max": 1
         },
-        {"name": "Ranger", "courage": 5, "movement": 7, "shoot": 3, "fight": 4, "defense": 3, "reflexes": 6, "wounds": 1, "weapons": ["shard_sniper", "light_handweapon"], "min": 4, "max": 9}
+        {"name": "Ranger", "courage": 6, "movement": 7, "shoot": 3, "fight": 4, "defense": 3, "reflexes": 7, "wounds": 1, "weapons": ["shard_sniper", "light_handweapon"], "min": 4, "max": 9}
       ]
     },
     "wvyern_squad": {
@@ -441,19 +441,19 @@
       "models": [
         {
           "name": "Wyvern Leader",
-          "courage": 6,
+          "courage": 7,
           "movement": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 1,
           "weapons": ["flamethrower", "light_handweapon"],
           "options": [{"replaceWeapon": ["flamethrower"], "withWeapon": ["shattersky_launcher", "shard_cannon"]}, {"addWeapon": ["flamethrower", "fusion_rifle"], "limit": 1}],
           "min": 1,
           "max": 1
         },
-        {"name": "Wyvern", "courage": 6, "movement": 7, "shoot": 3, "fight": 3, "defense": 5, "reflexes": 6, "wounds": 1, "weapons": ["flamethrower", "light_handweapon"], "min": 4, "max": 9}
+        {"name": "Wyvern", "courage": 7, "movement": 7, "shoot": 3, "fight": 3, "defense": 5, "reflexes": 7, "wounds": 1, "weapons": ["flamethrower", "light_handweapon"], "min": 4, "max": 9}
       ],
       "options": [{"replaceWeapon": ["flamethrower"], "withWeapon": ["fusion_rifle", "missile_launcher"]}]
     },
@@ -464,12 +464,12 @@
       "models": [
         {
           "name": "Wraith",
-          "courage": 6,
+          "courage": 7,
           "movement": 5,
           "shoot": 3,
           "fight": 3,
           "defense": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 2,
           "weapons": [{"id": "energy_handweapon", "count": 4}],
           "options": [
@@ -489,12 +489,12 @@
       "models": [
         {
           "name": "Assault Warrior Leader",
-          "courage": 6,
+          "courage": 7,
           "movement": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 1,
           "weapons": ["shard_pistol", {"id": "handweapon", "count": 2}],
           "options": [
@@ -507,12 +507,12 @@
         },
         {
           "name": "Assault Warrior",
-          "courage": 6,
+          "courage": 7,
           "movement": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 1,
           "weapons": ["shard_pistol", {"id": "handweapon", "count": 2}],
           "min": 4,
@@ -535,12 +535,12 @@
       "models": [
         {
           "name": "Phantom Leader",
-          "courage": 6,
+          "courage": 7,
           "movement": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 2,
           "weapons": ["spectre_rifle", {"id": "energy_handweapon", "count": 2}],
           "options": [{"replaceWeapon": "spectre_rifle", "withWeapon": ["elven_blaster", "emp_cannon"]}],
@@ -549,12 +549,12 @@
         },
         {
           "name": "Phantom",
-          "courage": 6,
+          "courage": 7,
           "movement": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 2,
           "weapons": ["spectre_rifle", {"id": "energy_handweapon", "count": 2}],
           "min": 2,
@@ -570,19 +570,19 @@
       "models": [
         {
           "name": "Hawk Leader",
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
           "movement": 8,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 1,
           "weapons": ["elven_blaster", "light_handweapon"],
           "options": [{"replaceWeapon": "elven_blaster", "withWeapon": ["hawk_talon", "sunlight_rifle"]}, {"replaceWeapon": ["light_handweapon"], "withWeapon": ["energy_handweapon"]}],
           "min": 1,
           "max": 1
         },
-        {"name": "Hawk", "courage": 6, "shoot": 3, "fight": 3, "defense": 4, "movement": 8, "reflexes": 6, "wounds": 1, "weapons": ["elven_blaster", "light_handweapon"], "min": 4, "max": 9}
+        {"name": "Hawk", "courage": 7, "shoot": 3, "fight": 3, "defense": 4, "movement": 8, "reflexes": 7, "wounds": 1, "weapons": ["elven_blaster", "light_handweapon"], "min": 4, "max": 9}
       ]
     },
     "blink_squad": {
@@ -593,12 +593,12 @@
       "models": [
         {
           "name": "Blink Leader",
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
           "movement": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 1,
           "weapons": ["nova_blaster", {"id": "light_handweapon", "count": 2}],
           "options": [
@@ -611,12 +611,12 @@
         },
         {
           "name": "Blink",
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 5,
           "movement": 7,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 1,
           "weapons": ["nova_blaster", {"id": "light_handweapon", "count": 2}],
           "min": 4,
@@ -631,12 +631,12 @@
       "models": [
         {
           "name": "Revenant Lord",
-          "courage": 6,
+          "courage": 7,
           "movement": 8,
           "shoot": 3,
           "fight": 3,
           "defense": 10,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 3,
           "weapons": [{"id": "revenant_fist", "count": 4}, {"id": "shard_rifle", "count": 2}],
           "options": [
@@ -660,11 +660,11 @@
       "models": [
         {
           "name": "Aeonweyr Biker Leader",
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 8,
           "wounds": 2,
           "weapons": ["twin_shard_rifle", "laser_lance_shoot", {"id": "laser_lance_melee", "count": 3}],
@@ -679,11 +679,11 @@
         },
         {
           "name": "Aeonweyr Biker",
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 8,
           "wounds": 2,
           "weapons": ["twin_shard_rifle", "laser_lance_shoot", {"id": "laser_lance_melee", "count": 3}],
@@ -702,11 +702,11 @@
       "models": [
         {
           "name": "Ranger Biker Leader",
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 8,
           "wounds": 2,
           "weapons": ["shard_sniper", "light_energy_handweapon", {"id": "twin_shard_rifle"}],
@@ -716,11 +716,11 @@
         },
         {
           "name": "Ranger Biker",
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 4,
-          "reflexes": 6,
+          "reflexes": 7,
           "movement": 8,
           "wounds": 2,
           "weapons": ["shard_sniper", "light_energy_handweapon", {"id": "twin_shard_rifle"}],
@@ -739,11 +739,11 @@
         {
           "name": "War Walker",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 6,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 3,
           "weapons": [{"id": "sky_cannon", "count": 2}, {"id": "stomp", "count": 2}],
           "options": [{"replaceWeapon": {"id": "sky_cannon", "x": 1}, "withWeapon": ["missile_launcher", "shard_cannon", "shining_cannon"], "count": 2}],
@@ -760,12 +760,12 @@
       "models": [
         {
           "name": "Hover APC",
-          "courage": 5,
+          "courage": 6,
           "movement": 10,
           "shoot": 3,
           "fight": 3,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 5,
           "rules": ["hover", {"id": "impact", "x": 3}, {"id": "transport", "x": 11}],
           "weapons": ["twin_shard_rifle", "twin_fusion_cannon"],
@@ -787,12 +787,12 @@
       "models": [
         {
           "name": "Hover Tank",
-          "courage": 5,
+          "courage": 6,
           "movement": 10,
           "shoot": 3,
           "fight": 3,
           "defense": 9,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 5,
           "rules": ["hover", {"id": "impact", "x": 6}, "vulnerable_rear"],
           "weapons": [{"id": "twin_shard_rifle"}, "twin_fusion_cannon"],
@@ -827,11 +827,11 @@
         {
           "name": "Revenant Titan",
           "movement": 8,
-          "courage": 6,
+          "courage": 7,
           "shoot": 3,
           "fight": 3,
           "defense": 11,
-          "reflexes": 6,
+          "reflexes": 7,
           "wounds": 6,
           "weapons": ["titan_sword", {"id": "heavy_stomp", "count": 3}],
           "options": [
