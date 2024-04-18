@@ -1355,13 +1355,6 @@
       "description": "Use when taking a skill test. You may re-roll that test and it may not be re-rolled again. This may be used once per round.",
       "cost": 1
     },
-    "battlefield_reserves": {
-      "phase": "pre_game",
-      "name": "Outflanking Reserves",
-      "flavor": "Sometimes assets are most useful finding an alternate route around the enemy.",
-      "description": "Up to half of any force's units, one point for each may be placed in _Outflanking Reserves_ instead of deployed on the field.",
-      "cost": "1/per"
-    },
     "combined_arms": {
       "name": "Combined Arms",
       "subfactions": ["mounted_focus"],
@@ -1461,7 +1454,7 @@
     "ambush": {
       "subfactions": ["stealth_focus"],
       "name": "Ambush",
-      "phase": "pre_game",
+      "phase": "activation",
       "description": "Up to half of any force's units, one point for each may be placed in _Ambush Reserves_ instead of deployed on the field.",
       "flavor": "With countless battles experienced, these fighters are trained to react to any situation.",
       "cost": "1/per"
@@ -1517,7 +1510,7 @@
     "encircle": {
       "subfactions": ["tactical_focus"],
       "name": "Encircle",
-      "phase": "pre_game",
+      "phase": "activation",
       "description": "Up to half of any force's units, one point for each may be placed in Encirclement reserves before the game begins. At the beginning of any round after the first, that unit may be set up within 6\" of any table edge and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
       "flavor": "With speed and ferocity, these soldiers can outflank their enemies.",
       "cost": "1/per"
