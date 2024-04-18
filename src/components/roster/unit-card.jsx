@@ -10,6 +10,7 @@ import {
   ListItemText,
   Menu,
   MenuItem,
+  Stack,
   Typography
 } from "@mui/material";
 import { Dropdown } from "components/dropdown";
@@ -60,17 +61,16 @@ export const UnitCard = (props) => {
     : data.getWeaponRules([unit], faction);
   const unitSubfactions = focusView
     ? [
-        subfactionId !== "none"
-          ? `${
-              { ...data.getSubfaction(faction.id, subfactionId) }.name || "No"
-            } Focus`
-          : "",
-      ].filter((name) => !!name)
+      subfactionId !== "none"
+        ? `${{ ...data.getSubfaction(faction.id, subfactionId) }.name || "No"
+        } Focus`
+        : "",
+    ].filter((name) => !!name)
     : uniq(
-        get(unit, "subfactions", [])
-          .map((subfactionId) => data.getSubfaction(faction.id, subfactionId))
-          .map((subfac) => `${subfac.name || "No"} Focus`)
-      );
+      get(unit, "subfactions", [])
+        .map((subfactionId) => data.getSubfaction(faction.id, subfactionId))
+        .map((subfac) => `${subfac.name || "No"} Focus`)
+    );
   const unitSetbacksCount = (setbacks || []).length;
   const [showUnitDescription, hideUnitDescription] = useModal(
     ({ extraProps }) => (
@@ -215,14 +215,14 @@ export const UnitCard = (props) => {
   const perkString =
     perks && perks.length
       ? `${perks.length > 1 ? "perks" : "the perk"} (${perks
-          .map((perk) => perk.name)
-          .join(", ")})`
+        .map((perk) => perk.name)
+        .join(", ")})`
       : "";
   const setbackString =
     setbacks && setbacks.length
       ? `${setbacks.length > 1 ? "injuries" : "the injury"} (${setbacks
-          .map((setback) => setback.name)
-          .join(", ")})`
+        .map((setback) => setback.name)
+        .join(", ")})`
       : "";
   const combinedString = [perkString, setbackString]
     .filter((str) => str.length)
@@ -242,6 +242,7 @@ export const UnitCard = (props) => {
   // };
   return (
     <Box sx={{ m: 2 }}>
+      {getExtraActions()}
       <Typography variant="h5" sx={{ mb: 2 }}>
         {printMode ? (
           <span style={{ marginRight: "5px" }}>
@@ -277,9 +278,8 @@ export const UnitCard = (props) => {
             sx={{ ml: 1 }}
             label={
               unitSetbacksCount > 0
-                ? `${unitSetbacksCount} ${
-                    unitSetbacksCount > 1 ? "Injuries" : "Injury"
-                  }`
+                ? `${unitSetbacksCount} ${unitSetbacksCount > 1 ? "Injuries" : "Injury"
+                }`
                 : ""
             }
           />
@@ -344,14 +344,19 @@ export const UnitCard = (props) => {
         </ul>
       </div>
       <Divider />
-      <span className="unit-keywords">
-        <b>Keywords: </b>
+      <Stack direction="row" sx={{ mt: 1 }}>
         {[
           faction.name,
           ...unitSubfactions,
           ...(unit.keywords || ["Infantry"]),
-        ].join(", ")}
-      </span>
+        ].map((keyword) => (
+          <Chip
+            size="small"
+            sx={{ mr: 1 }}
+            label={keyword}
+          />
+        ))}
+      </Stack>
     </Box>
   );
 };

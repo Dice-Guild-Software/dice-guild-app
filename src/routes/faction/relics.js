@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { RelicCard } from "components/roster/relic-card";
-import { get, groupBy, sortBy } from "lodash";
+import { sortBy } from "lodash";
 
 export const Relics = (props) => {
   const { data, faction, nameFilter } = props;

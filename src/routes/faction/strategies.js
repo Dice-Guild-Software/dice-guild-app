@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { StrategyCard } from "components/roster/strategy-card";
-import { get, groupBy, sortBy } from "lodash";
+import { sortBy } from "lodash";
 
 export const Strategies = (props) => {
   const { data, faction, nameFilter } = props;

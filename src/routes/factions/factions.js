@@ -2,7 +2,6 @@ import {
   Button,
   CardActionArea,
   CardActions,
-  CardHeader,
   CardMedia,
   Grid,
   ListItem,
@@ -10,7 +9,7 @@ import {
   Stack,
   Typography,
   useMediaQuery,
-  useTheme,
+  useTheme
 } from "@mui/material";
 import Card from "@mui/material/Card";
 import { get, groupBy, sortBy } from "lodash";

@@ -1,7 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { PowerCard } from "components/roster/power-card";
-import { get, groupBy, sortBy } from "lodash";
-import React from "react";
+import { sortBy } from "lodash";
 
 export const Powers = (props) => {
   const { data, faction, nameFilter } = props;
