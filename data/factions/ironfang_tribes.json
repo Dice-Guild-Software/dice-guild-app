@@ -651,7 +651,7 @@
           "courage": 4,
           "shoot": 4,
           "fight": 4,
-          "defense": 2,
+          "defense": 3,
           "reflexes": 5,
           "weapons": ["handweapon", "shield"],
           "options": [
@@ -743,7 +743,7 @@
           "courage": 4,
           "shoot": 4,
           "fight": 4,
-          "defense": 2,
+          "defense": 3,
           "reflexes": 5,
           "rules": ["ambush", "assassin", "evasive"],
           "weapons": [{"id": "lethal_handweapon", "count": 2}],

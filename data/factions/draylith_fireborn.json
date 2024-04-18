@@ -418,7 +418,7 @@
           "courage": 5,
           "shoot": 4,
           "fight": 4,
-          "defense": 2,
+          "defense": 3,
           "reflexes": 6,
           "weapons": [{"id": "poison_handweapon", "count": 2}],
           "rules": ["scout"],

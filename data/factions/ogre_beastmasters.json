@@ -377,7 +377,7 @@
           "shoot": 4,
           "courage": 4,
           "fight": 4,
-          "defense": 2,
+          "defense": 3,
           "reflexes": 5,
           "rules": ["trappers"],
           "weapons": ["light_handweapon", "sling"],
