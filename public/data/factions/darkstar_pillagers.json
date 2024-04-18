@@ -16,7 +16,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 7,
+          "defense": 5,
           "wounds": 3,
           "rules": [{"id": "warrior", "x": 1}, "hover", {"id": "leader", "x": "Beast, Monster"}],
           "reflexes": 6,
@@ -43,7 +43,7 @@
           "courage": 7,
           "shoot": 2,
           "fight": 2,
-          "defense": 7,
+          "defense": 5,
           "reflexes": 7,
           "wounds": 3,
           "rules": [{"id": "heavy_impact", "x": 3}, "hover", {"id": "leader", "x": "Infantry, Biker"}, {"id": "tactician", "x": 1}],
@@ -80,7 +80,7 @@
           "courage": 7,
           "shoot": 2,
           "fight": 2,
-          "defense": 7,
+          "defense": 5,
           "reflexes": 6,
           "wounds": 3,
           "rules": [{"id": "defender", "x": 1}, "hover", {"id": "leader", "x": "Infantry, Heavy Infantry"}],
@@ -107,7 +107,7 @@
           "courage": 7,
           "shoot": 2,
           "fight": 2,
-          "defense": 7,
+          "defense": 5,
           "reflexes": 7,
           "wounds": 3,
           "rules": ["leader", {"id": "tactician", "x": 1}],
@@ -143,7 +143,7 @@
           "movement": 7,
           "shoot": 2,
           "fight": 2,
-          "defense": 8,
+          "defense": 6,
           "reflexes": 7,
           "wounds": 3,
           "rules": ["fear", "furious", "leader", {"id": "tactician", "x": 1}],
@@ -164,7 +164,7 @@
           "courage": 5,
           "shoot": 3,
           "fight": 4,
-          "defense": 6,
+          "defense": 4,
           "reflexes": 6,
           "weapons": ["barb_rifle", "barb_knife"],
           "options": [
@@ -176,7 +176,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Ravager", "movement": 7, "courage": 5, "shoot": 3, "fight": 4, "defense": 6, "reflexes": 6, "weapons": ["barb_rifle", "barb_knife"], "min": 4, "max": 9}
+        {"name": "Ravager", "movement": 7, "courage": 5, "shoot": 3, "fight": 4, "defense": 4, "reflexes": 6, "weapons": ["barb_rifle", "barb_knife"], "min": 4, "max": 9}
       ],
       "options": [
         {"replaceWeapon": "barb_rifle", "withWeapon": ["fusion_rifle", "shred_rifle", "emp_rifle", "flamethrower", "grenade_launcher"], "modelLimit": "2/10"},
@@ -195,7 +195,7 @@
           "courage": 5,
           "shoot": 4,
           "fight": 3,
-          "defense": 5,
+          "defense": 3,
           "reflexes": 6,
           "weapons": ["barb_pistol", {"id": "barb_knife", "count": 2}],
           "options": [
@@ -206,7 +206,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Witch", "movement": 7, "courage": 5, "shoot": 4, "fight": 3, "defense": 5, "reflexes": 6, "weapons": ["barb_pistol", {"id": "barb_knife", "count": 2}], "min": 4, "max": 9}
+        {"name": "Witch", "movement": 7, "courage": 5, "shoot": 4, "fight": 3, "defense": 3, "reflexes": 6, "weapons": ["barb_pistol", {"id": "barb_knife", "count": 2}], "min": 4, "max": 9}
       ],
       "options": [
         {
@@ -227,7 +227,7 @@
           "courage": 5,
           "shoot": 4,
           "fight": 3,
-          "defense": 7,
+          "defense": 5,
           "reflexes": 5,
           "weapons": [{"id": "barb_sword", "count": 2}],
           "options": [
@@ -237,7 +237,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Abomination Warrior", "movement": 6, "courage": 5, "shoot": 4, "fight": 3, "defense": 7, "reflexes": 5, "weapons": [{"id": "barb_sword", "count": 2}], "min": 4, "max": 9}
+        {"name": "Abomination Warrior", "movement": 6, "courage": 5, "shoot": 4, "fight": 3, "defense": 5, "reflexes": 5, "weapons": [{"id": "barb_sword", "count": 2}], "min": 4, "max": 9}
       ],
       "options": [{"addWeapon": ["poison_sprayer", "poison_dart_rifle"], "modelLimit": "1/5"}]
     },
@@ -252,7 +252,7 @@
           "movement": 7,
           "shoot": 3,
           "fight": 3,
-          "defense": 8,
+          "defense": 6,
           "reflexes": 6,
           "rules": ["fear", "furious"],
           "weapons": [{"id": "energy_greatweapon", "count": 3}],
@@ -273,7 +273,7 @@
           "movement": 6,
           "shoot": 5,
           "fight": 3,
-          "defense": 8,
+          "defense": 6,
           "reflexes": 5,
           "wounds": 2,
           "weapons": ["poison_sprayer", {"id": "mutated_fists", "count": 4}],
@@ -294,7 +294,7 @@
           "movement": 7,
           "shoot": 3,
           "fight": 3,
-          "defense": 5,
+          "defense": 3,
           "reflexes": 6,
           "wounds": 2,
           "rules": ["legend_pop", "support"],
@@ -316,7 +316,7 @@
           "courage": 4,
           "shoot": 3,
           "fight": 3,
-          "defense": 5,
+          "defense": 3,
           "reflexes": 5,
           "wounds": 2,
           "rules": [{"id": "resistant", "x": 2}, "furious", "support"],
@@ -337,7 +337,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 5,
+          "defense": 3,
           "reflexes": 6,
           "wounds": 2,
           "rules": [{"id": "power", "x": 1}, "support"],
@@ -358,7 +358,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 5,
+          "defense": 3,
           "reflexes": 5,
           "wounds": 2,
           "rules": [{"id": "resistant", "x": 3}],
@@ -380,7 +380,7 @@
           "courage": 6,
           "shoot": 4,
           "fight": 3,
-          "defense": 10,
+          "defense": 8,
           "reflexes": 5,
           "wounds": 3,
           "rules": ["hover"],
@@ -427,7 +427,7 @@
           "movement": 8,
           "shoot": 0,
           "fight": 4,
-          "defense": 5,
+          "defense": 3,
           "reflexes": 6,
           "courage": 4,
           "wounds": 2,
@@ -450,7 +450,7 @@
           "courage": 5,
           "shoot": 0,
           "fight": 4,
-          "defense": 4,
+          "defense": 2,
           "reflexes": 4,
           "wounds": 3,
           "rules": ["fly"],
@@ -472,7 +472,7 @@
           "courage": 5,
           "shoot": 3,
           "fight": 4,
-          "defense": 6,
+          "defense": 4,
           "reflexes": 6,
           "weapons": ["barb_carbine", "light_handweapon"],
           "options": [
@@ -483,7 +483,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Harpy", "movement": 8, "courage": 5, "shoot": 3, "fight": 4, "defense": 6, "reflexes": 6, "weapons": ["barb_carbine", "light_handweapon"], "min": 4, "max": 9}
+        {"name": "Harpy", "movement": 8, "courage": 5, "shoot": 3, "fight": 4, "defense": 4, "reflexes": 6, "weapons": ["barb_carbine", "light_handweapon"], "min": 4, "max": 9}
       ],
       "options": [
         {"replaceWeapon": "barb_carbine", "withWeapon": ["fusion_rifle", "shred_rifle", "emp_rifle", "flamethrower", "grenade_launcher"], "modelLimit": "1/5"},
@@ -503,7 +503,7 @@
           "courage": 5,
           "shoot": 4,
           "fight": 3,
-          "defense": 7,
+          "defense": 5,
           "reflexes": 6,
           "weapons": ["barb_rifle", "light_handweapon", {"id": "twin_barb_rifle"}],
           "options": [
@@ -519,7 +519,7 @@
           "courage": 5,
           "shoot": 4,
           "fight": 3,
-          "defense": 7,
+          "defense": 5,
           "reflexes": 6,
           "weapons": ["barb_rifle", "light_handweapon", {"id": "twin_barb_rifle"}],
           "min": 2,
@@ -544,7 +544,7 @@
           "courage": 5,
           "shoot": 4,
           "fight": 3,
-          "defense": 6,
+          "defense": 4,
           "reflexes": 6,
           "weapons": ["barb_launcher", {"id": "glaive", "count": 2}],
           "options": [
@@ -556,7 +556,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Hoverboarder", "movement": 8, "courage": 5, "shoot": 4, "fight": 3, "defense": 6, "reflexes": 6, "weapons": ["barb_launcher", {"id": "glaive", "count": 2}], "min": 4, "max": 19}
+        {"name": "Hoverboarder", "movement": 8, "courage": 5, "shoot": 4, "fight": 3, "defense": 4, "reflexes": 6, "weapons": ["barb_launcher", {"id": "glaive", "count": 2}], "min": 4, "max": 19}
       ]
     },
     "void_bomber": {
@@ -571,7 +571,7 @@
           "courage": 5,
           "shoot": 3,
           "fight": 4,
-          "defense": 9,
+          "defense": 7,
           "reflexes": 6,
           "wounds": 5,
           "rules": ["aircraft"],
@@ -598,7 +598,7 @@
           "courage": 5,
           "shoot": 3,
           "fight": 4,
-          "defense": 9,
+          "defense": 7,
           "reflexes": 6,
           "wounds": 5,
           "rules": ["aircraft"],
@@ -638,7 +638,7 @@
           "courage": 5,
           "shoot": 3,
           "fight": 4,
-          "defense": 9,
+          "defense": 7,
           "reflexes": 6,
           "wounds": 4,
           "rules": ["hover", {"id": "impact", "x": 3}, "vulnerable_side_rear"],
@@ -674,7 +674,7 @@
           "courage": 5,
           "shoot": 3,
           "fight": 4,
-          "defense": 10,
+          "defense": 8,
           "reflexes": 6,
           "wounds": 5,
           "rules": ["hover", {"id": "impact", "x": 3}, {"id": "open_topped", "x": 12}, {"id": "transport", "x": 12}, "vulnerable_side_rear"],
@@ -710,7 +710,7 @@
           "movement": 10,
           "shoot": 3,
           "fight": 4,
-          "defense": 11,
+          "defense": 9,
           "reflexes": 6,
           "wounds": 5,
           "rules": ["hover", {"id": "heavy_impact", "x": 3}, "vulnerable_side_rear"],
@@ -766,7 +766,7 @@
           "courage": 5,
           "shoot": 3,
           "fight": 4,
-          "defense": 11,
+          "defense": 9,
           "reflexes": 6,
           "wounds": 5,
           "rules": [{"id": "heavy_impact", "x": 6}, "hover", "vulnerable_side_rear"],

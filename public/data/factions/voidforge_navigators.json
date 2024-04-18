@@ -16,7 +16,7 @@
           "courage": 7,
           "shoot": 3,
           "fight": 3,
-          "defense": 9,
+          "defense": 7,
           "reflexes": 6,
           "rules": ["leader", {"id": "wounds", "x": 3}, {"id": "tactician", "x": 1}],
           "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}],
@@ -46,7 +46,7 @@
           "courage": 7,
           "shoot": 3,
           "fight": 3,
-          "defense": 9,
+          "defense": 7,
           "reflexes": 6,
           "rules": [{"id": "leader", "x": "Infantry, Biker"}, {"id": "wounds", "x": 3}, {"id": "tactician", "x": 1}],
           "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}, {"id": "twin_combat_rifle"}],
@@ -82,7 +82,7 @@
           "courage": 7,
           "shoot": 3,
           "fight": 3,
-          "defense": 10,
+          "defense": 8,
           "reflexes": 6,
           "rules": ["ambush", "leader", {"id": "wounds", "x": 3}, {"id": "tactician", "x": 1}],
           "weapons": ["twin_heavy_carbine", {"id": "handweapon", "count": 3}],
@@ -117,7 +117,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 8,
+          "defense": 6,
           "reflexes": 6,
           "rules": ["leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
           "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}],
@@ -154,7 +154,7 @@
           "courage": 7,
           "shoot": 3,
           "fight": 3,
-          "defense": 8,
+          "defense": 6,
           "reflexes": 6,
           "rules": [{"id": "leader", "x": "Infantry, Biker"}, {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
           "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}, {"id": "twin_combat_rifle"}],
@@ -196,7 +196,7 @@
           "courage": 7,
           "shoot": 3,
           "fight": 3,
-          "defense": 9,
+          "defense": 7,
           "reflexes": 6,
           "rules": ["ambush", "leader", {"id": "power", "x": 1}, {"id": "wounds", "x": 3}],
           "weapons": ["twin_heavy_carbine", {"id": "handweapon", "count": 3}],
@@ -231,7 +231,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 8,
+          "defense": 6,
           "reflexes": 6,
           "rules": ["engineer", "leader", {"id": "wounds", "x": 3}],
           "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}],
@@ -261,7 +261,7 @@
           "courage": 7,
           "shoot": 3,
           "fight": 3,
-          "defense": 8,
+          "defense": 6,
           "reflexes": 6,
           "rules": ["engineer", {"id": "leader", "x": "Infantry, Biker"}, {"id": "wounds", "x": 3}],
           "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}, {"id": "twin_combat_rifle"}],
@@ -297,7 +297,7 @@
           "courage": 7,
           "shoot": 3,
           "fight": 3,
-          "defense": 9,
+          "defense": 7,
           "reflexes": 6,
           "rules": ["ambush", "engineer", "leader", {"id": "wounds", "x": 3}],
           "weapons": ["twin_heavy_carbine", {"id": "handweapon", "count": 3}],
@@ -329,7 +329,7 @@
           "courage": 5,
           "shoot": 4,
           "fight": 4,
-          "defense": 7,
+          "defense": 5,
           "reflexes": 5,
           "weapons": ["auto_carbine", "handweapon"],
           "options": [
@@ -344,7 +344,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Militia", "movement": 5, "courage": 5, "shoot": 4, "fight": 4, "defense": 7, "reflexes": 5, "weapons": ["auto_carbine", "handweapon"], "min": 4, "max": 19}
+        {"name": "Militia", "movement": 5, "courage": 5, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 5, "weapons": ["auto_carbine", "handweapon"], "min": 4, "max": 19}
       ]
     },
     "forge_warriors": {
@@ -380,7 +380,7 @@
           "courage": 5,
           "shoot": 3,
           "fight": 3,
-          "defense": 8,
+          "defense": 6,
           "reflexes": 5,
           "weapons": ["heavy_carbine", "handweapon"],
           "options": [
@@ -394,7 +394,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Warrior", "movement": 5, "courage": 5, "shoot": 3, "fight": 4, "defense": 8, "reflexes": 5, "weapons": ["heavy_carbine", "handweapon"], "min": 4, "max": 19}
+        {"name": "Warrior", "movement": 5, "courage": 5, "shoot": 3, "fight": 4, "defense": 6, "reflexes": 5, "weapons": ["heavy_carbine", "handweapon"], "min": 4, "max": 19}
       ]
     },
     "forge_berzerkers": {
@@ -421,14 +421,14 @@
           "courage": 5,
           "shoot": 3,
           "fight": 3,
-          "defense": 8,
+          "defense": 6,
           "reflexes": 5,
           "weapons": ["heavy_pistol", {"id": "handweapon", "count": 3}],
           "options": [{"replaceWeapon": ["heavy_pistol"], "withWeapon": ["combat_shotgun", "plasma_pistol", "fusion_pistol", "flamethrower_pistol", "thermal_pistol"]}],
           "min": 1,
           "max": 1
         },
-        {"name": "Berzerker", "movement": 5, "courage": 5, "shoot": 3, "fight": 3, "defense": 8, "reflexes": 5, "weapons": ["heavy_pistol", {"id": "handweapon", "count": 3}], "min": 4, "max": 9}
+        {"name": "Berzerker", "movement": 5, "courage": 5, "shoot": 3, "fight": 3, "defense": 6, "reflexes": 5, "weapons": ["heavy_pistol", {"id": "handweapon", "count": 3}], "min": 4, "max": 9}
       ]
     },
     "forge_destroyers": {
@@ -442,7 +442,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 9,
+          "defense": 7,
           "reflexes": 6,
           "rules": ["ambush"],
           "weapons": ["twin_heavy_carbine", {"id": "handweapon", "count": 3}],
@@ -483,7 +483,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 8,
+          "defense": 6,
           "reflexes": 6,
           "rules": ["strider"],
           "weapons": ["heavy_machinegun", {"id": "handweapon", "count": 2}],
@@ -509,7 +509,7 @@
           "courage": 5,
           "shoot": 3,
           "fight": 3,
-          "defense": 8,
+          "defense": 6,
           "reflexes": 5,
           "options": [
             {"replaceWeapon": ["heavy_carbine"], "withWeapon": ["laser_rifle"]},
@@ -569,7 +569,7 @@
           "courage": 5,
           "shoot": 3,
           "fight": 3,
-          "defense": 6,
+          "defense": 4,
           "reflexes": 5,
           "weapons": ["heavy_carbine", "handweapon"],
           "rules": ["engineer"],
@@ -580,7 +580,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Engineer", "movement": 5, "courage": 5, "shoot": 3, "fight": 3, "defense": 6, "reflexes": 5, "weapons": ["heavy_carbine", "handweapon"], "min": 4, "max": 9}
+        {"name": "Engineer", "movement": 5, "courage": 5, "shoot": 3, "fight": 3, "defense": 4, "reflexes": 5, "weapons": ["heavy_carbine", "handweapon"], "min": 4, "max": 9}
       ]
     },
     "mining_drone": {
@@ -594,7 +594,7 @@
           "courage": 5,
           "shoot": 3,
           "fight": 4,
-          "defense": 9,
+          "defense": 7,
           "reflexes": 5,
           "options": [{"replaceWeapon": ["mining_laser"], "withWeapon": ["heavy_mining_laser", "fusion_cannon", "thermal_lance"]}, {"addWeapon": [{"id": "assault_drill", "count": 2}]}],
           "weapons": ["mining_laser"],
@@ -617,7 +617,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 12,
+          "defense": 10,
           "reflexes": 6,
           "weapons": ["twin_fusion_cannon"],
           "options": [
@@ -645,7 +645,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 13,
+          "defense": 11,
           "reflexes": 6,
           "weapons": [
             "plasma_gatling",
@@ -691,7 +691,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 12,
+          "defense": 10,
           "reflexes": 6,
           "weapons": [{"id": "twin_combat_rifle"}],
           "options": [{"addRule": [{"id": "dozer", "name": "Dozer Blade"}, {"id": "transport", "x": 10}]}],
@@ -713,7 +713,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 10,
+          "defense": 8,
           "reflexes": 6,
           "weapons": ["thermal_lance"],
           "options": [{"replaceWeapon": "thermal_lance", "withWeapon": ["plasma_cannon", "heavy_flamethrower", "heavy_machinegun", "autocannon", "fusion_cannon", "missile_launcher", "tesla_cannon"]}],
@@ -735,7 +735,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 12,
+          "defense": 10,
           "reflexes": 6,
           "weapons": ["laser_cannon", {"id": "twin_heavy_machinegun"}],
           "options": [{"replaceWeapon": "laser_cannon", "withWeapon": ["autocannon", "missile_launcher", "plasma_cannon"]}],
@@ -756,7 +756,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 11,
+          "defense": 9,
           "reflexes": 6,
           "rules": [{"id": "wounds", "x": 5}, "vulnerable_rear"],
           "weapons": [{"id": "heavy_fusion_cannon", "count": 2}],
@@ -809,7 +809,7 @@
           "courage": 7,
           "shoot": 3,
           "fight": 3,
-          "defense": 9,
+          "defense": 7,
           "reflexes": 6,
           "rules": ["medic", "support", {"id": "wounds", "x": 3}],
           "weapons": ["heavy_pistol", {"id": "handweapon", "count": 2}],
@@ -830,7 +830,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 13,
+          "defense": 11,
           "reflexes": 6,
           "rules": [{"id": "wounds", "x": 6}, "vulnerable_rear"],
           "weapons": [{"id": "heavy_autocannon", "count": 2}],

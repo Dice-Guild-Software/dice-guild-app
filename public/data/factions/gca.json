@@ -15,7 +15,7 @@
           "courage": 7,
           "shoot": 3,
           "fight": 3,
-          "defense": 8,
+          "defense": 6,
           "reflexes": 6,
           "weapons": ["combat_rifle", {"id": "handweapon", "count": 3}],
           "options": [
@@ -44,7 +44,7 @@
           "courage": 7,
           "shoot": 3,
           "fight": 3,
-          "defense": 6,
+          "defense": 4,
           "reflexes": 6,
           "weapons": ["combat_rifle", {"id": "handweapon", "count": 2}],
           "rules": [{"id": "field_orders", "x": 1}, "leader", {"id": "wounds", "x": 3}],
@@ -71,7 +71,7 @@
           "courage": 7,
           "shoot": 3,
           "fight": 3,
-          "defense": 6,
+          "defense": 4,
           "reflexes": 6,
           "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}],
           "rules": [{"id": "field_orders", "x": 1, "ArrayItem": "leader"}, {"id": "wounds", "x": 3}, "scout"],
@@ -100,7 +100,7 @@
           "courage": 7,
           "shoot": 3,
           "fight": 3,
-          "defense": 6,
+          "defense": 4,
           "reflexes": 6,
           "weapons": ["heavy_carbine", {"id": "handweapon", "count": 2}],
           "rules": [{"id": "wounds", "x": 2}, {"id": "power", "x": 1}],
@@ -150,7 +150,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 6,
+          "defense": 4,
           "reflexes": 6,
           "weapons": ["combat_rifle", "light_handweapon"],
           "options": [
@@ -162,7 +162,7 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Veteran", "movement": 6, "courage": 6, "shoot": 3, "fight": 3, "defense": 6, "reflexes": 6, "weapons": ["combat_rifle", "light_handweapon"], "min": 4, "max": 9}
+        {"name": "Veteran", "movement": 6, "courage": 6, "shoot": 3, "fight": 3, "defense": 4, "reflexes": 6, "weapons": ["combat_rifle", "light_handweapon"], "min": 4, "max": 9}
       ]
     },
     "veteran_scouts": {
@@ -184,7 +184,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 6,
+          "defense": 4,
           "reflexes": 6,
           "weapons": ["heavy_carbine", "light_handweapon"],
           "options": [
@@ -195,8 +195,8 @@
           "min": 1,
           "max": 1
         },
-        {"name": "Veteran Scout", "movement": 6, "courage": 6, "shoot": 3, "fight": 3, "defense": 6, "reflexes": 6, "weapons": ["heavy_carbine", "light_handweapon"], "min": 4, "max": 9},
-        {"name": "Scout Drone", "movement": 7, "courage": 5, "shoot": 4, "fight": 4, "defense": 4, "reflexes": 5, "weapons": ["auto_carbine"], "rules": ["fly", "scout"], "min": 0, "max": 2}
+        {"name": "Veteran Scout", "movement": 6, "courage": 6, "shoot": 3, "fight": 3, "defense": 4, "reflexes": 6, "weapons": ["heavy_carbine", "light_handweapon"], "min": 4, "max": 9},
+        {"name": "Scout Drone", "movement": 7, "courage": 5, "shoot": 4, "fight": 4, "defense": 2, "reflexes": 5, "weapons": ["auto_carbine"], "rules": ["fly", "scout"], "min": 0, "max": 2}
       ]
     },
     "exosuit_troopers": {
@@ -210,7 +210,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 8,
+          "defense": 6,
           "reflexes": 6,
           "weapons": ["combat_rifle", {"id": "handweapon", "count": 2}],
           "options": [
@@ -240,7 +240,7 @@
           "courage": 5,
           "shoot": 4,
           "fight": 4,
-          "defense": 8,
+          "defense": 6,
           "reflexes": 5,
           "weapons": ["laser_cannon", "energy_powerweapon"],
           "options": [
@@ -265,7 +265,7 @@
           "courage": 5,
           "shoot": 4,
           "fight": 4,
-          "defense": 10,
+          "defense": 8,
           "reflexes": 5,
           "weapons": ["laser_cannon", {"id": "energy_powerweapon", "count": 2}],
           "options": [
@@ -294,7 +294,7 @@
           "courage": 5,
           "shoot": 3,
           "fight": 4,
-          "defense": 6,
+          "defense": 4,
           "reflexes": 6,
           "weapons": ["light_machinegun", "light_handweapon", "railgun"],
           "options": [{"replaceWeapon": ["light_machinegun"], "withWeapon": ["laser_cannon", "heavy_flamethrower"]}, {"addRule": ["field_radio"], "modelLimit": 1}],
@@ -315,7 +315,7 @@
           "courage": 5,
           "shoot": 4,
           "fight": 4,
-          "defense": 7,
+          "defense": 5,
           "reflexes": 6,
           "weapons": ["light_machinegun", "stomp"],
           "options": [
@@ -358,7 +358,7 @@
           "courage": 5,
           "shoot": 3,
           "fight": 3,
-          "defense": 7,
+          "defense": 5,
           "reflexes": 6,
           "weapons": ["fusion_cannon", {"id": "stomp", "count": 2}],
           "options": [
@@ -386,7 +386,7 @@
           "courage": 7,
           "shoot": 3,
           "fight": 3,
-          "defense": 6,
+          "defense": 4,
           "reflexes": 6,
           "weapons": ["auto_rifle", "smoke_grenade", "handweapon"],
           "rules": ["medic", "support", {"id": "wounds", "x": 2}],
@@ -410,7 +410,7 @@
           "courage": 7,
           "shoot": 3,
           "fight": 3,
-          "defense": 6,
+          "defense": 4,
           "reflexes": 6,
           "weapons": ["auto_rifle", "handweapon"],
           "rules": ["engineer", "support", {"id": "wounds", "x": 2}],
@@ -439,7 +439,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 10,
+          "defense": 8,
           "reflexes": 6,
           "weapons": ["light_battle_cannon"],
           "options": [
@@ -459,8 +459,8 @@
       "category": "elite",
       "keywords": ["Storm Trooper", "Infantry", "Beast"],
       "models": [
-        {"name": "K9 Sergeant", "courage": 5, "shoot": 3, "fight": 4, "defense": 6, "reflexes": 6, "movement": 6, "weapons": ["combat_shotgun", "light_handweapon"], "min": 1, "max": 1},
-        {"name": "Attack Dog", "courage": 5, "shoot": 0, "fight": 3, "defense": 5, "reflexes": 6, "movement": 6, "weapons": [{"id": "handweapon", "count": 2}], "min": 1, "max": 4}
+        {"name": "K9 Sergeant", "courage": 5, "shoot": 3, "fight": 4, "defense": 4, "reflexes": 6, "movement": 6, "weapons": ["combat_shotgun", "light_handweapon"], "min": 1, "max": 1},
+        {"name": "Attack Dog", "courage": 5, "shoot": 0, "fight": 3, "defense": 3, "reflexes": 6, "movement": 6, "weapons": [{"id": "handweapon", "count": 2}], "min": 1, "max": 4}
       ],
       "rules": ["scout"]
     },
@@ -475,7 +475,7 @@
           "movement": 7,
           "shoot": 2,
           "fight": 2,
-          "defense": 6,
+          "defense": 4,
           "reflexes": 7,
           "courage": 7,
           "min": 1,
@@ -495,7 +495,7 @@
           "movement": 7,
           "shoot": 2,
           "fight": 2,
-          "defense": 6,
+          "defense": 4,
           "reflexes": 7,
           "courage": 7,
           "min": 1,
@@ -510,7 +510,7 @@
       "category": "elite",
       "rules": [{"id": "wounds", "x": 3}, "assassin", "berzerk_overload"],
       "models": [
-        {"name": "Berzerker Assassin", "movement": 7, "shoot": 2, "fight": 2, "defense": 6, "reflexes": 7, "courage": 7, "min": 1, "max": 1, "weapons": [{"id": "energy_handweapon", "count": 8}]}
+        {"name": "Berzerker Assassin", "movement": 7, "shoot": 2, "fight": 2, "defense": 4, "reflexes": 7, "courage": 7, "min": 1, "max": 1, "weapons": [{"id": "energy_handweapon", "count": 8}]}
       ]
     },
     "stealth_assassin": {
@@ -524,7 +524,7 @@
           "movement": 7,
           "shoot": 2,
           "fight": 2,
-          "defense": 6,
+          "defense": 4,
           "reflexes": 7,
           "courage": 7,
           "min": 1,
@@ -546,7 +546,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 4,
-          "defense": 11,
+          "defense": 9,
           "reflexes": 6,
           "weapons": [{"id": "laser_machinegun"}, {"id": "strike_missiles"}],
           "options": [
@@ -572,7 +572,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 11,
+          "defense": 9,
           "reflexes": 6,
           "weapons": ["twin_combat_rifle"],
           "options": [{"addWeapon": ["twin_combat_rifle", "hunter_missiles"]}, {"addRule": ["spiked_ram", {"id": "dozer", "name": "Dozer Blade"}]}],
@@ -595,7 +595,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 11,
+          "defense": 9,
           "reflexes": 6,
           "weapons": ["twin_combat_rifle", "heavy_flamethrower"],
           "options": [
@@ -622,7 +622,7 @@
           "courage": 6,
           "shoot": 3,
           "fight": 3,
-          "defense": 13,
+          "defense": 11,
           "reflexes": 6,
           "weapons": [{"id": "twin_heavy_machinegun"}, {"id": "assault_rifle_array"}, {"id": "assault_rifle_array"}],
           "options": [
@@ -657,7 +657,7 @@
           "courage": 5,
           "shoot": 4,
           "fight": 4,
-          "defense": 6,
+          "defense": 4,
           "movement": 8,
           "reflexes": 5,
           "weapons": ["pistol", {"id": "light_handweapon", "count": 2}],
@@ -674,7 +674,7 @@
           "shoot": 4,
           "fight": 4,
           "movement": 8,
-          "defense": 6,
+          "defense": 4,
           "reflexes": 5,
           "weapons": ["heavy_pistol", {"id": "light_handweapon", "count": 2}],
           "options": [
@@ -698,7 +698,7 @@
           "courage": 5,
           "shoot": 4,
           "fight": 4,
-          "defense": 12,
+          "defense": 10,
           "movement": 10,
           "reflexes": 5,
           "weapons": ["nova_cannon", {"id": "heavy_flamethrower"}],
@@ -747,7 +747,7 @@
           "movement": 0,
           "shoot": 4,
           "fight": 4,
-          "defense": 7,
+          "defense": 5,
           "reflexes": 6,
           "weapons": ["twin_heavy_machinegun"],
           "options": [{"replaceWeapon": "twin_heavy_machinegun", "withWeapon": ["twin_laser_cannon", "twin_gatling_gun", "missile_launcher"]}]
@@ -757,7 +757,7 @@
     }
   },
   "models": {
-    "scout_drone": {"name": "Scout Drone", "movement": 7, "courage": 5, "shoot": 4, "fight": 4, "defense": 4, "reflexes": 5, "weapons": ["auto_carbine"], "min": 1, "max": 1, "rules": ["scout", "fly"]}
+    "scout_drone": {"name": "Scout Drone", "movement": 7, "courage": 5, "shoot": 4, "fight": 4, "defense": 2, "reflexes": 5, "weapons": ["auto_carbine"], "min": 1, "max": 1, "rules": ["scout", "fly"]}
   },
   "weapons": {
     "shotgun_pistol": {"name": "Sawn-off Shotgun", "attacks": 1, "ap": 1, "short": 9, "rules": ["assault"]},
