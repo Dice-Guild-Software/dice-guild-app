@@ -196,7 +196,7 @@
           "max": 1
         },
         {"name": "Veteran Scout", "movement": 6, "courage": 6, "shoot": 3, "fight": 3, "defense": 4, "reflexes": 6, "weapons": ["heavy_carbine", "light_handweapon"], "min": 4, "max": 9},
-        {"name": "Scout Drone", "movement": 7, "courage": 5, "shoot": 4, "fight": 4, "defense": 2, "reflexes": 5, "weapons": ["auto_carbine"], "rules": ["fly", "scout"], "min": 0, "max": 2}
+        {"name": "Scout Drone", "movement": 7, "courage": 5, "shoot": 4, "fight": 4, "defense": 3, "reflexes": 5, "weapons": ["auto_carbine"], "rules": ["fly", "scout"], "min": 0, "max": 2}
       ]
     },
     "exosuit_troopers": {
@@ -757,7 +757,7 @@
     }
   },
   "models": {
-    "scout_drone": {"name": "Scout Drone", "movement": 7, "courage": 5, "shoot": 4, "fight": 4, "defense": 2, "reflexes": 5, "weapons": ["auto_carbine"], "min": 1, "max": 1, "rules": ["scout", "fly"]}
+    "scout_drone": {"name": "Scout Drone", "movement": 7, "courage": 5, "shoot": 4, "fight": 4, "defense": 3, "reflexes": 5, "weapons": ["auto_carbine"], "min": 1, "max": 1, "rules": ["scout", "fly"]}
   },
   "weapons": {
     "shotgun_pistol": {"name": "Sawn-off Shotgun", "attacks": 1, "ap": 1, "short": 9, "rules": ["assault"]},

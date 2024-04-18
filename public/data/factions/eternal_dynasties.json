@@ -214,7 +214,7 @@
           "movement": 8,
           "shoot": 4,
           "fight": 4,
-          "defense": 2,
+          "defense": 3,
           "reflexes": 4,
           "wounds": 3,
           "rules": ["hover"],
